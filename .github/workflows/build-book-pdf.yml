@@ -58,6 +58,10 @@ jobs:
             -o adevelopment-book/dist/adev-book.pdf \
             --from markdown-yaml_metadata_block \
             --pdf-engine=xelatex \
+            -V geometry=margin=1in \
+            -V classoption=onecolumn \
+            -V fontsize=11pt \
+            -V linestretch=1.1 \
             --table-of-contents \
             --toc-depth=2 \
             --metadata title="Augmented Development (A-Dev)" \
