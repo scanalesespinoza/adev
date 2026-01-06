@@ -2,6 +2,10 @@ name: Build A-Dev Book PDF
 
 on:
   push:
+    branches:
+      - "**"
+    tags:
+      - "v*"
     paths:
       - "adevelopment-book/book/**"
       - "adevelopment-book/book/appendices/**"
@@ -12,6 +16,9 @@ on:
       - "adevelopment-book/book/appendices/**"
       - ".github/workflows/build-book-pdf.yml"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-pdf:
@@ -46,8 +53,18 @@ jobs:
           )
           pandoc "${FILES[@]}" -o adevelopment-book/dist/adev-book.pdf --from markdown --pdf-engine=xelatex
 
-      - name: Upload PDF artifact
+      - name: Upload PDF artifact (non-tag builds)
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
         uses: actions/upload-artifact@v4
         with:
           name: adev-book-pdf
           path: adevelopment-book/dist/adev-book.pdf
+
+      - name: Publish PDF to GitHub Release (tag builds)
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: softprops/action-gh-release@v1
+        with:
+          files: adevelopment-book/dist/adev-book.pdf
+          body: "Consolidated A-Dev book PDF for release ${{ github.ref_name }}."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

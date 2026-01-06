@@ -17,3 +17,8 @@ This short book is for practitioners who already build software and want to ampl
 
 ## Real credential
 The point of view comes from a consultant/architect with **dirty, cross-functional experience**: development, QA, security, sysadmin, and project management. That mix enables clear, applicable rules in real contexts.
+
+## Rights and attribution
+- Copyright and authorship: Sergio Sebastián Canales Espinoza (`sergio.canales.e@gmail.com`).
+- Repository of record: https://github.com/scanalesespinoza/adev
+- Comments: Yes, this was assisted with AI too.
