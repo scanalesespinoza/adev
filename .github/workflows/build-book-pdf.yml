@@ -1,0 +1,53 @@
+name: Build A-Dev Book PDF
+
+on:
+  push:
+    paths:
+      - "adevelopment-book/book/**"
+      - "adevelopment-book/book/appendices/**"
+      - ".github/workflows/build-book-pdf.yml"
+  pull_request:
+    paths:
+      - "adevelopment-book/book/**"
+      - "adevelopment-book/book/appendices/**"
+      - ".github/workflows/build-book-pdf.yml"
+  workflow_dispatch:
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-xetex
+
+      - name: Build consolidated PDF
+        run: |
+          mkdir -p adevelopment-book/dist
+          FILES=(
+            adevelopment-book/book/00-front-matter.md
+            adevelopment-book/book/01-adev-manifesto.md
+            adevelopment-book/book/02-solo-architect.md
+            adevelopment-book/book/03-atomic-iterations.md
+            adevelopment-book/book/04-baseline-rules-of-engagement.md
+            adevelopment-book/book/05-traceability-digital-thread.md
+            adevelopment-book/book/06-quality-density-metrics.md
+            adevelopment-book/book/07-weekend-marathon-playbook.md
+            adevelopment-book/book/08-homedir-vision.md
+            adevelopment-book/book/09-faq-objections.md
+            adevelopment-book/book/10-closing.md
+            adevelopment-book/book/appendices/A-templates.md
+            adevelopment-book/book/appendices/B-glossary.md
+            adevelopment-book/book/appendices/C-checklists.md
+          )
+          pandoc "${FILES[@]}" -o adevelopment-book/dist/adev-book.pdf --from markdown --pdf-engine=xelatex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: adev-book-pdf
+          path: adevelopment-book/dist/adev-book.pdf
