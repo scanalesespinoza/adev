@@ -62,7 +62,8 @@ jobs:
             --toc-depth=2 \
             --metadata title="Augmented Development (A-Dev)" \
             --metadata author="Sergio Sebastián Canales Espinoza" \
-            --metadata date="Version ${BOOK_VERSION}"
+            --metadata date="Version ${BOOK_VERSION}" \
+            -V hyphenate=false
 
       - name: Upload PDF artifact (non-tag builds)
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
