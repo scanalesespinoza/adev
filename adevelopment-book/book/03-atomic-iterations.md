@@ -14,3 +14,8 @@ Huge definitions create drift and inconsistencies. Keep objectives small, verifi
 2. **Implementation** → execute with discipline.
 3. **Verification** → fast tests and reviews.
 4. **Evidence** → commit + tests to close the loop.
+
+## When things break
+- Stop the line inside the same hour; there is no Plan B.
+- Solve, then ask why it failed: unclear prompt, missing baseline rule, or tooling gap.
+- Update the baseline immediately so the system cannot repeat the mistake.

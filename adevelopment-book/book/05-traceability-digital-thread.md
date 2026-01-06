@@ -1,9 +1,10 @@
 # The digital thread
 
 ## Traceability chain
-
 Product Feature → Atomic Plan → Prompt → Commit/Test Evidence.
 
 ## Why it matters
-
 It is not extra documentation: it is the **audit trail** produced by disciplined work. It proves decisions, quality, and security without artificial bureaucracy.
+
+## How to display it
+A simple timeline works: `[10:00] Define feature → [10:15] Prompt with baseline → [10:45] Generated files + tests → [11:00] CI pass → Commit ID linked to the feature`. This is the proof of contribution.
