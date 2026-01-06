@@ -7,8 +7,8 @@ This directory contains a concise book on Augmented Development (A-Dev) and a ki
 Chapters in `book/` follow a brief narrative flow:
 
 1. `00-front-matter.md`: purpose, audience, and the honest promise.
-2. `01-manifiesto-adev.md`: the A-Dev Manifesto.
-3. `02-el-solo-architect.md`: from team player to orchestrator.
+2. `01-adev-manifesto.md`: the A-Dev Manifesto.
+3. `02-solo-architect.md`: from team player to orchestrator.
 4. `03-atomic-iterations.md`: 1–2 hour atomic iterations.
 5. `04-baseline-rules-of-engagement.md`: baseline and rules of engagement.
 6. `05-traceability-digital-thread.md`: the digital thread of traceability.
