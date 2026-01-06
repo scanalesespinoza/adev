@@ -14,3 +14,8 @@ Short loops + baseline + "stop the line" when debt appears. Fix it in the same i
 
 ## How do you prove security/quality without a big team?
 Automate checks, require test evidence, and keep the plan → prompt → commit chain. Discipline substitutes headcount.
+
+---
+**Key takeaway:** Objections are answered with evidence: traceability, baseline discipline, and automated checks.
+
+**Apply in 20 minutes:** Draft a 3-line response to your toughest stakeholder question and include the specific proof (commit/CI link) you will show.

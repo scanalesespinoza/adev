@@ -17,3 +17,8 @@ A-Dev is about **giving people superpowers**, not replacing them. AI is the engi
 
 ## Motivation
 This is about democratization: people without a big-company budget can still build enterprise-grade systems. The resources now exist; the differentiator is the discipline to use them well.
+
+---
+**Key takeaway:** A-Dev is disciplined empowerment: AI supplies speed, the human supplies standards and intent.
+
+**Apply in 20 minutes:** Write your own "one weekend / one month / six months" plan for a single feature, including the baseline rules you will enforce.

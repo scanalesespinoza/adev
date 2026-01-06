@@ -19,3 +19,8 @@ Huge definitions create drift and inconsistencies. Keep objectives small, verifi
 - Stop the line inside the same hour; there is no Plan B.
 - Solve, then ask why it failed: unclear prompt, missing baseline rule, or tooling gap.
 - Update the baseline immediately so the system cannot repeat the mistake.
+
+---
+**Key takeaway:** Tight loops reduce drift; every failure is fixed and converted into a baseline rule before moving on.
+
+**Apply in 20 minutes:** Plan your next 1–2 hour sprint: write a three-line Definition, list the test you’ll run, and note where you’ll record the Evidence (commit + CI link).
