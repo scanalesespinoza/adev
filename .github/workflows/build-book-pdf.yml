@@ -56,7 +56,7 @@ jobs:
           )
           pandoc "${FILES[@]}" \
             -o adevelopment-book/dist/adev-book.pdf \
-            --from markdown \
+            --from markdown-yaml_metadata_block \
             --pdf-engine=xelatex \
             --table-of-contents \
             --toc-depth=2 \
