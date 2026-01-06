@@ -17,3 +17,8 @@ The future resume is evidence, not promises.
 ## What to showcase
 - Core flows (login, community, projects) with their evidence timelines.
 - CI results and commits linked directly to the feature they serve.
+
+---
+**Key takeaway:** Proof of contribution is measurable: baseline adherence, iteration success, quality density, and traceability presented publicly.
+
+**Apply in 20 minutes:** Sketch your HomeDir profile: list 3 metrics you can show today and the links (commits/CI) you’ll surface for each.

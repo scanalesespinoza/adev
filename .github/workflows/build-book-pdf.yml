@@ -35,8 +35,11 @@ jobs:
       - name: Build consolidated PDF
         run: |
           mkdir -p adevelopment-book/dist
+          BOOK_VERSION="${GITHUB_REF_NAME:-dev}"
           FILES=(
+            adevelopment-book/book/00-title-page.md
             adevelopment-book/book/00-front-matter.md
+            adevelopment-book/book/INDEX.md
             adevelopment-book/book/01-adev-manifesto.md
             adevelopment-book/book/02-solo-architect.md
             adevelopment-book/book/03-atomic-iterations.md
@@ -51,7 +54,15 @@ jobs:
             adevelopment-book/book/appendices/B-glossary.md
             adevelopment-book/book/appendices/C-checklists.md
           )
-          pandoc "${FILES[@]}" -o adevelopment-book/dist/adev-book.pdf --from markdown --pdf-engine=xelatex
+          pandoc "${FILES[@]}" \
+            -o adevelopment-book/dist/adev-book.pdf \
+            --from markdown \
+            --pdf-engine=xelatex \
+            --table-of-contents \
+            --toc-depth=2 \
+            --metadata title="Augmented Development (A-Dev)" \
+            --metadata author="Sergio Sebastián Canales Espinoza" \
+            --metadata date="Version ${BOOK_VERSION}"
 
       - name: Upload PDF artifact (non-tag builds)
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}

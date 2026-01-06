@@ -13,3 +13,8 @@ The highest-value human task is **translating real experience into constraints**
 - Treat each AI role (Definitions, Blueprints, Implementation, QA) as a specialist that must read the baseline before acting.
 - Run a quick "ghost meeting" in your head: past-you as QA asks for edge cases; past-you as architect asks for scaling; past-you as PM checks if the feature moves the needle.
 - You do not measure success by how much you type, but by how clearly you direct, challenge, and align those roles.
+
+---
+**Key takeaway:** Your value is orchestration: translating lived experience into constraints and directing AI roles to honor them.
+
+**Apply in 20 minutes:** Define the 3–5 roles your AI team will play this weekend and write the one rule each must read before acting.

@@ -14,3 +14,8 @@ Measure the "distance to value": how much risk and maintenance do you add per un
 
 ## Story to tell
 "The 10x developer here is the one who ships a secure Google login in 50 clean lines, not 500 noisy ones."
+
+---
+**Key takeaway:** Measure value density: simplicity, tests, and low rework beat sheer LOC every time.
+
+**Apply in 20 minutes:** Pick one feature and compute test/code ratio and cyclomatic complexity. Decide one refactor to lower complexity or raise tests.
