@@ -1,9 +1,9 @@
 # Checklists
 
 ## Before merging
-
-- Do tests pass?
-- Is it simple to explain?
-- Does it follow the structure?
-- Does it meet minimum security?
-- Is traceability in place?
+- Do tests pass (locally and CI)?
+- Is it simple enough to explain at 3 AM?
+- Does it follow the baseline structure and naming?
+- Does it meet minimum security expectations?
+- Is traceability in place (plan → prompt → commit/tests)?
+- If something broke, was the lesson added to the baseline?
