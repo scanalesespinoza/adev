@@ -1,6 +1,6 @@
 # Augmented Development (A-Dev)
 
-Version: v0.1.0  
+Version: see release tag of this PDF  
 Author: Sergio Sebastián Canales Espinoza  
 Contact: sergio.canales.e@gmail.com  
 Repository: https://github.com/scanalesespinoza/adev  

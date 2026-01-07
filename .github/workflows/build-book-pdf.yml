@@ -63,6 +63,7 @@ jobs:
             -V classoption=onecolumn \
             -V fontsize=11pt \
             -V linestretch=1.1 \
+            -V header-includes="\\usepackage[none]{hyphenat}\\usepackage{ragged2e}\\RaggedRight" \
             --table-of-contents \
             --toc-depth=2 \
             --metadata title="Augmented Development (A-Dev)" \
