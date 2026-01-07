@@ -22,6 +22,7 @@ permissions:
 
 jobs:
   build-pdf:
+    timeout-minutes: 25
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -30,7 +31,7 @@ jobs:
       - name: Install pandoc and LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-xetex
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended lmodern
 
       - name: Build consolidated PDF
         run: |
