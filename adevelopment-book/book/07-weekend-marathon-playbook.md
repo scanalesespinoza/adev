@@ -11,7 +11,6 @@ If something fails, fix it immediately, document it, and update the baseline. Th
 - Saturday: run 3–4 atomic iterations; each closes with tests, a commit, and a baseline update if anything broke.
 - Sunday: harden, add demo assets, and publish the evidence timeline (plan → prompt → commit/tests).
 
----
 **Key takeaway:** A weekend marathon is just disciplined micro-sprints with fast recovery and visible evidence.
 
 **Apply in 20 minutes:** Draft your Friday-Saturday-Sunday plan with 3 iteration slots and the test you expect to close each one.
