@@ -19,6 +19,10 @@ Measure the "distance to value": how much risk and maintenance do you add per un
 - Spend 50% on creation and 50% on verification (Build → Run → Walkthrough).
 - Quality is not a phase; it is half the work. Use this split to counter AI "noise" and debt.
 
+## Frugal architect stance
+- Use scarcity as a precision filter: if rollback is expensive, Plan A must be correct.
+- Rampage then steady state: allow initial AI/infra spike to build, then tighten costs once quality is proven.
+
 **Key takeaway:** Measure value density: simplicity, tests, and low rework beat sheer LOC every time.
 
 **Apply in 20 minutes:** Pick one feature and compute test/code ratio and cyclomatic complexity. Decide one refactor to lower complexity or raise tests.

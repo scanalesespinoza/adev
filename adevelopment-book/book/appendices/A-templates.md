@@ -34,3 +34,10 @@
 - **BASELINE.md:** five non-negotiables, 3 AM test, living baseline update rule, links to security/coding standards.
 - **ROADMAP.md:** personas, features, two-level plan mapping (roadmap → iterations), and success behaviors.
 - **Prompt folder:** prompt skeleton with goal/context/quality gates referencing roadmap node and baseline.
+
+## Template 7: A-Dev Foundation (pillars)
+- **Effort → Baseline:** list current discipline-as-code rules to avoid AI noise/debt.
+- **Creativity → Persona:** state the product vision and personas guiding decisions.
+- **Organization → Traceability:** map roadmap paths to tasks and verification.
+- **Responsibility → Simple Machines:** document infra choices and data isolation.
+- **Result → Superagency:** describe how one orchestrator covers the 1% highest-value work.

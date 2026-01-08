@@ -12,6 +12,7 @@ If something fails, fix it immediately, document it, and update the baseline. Th
 - Sunday: harden, add demo assets, and publish the evidence timeline (plan → prompt → commit/tests).
 - 24-hour pattern: Definition (15m) → Orchestration (30–45m) → Verification (10–15m) → Integration (5m) repeated until done.
 - Resource lifecycle: allow an initial "rampage" of AI/infra to build quickly, then shift to a frugal steady state once quality is proven.
+- Broad Quality Cycle built-in: each micro-sprint includes build → run → walkthrough so quality remains 50% of the effort.
 
 **Key takeaway:** A weekend marathon is just disciplined micro-sprints with fast recovery and visible evidence.
 

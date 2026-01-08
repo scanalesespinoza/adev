@@ -26,6 +26,14 @@ This is about democratization: people without a big-company budget can still bui
 - **Simple Machine Sovereignty:** Prefer simple, controllable infra and data isolation ("small spaces") over abstraction taxes.
 - **Resource Lifecycle:** Accept a GPU/AI-heavy ramp-up, then shift to a frugal steady state once quality is proven.
 - **Parallel Onboarding:** New contributors create value on day 1 by following the baseline while AI handles syntax and checks.
+- **Company of Companies vision:** A single orchestrator scales from one product to a portfolio by codifying standards, traceability, and autonomy.
+
+## A-Dev foundation (pillars → solutions)
+- **Effort:** AI can create noise/debt → Discipline-as-code in the Baseline.
+- **Creativity:** Automated code is generic → Persona-driven strategy and product vision.
+- **Organization:** Complexity causes hangovers → Traceability from Roadmap → Task → Verification.
+- **Responsibility:** Security/data leaks → Simple Machines and data sovereignty.
+- **Result:** Coordination tax → Superagency (one delivers at team/enterprise level).
 
 **Key takeaway:** A-Dev is disciplined empowerment: AI supplies speed, the human supplies standards and intent.
 
