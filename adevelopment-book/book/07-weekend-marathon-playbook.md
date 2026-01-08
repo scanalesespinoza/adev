@@ -10,6 +10,7 @@ If something fails, fix it immediately, document it, and update the baseline. Th
 - Friday night: choose one production-ready feature, narrow the scope, and collect baseline links/prompts.
 - Saturday: run 3–4 atomic iterations; each closes with tests, a commit, and a baseline update if anything broke.
 - Sunday: harden, add demo assets, and publish the evidence timeline (plan → prompt → commit/tests).
+- 24-hour pattern: Definition (15m) → Orchestration (30–45m) → Verification (10–15m) → Integration (5m) repeated until done.
 
 **Key takeaway:** A weekend marathon is just disciplined micro-sprints with fast recovery and visible evidence.
 

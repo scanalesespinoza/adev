@@ -20,6 +20,18 @@ Huge definitions create drift and inconsistencies. Keep objectives small, verifi
 - Solve, then ask why it failed: unclear prompt, missing baseline rule, or tooling gap.
 - Update the baseline immediately so the system cannot repeat the mistake.
 
+## 24-hour A-Dev marathon blueprint
+- **Definition (15 min):** Translate the product feature into a precise prompt. Keep context tight to avoid bloat.
+- **Orchestration (30–45 min):** Direct AI assistants with your baseline (security, coding standards, quality gates).
+- **Verification (10–15 min):** Run tests and security checks immediately; never pass a failed iteration.
+- **Integration (5 min):** Update the baseline with the lesson learned and merge the commit.
+Key takeaway for audiences: disciplined micro-cycles turn a weekend into high-density contribution.
+
+## Two-level command structure
+- **High-level plan (roadmap & strategy):** Ties to personas and product goals; keeps micro-iterations aligned.
+- **Middle-level command (iteration & action):** Breaks the roadmap into atomic sprints with explicit quality gates.
+This hierarchy preserves traceability from roadmap to task to verification.
+
 **Key takeaway:** Tight loops reduce drift; every failure is fixed and converted into a baseline rule before moving on.
 
 **Apply in 20 minutes:** Plan your next 1–2 hour sprint: write a three-line Definition, list the test you’ll run, and note where you’ll record the Evidence (commit + CI link).
