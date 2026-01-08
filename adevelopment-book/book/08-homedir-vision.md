@@ -14,6 +14,7 @@ The future resume is evidence, not promises.
 - **Quality density:** value delivered versus LOC, supported by tests and low complexity.
 - **Traceability:** visible links from feature → prompt → commit/tests.
 - **Infrastructure simplicity:** preference for simple machines and data "small spaces" to reduce abstraction tax and protect sensitive info.
+- **Private sovereignty in public space:** build logic in open source while isolating sensitive data on controlled hardware.
 
 ## What to showcase
 - Core flows (login, community, projects) with their evidence timelines.

@@ -13,6 +13,7 @@ A simple timeline works: `[10:00] Define feature → [10:15] Prompt with baselin
 - Maintain two levels: roadmap/strategy (personas, features) and iteration/action (atomic sprint tasks).
 - Every iteration references its roadmap node, expected behavior, and test/verification plan.
 - This prevents late-stage conflicts and protects previously fixed behaviors when new prompts run.
+- Include persona links in each plan and prompt to keep the "why" explicit, not just the "what."
 
 **Key takeaway:** Traceability is built-in, not bolted-on; the plan → prompt → commit/tests chain is your portable audit trail.
 

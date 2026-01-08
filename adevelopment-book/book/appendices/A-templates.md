@@ -29,3 +29,8 @@
 - **Orchestration (30–45m):** direct AI with baseline rules.
 - **Verification (10–15m):** run tests/security, no carry-over debt.
 - **Integration (5m):** merge + baseline update with lesson learned.
+
+## Template 6: First commit (A-Dev foundation)
+- **BASELINE.md:** five non-negotiables, 3 AM test, living baseline update rule, links to security/coding standards.
+- **ROADMAP.md:** personas, features, two-level plan mapping (roadmap → iterations), and success behaviors.
+- **Prompt folder:** prompt skeleton with goal/context/quality gates referencing roadmap node and baseline.
