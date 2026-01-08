@@ -13,6 +13,7 @@ The future resume is evidence, not promises.
 - **Iteration success rate:** how often Plan A closed inside the hour without deferring debt.
 - **Quality density:** value delivered versus LOC, supported by tests and low complexity.
 - **Traceability:** visible links from feature → prompt → commit/tests.
+- **Infrastructure simplicity:** preference for simple machines and data "small spaces" to reduce abstraction tax and protect sensitive info.
 
 ## What to showcase
 - Core flows (login, community, projects) with their evidence timelines.

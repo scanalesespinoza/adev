@@ -18,3 +18,14 @@
 - **Testing (minimums)**
 - **CI gates (minimums)**
 - **Explainability:** can the change be described in one paragraph (3 AM test)?
+
+## Template 4: Prompt anatomy (per iteration)
+- **Goal:** single task the AI must achieve.
+- **Context:** baseline links (security, coding standards), roadmap node/persona, and constraints.
+- **Quality gates:** tests and metrics required to accept the output.
+
+## Template 5: 24-hour A-Dev marathon
+- **Definition (15m):** feature → prompt with scope.
+- **Orchestration (30–45m):** direct AI with baseline rules.
+- **Verification (10–15m):** run tests/security, no carry-over debt.
+- **Integration (5m):** merge + baseline update with lesson learned.
