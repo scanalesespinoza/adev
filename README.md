@@ -2,11 +2,39 @@
 
 Augmented Development shows how one experienced person, operating with clear rules, can orchestrate AI to deliver professional software in short cycles with evidence and quality. This repository bundles a short book and a reusable collateral kit for talks, posts, and video series.
 
+## Contents
+- [Philosophy](#philosophy)
+- [Repository structure](#repository-structure)
+- [Download the book](#download-the-book-pdf)
+- [A-Dev flow (mermaid)](#a-dev-flow-mermaid)
+- [Join the rampage](#join-the-rampage)
+
+## Philosophy
+A-Dev nace de la urgencia de ser ultra-eficiente con recursos limitados. El “Arquitecto Frugal” convierte la escasez en precisión: ⚡ rampage inicial con IA + máquinas simples, 🛡️ baseline viva que evita deuda, y 🌱 steady state barato y estable. No usamos IA para escribir más código; la usamos para validar mejor la visión humana.
+
+2026 nos exige disciplina frente a la crisis de deuda técnica: menos “simulación”, más evidencia en producción con trazabilidad completa (plan → prompt → commit/tests).
+
 ## Repository structure
-All materials live in `adevelopment-book/`, organized like a compact book plus ready-to-use resources:
-- `book/`: main chapters and appendices.
-- `collateral/`: ready content for one-pagers, talks, videos, and posts.
-See `adevelopment-book/README.md` for a guided tour of the contents.
+Todo vive en `adevelopment-book/`, organizado como un libro compacto y recursos listos para usar:
+- `book/`: capítulos y apéndices.
+- `collateral/`: material para one-pagers, charlas, videos y posts.
+Consulta `adevelopment-book/README.md` para un recorrido guiado.
 
 ## Download the book (PDF)
-- Latest release PDF: https://github.com/scanalesespinoza/adev/releases/download/v0.1.0/adev-book.pdf
+- Última release PDF: https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf
+
+## A-Dev flow (mermaid)
+```mermaid
+flowchart LR
+  R[Roadmap & Personas] --> B[Baseline 🛡️]
+  B --> P[Prompt & Plan]
+  P --> Q[50/50 Broad Quality]
+  Q --> A[Alpha/Live behind flags]
+  A --> E[Evidence: commit + CI + tests]
+  E --> B
+```
+
+## Join the rampage
+- ⚡ Arranca con una feature pequeña y aplica el 50/50 (build/run/walkthrough).
+- 🛡️ Actualiza el baseline con cada fallo (living baseline, sin Plan B).
+- 🌱 Publica evidencia: commits, CI, health checks y badges como prueba de calidad.
