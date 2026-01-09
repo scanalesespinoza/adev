@@ -41,3 +41,11 @@
 - **Organization → Traceability:** map roadmap paths to tasks and verification.
 - **Responsibility → Simple Machines:** document infra choices and data isolation.
 - **Result → Superagency:** describe how one orchestrator covers the 1% highest-value work.
+
+## Template 8: Health check & deployment (Simple Machine)
+- **Liveness:** `/q/health/live` (expect 200), probe every 10s, failureThreshold 3.
+- **Readiness:** `/health/ready` (expect 200), probe every 10s, failureThreshold 3.
+- **Ports:** 8080 TCP.
+- **Flags:** Run behind feature toggles for Live Alpha (no staging detour).
+- **Security context (non-root):** drop ALL capabilities, read-only root filesystem, runAsNonRoot.
+- **Resources:** small requests (e.g., 50m CPU, 52Mi RAM) with burst limits (e.g., 4 CPU, 1Gi RAM) to support rampage → steady state.
