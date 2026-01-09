@@ -21,6 +21,7 @@ A simple timeline works: `[10:00] Define feature → [10:15] Prompt with baselin
 - **Prompt (How):** "Add Google OAuth login using existing Simple Machine stack; reuse session/cache layer; add health check; respect baseline security."
 - **Quality gates:** Build & tests on quarkus-app, security checks, manual UI check on `/login` with flag on, no regression on GitHub link.
 - **Evidence:** Commit + CI run showing OAuth endpoints, flag configuration, and passing tests; baseline updated with the new guardrail.
+- **Health checks:** Liveness `/q/health/live` and readiness `/health/ready` (10s probes, failureThreshold 3) included in the same change to align with Simple Machine standards.
 
 **Key takeaway:** Traceability is built-in, not bolted-on; the plan → prompt → commit/tests chain is your portable audit trail.
 

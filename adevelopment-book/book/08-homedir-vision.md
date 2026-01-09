@@ -20,6 +20,7 @@ The future resume is evidence, not promises.
 ## What to showcase
 - Core flows (login, community, projects) with their evidence timelines.
 - CI results and commits linked directly to the feature they serve.
+- Public signals: CI (pr-check workflow) and release badges in Homedir docs act as visible proof of quality gates.
 
 **Key takeaway:** Proof of contribution is measurable: baseline adherence, iteration success, quality density, and traceability presented publicly.
 
