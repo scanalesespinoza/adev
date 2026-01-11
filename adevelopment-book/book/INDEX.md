@@ -11,6 +11,7 @@ Main chapters:
 - [Quality Density](06-quality-density-metrics.md) — value per line, not volume; tests and simplicity win.
 - [Weekend Marathon](07-weekend-marathon-playbook.md) — realistic Friday–Sunday cadence.
 - [HomeDir Vision](08-homedir-vision.md) — public proof of contribution and discipline metrics.
+- [EvenFlow Case Study](11-evenflow-case-study.md) — 6-week frugal Live Alpha experiment that seeded HomeDir.
 - [FAQ / Objections](09-faq-objections.md) — honest answers to hype, debt, and staffing concerns.
 - [Closing](10-closing.md) — call to action and democratization note.
 
