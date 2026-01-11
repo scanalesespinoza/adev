@@ -1,15 +1,14 @@
 # Case Studies (HomeDir)
 
-## Google OAuth with 50/50
-- **Context (Why):** Persona necesita sign-in seguro para unirse a quests y enlazar identidad (HomeDir OAuth).
-- **Plan (What):** Google OAuth detrás de flag, sin romper GitHub; sin staging, Live Alpha con toggles.
-- **Execution (How):** Reusar Simple Machine stack (session/cache), health checks `/q/health/live` y `/health/ready`, baseline de seguridad aplicada.
-- **50/50:** 30–45m construir, 30–45m probar (build/tests, seguridad, UI en `/login` con flag, sin regresiones de GitHub).
-- **Evidence:** Commit + CI + probes activas; baseline actualizado con el guardrail.
+Use these case studies as proof points and patterns for new prompts.
 
-## Health checks & Simple Machine
-- **Context:** VPS/k8s despliegue minimalista.
-- **Checks:** Liveness `/q/health/live`, readiness `/health/ready`, probes cada 10s, failureThreshold 3.
+- [Quest Board Login (Live Alpha)](quest-board.md) — Google OAuth behind a feature flag to let personas join quests without breaking GitHub login.
+- [Rollback Contained in the Same Hour](rollback.md) — How “stop the line” + flags prevented a long rollback.
+- [Live Alpha with Feature Flags](live-alpha-flags.md) — Why flags beat staging and how to guardrail them.
+- [EvenFlow to HomeDir](evenflow.md) — 6-week event platform experiment (auth, speakers, schedule, notifications) that seeded the HomeDir standards.
+
+## Quick reference
+- **Health checks:** `/q/health/live`, `/health/ready`, probes cada 10s, failureThreshold 3.
 - **Security:** runAsNonRoot, drop ALL caps, filesystem read-only.
 - **Recursos:** requests pequeños (50m CPU/52Mi RAM) con burst (4 CPU/1Gi) para soportar rampage → steady state.
 

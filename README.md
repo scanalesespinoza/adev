@@ -1,11 +1,18 @@
 # Augmented Development (A-Dev)
 
+**Hook:** Stop fighting the AI code flood. A-Dev is the framework for the Architect-Orchestrator to govern systems they may not fully understand—but can fully validate—by killing the coordination tax with baseline guardrails, flags, and the 50/50 quality rule.
+
 Augmented Development shows how one experienced person, operating with clear rules, can orchestrate AI to deliver professional software in short cycles with evidence and quality. This repository bundles a short book and a reusable collateral kit for talks, posts, and video series.
+
+## Resumen rápido (ES)
+- Qué es: una guía práctica para operar IA con disciplina (50/50 calidad, baseline vivo, máquinas simples) y entregar evidencia real, no demos.
+- Para quién: devs/arquitectos que necesitan mover features en horas, sin presupuesto de big tech y sin aceptar deuda técnica.
+- Cómo se usa: aplica el flujo plan → prompt → commit/tests detrás de flags (Live Alpha) y usa el baseline para capturar cada fallo en reglas nuevas.
 
 ## Contents
 - [Philosophy](#philosophy)
 - [Repository structure](#repository-structure)
-- [Download the book](#download-the-book-pdf)
+- [Proof & downloads](#proof--downloads)
 - [A-Dev flow (mermaid)](#a-dev-flow-mermaid)
 - [Join the rampage](#join-the-rampage)
 
@@ -18,10 +25,15 @@ A-Dev nace de la urgencia de ser ultra-eficiente con recursos limitados. El “A
 Todo vive en `adevelopment-book/`, organizado como un libro compacto y recursos listos para usar:
 - `book/`: capítulos y apéndices.
 - `collateral/`: material para one-pagers, charlas, videos y posts.
+- `docs/case-studies/`: ejemplos (OAuth, rollback, feature flags, EvenFlow → HomeDir).
+- `starter-kit/`: baseline + decision log + calidad (lista para descargar y empezar).
 Consulta `adevelopment-book/README.md` para un recorrido guiado.
 
-## Download the book (PDF)
-- Última release PDF: https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf
+## Proof & downloads
+- PDF última release: https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf
+- Pitch en español: `publishing-kit/03-one-page-pitch-es.md`
+- Starter kit: `starter-kit/` (baseline, decision log, 50/50 checklist)
+- Casos prácticos: `docs/case-studies/` (OAuth, rollback, flags, EvenFlow → HomeDir)
 
 ## A-Dev flow (mermaid)
 ```mermaid

@@ -1,3 +1,8 @@
+# Table of Contents
+- [Ritual (Build → Run → Walkthrough)](#ritual-build--run--walkthrough)
+- [Por qué reemplaza el “staging eterno”](#por-qué-reemplaza-el-staging-eterno)
+- [Qué medir](#qué-medir)
+
 # Broad Quality Cycle (50/50)
 
 La mitad del tiempo es construcción y la otra mitad verificación. Es la defensa contra la deuda técnica y los rollbacks de días enteros.

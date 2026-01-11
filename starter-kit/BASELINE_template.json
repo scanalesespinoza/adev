@@ -1,0 +1,21 @@
+{
+  "non_negotiables": [
+    "Test everything",
+    "Security-first",
+    "Simple & repeatable structure",
+    "Traceability (plan → prompt → commit)",
+    "Stop the line: no Plan B"
+  ],
+  "frugality_guardrails": [
+    "No heavy middleware unless baseline-approved",
+    "Prefer SSR and lean components over complex client frameworks",
+    "Simple persistence/messaging with rollback plan"
+  ],
+  "flags_and_quality": {
+    "live_alpha": true,
+    "health_checks": ["/q/health/live", "/health/ready"],
+    "probe_interval_seconds": 10,
+    "failure_threshold": 3
+  },
+  "evidence_chain": "roadmap → plan → prompt → commit/tests → baseline update"
+}
