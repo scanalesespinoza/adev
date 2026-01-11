@@ -2,6 +2,7 @@
 - [Ritual (Build → Run → Walkthrough)](#ritual-build--run--walkthrough)
 - [Por qué reemplaza el “staging eterno”](#por-qué-reemplaza-el-staging-eterno)
 - [Qué medir](#qué-medir)
+- [Vista rápida (Mermaid)](#vista-rápida-mermaid)
 
 # Broad Quality Cycle (50/50)
 
@@ -21,3 +22,14 @@ La mitad del tiempo es construcción y la otra mitad verificación. Es la defens
 - % de iteraciones cerradas en 1–2h con tests + CI.
 - Reducción de rework después de aplicar 50/50.
 - Tiempo total del ciclo (objetivo: 5–10 minutos por iteración de QA completo).
+
+## Vista rápida (Mermaid)
+```mermaid
+flowchart LR
+  D[Definición clara] --> P[Prompt con baseline]
+  P --> B[Build]
+  B --> R[Run tests+seguridad]
+  R --> W[Walkthrough persona/UX]
+  W --> E[Evidence: commit+CI+baseline]
+  E --> D
+```

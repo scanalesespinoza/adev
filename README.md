@@ -34,6 +34,7 @@ Consulta `adevelopment-book/README.md` para un recorrido guiado.
 - Pitch en español: `publishing-kit/03-one-page-pitch-es.md`
 - Starter kit: `starter-kit/` (baseline, decision log, 50/50 checklist)
 - Casos prácticos: `docs/case-studies/` (OAuth, rollback, flags, EvenFlow → HomeDir)
+- Checklist 10 minutos: `adevelopment-book/book/appendices/C-checklists.md` (Starter kit in 10 minutes)
 
 ## A-Dev flow (mermaid)
 ```mermaid

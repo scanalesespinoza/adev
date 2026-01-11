@@ -28,6 +28,12 @@ A repository or folder of rules and blueprints everyone follows. It defines how 
 - Prefer server-side rendering and lean components over complex client-heavy frameworks.
 - Default to simple, explainable persistence/messaging; add any dependency only with a baseline entry and rollback plan.
 
+## When to say “no” to the AI (architectural blacklist)
+- Reject tech that increases coordination tax without matching value: heavy middleware, costly managed services, complex SPA frameworks for simple flows.
+- Say no to persistence/messaging choices that you cannot run locally/cheaply or roll back fast.
+- Push back on UI sprawl (multiple frameworks, ad-hoc scripts) that breaks consistency; prefer SSR-first.
+- If the prompt output violates baseline constraints (security, simplicity, traceability), stop the line, fix, and update the baseline before proceeding.
+
 **Key takeaway:** The baseline is the contract. It encodes testing, security, simplicity, and traceability so the AI team behaves consistently.
 
 **Apply in 20 minutes:** Write your baseline folder README with the five non-negotiables and the 3 AM test. Make every role read it before acting.
