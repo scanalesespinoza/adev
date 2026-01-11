@@ -1,5 +1,8 @@
 # Front Matter
 
+I> ### Estado de esta Versión (v0.3.1)
+I> Este documento funciona como un White Paper fundacional. No es el manual final, sino la definición del Framework ADEV y el análisis del caso EvenFlow. Como lector de la versión Beta, tu feedback es esencial para dar forma a los capítulos técnicos que vendrán.
+
 ## Purpose, audience, and honest promise
 This short book is for practitioners who already build software and want to amplify their impact with AI without sacrificing quality. The promise is pragmatic: **slash human-hour cost** while keeping security, testing, and structure intact.
 
