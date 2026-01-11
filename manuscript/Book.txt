@@ -1,0 +1,17 @@
+00-title-page
+00-front-matter
+INDEX
+01-adev-manifesto
+02-solo-architect
+03-atomic-iterations
+04-baseline-rules-of-engagement
+05-traceability-digital-thread
+06-quality-density-metrics
+07-weekend-marathon-playbook
+08-homedir-vision
+11-evenflow-case-study
+09-faq-objections
+10-closing
+appendices/A-templates
+appendices/B-glossary
+appendices/C-checklists
