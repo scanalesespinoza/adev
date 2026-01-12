@@ -1,5 +1,11 @@
 # Baseline / Rules of Engagement
 
+EvenFlow only worked because the baseline was a dam, not a memo. Day 1, the AI wanted to pull in “standard” stacks: heavy middleware, SPA frameworks, pricey managed services. The architect said no. The rules were written up front: SSR-first, lean messaging, flags default OFF, health checks always on. Every prompt had to read those guardrails before touching code.
+
+Mid-sprint, a broken auth flow tried to sneak in. The line stopped. The failure became a new rule: include probes and UI walkthrough before merging anything touching identity. The baseline was updated in the same hour, not after the fact. That discipline is what turned 45 days of change into a stable HomeDir foundation.
+
+By day 45, nothing shipped without the contract: tests, security, traceability, and a rollback path via flags. The baseline was living code, not a poster. It kept the project frugal, coherent, and recoverable even as the AI produced volume.
+
 ## What it is
 A repository or folder of rules and blueprints everyone follows. It defines how work happens and what "done" means.
 
