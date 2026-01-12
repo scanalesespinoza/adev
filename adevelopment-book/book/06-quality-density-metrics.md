@@ -1,5 +1,11 @@
 # Quality Density vs. Vanity Metrics
 
+Early in EvenFlow, raw speed was seductive: the AI could spit hundreds of lines in minutes. But every extra line without proof was a liability waiting to happen. Quality density became the counterweight: fewer lines, more evidence, less rework.
+
+The frugal stance was clear. If rollback was expensive, Plan A had to be correct. Flags kept risky flows off by default; probes stayed on to confirm reality; 50/50 loops forced creation and verification to weigh the same. Scarcity turned into precision: if you can only afford one iteration, it must be clean and test-backed.
+
+By day 45, the bragging rights were not LOC—they were stability: Google login, speakers, schedule, notifications running behind flags with tests and health checks green. The “10x” hero was the one who shipped a secure login in 50 clean lines, not 500 noisy ones. Quality density proved that value is measured by evidence and simplicity, not volume.
+
 ## Thesis
 1,000 LOC can be a liability; 100 well-designed LOC + tests is real value.
 
