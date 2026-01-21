@@ -1,0 +1,48 @@
+name: Deploy Site
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'adevelopment-book/book/**'
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/deploy-site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install MkDocs and Material
+        run: pip install mkdocs-material
+
+      - name: Stage Book Content
+        run: |
+          mkdir -p docs/book
+          mkdir -p docs/book/appendices
+          # Copy book chapters to docs structure for build
+          cp adevelopment-book/book/*.md docs/book/ || true
+          cp adevelopment-book/book/appendices/*.md docs/book/appendices/ || true
+          
+          # Fix relative image links if any (optional, purely precautionary)
+          # sed -i 's|\.\./images|../../images|g' docs/book/*.md || true
+
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force

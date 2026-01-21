@@ -1,0 +1,70 @@
+site_name: A-Dev Framework
+site_url: https://scanalesespinoza.github.io/adev/
+site_description: The A-Dev Framework (Augmented Development) is a discipline-first methodology for Solo Architects to orchestrate AI agents with living baselines, 50/50 quality cycles, and strict evidence trails.
+site_author: Sergio Sebastián Canales Espinoza
+
+repo_name: scanalesespinoza/adev
+repo_url: https://github.com/scanalesespinoza/adev
+edit_uri: ""
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Manifesto: book/01-adev-manifesto.md
+  - The Framework:
+    - Solo Architect: book/02-solo-architect.md
+    - Atomic Iterations: book/03-atomic-iterations.md
+    - Baseline Rules: book/04-baseline-rules-of-engagement.md
+    - Traceability: book/05-traceability-digital-thread.md
+    - Metrics: book/06-quality-density-metrics.md
+  - Playbook: book/07-weekend-marathon-playbook.md
+  - Vision: book/08-homedir-vision.md
+  - Case Studies:
+    - Overview: book/08-homedir-vision.md # Linking vision as intro to case studies for now, or we can index the docs/case-studies folder
+  - Extras:
+    - FAQ: book/09-faq-objections.md
+    - Closing: book/10-closing.md
+    - Appendices:
+      - Templates: book/appendices/A-templates.md
+      - Glossary: book/appendices/B-glossary.md
+      - Checklists: book/appendices/C-checklists.md
+      - Further Reading: book/appendices/D-further-reading.md
