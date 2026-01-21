@@ -8,10 +8,10 @@ Use these case studies as proof points and patterns for new prompts.
 - [EvenFlow to HomeDir](evenflow.md) — 6-week event platform experiment (auth, speakers, schedule, notifications) that seeded the HomeDir standards.
 
 ## Quick reference
-- **Health checks:** `/q/health/live`, `/health/ready`, probes cada 10s, failureThreshold 3.
+- **Health checks:** `/q/health/live`, `/health/ready`, probes every 10s, failureThreshold 3.
 - **Security:** runAsNonRoot, drop ALL caps, filesystem read-only.
-- **Recursos:** requests pequeños (50m CPU/52Mi RAM) con burst (4 CPU/1Gi) para soportar rampage → steady state.
+- **Resources:** small requests (50m CPU/52Mi RAM) with burst (4 CPU/1Gi) to support rampage → steady state.
 
-## Lecciones (pain → baseline)
-- Rollbacks largos se evitan con baseline vivo y controles amplios (50/50).
-- UI: mantener simplificación y consistencia; evitar scripts dispersos que rompan look & feel.
+## Lessons (pain → baseline)
+- Long rollbacks are avoided with a living baseline and broad controls (50/50).
+- UI: keep simplification and consistency; avoid scattered scripts that break look & feel.

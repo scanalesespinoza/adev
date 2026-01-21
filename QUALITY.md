@@ -1,34 +1,34 @@
 # Table of Contents
 - [Ritual (Build → Run → Walkthrough)](#ritual-build--run--walkthrough)
-- [Por qué reemplaza el “staging eterno”](#por-qué-reemplaza-el-staging-eterno)
-- [Qué medir](#qué-medir)
-- [Vista rápida (Mermaid)](#vista-rápida-mermaid)
+- [Why it replaces endless staging](#why-it-replaces-endless-staging)
+- [What to measure](#what-to-measure)
+- [Quick view (Mermaid)](#quick-view-mermaid)
 
 # Broad Quality Cycle (50/50)
 
-La mitad del tiempo es construcción y la otra mitad verificación. Es la defensa contra la deuda técnica y los rollbacks de días enteros.
+Half the time is build and half verification. It is the defense against debt and long rollbacks.
 
 ## Ritual (Build → Run → Walkthrough)
-- **Build:** compila/local, sin depender de staging pesados; feature toggles para Live Alpha.
-- **Run:** pruebas automáticas + seguridad; liveness `/q/health/live`, readiness `/health/ready` cuando aplique.
-- **Walkthrough:** validación con la persona en mente (¿resuelve su necesidad?), UI/UX breve aunque las herramientas visuales sean inmaduras.
-- **Evidence:** commit + CI + baseline actualizado con la lección (living baseline, sin Plan B).
+- **Build:** compile/run locally without heavy staging; feature toggles for Live Alpha.
+- **Run:** automated tests + security; liveness `/q/health/live`, readiness `/health/ready` when applicable.
+- **Walkthrough:** validate with the persona in mind (does it meet the need?); brief UI/UX check even if visual tools are immature.
+- **Evidence:** commit + CI + baseline updated with the lesson (living baseline, no Plan B).
 
-## Por qué reemplaza el “staging eterno”
-- IA acelera pero también propaga errores; controles pequeños e inconsistentes crean rollbacks grandes.
-- Live Alpha detrás de flags mantiene la velocidad y evita la “abstraction tax”.
+## Why it replaces endless staging
+- AI accelerates but also propagates errors; small inconsistent controls create big rollbacks.
+- Live Alpha behind flags keeps speed and avoids the abstraction tax.
 
-## Qué medir
-- % de iteraciones cerradas en 1–2h con tests + CI.
-- Reducción de rework después de aplicar 50/50.
-- Tiempo total del ciclo (objetivo: 5–10 minutos por iteración de QA completo).
+## What to measure
+- % of iterations closed in 1–2h with tests + CI.
+- Reduction of rework after applying 50/50.
+- Total cycle time (target: 5–10 minutes for a full QA loop).
 
-## Vista rápida (Mermaid)
+## Quick view (Mermaid)
 ```mermaid
 flowchart LR
-  D[Definición clara] --> P[Prompt con baseline]
+  D[Clear definition] --> P[Prompt with baseline]
   P --> B[Build]
-  B --> R[Run tests+seguridad]
+  B --> R[Run tests+security]
   R --> W[Walkthrough persona/UX]
   W --> E[Evidence: commit+CI+baseline]
   E --> D

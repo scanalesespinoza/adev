@@ -4,10 +4,10 @@
 
 Augmented Development shows how one experienced person, operating with clear rules, can orchestrate AI to deliver professional software in short cycles with evidence and quality. This repository bundles a short book and a reusable collateral kit for talks, posts, and video series.
 
-## Resumen rápido (ES)
-- Qué es: una guía práctica para operar IA con disciplina (50/50 calidad, baseline vivo, máquinas simples) y entregar evidencia real, no demos.
-- Para quién: devs/arquitectos que necesitan mover features en horas, sin presupuesto de big tech y sin aceptar deuda técnica.
-- Cómo se usa: aplica el flujo plan → prompt → commit/tests detrás de flags (Live Alpha) y usa el baseline para capturar cada fallo en reglas nuevas.
+## Quick summary
+- What it is: a practical guide to run AI with discipline (50/50 quality, living baseline, simple machines) and ship real evidence, not demos.
+- For whom: devs/architects who need to move features in hours without big-tech budgets or technical debt.
+- How to use: apply the plan → prompt → commit/tests flow behind flags (Live Alpha) and use the baseline to capture every failure as a new rule.
 
 ## Contents
 - [Philosophy](#philosophy)
@@ -17,24 +17,24 @@ Augmented Development shows how one experienced person, operating with clear rul
 - [Join the rampage](#join-the-rampage)
 
 ## Philosophy
-A-Dev nace de la urgencia de ser ultra-eficiente con recursos limitados. El “Arquitecto Frugal” convierte la escasez en precisión: ⚡ rampage inicial con IA + máquinas simples, 🛡️ baseline viva que evita deuda, y 🌱 steady state barato y estable. No usamos IA para escribir más código; la usamos para validar mejor la visión humana.
+A-Dev is born from the urgency to be ultra-efficient with limited resources. The “Frugal Architect” turns scarcity into precision: ⚡ initial rampage with AI + simple machines, 🛡️ living baseline that blocks debt, and 🌱 a steady state that is stable and cheap. We don’t use AI to write more code; we use it to validate the human vision better.
 
-2026 nos exige disciplina frente a la crisis de deuda técnica: menos “simulación”, más evidencia en producción con trazabilidad completa (plan → prompt → commit/tests).
+2026 demands discipline in the face of the AI-driven debt crisis: less “simulation,” more production evidence with full traceability (plan → prompt → commit/tests).
 
 ## Repository structure
-Todo vive en `adevelopment-book/`, organizado como un libro compacto y recursos listos para usar:
-- `book/`: capítulos y apéndices.
-- `collateral/`: material para one-pagers, charlas, videos y posts.
-- `docs/case-studies/`: ejemplos (OAuth, rollback, feature flags, EvenFlow → HomeDir).
-- `starter-kit/`: baseline + decision log + calidad (lista para descargar y empezar).
-Consulta `adevelopment-book/README.md` para un recorrido guiado.
+Everything lives in `adevelopment-book/`, organized as a compact book and ready-to-use resources:
+- `book/`: chapters and appendices.
+- `collateral/`: material for one-pagers, talks, videos, and posts.
+- `docs/case-studies/`: examples (OAuth, rollback, feature flags, EvenFlow → HomeDir).
+- `starter-kit/`: baseline + decision log + quality checklist (ready to start).
+See `adevelopment-book/README.md` for a guided tour.
 
 ## Proof & downloads
-- PDF última release: https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf
-- Pitch en español: `publishing-kit/03-one-page-pitch-es.md`
+- Latest PDF: https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf
+- Pitch: `publishing-kit/03-one-page-pitch.md`
 - Starter kit: `starter-kit/` (baseline, decision log, 50/50 checklist)
-- Casos prácticos: `docs/case-studies/` (OAuth, rollback, flags, EvenFlow → HomeDir)
-- Checklist 10 minutos: `adevelopment-book/book/appendices/C-checklists.md` (Starter kit in 10 minutes)
+- Case studies: `docs/case-studies/` (OAuth, rollback, flags, EvenFlow → HomeDir)
+- 10-minute checklist: `adevelopment-book/book/appendices/C-checklists.md` (Starter kit in 10 minutes)
 
 ## A-Dev flow (mermaid)
 ```mermaid
@@ -48,6 +48,6 @@ flowchart LR
 ```
 
 ## Join the rampage
-- ⚡ Arranca con una feature pequeña y aplica el 50/50 (build/run/walkthrough).
-- 🛡️ Actualiza el baseline con cada fallo (living baseline, sin Plan B).
-- 🌱 Publica evidencia: commits, CI, health checks y badges como prueba de calidad.
+- ⚡ Start with a small feature and apply 50/50 (build/run/walkthrough).
+- 🛡️ Update the baseline with every failure (living baseline, no Plan B).
+- 🌱 Publish evidence: commits, CI, health checks, and badges as proof of quality.
