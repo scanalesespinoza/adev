@@ -1,5 +1,15 @@
 # A-Dev Manifesto
 
+The AI era feels like standing in front of a river that just overflowed: thousands of lines you did not type, patterns you did not intend, and a creeping sense that you are becoming a copy-paste senior who no longer owns the system. Speed without governance is a flood; the architect’s job is to build the dam and channel the force, not to outrun the water.
+
+EvenFlow was that dam in practice. Day 1: a blank repo, one architect, six weeks, and a hard rule—no heavy middleware, no fancy SPA, only frugal choices (SSR-first, lean messaging) and feature flags to keep risk contained. Every prompt ran behind the living baseline; every shortcut the AI proposed that added bloat was rejected.
+
+Midway, the rhythm became muscle memory: 50/50 loops (build → run → walkthrough), health checks always on, failures turned into baseline rules before moving on. The AI was the excavator, but the architect was the governor, deciding where to dig and when to stop the line.
+
+Day 45: auth, speakers, schedule, notifications were live behind flags, probes green, rollback trivial. Evidence was traceable (plan → prompt → commit/tests) and the lessons hardened into HomeDir. The dam held; the flow was now a hydro plant, not a flood.
+
+A-Dev exists to make that governance repeatable: the architect keeps authority, the AI supplies force, and the baseline encodes the rules so the system cannot drift.
+
 ## Core idea
 A-Dev is about **giving people superpowers**, not replacing them. AI is the engine; the human remains the Architect, QA, and Quality Officer.
 

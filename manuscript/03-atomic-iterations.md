@@ -1,15 +1,18 @@
 # Atomic Iterations (1–2 hours)
 
-## Golden rule
+EvenFlow was built as chained atomic iterations. Day 1 started with nothing but a roadmap node, a persona, and a three-line definition. Each 1–2 hour loop forced discipline: tight scope, SSR-first, flags default OFF, probes ON. The AI could generate a lot; the architect insisted on evidence before moving on.
 
+In practice, every micro-cycle followed the same rhythm: define, orchestrate, verify, integrate. The prompt was precise, the baseline was non-negotiable, and the 50/50 rule kept creation and verification balanced. When something broke, the line stopped and the baseline gained a new guardrail before the next loop started.
+
+By the end of a weekend, this cadence turned into a marathon of high-density contribution: multiple increments live behind flags, tests green, rollback trivial. Even with one architect, the system behaved like a disciplined team because each iteration closed with proof, not hope.
+
+## Golden rule
 The shorter the loop, the higher the quality. Working in 1–2 hour cycles keeps focus and reduces risk.
 
 ## Avoid context bloat
-
 Huge definitions create drift and inconsistencies. Keep objectives small, verifiable, and well bounded.
 
 ## Typical structure
-
 1. **Definition** → what you will do in this iteration.
 2. **Implementation** → execute with discipline.
 3. **Verification** → fast tests and reviews.

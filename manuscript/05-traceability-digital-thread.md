@@ -1,5 +1,11 @@
 # The digital thread
 
+At the start of EvenFlow, every change could have been lost in the AI flood: prompts spitting files, behaviors drifting, and no proof of how we got there. Traceability turned that chaos into an audit trail the architect could trust. Day 1, the chain was explicit: feature → plan → prompt → commit/tests → baseline update. Day 45, the chain was muscle memory and the reason HomeDir could harden without fear.
+
+When a prompt tried to “help” by adding hidden complexity, the trail caught it. The plan and persona were linked; the commit carried the evidence; the baseline logged the new guardrail. Flags kept risky flows off by default, and health checks stayed on to confirm reality, not guesses. Traceability was the contract that kept the AI honest and the architect in control.
+
+The payoff: when the platform went live behind flags, there was a clear path to roll back, prove intent, and show value. No “just trust me” — the digital thread was the proof of contribution.
+
 ## Traceability chain
 Product Feature → Atomic Plan → Prompt → Commit/Test Evidence.
 
