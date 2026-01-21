@@ -4,6 +4,9 @@ The AI era feels like standing in front of a river that just overflowed: thousan
 
 A-Dev exists to make that governance repeatable: the architect keeps authority, the AI supplies force, and the baseline encodes the rules so the system cannot drift. Clear prompts, a living baseline, and the 50/50 quality cycle are the tools to turn raw volume into controlled, verifiable delivery.
 
+## Real History: The Debt Crisis
+I remember the panic of opening a project I had "accelerated" with AI just a week prior. It was a massive React setup with layers of abstraction I hadn't verified, only generated. It worked, but I couldn't change a single button without a cascade of errors. I wasn't the owner; I was a hostage to my own generated code. That fear—the "Crisis of Debt"—was the catalyst for A-Dev. I realized I needed to stop code-dumping and start orchestrating with strict, minimal constraints.
+
 ## Core idea
 A-Dev is about **giving people superpowers**, not replacing them. AI is the engine; the human remains the Architect, QA, and Quality Officer.
 

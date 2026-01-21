@@ -26,6 +26,11 @@ A simple timeline works: `[10:00] Define feature → [10:15] Prompt with baselin
 - **Roadmap:** where the product is going and why (personas, features, success behaviors).
 - **Constraints:** frugal guardrails and tech choices that keep the project viable.
 - **Decision log:** short entries that capture the “why” with links to commits/flags/CI.
+
+## Decision History: The Missing Link
+Most projects only have the code. A-Dev adds the "Decision History": a simple log or folder where you record *why* you chose a path.
+*Example*: `[2024-10-15] Refused Redis -> using in-memory with file backup. Why? Project is <1000 users, Redis adds $20/mo and maintenance. Evidence: Commit 8a7b9c.`
+This stops the "why did we do this?" loop that kills momentum six months later.
 Organize these folders so any orchestrator can understand the constraints within minutes and continue the work without “seniority tax.”
 
 **Key takeaway:** Traceability is built-in, not bolted-on; the plan → prompt → commit/tests chain is your portable audit trail.

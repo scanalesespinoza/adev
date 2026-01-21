@@ -23,6 +23,9 @@ Huge definitions create drift and inconsistencies. Keep objectives small, verifi
 - Solve, then ask why it failed: unclear prompt, missing baseline rule, or tooling gap.
 - Update the baseline immediately so the system cannot repeat the mistake.
 
+### Case Study: The Broken Notification
+I once spent six hours building a "perfect" notification engine. It complied, but when I deployed, it spammed 300 emails to a single user. Why? I had skipped three verification loops to "move fast." Now, I never code for more than two hours without a full cycle (build/run/walkthrough). If I had stopped at hour one, I would have caught the loop error with a simple test. The cost of "speed" was a day of damage control.
+
 ## 24-hour A-Dev marathon blueprint
 - **Definition (15 min):** Translate the product feature into a precise prompt. Keep context tight to avoid bloat.
 - **Orchestration (30–45 min):** Direct AI assistants with your baseline (security, coding standards, quality gates).

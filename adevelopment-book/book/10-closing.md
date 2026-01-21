@@ -8,6 +8,9 @@ Deliver one production-ready feature in a weekend, with baseline and full tracea
 ## Human message
 Real democratization happens when rules, tools, and AI are accessible and disciplined. A-Dev is the operating system for that discipline: simple machines, living baseline, and reproducible procedures.
 
+## Future Vision (v1.0.0+)
+We are moving towards a world where one person can govern a portfolio of systems. The next phase of A-Dev will focus on **Multi-Agent Orchestration**: moving from a single "ghost team" to a fleet of specialized agents (QA, Sec, Doc) that run autonomously against your baseline. But the core remains: you are the Architect.
+
 **Key takeaway:** The path is simple: ship one feature with discipline, show the evidence, and repeat. That is how an individual leads at enterprise level.
 
 **Apply in 20 minutes:** Pick the next feature, write the 3-line Definition, link the baseline you will enforce, and schedule your first 1–2 hour iteration.

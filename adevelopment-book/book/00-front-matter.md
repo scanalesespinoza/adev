@@ -22,7 +22,7 @@ This short book is for practitioners who already build software and want to ampl
 The point of view comes from a consultant/architect with **dirty, cross-functional experience**: development, QA, security, sysadmin, and project management. That mix enables clear, applicable rules in real contexts.
 
 ## Author Bio
-- Sergio Sebastián Canales Espinoza is an architect/consultant who has worked across development, QA, security, ops, and project management. He builds implementation-led theory by running A-Dev in real projects (HomeDir) and encoding lessons into living baselines, simple machines, and the 50/50 Broad Quality Cycle.
+- Sergio Sebastián Canales Espinoza is a pragmatic Full Stack Architect and consultant with deep cross-functional expertise spanning Development, QA, Security, Operations, and Project Management. He helps organizations stop fighting the AI flood and start cutting human-hour costs by orchestrating "ghost teams" of AI agents. He proved the A-Dev framework by building HomeDir solo—encoding his experience into livings baselines to govern systems that outpace manual coding.
 
 ## Letter to the reader
 To the Architect who feels like a stranger in their own code: the AI era created a flood of code we do not fully understand. EvenFlow, a six-week solo experiment (auth, speakers, notifications), proved that governing the gap beats mastering every API. By rejecting heavy middleware, forcing server-side simplicity, and using flags + 50/50 validation, the experiment worked—and its DNA became HomeDir. This book is the pathfinder: a map of guardrails and breadcrumbs so you can ship with fidelity to your vision, not to the bloat of the moment.

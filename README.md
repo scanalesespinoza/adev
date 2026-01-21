@@ -9,6 +9,12 @@ Augmented Development shows how one experienced person, operating with clear rul
 - For whom: devs/architects who need to move features in hours without big-tech budgets or technical debt.
 - How to use: apply the plan → prompt → commit/tests flow behind flags (Live Alpha) and use the baseline to capture every failure as a new rule.
 
+## Resumen en Español
+**Augmented Development (A-Dev)** es un marco de trabajo para que Individuos/Arquitectos gobiernen la "inundación de código" de la IA. No se trata de escribir más rápido, sino de orquestar con disciplina: reglas de línea base (Baseline), ciclo de calidad 50/50 (mitad creación, mitad verificación) y trazabilidad total. Permite a una sola persona entregar software de calidad empresarial sin la deuda técnica habitual.
+- **Lo que es**: Guía práctica para usar IA con evidencia real (commits, tests).
+- **Para quién**: Desarrolladores que necesitan mover funciones en horas, no semanas.
+- **Cómo**: Plan → Prompt → Evidencia.
+
 ## Contents
 - [Philosophy](#philosophy)
 - [Repository structure](#repository-structure)

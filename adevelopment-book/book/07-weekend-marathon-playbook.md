@@ -10,7 +10,8 @@ The cadence worked because the 50/50 rule was baked in. Half the time was creati
 Not long phases; **micro-sprints of 1–2 hours** chained with discipline.
 
 ## Plan A only
-If something fails, fix it immediately, document it, and update the baseline. There is no Plan B because the learning is captured in the same loop.
+## Plan A only
+If something fails, fix it immediately, document it, and update the baseline. There is no Plan B because the learning is captured in the same loop. **Why?** Plan B ("we'll fix it in staging") is where debt hides. By stopping the line, you ensure the cost of quality is paid now, when it is cheapest, not later.
 
 ## Weekend flow
 - Friday night: choose one production-ready feature, narrow the scope, and collect baseline links/prompts.

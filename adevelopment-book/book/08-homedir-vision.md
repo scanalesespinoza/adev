@@ -12,6 +12,14 @@ Quality and value are proven by signals, not claims: adherence to baseline, succ
 - Public signals: CI and release badges as visible proof of quality gates.
 - Resource lifecycle: initial AI/infra rampage followed by steady-state frugality once quality is proven.
 
+## Case Study: The Quest Board
+The "Quest Board" feature (gamified tasks) was built in a single 4-hour weekend block.
+1. **Plan**: Define "Quests" as simple YAML files (no DB schema change).
+2. **Prompt**: "Create a parser for quest.yaml and a read-only UI. Baseline: Use existing `styles.css`."
+3. **Verify**: Added 3 unit tests for the parser and a UI walkthrough.
+4. **Evidence**: Commit linked to the "Gamification" roadmap node.
+Result: A major feature shipped with 0 database migrations and 100% test coverage in half a day.
+
 **Key takeaway:** Proof of contribution is measurable and aligned: baseline adherence, short-loop success, quality density, and traceability presented openly.
 
 **Apply in 20 minutes:** Sketch your public profile: list 3 metrics you can show today and the links (commits/CI) you’ll surface for each.

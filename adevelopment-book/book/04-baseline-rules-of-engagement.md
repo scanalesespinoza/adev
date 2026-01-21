@@ -27,7 +27,11 @@ A repository or folder of rules and blueprints everyone follows. It defines how 
 - Keep a single, simple layout; reuse the same components/styles instead of scattered scripts or ad-hoc CSS.
 - Feature flags must preserve spacing/typography when OFF; new UI behind flags must not degrade the default path.
 - Keep copy consistent (one language per screen) and avoid inline hacks that break look & feel across pages.
+- Keep copy consistent (one language per screen) and avoid inline hacks that break look & feel across pages.
 - Add a quick UI walkthrough to the 50/50 check when a prompt touches the interface.
+
+### Failure Story: The Frankenstein UI
+Early in HomeDir, I let the AI generate "modern" components without a style guide. By Day 3, I had Bootstrap buttons, Tailwind grids, and raw CSS flexboxes fighting on the same page. It was unmaintainable. I stopped the line, stripped everything back to a single `styles.css`, and wrote the "UI Consistency Guardrail" into the baseline. Now, the AI must read `styles.css` before generating any markup.
 
 ## Frugality Guardrails
 - No heavy middleware or expensive managed services unless the baseline lists them explicitly.

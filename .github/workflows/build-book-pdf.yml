@@ -54,6 +54,7 @@ jobs:
             adevelopment-book/book/appendices/A-templates.md
             adevelopment-book/book/appendices/B-glossary.md
             adevelopment-book/book/appendices/C-checklists.md
+            adevelopment-book/book/appendices/D-further-reading.md
           )
           pandoc "${FILES[@]}" \
             -o adevelopment-book/dist/adev-book.pdf \

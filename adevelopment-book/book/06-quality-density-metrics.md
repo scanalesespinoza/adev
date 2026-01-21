@@ -25,6 +25,9 @@ Measure the "distance to value": how much risk and maintenance do you add per un
 - Spend 50% on creation and 50% on verification (Build → Run → Walkthrough).
 - Quality is not a phase; it is half the work. Use this split to counter AI "noise" and debt.
 
+## Why this works in 2026
+In 2026, generating code is free. The bottleneck is *reading* and *trusting* it. Quality Density solves the trust crisis. By forcing a 50/50 split, you reject the "flood" of AI code and only commit what you can personally verify. It turns the AI from a firehose into a precision laser.
+
 ## Frugal architect stance
 - Use scarcity as a precision filter: if rollback is expensive, Plan A must be correct.
 - Rampage then steady state: allow initial AI/infra spike to build, then tighten costs once quality is proven.
