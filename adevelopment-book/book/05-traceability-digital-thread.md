@@ -1,10 +1,10 @@
 # The digital thread
 
-At the start of EvenFlow, every change could have been lost in the AI flood: prompts spitting files, behaviors drifting, and no proof of how we got there. Traceability turned that chaos into an audit trail the architect could trust. Day 1, the chain was explicit: feature → plan → prompt → commit/tests → baseline update. Day 45, the chain was muscle memory and the reason HomeDir could harden without fear.
+Traceability keeps the architect in control when AI output multiplies. From the first iteration, the chain must be explicit: feature → plan → prompt → commit/tests → baseline update. With that in place, drift is caught early, risky changes stay behind flags, and health checks confirm reality instead of guesses.
 
-When a prompt tried to “help” by adding hidden complexity, the trail caught it. The plan and persona were linked; the commit carried the evidence; the baseline logged the new guardrail. Flags kept risky flows off by default, and health checks stayed on to confirm reality, not guesses. Traceability was the contract that kept the AI honest and the architect in control.
+When a prompt tries to “help” by adding hidden complexity, the trail surfaces it. The plan and persona are linked; the commit carries the evidence; the baseline logs the new guardrail. Traceability is the contract that keeps the AI honest and the architect accountable.
 
-The payoff: when the platform went live behind flags, there was a clear path to roll back, prove intent, and show value. No “just trust me” — the digital thread was the proof of contribution.
+The payoff: when work goes live behind flags, there is a clear path to roll back, prove intent, and show value. No “just trust me” — the digital thread is the proof of contribution.
 
 ## Traceability chain
 Product Feature → Atomic Plan → Prompt → Commit/Test Evidence.
@@ -20,19 +20,6 @@ A simple timeline works: `[10:00] Define feature → [10:15] Prompt with baselin
 - Every iteration references its roadmap node, expected behavior, and test/verification plan.
 - This prevents late-stage conflicts and protects previously fixed behaviors when new prompts run.
 - Include persona links in each plan and prompt to keep the "why" explicit, not just the "what."
-
-## Worked example (from HomeDir)
-- **Roadmap node (Why):** Persona wants a secure Google sign-in to join quests and link identity (see HomeDir docs → OAuth).
-- **Plan (What):** Build Google OAuth flow with feature flag, keep GitHub link intact, no staging detour (Live Alpha behind flag).
-- **Prompt (How):** "Add Google OAuth login using existing Simple Machine stack; reuse session/cache layer; add health check; respect baseline security."
-- **Quality gates:** Build & tests on quarkus-app, security checks, manual UI check on `/login` with flag on, no regression on GitHub link.
-- **Evidence:** Commit + CI run showing OAuth endpoints, flag configuration, and passing tests; baseline updated with the new guardrail.
-- **Health checks:** Liveness `/q/health/live` and readiness `/health/ready` (10s probes, failureThreshold 3) included in the same change to align with Simple Machine standards.
-
-## Decision history (template + examples)
-- **Template:** Date → Decision → Options considered → Rationale (persona + baseline) → Evidence (commit/CI/flag) → Follow-up guardrail.
-- **Example 1:** Live Alpha for OAuth behind a feature flag instead of staging. *Rationale:* avoid drift and keep GitHub login stable. *Evidence:* plan → prompt → commit with flag + probes; baseline updated. *Follow-up:* add UI walkthrough to the 50/50 when touching `/login`.
-- **Example 2:** Health checks baked into every deploy (liveness `/q/health/live`, readiness `/health/ready`). *Rationale:* Simple Machine standards and “no dark launches.” *Evidence:* probes enabled with 10s interval, failureThreshold 3 in manifests; baseline rule added. *Follow-up:* keep probes on during rollbacks to confirm service health.
 
 ## Breadcrumbs / Pathfinder layout
 - **Governance (baseline):** the DNA—non-negotiables and constraints (e.g., no heavy middleware, SSR-first).

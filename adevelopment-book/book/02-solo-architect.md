@@ -1,12 +1,12 @@
 # From team member to orchestrator
 
-Before A-Dev, being a senior often meant drowning in AI output: dozens of files you never touched, a UI that drifted because a prompt overreached, and the uneasy feeling that you were a copy-paste operator instead of the owner of the system. EvenFlow forced a different posture: one architect, one clear voice, and a living baseline every prompt had to obey.
+Before A-Dev, being a senior often meant drowning in AI output: dozens of files you never touched, a UI that drifted because a prompt overreached, and the uneasy feeling that you were a copy-paste operator instead of the owner of the system. A-Dev forces a different posture: one architect, one clear voice, and a living baseline every prompt must obey.
 
-On day 1 of EvenFlow, there was no team to delegate to—only a "ghost team" in the architect’s head. Each role (definition, blueprint, implementation, QA) had to read the baseline first: no heavy middleware, SSR-first, flags on by default, health checks always on. Every time the AI suggested a shortcut that increased coordination tax, the answer was a disciplined "no."
+When you run with a "ghost team" in your head, each role (definition, blueprint, implementation, QA) reads the baseline first: no heavy middleware, SSR-first, flags on by default, health checks always on. Every time the AI suggests a shortcut that increases coordination tax, the answer is a disciplined "no."
 
-Midway, the shift became tangible. The value was no longer keystrokes; it was orchestration. The architect directed the AI like a crew: past-you as QA demanding edge cases, past-you as architect insisting on scalability, past-you as PM aligning the feature to the persona. The AI did the excavation; the human decided where to dig and when to stop the line.
+The value is not keystrokes; it is orchestration. The architect directs the AI like a crew: past-you as QA demanding edge cases, past-you as architect insisting on scalability, past-you as PM aligning the feature to the persona. The AI does the excavation; the human decides where to dig and when to stop the line.
 
-By day 45, the payoff was real: auth, speakers, schedule, and notifications were live behind flags, probes green, rollback trivial. That outcome came not from typing faster, but from translating lived experience into constraints and enforcing them without compromise. The orchestrator owned the system again.
+The payoff comes from translating lived experience into constraints and enforcing them without compromise. The orchestrator owns the system again.
 
 ## The psychological shift
 The leap is not only technical: you move from **typing** to **directing**. You stop measuring value by lines written and start measuring by how you orchestrate the system.
