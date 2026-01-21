@@ -1,27 +1,17 @@
-# HomeDir as Proof of Contribution
+# Proof of contribution and alignment
 
-## Vision
-A public profile that connects:
-- Integrations (Google/GitHub).
-- Metrics.
-- Contributions (code + content + leadership).
+An A-Dev architect leads a virtual team: AI roles act fast, the human sets culture, baseline, and evidence. The resume is no longer promises; it is a visible chain of work, tests, and decisions that anyone can verify.
 
-The future resume is evidence, not promises.
+The repository is the Pathfinder. It encodes how the virtual team behaves: baseline rules, two-level plans (roadmap → iteration), prompts that cite personas and constraints, and a decision log that shows why something changed. This structure prevents feature drift, protects past fixes, and keeps every iteration aligned to the product and the people it serves.
 
-## Metrics that matter
-- **Baseline adherence:** did the work follow structure, security, and tests from the first commit?
-- **Iteration success rate:** how often Plan A closed inside the hour without deferring debt.
-- **Quality density:** value delivered versus LOC, supported by tests and low complexity.
-- **Traceability:** visible links from feature → prompt → commit/tests.
-- **Infrastructure simplicity:** preference for simple machines and data "small spaces" to reduce abstraction tax and protect sensitive info.
-- **Private sovereignty in public space:** build logic in open source while isolating sensitive data on controlled hardware.
-- **Rampage vs steady state:** show how initial AI/infra spikes convert into a low-cost, proven steady state over time.
+Quality and value are proven by signals, not claims: adherence to baseline, success rate of 1–2h iterations, quality density (simple, tested code), and traceability from feature to prompt to commit/tests. Infrastructure stays simple (flags, probes, small spaces) to reduce abstraction tax and make security predictable.
 
 ## What to showcase
 - Core flows (login, community, projects) with their evidence timelines.
 - CI results and commits linked directly to the feature they serve.
-- Public signals: CI (pr-check workflow) and release badges in Homedir docs act as visible proof of quality gates.
+- Public signals: CI and release badges as visible proof of quality gates.
+- Resource lifecycle: initial AI/infra rampage followed by steady-state frugality once quality is proven.
 
-**Key takeaway:** Proof of contribution is measurable: baseline adherence, iteration success, quality density, and traceability presented publicly.
+**Key takeaway:** Proof of contribution is measurable and aligned: baseline adherence, short-loop success, quality density, and traceability presented openly.
 
-**Apply in 20 minutes:** Sketch your HomeDir profile: list 3 metrics you can show today and the links (commits/CI) you’ll surface for each.
+**Apply in 20 minutes:** Sketch your public profile: list 3 metrics you can show today and the links (commits/CI) you’ll surface for each.
