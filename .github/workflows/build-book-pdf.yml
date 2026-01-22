@@ -49,6 +49,10 @@ jobs:
             adevelopment-book/book/06-quality-density-metrics.md
             adevelopment-book/book/07-weekend-marathon-playbook.md
             adevelopment-book/book/08-homedir-vision.md
+            docs/case-studies/evenflow.md
+            docs/case-studies/quest-board.md
+            docs/case-studies/live-alpha-flags.md
+            docs/case-studies/rollback.md
             adevelopment-book/book/09-faq-objections.md
             adevelopment-book/book/10-closing.md
             adevelopment-book/book/appendices/A-templates.md

@@ -1,6 +1,6 @@
 # Front Matter
 
-I> ### Status of this version (v1.0.1)
+I> ### Status of this version (v1.0.2)
 I> This is a foundational white paper: definition of the A-Dev framework and the EvenFlow case study. It is not the final manual. As a beta reader, your feedback will shape the upcoming technical chapters.
 
 ## Purpose, audience, and honest promise
