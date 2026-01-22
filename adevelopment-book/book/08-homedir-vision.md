@@ -1,4 +1,4 @@
-# Proof of contribution and alignment
+# Vision: Proof of contribution and alignment
 
 An A-Dev architect leads a virtual team: AI roles act fast, the human sets culture, baseline, and evidence. The resume is no longer promises; it is a visible chain of work, tests, and decisions that anyone can verify.
 
