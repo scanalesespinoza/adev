@@ -1,4 +1,6 @@
-# EvenFlow: Frugal Live Alpha in 6 Weeks
+# EvenFlow: Frugal Live Alpha in 6 Weeks (reference case)
+
+> This case is a reference for readers who want a concrete example. The A-Dev framework stands on its own; you can skip this if you only need the principles and starter kit.
 
 ## Context
 - Need: full event platform for a real group (auth, speakers, schedule, notifications) in ~6 weeks, solo.
