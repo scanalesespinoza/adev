@@ -1,5 +1,6 @@
 # Release Checklist (publishing)
 - [x] Update manuscript (chapters, appendices, README, QUALITY) with latest edits.
+- [ ] Confirm `Book.txt` and the PDF workflow still reference the same manuscript order.
 - [ ] Regenerate PDF release and ensure AI disclosure is present.
 - [x] Case studies: ensure references and links are valid.
 - [x] Comp titles: updated and complete.
