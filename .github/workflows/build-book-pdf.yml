@@ -10,11 +10,13 @@ on:
       - "adevelopment-book/book/**"
       - "adevelopment-book/book/appendices/**"
       - ".github/workflows/build-book-pdf.yml"
+      - "adevelopment-book/README.md"
   pull_request:
     paths:
       - "adevelopment-book/book/**"
       - "adevelopment-book/book/appendices/**"
       - ".github/workflows/build-book-pdf.yml"
+      - "adevelopment-book/README.md"
   workflow_dispatch:
 
 permissions:
@@ -33,34 +35,27 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended lmodern
 
+      - name: Validate manuscript manifest
+        run: |
+          test -f adevelopment-book/book/Book.txt
+          test -f adevelopment-book/book/title.txt
+          while IFS= read -r entry; do
+            [ -z "$entry" ] && continue
+            test -f "adevelopment-book/book/${entry}.md"
+          done < adevelopment-book/book/Book.txt
+
       - name: Build consolidated PDF
         run: |
           mkdir -p adevelopment-book/dist
           BOOK_VERSION="${GITHUB_REF_NAME:-dev}"
-          FILES=(
-            adevelopment-book/book/00-title-page.md
-            adevelopment-book/book/00-front-matter.md
-            adevelopment-book/book/INDEX.md
-            adevelopment-book/book/01-adev-manifesto.md
-            adevelopment-book/book/02-solo-architect.md
-            adevelopment-book/book/03-atomic-iterations.md
-            adevelopment-book/book/04-baseline-rules-of-engagement.md
-            adevelopment-book/book/05-traceability-digital-thread.md
-            adevelopment-book/book/06-quality-density-metrics.md
-            adevelopment-book/book/07-weekend-marathon-playbook.md
-            adevelopment-book/book/08-homedir-vision.md
-            docs/case-studies/evenflow.md
-            docs/case-studies/quest-board.md
-            docs/case-studies/live-alpha-flags.md
-            docs/case-studies/rollback.md
-            adevelopment-book/book/09-faq-objections.md
-            adevelopment-book/book/10-closing.md
-            adevelopment-book/book/appendices/A-templates.md
-            adevelopment-book/book/appendices/B-glossary.md
-            adevelopment-book/book/appendices/C-checklists.md
-            adevelopment-book/book/appendices/D-further-reading.md
-          )
+          BOOK_TITLE="$(cat adevelopment-book/book/title.txt)"
+          mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book/Book.txt)
+          FILES=()
+          for entry in "${ENTRIES[@]}"; do
+            FILES+=("adevelopment-book/book/${entry}.md")
+          done
           pandoc "${FILES[@]}" \
+            --resource-path=adevelopment-book/book:adevelopment-book/book/resources \
             -o adevelopment-book/dist/adev-book.pdf \
             --from markdown-yaml_metadata_block \
             --pdf-engine=xelatex \
@@ -71,7 +66,7 @@ jobs:
             -V header-includes="\\usepackage[none]{hyphenat}\\usepackage{ragged2e}\\RaggedRight" \
             --table-of-contents \
             --toc-depth=2 \
-            --metadata title="Augmented Development (A-Dev)" \
+            --metadata title="$BOOK_TITLE" \
             --metadata author="Sergio Sebastián Canales Espinoza" \
             --metadata date="Version ${BOOK_VERSION}" \
             -V hyphenate=false
