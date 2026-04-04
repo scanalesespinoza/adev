@@ -1,5 +1,7 @@
 # ADEV.md
 
+Upstream source of truth: `https://github.com/scanalesespinoza/adev`
+
 ## Mission
 A-Dev is not a traditional writing project. This repository is the empirical codification of model- and agent-assisted software delivery, grounded in repeatable evidence from real execution.
 
@@ -9,14 +11,15 @@ A-Dev is not a traditional writing project. This repository is the empirical cod
 3. Use Conventional Commits and keep each commit atomic.
 4. Do not mix framework doctrine, manuscript expansion, starter-kit changes, release mechanics, and website polish in the same PR unless the user explicitly requests batch delivery.
 5. Prefer new canonical assets over broad rewrites of stable files when codifying new lessons.
-6. Every framework claim must map to a repo asset, validated release flow, or real operational evidence from Homedir.
+6. Every framework claim must map to a repository asset, validated release flow, or real operational evidence from Homedir.
 7. Every failure worth remembering must become one of: a guardrail, a case study, a checklist item, or a starter-kit update.
-8. Keep public canonical content in English unless a bilingual mirror is explicitly required.
+8. English is the only valid language for committed repository content unless a bilingual mirror is explicitly required.
 9. If another person or agent is already changing a file locally, avoid parallel edits on that file unless coordination is explicit.
-10. Do not institutionalize guessed workflows. If the repo or evidence does not support a claim, mark it as a gap.
+10. Do not institutionalize guessed workflows. If the repository or evidence does not support a claim, mark it as a gap.
 11. Manual release cadence applies here too: do not assume every PR needs a tag or public release.
 12. Before commit, run the narrowest validation that proves the change is sound for its scope.
 13. If the user asks for batch delivery, multiple atomic iterations may live in one PR, but each stage still needs explicit validation and a rollback point.
+14. Any local branch that has already been merged into `main` must be deleted during cleanup; keep local branch state lean and remove merged work once it is no longer needed.
 
 ## Stage Model
 ### Stage 1: Canon
@@ -33,13 +36,14 @@ A-Dev is not a traditional writing project. This repository is the empirical cod
 
 ## Operating Flow
 1. Sync with `origin/main` and open a dedicated branch.
-2. Define the exact scope for the current stage/PR.
-3. Implement only repo-grounded assets for that scope.
+2. Define the exact scope for the current stage or PR.
+3. Implement only repository-grounded assets for that scope.
 4. Validate the changed surface.
 5. Commit atomically.
-6. Push branch.
+6. Push the branch.
 7. Open a PR that includes: summary, why, scope in/out, validation, follow-up stage, and rollback notes if relevant.
 8. Do not advance to the next stage PR until the current one is reviewed and stable.
+9. After merge verification, delete local branches already merged into `main` as part of routine cleanup.
 
 ## Evidence Rules
 1. Prefer proof chains of the form: incident -> decision -> guardrail -> reusable asset.
@@ -51,4 +55,4 @@ A-Dev is not a traditional writing project. This repository is the empirical cod
 ## Editorial Positioning
 1. Homedir is the proving ground. A-Dev is the transferable system.
 2. The book should not depend on private chat context to make sense.
-3. The strongest material in this repo is not abstract optimism; it is disciplined learning under failure, delivery pressure, and verification.
+3. The strongest material in this repository is not abstract optimism; it is disciplined learning under failure, delivery pressure, and verification.
