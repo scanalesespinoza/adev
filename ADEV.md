@@ -47,6 +47,9 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 34. If there is an active PRD or product roadmap, iterations must prioritize visible end-user value and avoid diverting scope toward internal tooling, release evidence, or operational layers that are outside the agreed product.
 35. Keep canonical public content understandable without requiring private chat context.
 36. The strongest material in this system is disciplined learning under failure, delivery pressure, and verification, not abstract optimism.
+37. Never store secrets, credentials, sensitive raw outputs, personal data, or company-specific data in durable knowledge, doctrine, handoffs, commits, issues, PRs, or agent memory. Record lessons generically and impersonally by default.
+38. Replace specific people, customers, employers, vendors, companies, environments, and private projects with neutral roles or sanitized descriptors unless the information is already intentionally public and strictly required for repository function.
+39. Apply KISS and repository housekeeping after every task. Remove temporary markdown files, scratch scripts, test manifests, generated probes, one-off notes, and other transient artifacts once their function is complete, or consolidate the useful content into canonical documentation, tests, scripts, or runbooks.
 
 ## Multi-Agent Collaboration
 
@@ -68,6 +71,28 @@ When working with multiple AI agents (local and remote) on the same repository:
 
 **Evidence:** scanales-kb/daily/2026-05-17.md - Multi-agent workflow established
 **Principle:** CI/CD practices apply to AI agents just as they do to human developers. Treat each agent as a team member that must sync, preserve local work, validate, and coordinate.
+
+## Privacy and Data Protection
+
+All documented work, evidence, code, commits, PRs, and knowledge base entries must protect sensitive information:
+
+1. **Never commit sensitive data**: No API keys, passwords, tokens, credentials, connection strings, or secrets in any repository, regardless of privacy settings.
+2. **Anonymize personal information**: Replace real names, email addresses, phone numbers, and personal identifiers with generic placeholders (e.g., "User A", "user@example.com").
+3. **Generalize company data**: Replace specific company names, client names, and proprietary information with generic descriptors (e.g., "Client X", "Enterprise customer", "Financial services company").
+4. **Sanitize domain-specific data**: Remove or generalize specific domain names, IP addresses, internal URLs, server names, and infrastructure details.
+5. **Abstract financial and business data**: Replace specific revenue numbers, costs, metrics, and business-sensitive data with ranges or generic descriptions (e.g., "high-traffic endpoint", "enterprise-scale deployment").
+6. **Protect intellectual property**: Do not include proprietary algorithms, trade secrets, or confidential business logic in public or shared documentation.
+7. **Use generic examples**: When documenting solutions, use fictional but realistic examples that convey the pattern without exposing real data.
+8. **Redact before commit**: Review all changes with `git diff` before commit to ensure no sensitive data slipped through.
+9. **Impersonal documentation**: Write all documentation, commit messages, and evidence in an impersonal, generic style that focuses on the pattern, not the specific instance.
+10. **Private repos are not exempt**: Even in private repositories, treat data protection as mandatory. Repository access can change, and habits formed in private repos affect public work.
+11. **Audit existing content**: If sensitive data is discovered in committed history, do not force-push to rewrite history. Instead, rotate the exposed credentials immediately and document the incident.
+12. **Template-based redaction**: For knowledge base entries, use templates that enforce generic, anonymized documentation from the start.
+
+**Principle:** Documentation captures transferable patterns, not sensitive specifics. Protect people, companies, and systems regardless of repository visibility.
+
+**Evidence:** scanales-kb/daily/2026-05-17.md - Privacy rule established
+**Enforcement:** All agents (human and AI) must follow these rules when creating commits, PRs, documentation, and knowledge base entries.
 
 ## Stage Model
 ### Stage 1: Canon
@@ -103,7 +128,8 @@ When working with multiple AI agents (local and remote) on the same repository:
 18. After approval and merge, verify the deployed behavior in production or the highest relevant target environment.
 19. After merge verification, delete local branches already merged into `main` as part of routine cleanup.
 20. Update handoff again with merge result, verification result, and cleanup when the repo uses a shared workspace model.
-21. If production fails, stop new iterations, revert or roll back to a stable version, and open a corrective PR with root cause and prevention.
+21. Remove or consolidate temporary artifacts created during the iteration before handoff, PR, or merge.
+22. If production fails, stop new iterations, revert or roll back to a stable version, and open a corrective PR with root cause and prevention.
 
 ## Evidence Rules
 1. Prefer proof chains of the form: incident -> decision -> guardrail -> reusable asset.
@@ -132,6 +158,8 @@ When working with multiple AI agents (local and remote) on the same repository:
 16. When an admin or public view derives summaries or statuses from optional codes, re-sanitize the value after each derived assignment and cover the exact production state in tests to avoid null-handling defects.
 17. Do not turn PR stabilization, production-promotion steps, or rollout tracking needs into product features unless there is an explicit business requirement.
 18. Production releases should not depend on a single container registry; keep at least one secondary registry operational for push and pull.
+19. When editing Helm charts or multi-document YAML manifests, verify that document separators (`---`) are present between each resource definition; omitting separators causes parsing failures and can generate user-reported production regressions. Validation must render or parse the final YAML as multiple documents, not only check that the file is syntactically readable.
+20. Temporary files are a repository liability after their diagnostic function ends. Scratch markdown, exploratory scripts, temporary manifests, generated checks, and one-off notes must be deleted or consolidated into canonical assets before the work is considered complete.
 
 ## Homedir Overlay
 - Homedir is the main proving ground for this doctrine.
