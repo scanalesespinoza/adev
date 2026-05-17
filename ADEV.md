@@ -156,6 +156,7 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 16. When an admin or public view derives summaries or statuses from optional codes, re-sanitize the value after each derived assignment and cover the exact production state in tests to avoid null-handling defects.
 17. Do not turn PR stabilization, production-promotion steps, or rollout tracking needs into product features unless there is an explicit business requirement.
 18. Production releases should not depend on a single container registry; keep at least one secondary registry operational for push and pull.
+19. When editing Helm charts or multi-document YAML manifests, verify that document separators (`---`) are present between each resource definition; omitting separators causes parsing failures and can generate user-reported production regressions.
 
 ## Homedir Overlay
 - Homedir is the main proving ground for this doctrine.
