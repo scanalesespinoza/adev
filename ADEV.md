@@ -49,6 +49,7 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 36. The strongest material in this system is disciplined learning under failure, delivery pressure, and verification, not abstract optimism.
 37. Never store secrets, credentials, sensitive raw outputs, personal data, or company-specific data in durable knowledge, doctrine, handoffs, commits, issues, PRs, or agent memory. Record lessons generically and impersonally by default.
 38. Replace specific people, customers, employers, vendors, companies, environments, and private projects with neutral roles or sanitized descriptors unless the information is already intentionally public and strictly required for repository function.
+39. Apply KISS and repository housekeeping after every task. Remove temporary markdown files, scratch scripts, test manifests, generated probes, one-off notes, and other transient artifacts once their function is complete, or consolidate the useful content into canonical documentation, tests, scripts, or runbooks.
 
 ## Multi-Agent Collaboration
 
@@ -127,7 +128,8 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 18. After approval and merge, verify the deployed behavior in production or the highest relevant target environment.
 19. After merge verification, delete local branches already merged into `main` as part of routine cleanup.
 20. Update handoff again with merge result, verification result, and cleanup when the repo uses a shared workspace model.
-21. If production fails, stop new iterations, revert or roll back to a stable version, and open a corrective PR with root cause and prevention.
+21. Remove or consolidate temporary artifacts created during the iteration before handoff, PR, or merge.
+22. If production fails, stop new iterations, revert or roll back to a stable version, and open a corrective PR with root cause and prevention.
 
 ## Evidence Rules
 1. Prefer proof chains of the form: incident -> decision -> guardrail -> reusable asset.
@@ -156,7 +158,8 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 16. When an admin or public view derives summaries or statuses from optional codes, re-sanitize the value after each derived assignment and cover the exact production state in tests to avoid null-handling defects.
 17. Do not turn PR stabilization, production-promotion steps, or rollout tracking needs into product features unless there is an explicit business requirement.
 18. Production releases should not depend on a single container registry; keep at least one secondary registry operational for push and pull.
-19. When editing Helm charts or multi-document YAML manifests, verify that document separators (`---`) are present between each resource definition; omitting separators causes parsing failures and can generate user-reported production regressions.
+19. When editing Helm charts or multi-document YAML manifests, verify that document separators (`---`) are present between each resource definition; omitting separators causes parsing failures and can generate user-reported production regressions. Validation must render or parse the final YAML as multiple documents, not only check that the file is syntactically readable.
+20. Temporary files are a repository liability after their diagnostic function ends. Scratch markdown, exploratory scripts, temporary manifests, generated checks, and one-off notes must be deleted or consolidated into canonical assets before the work is considered complete.
 
 ## Homedir Overlay
 - Homedir is the main proving ground for this doctrine.
