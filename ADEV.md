@@ -50,6 +50,7 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 37. Never store secrets, credentials, sensitive raw outputs, personal data, or company-specific data in durable knowledge, doctrine, handoffs, commits, issues, PRs, or agent memory. Record lessons generically and impersonally by default.
 38. Replace specific people, customers, employers, vendors, companies, environments, and private projects with neutral roles or sanitized descriptors unless the information is already intentionally public and strictly required for repository function.
 39. Apply KISS and repository housekeeping after every task. Remove temporary markdown files, scratch scripts, test manifests, generated probes, one-off notes, and other transient artifacts once their function is complete, or consolidate the useful content into canonical documentation, tests, scripts, or runbooks.
+40. Act as a librarian before adding durable content. Search existing sections and related files using grep, glob, or file structure review. If related content exists, consolidate into the existing asset rather than creating fragments. Create new entries only when content is genuinely distinct. Preserve clear structure, taxonomy, naming, and cross-references. Avoid semantic duplication, fragmentation, and scattered knowledge.
 
 ## Multi-Agent Collaboration
 
@@ -113,6 +114,7 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 3. Sync with `origin/main` or the agreed integration branch and open a dedicated branch with explicit scope.
 4. Define the exact scope for the current iteration, stage, or PR.
 5. Choose the delivery mode: default one-iteration-one-PR, or explicit batch delivery.
+5a. Before adding doctrine to ADEV or evidence to knowledge-base, search for related existing content to avoid duplication and maintain organization. Use grep for keywords, glob for file patterns, and review directory structure. Consolidate into existing assets when possible; create new files only when the content is truly distinct.
 6. Implement only the agreed scope for the iteration or current batch stage.
 7. For new features, endpoints, or APIs, use the incremental rollout sequence: hidden or unused -> integrated or consumed -> legacy cleanup or deprecation.
 8. In batch delivery mode, create a restore point at the start of the batch and maintain checkpoints by stage.
@@ -129,7 +131,8 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 19. After merge verification, delete local branches already merged into `main` as part of routine cleanup.
 20. Update handoff again with merge result, verification result, and cleanup when the repo uses a shared workspace model.
 21. Remove or consolidate temporary artifacts created during the iteration before handoff, PR, or merge.
-22. If production fails, stop new iterations, revert or roll back to a stable version, and open a corrective PR with root cause and prevention.
+22. Before adding doctrine, evidence, docs, scripts, or runbooks, search the likely local section and neighboring assets for similar content. Prefer extending or linking the canonical asset over creating a duplicate.
+23. If production fails, stop new iterations, revert or roll back to a stable version, and open a corrective PR with root cause and prevention.
 
 ## Evidence Rules
 1. Prefer proof chains of the form: incident -> decision -> guardrail -> reusable asset.
@@ -138,6 +141,8 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 4. Starter-kit assets should tell a practitioner what to do on day 0, in the first week, and before the first production release.
 5. Traceability matters: roadmap, doctrine, templates, runbooks, and releases should agree with each other.
 6. Multi-agent collaboration evidence should capture branch state, local dirty files, upstream divergence, integration decisions, and validation after sync.
+7. Knowledge organization matters: related lessons should live together, use stable names, and link to supporting evidence so future agents can search by topic before adding new content.
+7. Before adding new evidence or doctrine, act as librarian: search existing content for similar topics using grep and file structure review. Consolidate into existing entries to prevent fragmentation. New files should only be created when content is genuinely distinct and cannot be merged into an existing canonical asset.
 
 ## Operational Lessons Consolidated From Homedir
 1. If a rule, template, or automation contradicts the actual repository flow, fix the rule or documentation first before institutionalizing the error.
@@ -160,6 +165,7 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 18. Production releases should not depend on a single container registry; keep at least one secondary registry operational for push and pull.
 19. When editing Helm charts or multi-document YAML manifests, verify that document separators (`---`) are present between each resource definition; omitting separators causes parsing failures and can generate user-reported production regressions. Validation must render or parse the final YAML as multiple documents, not only check that the file is syntactically readable.
 20. Temporary files are a repository liability after their diagnostic function ends. Scratch markdown, exploratory scripts, temporary manifests, generated checks, and one-off notes must be deleted or consolidated into canonical assets before the work is considered complete.
+21. A repository is a library, not a pile of notes. Before adding content, classify it, search for related material, choose the canonical shelf, and avoid creating parallel fragments that future agents cannot reconcile.
 
 ## Homedir Overlay
 - Homedir is the main proving ground for this doctrine.
