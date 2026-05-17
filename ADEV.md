@@ -48,6 +48,26 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 35. Keep canonical public content understandable without requiring private chat context.
 36. The strongest material in this system is disciplined learning under failure, delivery pressure, and verification, not abstract optimism.
 
+## Multi-Agent Collaboration
+
+When working with multiple AI agents (local and remote) on the same repository:
+
+1. **Always pull before starting work**: Run `git pull --rebase` before beginning any task to sync with latest remote changes.
+2. **Check local changes before commit**: Run `git status` and `git diff` to verify what changed locally before staging.
+3. **Coordinate file-level edits**: If another agent (local or remote) is editing a file, avoid parallel changes unless explicitly coordinating.
+4. **Communicate state changes**: When completing work, update handoff files (`HANDOFF.md`, `LATEST.txt`, etc.) so other agents know what was done.
+5. **Verify before push**: Always check `git log` and `git diff origin/main` before pushing to ensure you're not overwriting recent work.
+6. **Use atomic commits**: Each commit should be self-contained and independently revertible in case of conflicts.
+7. **Pull before push**: Always `git pull --rebase` immediately before `git push` to catch any concurrent changes.
+8. **Resolve conflicts immediately**: If merge conflicts occur, resolve them before continuing with new work.
+9. **Document agent actions**: Mark which agent made changes (in commit messages or handoff notes) for traceability.
+10. **Validate after merge**: Run tests/validation after pulling remote changes to ensure integration didn't break anything.
+11. **Avoid force push**: Never use `git push --force` in shared branches unless coordinating with all active agents.
+12. **Lock critical operations**: For critical operations (releases, schema changes), establish a lock mechanism or coordination protocol.
+
+**Evidence:** scanales-kb/daily/2026-05-17.md - Multi-agent workflow established
+**Principle:** CI/CD practices apply to AI agents just as they do to human developers. Treat each agent as a team member that must sync, validate, and coordinate.
+
 ## Stage Model
 ### Stage 1: Canon
 - Convert operational evidence into reusable doctrine.
