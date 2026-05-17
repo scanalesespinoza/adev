@@ -47,6 +47,8 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 34. If there is an active PRD or product roadmap, iterations must prioritize visible end-user value and avoid diverting scope toward internal tooling, release evidence, or operational layers that are outside the agreed product.
 35. Keep canonical public content understandable without requiring private chat context.
 36. The strongest material in this system is disciplined learning under failure, delivery pressure, and verification, not abstract optimism.
+37. Never store secrets, credentials, sensitive raw outputs, personal data, or company-specific data in durable knowledge, doctrine, handoffs, commits, issues, PRs, or agent memory. Record lessons generically and impersonally by default.
+38. Replace specific people, customers, employers, vendors, companies, environments, and private projects with neutral roles or sanitized descriptors unless the information is already intentionally public and strictly required for repository function.
 
 ## Multi-Agent Collaboration
 
