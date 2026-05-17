@@ -52,21 +52,22 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 
 When working with multiple AI agents (local and remote) on the same repository:
 
-1. **Always pull before starting work**: Run `git pull --rebase` before beginning any task to sync with latest remote changes.
-2. **Check local changes before commit**: Run `git status` and `git diff` to verify what changed locally before staging.
-3. **Coordinate file-level edits**: If another agent (local or remote) is editing a file, avoid parallel changes unless explicitly coordinating.
-4. **Communicate state changes**: When completing work, update handoff files (`HANDOFF.md`, `LATEST.txt`, etc.) so other agents know what was done.
-5. **Verify before push**: Always check `git log` and `git diff origin/main` before pushing to ensure you're not overwriting recent work.
-6. **Use atomic commits**: Each commit should be self-contained and independently revertible in case of conflicts.
-7. **Pull before push**: Always `git pull --rebase` immediately before `git push` to catch any concurrent changes.
-8. **Resolve conflicts immediately**: If merge conflicts occur, resolve them before continuing with new work.
-9. **Document agent actions**: Mark which agent made changes (in commit messages or handoff notes) for traceability.
-10. **Validate after merge**: Run tests/validation after pulling remote changes to ensure integration didn't break anything.
-11. **Avoid force push**: Never use `git push --force` in shared branches unless coordinating with all active agents.
-12. **Lock critical operations**: For critical operations (releases, schema changes), establish a lock mechanism or coordination protocol.
+1. **Start with situational awareness**: Inspect branch, remotes, working tree status, untracked files, local commits, and recent upstream changes before editing.
+2. **Fetch before work**: Run `git fetch` first. Pull, merge, or rebase only when the working tree is clean or local changes are safely committed, stashed, or otherwise preserved.
+3. **Never overwrite unreviewed local work**: Treat local edits from another human or AI agent as active work until proven otherwise.
+4. **Coordinate file-level edits**: If another agent is editing a file, avoid parallel changes unless coordination is explicit.
+5. **Use continuous integration discipline**: Keep branches small, integrate frequently, validate changed surfaces, and resolve conflicts promptly.
+6. **Communicate state changes**: When completing work, update handoff files (`HANDOFF.md`, `LATEST.txt`, etc.) so other agents know what was done.
+7. **Verify before push**: Check `git status`, `git log`, and the diff against the integration branch before pushing.
+8. **Pull before push only when safe**: Re-sync immediately before push, but do not run pull or rebase over a dirty or unexplained tree.
+9. **Use atomic commits**: Each commit should be self-contained and independently revertible in case of conflicts.
+10. **Document agent actions**: Mark which agent made changes in commit messages, PR descriptions, or handoff notes for traceability.
+11. **Validate after integration**: Run tests or focused validation after merging or rebasing remote changes to ensure integration did not break behavior.
+12. **Avoid force push**: Never use `git push --force` on shared branches unless coordinated with all active humans and agents.
+13. **Lock critical operations**: For releases, schema changes, migrations, and production promotions, establish a coordination protocol before execution.
 
 **Evidence:** scanales-kb/daily/2026-05-17.md - Multi-agent workflow established
-**Principle:** CI/CD practices apply to AI agents just as they do to human developers. Treat each agent as a team member that must sync, validate, and coordinate.
+**Principle:** CI/CD practices apply to AI agents just as they do to human developers. Treat each agent as a team member that must sync, preserve local work, validate, and coordinate.
 
 ## Stage Model
 ### Stage 1: Canon
@@ -82,25 +83,27 @@ When working with multiple AI agents (local and remote) on the same repository:
 - Strengthen external credibility without diluting the framework.
 
 ## Operating Flow
-1. Sync with `origin/main` and open a dedicated branch with explicit scope.
-2. Define the exact scope for the current iteration, stage, or PR.
-3. Choose the delivery mode: default one-iteration-one-PR, or explicit batch delivery.
-4. Implement only the agreed scope for the iteration or current batch stage.
-5. For new features, endpoints, or APIs, use the incremental rollout sequence: hidden or unused -> integrated or consumed -> legacy cleanup or deprecation.
-6. In batch delivery mode, create a restore point at the start of the batch and maintain checkpoints by stage.
-7. Validate the changed surface with the narrowest meaningful build, test, or review step.
-8. Commit atomically.
-9. Push the branch.
-10. Update the shared workspace handoff before requesting review or changing assistant or session, when that workspace model exists.
-11. Create or update the PR with summary, why, scope in/out, validation, production verification plan, rollback plan, and follow-up stage when relevant.
-12. Enable auto-merge when checks are ready and approval requirements are satisfied.
-13. Monitor PR validation and any required release or production workflows.
-14. Before merge or production promotion, run and record validations focused on scope, including targeted UI, i18n, backend, and operational tests when applicable.
-15. If a quality gate, readiness, or release-evidence need appears, solve it in the SDLC and delivery layer through scripts, CI, operational docs, runbooks, or shared handoff unless product scope explicitly says otherwise.
-16. After approval and merge, verify the deployed behavior in production or the highest relevant target environment.
-17. After merge verification, delete local branches already merged into `main` as part of routine cleanup.
-18. Update handoff again with merge result, verification result, and cleanup when the repo uses a shared workspace model.
-19. If production fails, stop new iterations, revert or roll back to a stable version, and open a corrective PR with root cause and prevention.
+1. Inspect branch, remotes, working tree status, local commits, and recent upstream changes before editing.
+2. Fetch from the relevant remote before work. Pull, merge, or rebase only when local changes are clean or safely preserved.
+3. Sync with `origin/main` or the agreed integration branch and open a dedicated branch with explicit scope.
+4. Define the exact scope for the current iteration, stage, or PR.
+5. Choose the delivery mode: default one-iteration-one-PR, or explicit batch delivery.
+6. Implement only the agreed scope for the iteration or current batch stage.
+7. For new features, endpoints, or APIs, use the incremental rollout sequence: hidden or unused -> integrated or consumed -> legacy cleanup or deprecation.
+8. In batch delivery mode, create a restore point at the start of the batch and maintain checkpoints by stage.
+9. Validate the changed surface with the narrowest meaningful build, test, or review step.
+10. Commit atomically.
+11. Push the branch.
+12. Update the shared workspace handoff before requesting review or changing assistant or session, when that workspace model exists.
+13. Create or update the PR with summary, why, scope in/out, validation, production verification plan, rollback plan, and follow-up stage when relevant.
+14. Enable auto-merge when checks are ready and approval requirements are satisfied.
+15. Monitor PR validation and any required release or production workflows.
+16. Before merge or production promotion, run and record validations focused on scope, including targeted UI, i18n, backend, and operational tests when applicable.
+17. If a quality gate, readiness, or release-evidence need appears, solve it in the SDLC and delivery layer through scripts, CI, operational docs, runbooks, or shared handoff unless product scope explicitly says otherwise.
+18. After approval and merge, verify the deployed behavior in production or the highest relevant target environment.
+19. After merge verification, delete local branches already merged into `main` as part of routine cleanup.
+20. Update handoff again with merge result, verification result, and cleanup when the repo uses a shared workspace model.
+21. If production fails, stop new iterations, revert or roll back to a stable version, and open a corrective PR with root cause and prevention.
 
 ## Evidence Rules
 1. Prefer proof chains of the form: incident -> decision -> guardrail -> reusable asset.
@@ -108,6 +111,7 @@ When working with multiple AI agents (local and remote) on the same repository:
 3. Case studies should show conflict, constraint, decision, evidence, and reusable lesson.
 4. Starter-kit assets should tell a practitioner what to do on day 0, in the first week, and before the first production release.
 5. Traceability matters: roadmap, doctrine, templates, runbooks, and releases should agree with each other.
+6. Multi-agent collaboration evidence should capture branch state, local dirty files, upstream divergence, integration decisions, and validation after sync.
 
 ## Operational Lessons Consolidated From Homedir
 1. If a rule, template, or automation contradicts the actual repository flow, fix the rule or documentation first before institutionalizing the error.
