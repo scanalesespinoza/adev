@@ -69,6 +69,28 @@ When working with multiple AI agents (local and remote) on the same repository:
 **Evidence:** scanales-kb/daily/2026-05-17.md - Multi-agent workflow established
 **Principle:** CI/CD practices apply to AI agents just as they do to human developers. Treat each agent as a team member that must sync, preserve local work, validate, and coordinate.
 
+## Privacy and Data Protection
+
+All documented work, evidence, code, commits, PRs, and knowledge base entries must protect sensitive information:
+
+1. **Never commit sensitive data**: No API keys, passwords, tokens, credentials, connection strings, or secrets in any repository, regardless of privacy settings.
+2. **Anonymize personal information**: Replace real names, email addresses, phone numbers, and personal identifiers with generic placeholders (e.g., "User A", "user@example.com").
+3. **Generalize company data**: Replace specific company names, client names, and proprietary information with generic descriptors (e.g., "Client X", "Enterprise customer", "Financial services company").
+4. **Sanitize domain-specific data**: Remove or generalize specific domain names, IP addresses, internal URLs, server names, and infrastructure details.
+5. **Abstract financial and business data**: Replace specific revenue numbers, costs, metrics, and business-sensitive data with ranges or generic descriptions (e.g., "high-traffic endpoint", "enterprise-scale deployment").
+6. **Protect intellectual property**: Do not include proprietary algorithms, trade secrets, or confidential business logic in public or shared documentation.
+7. **Use generic examples**: When documenting solutions, use fictional but realistic examples that convey the pattern without exposing real data.
+8. **Redact before commit**: Review all changes with `git diff` before commit to ensure no sensitive data slipped through.
+9. **Impersonal documentation**: Write all documentation, commit messages, and evidence in an impersonal, generic style that focuses on the pattern, not the specific instance.
+10. **Private repos are not exempt**: Even in private repositories, treat data protection as mandatory. Repository access can change, and habits formed in private repos affect public work.
+11. **Audit existing content**: If sensitive data is discovered in committed history, do not force-push to rewrite history. Instead, rotate the exposed credentials immediately and document the incident.
+12. **Template-based redaction**: For knowledge base entries, use templates that enforce generic, anonymized documentation from the start.
+
+**Principle:** Documentation captures transferable patterns, not sensitive specifics. Protect people, companies, and systems regardless of repository visibility.
+
+**Evidence:** scanales-kb/daily/2026-05-17.md - Privacy rule established
+**Enforcement:** All agents (human and AI) must follow these rules when creating commits, PRs, documentation, and knowledge base entries.
+
 ## Stage Model
 ### Stage 1: Canon
 - Convert operational evidence into reusable doctrine.
