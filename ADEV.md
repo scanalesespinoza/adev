@@ -37,7 +37,7 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 24. Automated marketing may use only real and verifiable product data; never invent numbers, milestones, or claims.
 25. Every integration with external publishing or automation channels must use secrets managed outside the repository, deduplication, channel rate limiting, and a global kill switch before any production scheduler is enabled.
 26. Every iteration, batch, or objective must end with an updated handoff in the shared workspace and an open or updated PR when that workspace model is part of the repository operating system.
-27. The shared workspace must remain consistent at relevant checkpoints, including `LATEST.txt`, `HANDOFF.md`, `state.json`, `SESSION-LOG.md`, and `DECISIONS.md` when those assets exist in the repo.
+27. The shared workspace must remain consistent at relevant checkpoints and must be refreshed at least once per hour during active work, including `LATEST.txt`, `HANDOFF.md`, `state.json`, `SESSION-LOG.md`, and `DECISIONS.md` when those assets exist in the repo or external context workspace.
 28. Before requesting approval, merge, or production promotion, complete the quality tasks needed to sustain high PR success: local validation, targeted tests, risk preflight, and updated verification notes.
 29. Every PR should be configured with auto-merge when the repository workflow supports it, unless an explicit documented blocker prevents it.
 30. Every change must finish in a PR at the close of an iteration or objective; do not leave completed work only in a local branch, local handoff, or chat transcript.
@@ -69,6 +69,7 @@ When working with multiple AI agents (local and remote) on the same repository:
 11. **Validate after integration**: Run tests or focused validation after merging or rebasing remote changes to ensure integration did not break behavior.
 12. **Avoid force push**: Never use `git push --force` on shared branches unless coordinated with all active humans and agents.
 13. **Lock critical operations**: For releases, schema changes, migrations, and production promotions, establish a coordination protocol before execution.
+14. **Refresh active context hourly**: During active work, update the repository context workspace at least once per hour and whenever changing agents, stopping work, opening a PR, merging, or changing production state. External context roots such as `E:\codex-context\<repo>` are valid when the repository does not carry its own handoff assets.
 
 **Evidence:** scanales-kb/daily/2026-05-17.md - Multi-agent workflow established
 **Principle:** CI/CD practices apply to AI agents just as they do to human developers. Treat each agent as a team member that must sync, preserve local work, validate, and coordinate.
@@ -121,7 +122,7 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 9. Validate the changed surface with the narrowest meaningful build, test, or review step.
 10. Commit atomically.
 11. Push the branch.
-12. Update the shared workspace handoff before requesting review or changing assistant or session, when that workspace model exists.
+12. Update the shared workspace handoff at least once per hour during active work and before requesting review or changing assistant or session, when that workspace model exists.
 13. Create or update the PR with summary, why, scope in/out, validation, production verification plan, rollback plan, and follow-up stage when relevant.
 14. Enable auto-merge when checks are ready and approval requirements are satisfied.
 15. Monitor PR validation and any required release or production workflows.
