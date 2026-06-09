@@ -3,9 +3,9 @@
 ## Issues found
 - **Depth**: Chapters are brief (~3.3k words total); need more examples and explanations.  
 - **Comp titles**: Missing list and differentiation.  
-- **Author bio**: Absent in manuscript; credibility relies on implied experience.  
+- **Author bio**: Present in front matter; could be cross-referenced more clearly in the manuscript.
 - **Audience clarity**: Broad description; no segmentation or pains.  
-- **Case studies**: Only one worked example (OAuth + health checks) referenced; more needed.  
+- **Case studies**: Present, but the manuscript still needs more in-chapter examples.
 - **Spanish edition**: Not present; only one-page pitch bilingual.  
 - **TOC/Navigation**: Long docs lack internal TOC.  
 - **Marketing/platform**: No concrete metrics or plan in-book.  
@@ -37,4 +37,4 @@
 - Starter kit download links (templates) highlighted.  
 - Permissions log initialized with any third-party items.  
 - Marketing plan with concrete channels and TODO metrics.  
-- Release PDF v0.3.x including above changes.
+- Release PDF v1.0.4 including the above alignment pass.

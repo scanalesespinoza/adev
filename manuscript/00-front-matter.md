@@ -1,7 +1,7 @@
 # Front Matter
 
-I> ### Status of this version (v1.0.3)
-I> This is the foundational A-Dev framework, ready for publication: principles, guardrails, and starter kit to operate as an Architect-Orchestrator. Feedback remains welcome to deepen future technical chapters.
+I> ### Status of this version (v1.0.4)
+I> This is the foundational A-Dev framework, ready for publication: principles, guardrails, and starter kit for practitioners to operate with confidence. Feedback remains welcome to deepen future technical chapters.
 
 ## Purpose, audience, and honest promise
 This short book is for practitioners who already build software and want to amplify their impact with AI without sacrificing quality. The promise is pragmatic: **slash human-hour cost** while keeping security, testing, and structure intact.
