@@ -15,7 +15,7 @@ Transparency is the defense: show the baseline, iteration traces, and quality me
 Short loops + baseline + "stop the line" when debt appears. Fix it in the same iteration and add the new guardrail.
 
 ## How you protect against burnout?
-It might seem like "solo architect" means working twice as hard. In reality, the AI does the heavy lifting (typing, boilerplate, refactoring). Your energy goes into the *decisions* and *verification*. It is high-focus work, but less draining than manually typing 5000 lines of boilerplate. The "stop the line" rule also prevents the "death march" of piling technical debt.
+It might seem like "practitioner-led orchestration" means working twice as hard. In reality, the AI does the heavy lifting (typing, boilerplate, refactoring). Your energy goes into the *decisions* and *verification*. It is high-focus work, but less draining than manually typing 5000 lines of boilerplate. The "stop the line" rule also prevents the "death march" of piling technical debt.
 
 ## How do you prove security/quality without a big team?
 Automate checks, require test evidence, and keep the plan → prompt → commit chain. Discipline substitutes headcount.

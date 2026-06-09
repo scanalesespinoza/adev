@@ -1,6 +1,6 @@
 # Reader Segments and Promise Map
 
-## Segment 1: Solo architect under delivery pressure
+## Segment 1: Practitioner under delivery pressure
 Pain:
 - too much AI output, not enough control
 - weak traceability
@@ -16,7 +16,7 @@ Pain:
 - sees quality drift between prompts and outcomes
 
 Promise:
-A-Dev reframes the role from implementer-only to governor of a virtual delivery team.
+A-Dev reframes the role from implementer-only to coordinator of a virtual delivery workflow.
 
 ## Segment 3: Small team lead with limited budget
 Pain:

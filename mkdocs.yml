@@ -1,6 +1,6 @@
 site_name: A-Dev Framework
 site_url: https://scanalesespinoza.github.io/adev/
-site_description: The A-Dev Framework (Augmented Development) is a discipline-first methodology for Solo Architects to orchestrate AI agents with living baselines, 50/50 quality cycles, and strict evidence trails.
+site_description: The A-Dev Framework (Augmented Development) is a discipline-first methodology for practitioners and teams to orchestrate AI-assisted delivery with living baselines, short quality cycles, and strict evidence trails.
 site_author: Sergio Sebastián Canales Espinoza
 
 repo_name: scanalesespinoza/adev
@@ -52,7 +52,7 @@ nav:
   - Home: index.md
   - Manifesto: book/01-adev-manifesto.md
   - The Framework:
-    - Solo Architect: book/02-solo-architect.md
+    - Role Shift: book/02-solo-architect.md
     - Atomic Iterations: book/03-atomic-iterations.md
     - Baseline Rules: book/04-baseline-rules-of-engagement.md
     - Traceability: book/05-traceability-digital-thread.md

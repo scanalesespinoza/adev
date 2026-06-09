@@ -51,6 +51,12 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 38. Replace specific people, customers, employers, vendors, companies, environments, and private projects with neutral roles or sanitized descriptors unless the information is already intentionally public and strictly required for repository function.
 39. Apply KISS and repository housekeeping after every task. Remove temporary markdown files, scratch scripts, test manifests, generated probes, one-off notes, and other transient artifacts once their function is complete, or consolidate the useful content into canonical documentation, tests, scripts, or runbooks.
 40. Act as a librarian before adding durable content. Search existing sections and related files using grep, glob, or file structure review. If related content exists, consolidate into the existing asset rather than creating fragments. Create new entries only when content is genuinely distinct. Preserve clear structure, taxonomy, naming, and cross-references. Avoid semantic duplication, fragmentation, and scattered knowledge.
+41. Technical debt is the silent accumulation of deferred decisions that progressively erodes prior work; continuously reduce it by re-evaluating design, structure, dependencies, and libraries whenever new change is introduced.
+42. Decision principles should define the what and why before the how: reduce the number of viable options enough to improve clarity, but preserve room for judgment, innovation, and context-specific implementation.
+43. Prefer process patterns over rigid step sequences: use steps and stages as reusable guidance, while allowing additional intermediate steps when they improve safety, quality, or coordination.
+44. Before handing work for review, validate the full end-user path as a real user would: run the actual build, follow the observable workflow, and confirm the promised behavior is functional in practice. Technical correctness alone is not sufficient for delivery.
+45. Canonical public content must stay vendor-neutral and industry-agnostic: prefer role-based, capability-based, and process-based language over tool, model, or company names unless the name is required by verifiable evidence or external citation.
+46. If a claim only holds for one vendor, one assistant, one product, or one sector, treat it as an example or evidence note rather than doctrine. Framework rules must transfer across tools, industries, and delivery contexts.
 
 ## Multi-Agent Collaboration
 

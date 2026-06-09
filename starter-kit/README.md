@@ -1,6 +1,6 @@
 # Starter Kit
 
-The A-Dev starter kit is the shortest path from doctrine to repeatable practice.
+The A-Dev starter kit is the shortest path from doctrine to repeatable practice across repos, teams, and industries.
 
 ## Adoption path
 - `DAY_0.md`: establish the minimum operating skeleton.

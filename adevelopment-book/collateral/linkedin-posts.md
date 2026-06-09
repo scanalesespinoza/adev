@@ -8,5 +8,5 @@
 6. Method: traceability plan → prompt → commit in action.
 7. Metrics: quality density vs. vanity metrics.
 8. Metrics: test/code ratio and complexity signals.
-9. Personal story: consultant to solo architect.
+9. Personal story: consultant to practitioner-orchestrator.
 10. Personal story: learning to "stop the line" with no Plan B.
