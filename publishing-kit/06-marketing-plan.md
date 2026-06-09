@@ -1,7 +1,7 @@
 # Marketing Plan (actions)
 
 ## Target persona
-- **Frustrated Visionary / Solo Product Engineer:** senior dev/architect who wants production-grade output with minimal coordination tax; values frugality and fast proof.
+- **Practitioners, maintainers, and team leads:** people who want production-grade output with minimal coordination tax; value frugality, portability, and fast proof.
 
 ## Channels & actions (TODO metrics)
 1. Talks/workshops for OSS and startup communities (e.g., OpenSource Santiago).  
@@ -12,14 +12,14 @@
 6. Offer a free “Baseline Review” for small teams; turn outcomes into testimonials.  
 7. Release assets: templates, checklists, first-session baseline, in English/Spanish.  
 8. Host live coding sessions showing 50/50 and Live Alpha behind flags.  
-9. Partner with DevRel/InnerSource programs to gamify real backlogs (OpenQuest/HomeDir).  
+9. Partner with DevRel/InnerSource programs to gamify real backlogs.
 10. Create a “Decision History” series: failures, rollbacks, and how baseline fixed them.  
 11. Add badges/releases prominently; share PDF updates and changelog.  
 12. Submit talks to conferences/meetups on AI discipline, quality density, and superagency.  
 13. Build a small Discord/Slack channel for A-Dev adopters; weekly office hours.  
 14. Provide a starter kit: BASELINE/constraints + decision log + quality checklist as a downloadable.
 15. Translate the one-page pitch and key README sections to Spanish (LATAM reach).
-16. Surface EvenFlow/HomeDir case study as “battle-tested” badge/link on README.
+16. Surface case studies as evidence badges or links on README.
 
 ## TODO metrics
 - Audience size per channel (newsletter subs, Discord members, LinkedIn followers).

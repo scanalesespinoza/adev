@@ -1,6 +1,6 @@
 # A-Dev Evidence Index
 
-This page maps A-Dev principles to concrete proof sources and canonical assets.
+This page maps A-Dev principles to concrete proof sources and canonical assets. The doctrine stays neutral; the evidence stays specific.
 
 Primary raw source stream: local Codex CLI work on Homedir from late 2025 through March 2026. Those transcripts are not the product; they are the evidence reservoir. The goal of this index is to surface the reusable doctrine extracted from that reservoir.
 

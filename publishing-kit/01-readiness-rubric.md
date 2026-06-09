@@ -2,8 +2,8 @@
 
 | Dimension | Score | Evidence / Notes |
 | --- | --- | --- |
-| Hook & promise clarity | 4 | Hook updated (Architect-Orchestrator, kill coordination tax with baseline/flags/50-50) in README and pitches EN/ES. Needs outcome line per chapter. |
-| Audience definition | 3 | Segments plus “Frustrated Visionary / Solo Product Engineer” in proposal/marketing. No audience sizing metrics yet. |
+| Hook & promise clarity | 4 | Hook updated for vendor-neutral AI-assisted delivery in README and pitches EN/ES. Needs outcome line per chapter. |
+| Audience definition | 3 | Segments plus neutral practitioner/team framing in proposal/marketing. No audience sizing metrics yet. |
 | Differentiation vs comp titles | 3 | Comp matrix added (Clean Code, Lean Startup, Pragmatic Programmer, etc.). Needs publication details/links and 1–2 AI-era titles. |
 | Structure & progression | 3 | TOC coherent; new breadcrumbs/pathfinder guidance. Transitions and depth can grow. |
 | Chapter quality (voice, examples, clarity) | 3 | Added EvenFlow case study, frugality guardrails, decision/breadcrumbs, letter to reader. More narrative polish and cross-references needed. |

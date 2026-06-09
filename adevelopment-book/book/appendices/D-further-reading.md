@@ -6,7 +6,7 @@
 
 ## Accelerate (Forsgren, Humble, Kim)
 * **Overlap**: Metrics, delivery performance, and scientific rigor.
-* **A-Dev Differs**: A-Dev focuses on the *Solo Architect/Small Team* context rather than enterprise DevOps transformations. It democratizes "Elite Performance" for individuals using AI.
+* **A-Dev Differs**: A-Dev focuses on the practitioner/small-team context rather than enterprise DevOps transformations. It democratizes high-leverage performance for individuals using AI.
 
 ## Team Topologies (Skelton & Pais)
 * **Overlap**: Organizing teams for flow.

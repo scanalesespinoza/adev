@@ -1,6 +1,6 @@
 # Minimal A-Dev Loop Example
 
-This example is intentionally small. It shows the minimum structure needed to run A-Dev in a new repository without depending on Homedir-specific context.
+This example is intentionally small. It shows the minimum structure needed to run A-Dev in a new repository without depending on a specific tool, model, or Homedir-specific context.
 
 ## Included files
 - `BASELINE.md`: operating rules.

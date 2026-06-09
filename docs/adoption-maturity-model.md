@@ -25,10 +25,10 @@ Signals:
 - operational incidents produce doctrine updates.
 
 ## Level 4: Evidence-driven scaling
-The framework becomes portable across initiatives because doctrine, starter-kit assets, and proof remain aligned.
+The framework becomes portable across initiatives and industries because doctrine, starter-kit assets, and proof remain aligned.
 
 Signals:
-- new repos can adopt the method quickly,
+- new repos and teams can adopt the method quickly,
 - optimization and prioritization are evidence-backed,
 - case studies and starter-kit rituals guide new work without hidden context.
 

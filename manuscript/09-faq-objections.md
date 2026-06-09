@@ -1,6 +1,6 @@
 # Tough objections (and honest answers)
 
-Objections are answered with evidence and culture. The A-Dev architect is not selling magic; they are enforcing baseline rules, short loops, and traceability so the virtual team behaves with consistency. When challenged, point to the audit trail, not opinions.
+Objections are answered with evidence and culture. The A-Dev practitioner is not selling magic; they are enforcing baseline rules, short loops, and traceability so the virtual team behaves with consistency. When challenged, point to the audit trail, not opinions.
 
 ## What if AI did the work?
 Traceability shows your role as Architect/QA: prompts, decisions, and commits are linked to personas and baseline rules. The AI executes; you govern.

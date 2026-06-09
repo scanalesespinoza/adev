@@ -22,8 +22,8 @@
 - Expand case studies: Quest Board, rollback, Live Alpha launch with flags.
 
 ## Style/consistency rules
-- Tone: clear, practical, low-fluff; first person when sharing experience; keep “Plan A,” “Baseline,” “Simple Machines,” “Broad Quality Cycle.”  
-- Use consistent terms: A-Dev, Solo Architect, Broad Quality Cycle (50/50), Living Baseline, Simple Machines, Plan A, Rampage → Steady State.  
+- Tone: clear, practical, low-fluff; first person when sharing experience; keep “Plan A,” “Baseline,” and “Simple Machines.”
+- Use consistent terms: A-Dev, practitioner role, quality cycle (50/50), Living Baseline, Simple Machines, Plan A, and steady-state language.
 - Keep AI disclosure note on title page/front matter.  
 - Use mermaid diagrams sparingly to illustrate flows.
 
