@@ -3,7 +3,7 @@
 Objections are answered with evidence and culture. The A-Dev practitioner is not selling magic; they are enforcing baseline rules, short loops, and traceability so the virtual team behaves with consistency. When challenged, point to the audit trail, not opinions.
 
 ## What if AI did the work?
-Traceability shows your role as Architect/QA: prompts, decisions, and commits are linked to personas and baseline rules. The AI executes; you govern.
+Traceability shows your role as practitioner/QA: prompts, decisions, and commits are linked to personas and baseline rules. The AI executes; you govern.
 
 ## Isn’t this replacing people?
 No. The same people produce more. A-Dev is about giving practitioners superpowers, not removing them. Culture and baseline make AI output coherent.

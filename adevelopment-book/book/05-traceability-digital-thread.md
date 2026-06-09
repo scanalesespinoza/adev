@@ -1,8 +1,8 @@
 # The digital thread
 
-Traceability keeps the architect in control when AI output multiplies. From the first iteration, the chain must be explicit: feature → plan → prompt → commit/tests → baseline update. With that in place, drift is caught early, risky changes stay behind flags, and health checks confirm reality instead of guesses.
+Traceability keeps the practitioner in control when AI output multiplies. From the first iteration, the chain must be explicit: feature → plan → prompt → commit/tests → baseline update. With that in place, drift is caught early, risky changes stay behind flags, and health checks confirm reality instead of guesses.
 
-When a prompt tries to “help” by adding hidden complexity, the trail surfaces it. The plan and persona are linked; the commit carries the evidence; the baseline logs the new guardrail. Traceability is the contract that keeps the AI honest and the architect accountable.
+When a prompt tries to “help” by adding hidden complexity, the trail surfaces it. The plan and persona are linked; the commit carries the evidence; the baseline logs the new guardrail. Traceability is the contract that keeps the AI honest and the practitioner accountable.
 
 The payoff: when work goes live behind flags, there is a clear path to roll back, prove intent, and show value. No “just trust me” — the digital thread is the proof of contribution.
 

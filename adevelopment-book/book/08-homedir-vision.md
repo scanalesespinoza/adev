@@ -1,6 +1,6 @@
 # Vision: Proof of contribution and alignment
 
-An A-Dev architect leads a virtual team: AI roles act fast, the human sets culture, baseline, and evidence. The resume is no longer promises; it is a visible chain of work, tests, and decisions that anyone can verify.
+An A-Dev practitioner leads a virtual team: AI roles act fast, the human sets culture, baseline, and evidence. The profile is no longer promises; it is a visible chain of work, tests, and decisions that anyone can verify.
 
 The repository is the Pathfinder. It encodes how the virtual team behaves: baseline rules, two-level plans (roadmap → iteration), prompts that cite personas and constraints, and a decision log that shows why something changed. This structure prevents feature drift, protects past fixes, and keeps every iteration aligned to the product and the people it serves.
 
@@ -10,7 +10,7 @@ Quality and value are proven by signals, not claims: adherence to baseline, succ
 - Core flows (login, community, projects) with their evidence timelines.
 - CI results and commits linked directly to the feature they serve.
 - Public signals: CI and release badges as visible proof of quality gates.
-- Resource lifecycle: initial AI/infra rampage followed by steady-state frugality once quality is proven.
+- Resource lifecycle: initial AI/infra build-out followed by steady-state frugality once quality is proven.
 
 ## Case Study: The Quest Board
 The "Quest Board" feature (gamified tasks) was built in a single 4-hour weekend block.

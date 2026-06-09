@@ -37,4 +37,4 @@
 - Starter kit download links (templates) highlighted.  
 - Permissions log initialized with any third-party items.  
 - Marketing plan with concrete channels and TODO metrics.  
-- Release PDF v1.0.4 including the above alignment pass.
+- Release PDF v1.0.5 including the above alignment pass.

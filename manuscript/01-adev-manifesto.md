@@ -1,11 +1,11 @@
 # A-Dev Manifesto
 
-The AI era feels like standing in front of a river that just overflowed: thousands of lines you did not type, patterns you did not intend, and a creeping sense that you are becoming a copy-paste senior who no longer owns the system. Speed without governance is a flood; the architect’s job is to build the dam and channel the force, not to outrun the water.
+The AI era feels like standing in front of a river that just overflowed: thousands of lines you did not type, patterns you did not intend, and a creeping sense that you are becoming a copy-paste senior who no longer owns the system. Speed without governance is a flood; the practitioner's job is to build the dam and channel the force, not to outrun the water.
 
-A-Dev exists to make that governance repeatable: the architect keeps authority, the AI supplies force, and the baseline encodes the rules so the system cannot drift. Clear prompts, a living baseline, and the 50/50 quality cycle are the tools to turn raw volume into controlled, verifiable delivery.
+A-Dev exists to make that governance repeatable: the practitioner keeps authority, the AI supplies force, and the baseline encodes the rules so the system cannot drift. Clear prompts, a living baseline, and the quality cycle are the tools to turn raw volume into controlled, verifiable delivery.
 
 ## Core idea
-A-Dev is about **giving people superpowers**, not replacing them. AI is the engine; the human remains the Architect, QA, and Quality Officer.
+A-Dev is about **giving people leverage**, not replacing them. AI is the engine; the human remains the practitioner, QA, and quality steward.
 
 ## Myth vs. reality
 - **Myth:** "AI writes your company in a weekend."
@@ -24,11 +24,11 @@ This is about democratization: people without a big-company budget can still bui
 
 ## 2026 principles (extended)
 - **Individual as Enterprise:** Superagency so one orchestrator can deliver the critical 1% of an area with team/enterprise impact.
-- **50/50 Quality Rule:** Half the time on creation, half on verification (build → run → walkthrough). Quality is not a phase.
+- **Quality Rule:** Half the time on creation, half on verification (build → run → walkthrough). Quality is not a phase.
 - **Traceability by Default:** Every task ties to a persona, roadmap path, and success behavior; nothing ships without evidence.
 - **Living Baseline:** Every error becomes a rule; expertise is encoded as code so the system never repeats the same mistake.
 - **Simple Machine Sovereignty:** Prefer simple, controllable infra and data isolation ("small spaces") over abstraction taxes.
-- **Resource Lifecycle:** Accept a GPU/AI-heavy ramp-up, then shift to a frugal steady state once quality is proven.
+- **Resource Lifecycle:** Accept an initial build-out of AI/infra, then shift to a frugal steady state once quality is proven.
 - **Parallel Onboarding:** New contributors create value on day 1 by following the baseline while AI handles syntax and checks.
 - **Company of Companies vision:** A single orchestrator scales from one product to a portfolio by codifying standards, traceability, and autonomy.
 

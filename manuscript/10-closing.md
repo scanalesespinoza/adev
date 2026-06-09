@@ -1,6 +1,6 @@
 # Closing
 
-A-Dev is a culture for a virtual team led by a single architect: baseline rules, 50/50 loops, and traceable evidence. AI brings force; you bring standards and intent. With that mix, individuals can deliver enterprise-grade results without enterprise bloat.
+A-Dev is a culture for a virtual team led by a practitioner: baseline rules, quality loops, and traceable evidence. AI brings force; you bring standards and intent. With that mix, individuals can deliver enterprise-grade results without enterprise bloat.
 
 ## Call to action
 Deliver one production-ready feature in a weekend, with baseline and full traceability. Treat it as proof of the culture you want the virtual team to follow.

@@ -1,6 +1,6 @@
 # Closing
 
-A-Dev is a culture for a virtual team led by a single architect: baseline rules, 50/50 loops, and traceable evidence. AI brings force; you bring standards and intent. With that mix, individuals can deliver enterprise-grade results without enterprise bloat.
+A-Dev is a culture for a virtual team led by a practitioner: baseline rules, quality loops, and traceable evidence. AI brings force; you bring standards and intent. With that mix, individuals can deliver enterprise-grade results without enterprise bloat.
 
 ## Call to action
 Deliver one production-ready feature in a weekend, with baseline and full traceability. Treat it as proof of the culture you want the virtual team to follow.
@@ -8,8 +8,8 @@ Deliver one production-ready feature in a weekend, with baseline and full tracea
 ## Human message
 Real democratization happens when rules, tools, and AI are accessible and disciplined. A-Dev is the operating system for that discipline: simple machines, living baseline, and reproducible procedures.
 
-## Future Vision (v1.0.0+)
-We are moving towards a world where one person can govern a portfolio of systems. The next phase of A-Dev will focus on **Multi-Agent Orchestration**: moving from a single "ghost team" to a fleet of specialized agents (QA, Sec, Doc) that run autonomously against your baseline. But the core remains: you are the Architect.
+## Future Vision
+We are moving towards a world where one person can govern a portfolio of systems. The next phase of A-Dev will focus on **multi-assistant orchestration**: moving from a single delivery workflow to a fleet of specialized assistants (QA, Sec, Doc) that run autonomously against your baseline. But the core remains: you are the practitioner in charge.
 
 **Key takeaway:** The path is simple: ship one feature with discipline, show the evidence, and repeat. That is how an individual leads at enterprise level.
 

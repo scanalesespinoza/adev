@@ -1,19 +1,19 @@
 # Inventory & Manuscript Snapshot
 
 ## Manuscript sources
-- Primary snapshot: release PDF `v1.0.4` → https://github.com/scanalesespinoza/adev/releases/download/v1.0.4/adev-book.pdf
+- Primary snapshot: release PDF `v1.0.5` → https://github.com/scanalesespinoza/adev/releases/download/v1.0.5/adev-book.pdf
 - Markdown sources: `adevelopment-book/book/*.md` and `adevelopment-book/book/appendices/*.md`
 - Collateral: `docs/case-studies/README.md`, `QUALITY.md`, `README.md` (philosophy/pitch), `blog/2026-06-adev-intro.md`
 
 ## Version
-- Tag: `v1.0.4`
+- Tag: `v1.0.5`
 - Date: 2026-06-09
 
 ## Word count (estimated)
 - Core chapters (`book/*.md`): ~2,744 words
 - Appendices: ~551 words
 - Total manuscript (md): ~3,300 words (short primer length)
-- PDF page count: ~26 pages (verify against the `v1.0.4` build)
+- PDF page count: ~26 pages (verify against the `v1.0.5` build)
 
 ## Chapter list (from filenames/INDEX)
 - 00 Title Page
