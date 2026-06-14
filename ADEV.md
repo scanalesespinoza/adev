@@ -12,6 +12,7 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 
 ## Non-Negotiable Rules
 1. Default mode: each iteration must ship from a dedicated branch and a single atomic PR with a clear objective.
+1. When a scoped issue exists, treat it as the source of truth for the implementation objective and branch directly from that issue into a dedicated feature branch and PR; do not invent a parallel task framing.
 2. Every change must land through a PR; direct pushes to `main` are not allowed.
 3. Commits must be atomic and use Conventional Commits.
 4. Do not mix refactor, feature, visual changes, infrastructure, doctrine updates, and release mechanics in the same PR unless batch delivery is explicitly requested.
