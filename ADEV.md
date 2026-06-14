@@ -12,6 +12,7 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 
 ## Non-Negotiable Rules
 1. Default mode: each iteration must ship from a dedicated branch and a single atomic PR with a clear objective.
+1. When a scoped issue exists, treat it as the source of truth for the implementation objective and branch directly from that issue into a dedicated feature branch and PR; do not invent a parallel task framing.
 2. Every change must land through a PR; direct pushes to `main` are not allowed.
 3. Commits must be atomic and use Conventional Commits.
 4. Do not mix refactor, feature, visual changes, infrastructure, doctrine updates, and release mechanics in the same PR unless batch delivery is explicitly requested.
@@ -40,23 +41,24 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 27. The shared workspace must remain consistent at relevant checkpoints and must be refreshed at least once per hour during active work, including `LATEST.txt`, `HANDOFF.md`, `state.json`, `SESSION-LOG.md`, and `DECISIONS.md` when those assets exist in the repo or external context workspace.
 28. Before requesting approval, merge, or production promotion, complete the quality tasks needed to sustain high PR success: local validation, targeted tests, risk preflight, and updated verification notes.
 29. Every PR should be configured with auto-merge when the repository workflow supports it, unless an explicit documented blocker prevents it.
-30. Every change must finish in a PR at the close of an iteration or objective; do not leave completed work only in a local branch, local handoff, or chat transcript.
-31. Every approved and merged PR to `main` must end with operational cleanup: verify the merge, update handoff if used, and remove no-longer-needed source branches.
-32. Any local branch already merged into `main` must be deleted during cleanup unless it is still attached to an active worktree or another documented hold condition.
-33. PR quality, release gates, and production-promotion validations belong to the SDLC and delivery operation, not to the user-facing product, unless explicitly scoped otherwise.
-34. If there is an active PRD or product roadmap, iterations must prioritize visible end-user value and avoid diverting scope toward internal tooling, release evidence, or operational layers that are outside the agreed product.
-35. Keep canonical public content understandable without requiring private chat context.
-36. The strongest material in this system is disciplined learning under failure, delivery pressure, and verification, not abstract optimism.
-37. Never store secrets, credentials, sensitive raw outputs, personal data, or company-specific data in durable knowledge, doctrine, handoffs, commits, issues, PRs, or agent memory. Record lessons generically and impersonally by default.
-38. Replace specific people, customers, employers, vendors, companies, environments, and private projects with neutral roles or sanitized descriptors unless the information is already intentionally public and strictly required for repository function.
-39. Apply KISS and repository housekeeping after every task. Remove temporary markdown files, scratch scripts, test manifests, generated probes, one-off notes, and other transient artifacts once their function is complete, or consolidate the useful content into canonical documentation, tests, scripts, or runbooks.
-40. Act as a librarian before adding durable content. Search existing sections and related files using grep, glob, or file structure review. If related content exists, consolidate into the existing asset rather than creating fragments. Create new entries only when content is genuinely distinct. Preserve clear structure, taxonomy, naming, and cross-references. Avoid semantic duplication, fragmentation, and scattered knowledge.
-41. Technical debt is the silent accumulation of deferred decisions that progressively erodes prior work; continuously reduce it by re-evaluating design, structure, dependencies, and libraries whenever new change is introduced.
-42. Decision principles should define the what and why before the how: reduce the number of viable options enough to improve clarity, but preserve room for judgment, innovation, and context-specific implementation.
-43. Prefer process patterns over rigid step sequences: use steps and stages as reusable guidance, while allowing additional intermediate steps when they improve safety, quality, or coordination.
-44. Before handing work for review, validate the full end-user path as a real user would: run the actual build, follow the observable workflow, and confirm the promised behavior is functional in practice. Technical correctness alone is not sufficient for delivery.
-45. Canonical public content must stay vendor-neutral and industry-agnostic: prefer role-based, capability-based, and process-based language over tool, model, or company names unless the name is required by verifiable evidence or external citation.
-46. If a claim only holds for one vendor, one assistant, one product, or one sector, treat it as an example or evidence note rather than doctrine. Framework rules must transfer across tools, industries, and delivery contexts.
+30. Create draft PRs only when scope is still unclear or the change intentionally needs staged review; if the scope comes from a complete issue, open the PR ready for review by default. When an issue is already scoped, treat that issue as locked for the active branch; if new work appears, split it into a new issue and a new PR instead of expanding the original branch.
+31. Every change must finish in a PR at the close of an iteration or objective; do not leave completed work only in a local branch, local handoff, or chat transcript.
+32. Every approved and merged PR to `main` must end with operational cleanup: verify the merge, update handoff if used, and remove no-longer-needed source branches.
+33. Any local branch already merged into `main` must be deleted during cleanup unless it is still attached to an active worktree or another documented hold condition.
+34. PR quality, release gates, and production-promotion validations belong to the SDLC and delivery operation, not to the user-facing product, unless explicitly scoped otherwise.
+35. If there is an active PRD or product roadmap, iterations must prioritize visible end-user value and avoid diverting scope toward internal tooling, release evidence, or operational layers that are outside the agreed product.
+36. Keep canonical public content understandable without requiring private chat context.
+37. The strongest material in this system is disciplined learning under failure, delivery pressure, and verification, not abstract optimism.
+38. Never store secrets, credentials, sensitive raw outputs, personal data, or company-specific data in durable knowledge, doctrine, handoffs, commits, issues, PRs, or agent memory. Record lessons generically and impersonally by default.
+39. Replace specific people, customers, employers, vendors, companies, environments, and private projects with neutral roles or sanitized descriptors unless the information is already intentionally public and strictly required for repository function.
+40. Apply KISS and repository housekeeping after every task. Remove temporary markdown files, scratch scripts, test manifests, generated probes, one-off notes, and other transient artifacts once their function is complete, or consolidate the useful content into canonical documentation, tests, scripts, or runbooks.
+41. Act as a librarian before adding durable content. Search existing sections and related files using grep, glob, or file structure review. If related content exists, consolidate into the existing asset rather than creating fragments. Create new entries only when content is genuinely distinct. Preserve clear structure, taxonomy, naming, and cross-references. Avoid semantic duplication, fragmentation, and scattered knowledge.
+42. Technical debt is the silent accumulation of deferred decisions that progressively erodes prior work; continuously reduce it by re-evaluating design, structure, dependencies, and libraries whenever new change is introduced.
+43. Decision principles should define the what and why before the how: reduce the number of viable options enough to improve clarity, but preserve room for judgment, innovation, and context-specific implementation.
+44. Prefer process patterns over rigid step sequences: use steps and stages as reusable guidance, while allowing additional intermediate steps when they improve safety, quality, or coordination.
+45. Before handing work for review, validate the full end-user path as a real user would: run the actual build, follow the observable workflow, and confirm the promised behavior is functional in practice. Technical correctness alone is not sufficient for delivery.
+46. Canonical public content must stay vendor-neutral and industry-agnostic: prefer role-based, capability-based, and process-based language over tool, model, or company names unless the name is required by verifiable evidence or external citation.
+47. If a claim only holds for one vendor, one assistant, one product, or one sector, treat it as an example or evidence note rather than doctrine. Framework rules must transfer across tools, industries, and delivery contexts.
 
 ## Multi-Agent Collaboration
 
