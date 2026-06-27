@@ -80,6 +80,7 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 47. If a claim only holds for one vendor, one assistant, one product, or one sector, treat it as an example or evidence note rather than doctrine. Framework rules must transfer across tools, industries, and delivery contexts.
 48. When resolving a scoped issue, follow a unified lifecycle: read the issue to lock implementation scope, sync with main, branch using a dedicated feature branch containing the issue ID (e.g. fix/issue-123), implement local validations, link the issue in the PR description (e.g. Closes #123) for automatic closure, and perform post-merge cleanup by deleting the source branch locally and on remote.
 49. Each change must live in a fresh dedicated branch; do not reuse a branch for a new change after it has been committed, merged, or superseded, even if the new change feels small.
+50. To resolve any problem, always execute the branch-per-change flow end to end: scope the issue, create a fresh branch, implement the fix, validate locally, open a PR, and merge only through the repository's normal PR path.
 
 ## Multi-Agent Collaboration
 
