@@ -149,13 +149,16 @@ All documented work, evidence, code, commits, PRs, and knowledge base entries mu
 
 ## Evidence Rules
 1. Prefer proof chains of the form: incident -> decision -> guardrail -> reusable asset.
-2. When using project-specific source material such as Homedir, extract the transferable principle; do not let project-specific detail replace doctrine.
-3. Case studies should show conflict, constraint, decision, evidence, and reusable lesson.
-4. Starter-kit assets should tell a practitioner what to do on day 0, in the first week, and before the first production release.
-5. Traceability matters: roadmap, doctrine, templates, runbooks, and releases should agree with each other.
-6. Multi-agent collaboration evidence should capture branch state, local dirty files, upstream divergence, integration decisions, and validation after sync.
-7. Knowledge organization matters: related lessons should live together, use stable names, and link to supporting evidence so future agents can search by topic before adding new content.
-7. Before adding new evidence or doctrine, act as librarian: search existing content for similar topics using grep and file structure review. Consolidate into existing entries to prevent fragmentation. New files should only be created when content is genuinely distinct and cannot be merged into an existing canonical asset.
+2. [Homedir](https://github.com/scanalesespinoza/homedir) is the canonical reference repository for A-Dev operational evidence and reference cases. Do not substitute a similar name, an execution transcript, or an unsourced summary for the repository source.
+3. Every factual claim, evidence record, or case-study statement derived from Homedir must link directly to the relevant source artifact in that repository, such as a file, commit, pull request, issue, release, or workflow run. Link to the repository root only when no more specific durable artifact exists, and state that limitation.
+4. Record the observed commit, tag, or date when a mutable Homedir artifact supports a claim. Never infer a result, metric, causal relationship, or adoption signal that the linked artifact does not establish; label unsupported material as a proposal or gap.
+5. When using Homedir source material, extract the transferable principle; do not let project-specific detail replace doctrine.
+6. Case studies should show conflict, constraint, decision, evidence, and reusable lesson.
+7. Starter-kit assets should tell a practitioner what to do on day 0, in the first week, and before the first production release.
+8. Traceability matters: roadmap, doctrine, templates, runbooks, and releases should agree with each other.
+9. Multi-agent collaboration evidence should capture branch state, local dirty files, upstream divergence, integration decisions, and validation after sync.
+10. Knowledge organization matters: related lessons should live together, use stable names, and link to supporting evidence so future agents can search by topic before adding new content.
+11. Before adding new evidence or doctrine, act as librarian: search existing content for similar topics using grep and file structure review. Consolidate into existing entries to prevent fragmentation. New files should only be created when content is genuinely distinct and cannot be merged into an existing canonical asset.
 
 ## Operational Lessons Consolidated From Homedir
 1. If a rule, template, or automation contradicts the actual repository flow, fix the rule or documentation first before institutionalizing the error.
