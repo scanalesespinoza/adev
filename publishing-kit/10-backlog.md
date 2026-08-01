@@ -33,7 +33,7 @@ Baseline: [repository and manuscript inventory](00-inventory.md), observed 2026-
 ### 4. Audit evidence links
 
 - **Scope:** map material book and publishing claims to current evidence or label them as proposals.
-- **Acceptance:** each audited claim has a working repository link, a named external source, or an explicit “proposal/not yet observed” label.
+- **Acceptance:** each Homedir-derived claim has a direct link to the relevant artifact in the canonical [Homedir repository](https://github.com/scanalesespinoza/homedir); other claims have a named source or an explicit “proposal/not yet observed” label.
 
 ## P1 — after P0
 

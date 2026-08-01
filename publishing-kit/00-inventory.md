@@ -2,6 +2,8 @@
 
 This inventory is a reproducible snapshot of tracked repository content. It does not claim readership, adoption, downloads, or other external outcomes.
 
+Repository counts below describe ADEV itself. They are not operational proof of the framework. The canonical proving-ground repository for operational evidence and reference cases is [Homedir](https://github.com/scanalesespinoza/homedir); any claim derived from it must link to the relevant Homedir artifact rather than rely on the project name alone.
+
 ## Snapshot basis
 
 - Observed on: 2026-08-01
@@ -15,7 +17,7 @@ This inventory is a reproducible snapshot of tracked repository content. It does
 | --- | --- | --- |
 | ADEV practice | [`ADEV.md`](../ADEV.md), [`framework/`](../framework/) | Doctrine, knowledge map, practices, definitions, and four Hardness documents |
 | Book | [`adevelopment-book/book/`](../adevelopment-book/book/), [`Book.txt`](../adevelopment-book/book/Book.txt) | 18 manifest entries; 5,967 words in manifest order |
-| Evidence | [`docs/evidence-index.md`](../docs/evidence-index.md), [`docs/case-studies/`](../docs/case-studies/) | Evidence index plus eight case-study files |
+| Evidence | [`docs/evidence-index.md`](../docs/evidence-index.md), [`docs/case-studies/`](../docs/case-studies/), [Homedir source repository](https://github.com/scanalesespinoza/homedir) | Evidence index plus eight case-study files; the files are an ADEV inventory, while Homedir is the canonical operational source |
 | Starter kit | [`starter-kit/`](../starter-kit/) | 11 tracked Markdown assets |
 | Publishing kit | [`publishing-kit/`](./) | 17 tracked Markdown assets, including this inventory, readiness rubric, and backlog |
 | Historical manuscript | [`manuscript/`](../manuscript/) | 19 tracked Markdown files; not the book build source |
@@ -57,5 +59,5 @@ $bookFiles = $manifest | ForEach-Object { "adevelopment-book/book/$_.md" }
 
 - The book source is the manifest-driven `adevelopment-book/book/` surface; `manuscript/` is a historical snapshot and should not be counted as additional current chapters.
 - Repository tags and the current `main` snapshot describe different points in time and must be reported separately.
-- External proof remains unmeasured. Any future adoption or audience claim requires a named data source and observation date.
+- External proof remains unmeasured. Any future adoption or audience claim requires a named data source and observation date. Any Homedir-derived claim also requires a direct link to its source artifact.
 - Current readiness work is tracked in the [publisher readiness rubric](01-readiness-rubric.md) and [editorial backlog](10-backlog.md).
