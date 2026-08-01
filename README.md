@@ -1,59 +1,70 @@
-# Augmented Development (A-Dev)
+# A-Dev
 
-**Hook:** A-Dev is a vendor-neutral framework for AI-assisted delivery. It helps practitioners govern AI work with baselines, small iterations, and evidence so quality does not depend on a specific tool or model.
+A-Dev is a vendor-neutral operating framework for model- and agent-assisted software delivery. It turns human expectations into explicit constraints, bounded capabilities, reviewable actions, and evidence-backed learning.
 
-Augmented Development shows how one practitioner or team, operating with clear rules, can orchestrate interchangeable AI assistants to deliver professional software in short cycles with evidence and quality. This repository bundles a short book and a reusable collateral kit for talks, posts, and workshops.
+This repository has two distinct products:
 
-## Quick summary
-- What it is: a practical guide to run AI-assisted delivery with discipline, evidence, and reviewable loops.
-- For whom: practitioners, maintainers, architects, and teams that need to move features without tool lock-in or avoidable debt.
-- How to use: apply the plan → prompt → implementation → tests → commit flow behind controlled guardrails and use the baseline to capture every failure as a new rule.
+1. **The A-Dev practice** defines the doctrine, knowledge, practices, definitions, adoption kit, evidence, and Hardness model used to govern agent-assisted work.
+2. **The A-Dev book** explains the practice through narrative chapters, examples, and publishing material.
 
-## Resumen en Español
-**Augmented Development (A-Dev)** es un marco de trabajo agnóstico al proveedor para que practicantes, mantenedores y equipos gobiernen el trabajo asistido por IA. No se trata de escribir más rápido, sino de orquestar con disciplina: reglas de línea base (Baseline), ciclos cortos de calidad y trazabilidad total. Permite entregar software con evidencia sin depender de una herramienta o modelo específico.
-- **Lo que es**: Guía práctica para usar IA con evidencia real (commits, tests).
-- **Para quién**: Practicantes y equipos que necesitan mover funciones en horas, no semanas.
-- **Cómo**: Plan → Prompt → Implementación → Evidencia.
+They support each other, but they are not the same artifact. The practice is normative and reusable. The book is explanatory and editorial.
 
-## Contents
-- [Philosophy](#philosophy)
-- [Repository structure](#repository-structure)
-- [Proof & downloads](#proof--downloads)
-- [A-Dev flow (mermaid)](#a-dev-flow-mermaid)
-- [Next steps](#next-steps)
+## Start here
 
-## Philosophy
-A-Dev is born from the need to be precise with limited resources. The method turns scarcity into discipline: fast iteration, a living baseline that blocks avoidable debt, and a steady state that is stable and affordable. We do not use AI to write more code; we use it to validate human intent better.
+| If you want to... | Go to |
+| --- | --- |
+| Understand or apply the A-Dev practice | [`framework/README.md`](framework/README.md) |
+| Define predictable, policy-conformant agent behavior | [`framework/hardness/README.md`](framework/hardness/README.md) |
+| Adopt A-Dev in a repository | [`starter-kit/README.md`](starter-kit/README.md) |
+| Review operational proof and case studies | [`docs/evidence-index.md`](docs/evidence-index.md) |
+| Read or build the book | [`book/README.md`](book/README.md) |
+| Prepare the book for publication | [`publishing-kit/00-inventory.md`](publishing-kit/00-inventory.md) |
+| Read the repository operating doctrine used by contributors and agents | [`ADEV.md`](ADEV.md) |
 
-The current AI wave rewards the teams that can preserve quality, traceability, and portability across tools and delivery contexts.
+## Repository architecture
 
-## Repository structure
-Everything lives in `adevelopment-book/`, organized as a compact book and ready-to-use resources:
-- `book/`: chapters and appendices.
-- `collateral/`: material for one-pagers, talks, videos, and posts.
-- `docs/case-studies/`: examples (OAuth, rollback, feature flags, EvenFlow → HomeDir).
-- `starter-kit/`: baseline + decision log + quality checklist (ready to start).
-See `adevelopment-book/README.md` for a guided tour.
+```text
+framework/           Practice map and normative Hardness foundation
+  doctrine/          Governing principles and non-negotiables
+  knowledge/         Explanations and accumulated reusable knowledge
+  practices/         Repeatable operating patterns and rituals
+  definitions/       Shared vocabulary and conceptual boundaries
+  kit/               Adoption assets and reusable templates
+  evidence/          Proof that supports framework claims
+  hardness/          Agent expectations, policies, precedence, and skills
 
-## Proof & downloads
-- Latest PDF: https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf
-- Pitch: `publishing-kit/03-one-page-pitch.md`
-- Starter kit: `starter-kit/` (baseline, decision log, 50/50 checklist)
-- Case studies: `docs/case-studies/` (OAuth, rollback, flags, EvenFlow → HomeDir)
-- 10-minute checklist: `adevelopment-book/book/appendices/C-checklists.md` (Starter kit in 10 minutes)
-
-## A-Dev flow (mermaid)
-```mermaid
-flowchart LR
-  R[Roadmap & Personas] --> B[Baseline 🛡️]
-  B --> P[Prompt & Plan]
-  P --> Q[50/50 Broad Quality]
-  Q --> A[Alpha/Live behind flags]
-  A --> E[Evidence: commit + CI + tests]
-  E --> B
+book/                Canonical entry point for the explanatory book
+adevelopment-book/   Current book sources and collateral (compatibility path)
+manuscript/          Historical manuscript snapshot pending consolidation
+starter-kit/         Copyable A-Dev adoption assets
+docs/                Documentation site pages and case studies
+publishing-kit/      Editorial proposal, readiness, rights, and planning
+blog/                Public articles derived from the framework
 ```
 
-## Next steps
-- Start with a small feature and apply disciplined create/verify loops.
-- Update the baseline with every failure so the next iteration is portable and repeatable.
-- Publish evidence: commits, CI, checks, and review notes as proof of quality.
+The directories under `framework/` are the conceptual shelves for the practice. During this first reorganization phase, their indexes route to existing canonical assets rather than duplicating or destructively moving content. The book build continues to use `adevelopment-book/` until its two manuscript trees are consolidated in a dedicated change.
+
+## The A-Dev loop
+
+```mermaid
+flowchart LR
+  E[Human expectation] --> B[Baseline and policies]
+  B --> S[Bounded skill or iteration]
+  S --> V[Verification and evidence]
+  V --> L[Decision and learning]
+  L --> B
+```
+
+A-Dev does not promise that agents never fail. It makes intended behavior explicit, limits the effect of failure, and turns validated lessons into maintainable rules, skills, tests, or evidence.
+
+## Current status
+
+The delivery practice, starter kit, case studies, and short book already exist. Hardness is an early framework extension: its definition, minimum policy model, and skill contract are now present, while behavioral evaluations, risk profiles, and broader external evidence remain future work.
+
+Canonical committed content is English. Project-specific material such as Homedir is evidence and a proving ground, not universal doctrine.
+
+## Public artifacts
+
+- [Latest book PDF](https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf)
+- [Documentation site](https://scanalesespinoza.github.io/adev/)
+- [Apache 2.0 license](LICENSE)

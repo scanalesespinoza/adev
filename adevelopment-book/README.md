@@ -1,5 +1,7 @@
 # A-Dev Book and Collateral
 
+> This directory contains the current build sources for the explanatory book. Start at [`book/README.md`](../book/README.md) for its canonical repository entry point, or [`framework/README.md`](../framework/README.md) for the normative A-Dev practice.
+
 This directory contains the core A-Dev book and the collateral used to extend it across talks, posts, and documentation.
 
 ## Book

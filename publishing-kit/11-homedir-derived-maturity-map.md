@@ -9,7 +9,7 @@ Date: 2026-03-12
   - `019b93b2-2ac1-7e61-b2d8-b66a03d685ce` (Jan-Mar 2026 product evolution, UX, multilingual, performance, CI)
   - `019b9489-d492-7603-87c6-614db4fbae67` (A-Dev book/productization work using Homedir as proof source)
 - Existing distilled artifacts:
-  - `docs/homedir-derived-guardrails.md`
+  - `ADEV.md` (Operational Lessons Consolidated From Homedir)
   - `docs/case-studies/*.md`
   - `publishing-kit/01-readiness-rubric.md`
   - `publishing-kit/09-manuscript-improvement-plan.md`
@@ -38,7 +38,7 @@ Current editorial verdict:
 | --- | --- | --- |
 | Framework clarity | 4.5 | Core language is coherent: baseline, 50/50, digital thread, simple machines, live alpha. |
 | Operational proof | 5.0 | Homedir conversations show repeated use in deployment, UX, CI, backup/DR, performance, multilingual, and product capability work. |
-| Baseline extraction | 4.0 | `docs/homedir-derived-guardrails.md` is a meaningful distillation, but still selective rather than comprehensive. |
+| Baseline extraction | 4.0 | The operational lessons in `ADEV.md` are a meaningful distillation, but still selective rather than comprehensive. |
 | Editorial depth | 3.0 | Manuscript remains short and still under-expresses the depth of the operating history. |
 | Case-study quality | 3.5 | Existing case studies are directionally right, but still summary-heavy and light on conflict/decision/outcome detail. |
 | Reusability for new teams | 3.5 | Starter kit exists, but the bridge from proof project to generic adoption can be stronger. |
@@ -82,7 +82,7 @@ The project is no longer just a manuscript folder. It has:
 That structure is a strong foundation for maturing from "ideas repo" to "operating system + book + evidence kit".
 
 ### 3. Guardrails are starting to emerge from reality
-The strongest recent improvement is the move from abstract principle to repo-grounded guardrail. `docs/homedir-derived-guardrails.md` is one of the best signals in the repo because it turns repeated operational pain into reusable discipline.
+The strongest recent improvement is the move from abstract principle to repo-grounded guardrail. The operational lessons in `ADEV.md` are one of the best signals in the repo because they turn repeated operational pain into reusable discipline.
 
 ### 4. A-Dev already has a distinctive angle
 The combination of:

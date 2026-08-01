@@ -2,6 +2,8 @@
 
 The A-Dev starter kit is the shortest path from doctrine to repeatable practice across repos, teams, and industries.
 
+This is the implementation kit for the [A-Dev practice](../framework/README.md). For agent capability design, also use the [Hardness skill contract](../framework/hardness/02-skill-contract-template.md).
+
 ## Adoption path
 - `DAY_0.md`: establish the minimum operating skeleton.
 - `FIRST_WEEK.md`: run the first evidence-backed iteration cycle.

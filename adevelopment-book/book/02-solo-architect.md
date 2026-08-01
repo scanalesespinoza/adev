@@ -2,7 +2,7 @@
 
 Before A-Dev, being a senior often meant drowning in AI output: dozens of files you never touched, a UI that drifted because a prompt overreached, and the uneasy feeling that you were a copy-paste operator instead of the owner of the system. A-Dev forces a different posture: one architect, one clear voice, and a living baseline every prompt must obey.
 
-When you run with a "ghost team" in your head, each role (definition, blueprint, implementation, QA) reads the baseline first: no heavy middleware, SSR-first, flags on by default, health checks always on. Every time the AI suggests a shortcut that increases coordination tax, the answer is a disciplined "no."
+When you run with a "ghost team" in your head, each role (definition, blueprint, implementation, QA) reads the baseline first: no heavy middleware, SSR-first, flags off by default until verified, health checks always on. Every time the AI suggests a shortcut that increases coordination tax, the answer is a disciplined "no."
 
 The value is not keystrokes; it is orchestration. The architect directs the AI like a crew: past-you as QA demanding edge cases, past-you as architect insisting on scalability, past-you as PM aligning the feature to the persona. The AI does the excavation; the human decides where to dig and when to stop the line.
 
