@@ -59,6 +59,7 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 45. Before handing work for review, validate the full end-user path as a real user would: run the actual build, follow the observable workflow, and confirm the promised behavior is functional in practice. Technical correctness alone is not sufficient for delivery.
 46. Canonical public content must stay vendor-neutral and industry-agnostic: prefer role-based, capability-based, and process-based language over tool, model, or company names unless the name is required by verifiable evidence or external citation.
 47. If a claim only holds for one vendor, one assistant, one product, or one sector, treat it as an example or evidence note rather than doctrine. Framework rules must transfer across tools, industries, and delivery contexts.
+48. Each change must live in a fresh dedicated branch; do not reuse a branch for a new change after it has been committed, merged, or superseded, even if the new change feels small.
 
 ## Multi-Agent Collaboration
 
