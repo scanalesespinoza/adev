@@ -13,6 +13,7 @@ This directory is the canonical map of the A-Dev practice. It separates normativ
 | [Kit](kit/README.md) | Copyable adoption templates and examples | [`starter-kit/`](../starter-kit/) |
 | [Evidence](evidence/README.md) | Proof chains supporting framework claims | [`docs/evidence-index.md`](../docs/evidence-index.md) |
 | [Hardness](hardness/README.md) | Governance for predictable and policy-conformant agents | Definition, policy model, and skill contract |
+| [Concept traceability](concept-traceability-matrix.md) | Canonical cross-surface map for core A-Dev concepts | Doctrine, guidance, kit, evidence, book, and maturity gaps |
 
 ## Normative status
 
