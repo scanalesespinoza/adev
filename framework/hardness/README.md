@@ -11,6 +11,7 @@ It is not presented as an external technical standard. It is a working A-Dev ter
 3. [`02-skill-contract-template.md`](02-skill-contract-template.md) defines the minimum contract for creating or reviewing an agent skill.
 4. [`03-human-expectations-contract.md`](03-human-expectations-contract.md) turns a user request into explicit intent, authority, constraints, uncertainty, and stop conditions.
 5. [`04-action-risk-authority-model.md`](04-action-risk-authority-model.md) classifies action effects and the approval, evidence, and escalation required for each.
+6. [`05-policy-schema-and-fixtures.md`](05-policy-schema-and-fixtures.md) provides a local policy-record schema, fixtures, and reproducible structural validation.
 
 ## Relationship to A-Dev
 
@@ -22,4 +23,4 @@ The existing baseline remains useful, but Hardness distinguishes universal doctr
 
 ## Current maturity
 
-This is a foundation, not a completeness claim. The initial expectation contract and action risk classes are defined; executable policy schemas, behavioral evaluations, lifecycle management, and cross-agent proof are intentionally left for later phases.
+This is a foundation, not a completeness claim. The initial expectation contract, action risk classes, and policy-record schema are defined; enforcement, behavioral evaluations, lifecycle management, and cross-agent proof are intentionally left for later phases.

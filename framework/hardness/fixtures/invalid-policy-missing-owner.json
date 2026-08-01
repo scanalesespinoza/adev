@@ -1,0 +1,36 @@
+{
+  "id": "HD-REPOSITORY-READ-ONLY-002",
+  "statement": "This fixture is intentionally invalid because it has no owner.",
+  "level": "MUST",
+  "scope": {
+    "repositories": ["*"],
+    "tasks": ["inspection"],
+    "roles": ["agent"],
+    "files": ["*"],
+    "tools": ["read-only"],
+    "environments": ["local"]
+  },
+  "authority": {
+    "source": "repository doctrine",
+    "level": "repository"
+  },
+  "precedence": {
+    "authorityRank": 3,
+    "priority": 100,
+    "tieBreaker": "narrower-scope"
+  },
+  "rationale": "Exercise the required owner field.",
+  "exceptions": [],
+  "evidence": {
+    "requirements": ["validation result"],
+    "retention": "report"
+  },
+  "review": {
+    "trigger": "Fixture check.",
+    "dueOn": "2027-08-01"
+  },
+  "expiry": {
+    "expiresOn": "2028-08-01",
+    "action": "review"
+  }
+}
