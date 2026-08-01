@@ -13,6 +13,7 @@ It is not presented as an external technical standard. It is a working A-Dev ter
 5. [`04-action-risk-authority-model.md`](04-action-risk-authority-model.md) classifies action effects and the approval, evidence, and escalation required for each.
 6. [`05-policy-schema-and-fixtures.md`](05-policy-schema-and-fixtures.md) provides a local policy-record schema, fixtures, and reproducible structural validation.
 7. [`06-agent-consumption-guide.md`](06-agent-consumption-guide.md) explains how an agent reads canon, selects a bounded skill, and applies policy without assuming a runtime.
+8. [`07-compatibility-layer.md`](07-compatibility-layer.md) defines portable Hardness contracts and runtime adaptation without a runtime dependency.
 
 ## Relationship to A-Dev
 
@@ -24,4 +25,4 @@ The existing baseline remains useful, but Hardness distinguishes universal doctr
 
 ## Current maturity
 
-This is a foundation, not a completeness claim. The initial expectation contract, action risk classes, policy-record schema, and first reference skill are defined; enforcement, runtime-backed evaluations, lifecycle management, and cross-agent proof are intentionally left for later phases.
+This is a foundation, not a completeness claim. The initial expectation contract, action risk classes, policy-record schema, reference skill, and compatibility layer are defined; enforcement, runtime-backed evaluations, lifecycle management, and cross-agent proof are intentionally left for later phases.
