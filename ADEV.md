@@ -2,6 +2,8 @@
 
 Upstream source of truth: `https://github.com/scanalesespinoza/adev`
 
+Repository map: [`README.md`](README.md). The A-Dev practice is organized through [`framework/README.md`](framework/README.md); the explanatory book has a separate entry point at [`book/README.md`](book/README.md). Hardness begins at [`framework/hardness/README.md`](framework/hardness/README.md).
+
 ## Mission
 A-Dev is the canonical operating doctrine for model- and agent-assisted software delivery. It consolidates the transferable system extracted from real execution, especially the high-friction operational lessons gathered in Homedir.
 
