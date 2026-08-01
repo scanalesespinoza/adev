@@ -33,37 +33,18 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 19. If batch delivery is explicitly requested, multiple atomic iterations may live in one PR, but each stage still requires explicit validation and a rollback point.
 20. Every PR failure, integration block, or incident caused by a change must be closed by incorporating the resulting learning into this upstream rule set or another durable canonical asset.
 21. Every change touching templates, visible copy, i18n, public routes, or admin views must update or create tests for the affected behavior in the same iteration.
-3. Commits must be atomic and use Conventional Commits.
-4. Do not mix refactor, feature, visual changes, infrastructure, doctrine updates, and release mechanics in the same PR unless batch delivery is explicitly requested.
-5. Prefer new canonical assets over broad rewrites of stable files when codifying new lessons.
-6. Every framework claim must map to a repository asset, validated release flow, or real operational evidence.
-7. Every failure worth remembering must become one of: a guardrail, a case study, a checklist item, a starter-kit update, or a durable rule.
-8. English is the only valid language for committed repository content unless a bilingual mirror is explicitly required.
-9. If another person or agent is already changing a file locally, avoid parallel edits on that file unless coordination is explicit.
-10. Do not institutionalize guessed workflows. If the repository or evidence does not support a claim, mark it as a gap.
-11. Run the narrowest validation that proves the change is sound for its scope before commit.
-12. CI must be green before merge.
-13. Do not advance to a new iteration without validating the previous one in production when the change has production impact.
-14. Versioning and tagging happen on a manual initiative cadence; do not assume a tag or public release for every PR or minor change.
-15. When versioning, update version references across the repository, starting with the canonical version source such as `pom.xml` when applicable.
-16. Every result must be followed through to deployment verification, not left at analysis or local edits only.
-17. For new features, endpoints, or APIs, use a mandatory 3-iteration incremental rollout: hidden or non-production, progressive integration, then legacy cleanup after production validation.
-18. If the project is multilingual, all visible text must be implemented through language bundles or equivalent localization assets; avoid globally hardcoded text in templates, JS, backend code, and UI messages.
-19. If batch delivery is explicitly requested, multiple atomic iterations may live in one PR, but each stage still requires explicit validation and a rollback point.
-20. Every PR failure, integration block, or incident caused by a change must be closed by incorporating the resulting learning into this upstream rule set or another durable canonical asset.
-21. Every change touching templates, visible copy, i18n, public routes, or admin views must update or create tests for the affected behavior in the same iteration.
 22. Before opening a PR, review changes against common security and CodeQL patterns such as logs with input or paths, redirects, auth or session, persistence, and input-derived URLs; sanitize or encapsulate those cases in the same iteration.
 23. Marketing automation and social publishing require staged rollout: internal drafts, controlled approval or scheduling, then autopublishing only after production validation.
 24. Automated marketing may use only real and verifiable product data; never invent numbers, milestones, or claims.
 25. Every integration with external publishing or automation channels must use secrets managed outside the repository, deduplication, channel rate limiting, and a global kill switch before any production scheduler is enabled.
 26. Every iteration, batch, or objective must end with an updated handoff in the shared workspace and an open or updated PR when that workspace model is part of the repository operating system.
 27. The shared workspace must remain consistent at relevant checkpoints and must be refreshed at least once per hour during active work, including `LATEST.txt`, `HANDOFF.md`, `state.json`, `SESSION-LOG.md`, and `DECISIONS.md` when those assets exist in the repo or external context workspace.
-28. Before requesting approval, merge, or production promotion, complete the quality tasks needed to sustain high PR success: local validation, targeted tests, risk preflight, and updated verification notes. Approval reviews must explicitly document the reasons and validations justifying the approval in the review comments.
-29. Every PR should be configured with auto-merge when the repository workflow supports it, unless an explicit documented blocker prevents it. If merge is available (e.g. all quality checks pass and approval is granted), apply the merge immediately. If the PR is approved but out-of-date/out-of-sync with the base branch, execute the update branch command to trigger the automatic status validations, and continue with the merge and branch deletion once all checks pass.
+28. Before requesting approval, merge, or production promotion, complete the quality tasks needed to sustain high PR success: local validation, targeted tests, risk preflight, and updated verification notes.
+29. Every PR should be configured with auto-merge when the repository workflow supports it, unless an explicit documented blocker prevents it.
 30. Create draft PRs only when scope is still unclear or the change intentionally needs staged review; if the scope comes from a complete issue, open the PR ready for review by default. When an issue is already scoped, treat that issue as locked for the active branch; if new work appears, split it into a new issue and a new PR instead of expanding the original branch. For traceability, every implementation PR must reference its source issue, and the issue record should reference the PR once it exists.
 31. Every change must finish in a PR at the close of an iteration or objective; do not leave completed work only in a local branch, local handoff, or chat transcript.
-32. Every approved and merged PR to `main` must end with operational cleanup: verify the merge, update handoff if used, and always delete the source branch locally and on remote to maintain repository cleanliness.
-33. Any local or remote branch already merged into `main` must be deleted during cleanup unless it is still attached to an active worktree or another documented hold condition.
+32. Every approved and merged PR to `main` must end with operational cleanup: verify the merge, update handoff if used, and remove no-longer-needed source branches.
+33. Any local branch already merged into `main` must be deleted during cleanup unless it is still attached to an active worktree or another documented hold condition.
 34. PR quality, release gates, and production-promotion validations belong to the SDLC and delivery operation, not to the user-facing product, unless explicitly scoped otherwise.
 35. If there is an active PRD or product roadmap, iterations must prioritize visible end-user value and avoid diverting scope toward internal tooling, release evidence, or operational layers that are outside the agreed product.
 36. Keep canonical public content understandable without requiring private chat context.
@@ -78,8 +59,7 @@ A-Dev is the canonical operating doctrine for model- and agent-assisted software
 45. Before handing work for review, validate the full end-user path as a real user would: run the actual build, follow the observable workflow, and confirm the promised behavior is functional in practice. Technical correctness alone is not sufficient for delivery.
 46. Canonical public content must stay vendor-neutral and industry-agnostic: prefer role-based, capability-based, and process-based language over tool, model, or company names unless the name is required by verifiable evidence or external citation.
 47. If a claim only holds for one vendor, one assistant, one product, or one sector, treat it as an example or evidence note rather than doctrine. Framework rules must transfer across tools, industries, and delivery contexts.
-48. When resolving a scoped issue, follow a unified lifecycle: read the issue to lock implementation scope, sync with main, branch using a dedicated feature branch containing the issue ID (e.g. fix/issue-123), implement local validations, link the issue in the PR description (e.g. Closes #123) for automatic closure, and perform post-merge cleanup by deleting the source branch locally and on remote.
-49. Each change must live in a fresh dedicated branch; do not reuse a branch for a new change after it has been committed, merged, or superseded, even if the new change feels small.
+48. Each change must live in a fresh dedicated branch; do not reuse a branch for a new change after it has been committed, merged, or superseded, even if the new change feels small.
 
 ## Multi-Agent Collaboration
 
