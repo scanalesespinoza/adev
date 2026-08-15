@@ -18,7 +18,7 @@ El software es un espacio que otras personas habitan. Producto y arquitectura co
 
 **Resultado:** el lector puede expresar una necesidad como comportamiento humano observable antes de elegir herramientas.
 
-### 3. El arquitecto y el agente
+### [3. El arquitecto y el agente](03-el-arquitecto-y-el-agente.md)
 
 El agente ejecuta y propone; el arquitecto conserva intención, contexto, juicio y responsabilidad. Los planos distinguen decisiones estructurales de decisiones locales y reversibles.
 
