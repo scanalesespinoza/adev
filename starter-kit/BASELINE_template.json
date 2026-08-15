@@ -1,21 +1,47 @@
 {
-  "non_negotiables": [
-    "Test everything",
-    "Security-first",
-    "Simple & repeatable structure",
-    "Traceability (plan → prompt → commit)",
-    "Stop the line: no Plan B"
-  ],
-  "frugality_guardrails": [
-    "No heavy middleware unless baseline-approved",
-    "Prefer SSR and lean components over complex client frameworks",
-    "Simple persistence/messaging with rollback plan"
-  ],
-  "flags_and_quality": {
-    "live_alpha": true,
-    "health_checks": ["/q/health/live", "/health/ready"],
-    "probe_interval_seconds": 10,
-    "failure_threshold": 3
+  "version": 1,
+  "sources": {
+    "product": "<path to product context>",
+    "architecture": "<path to architecture decisions>",
+    "quality": "<path to quality requirements>",
+    "security": "<path to security requirements>",
+    "roadmap": "<path to prioritized work>",
+    "decisions": "<path to decision log>"
   },
-  "evidence_chain": "roadmap → plan → prompt → commit/tests → baseline update"
+  "non_negotiables": [
+    "Work from an explicit objective, scope, and acceptance criteria",
+    "Keep each iteration small, reversible, and independently reviewable",
+    "Protect secrets, sensitive data, and user privacy",
+    "Validate locally before publishing a change",
+    "Integrate only through the repository's authorized review path",
+    "Verify promised behavior in the relevant environment",
+    "Stop and escalate when authority, impact, or required context is uncertain"
+  ],
+  "delivery": {
+    "inner_loop": [
+      "<focused build, analysis, or test command>",
+      "<local behavior check>"
+    ],
+    "outer_loop": [
+      "<independent CI or review check>"
+    ],
+    "target_verification": "<observable user or system action>",
+    "rollback_or_containment": "<recovery path>"
+  },
+  "authority": {
+    "autonomous_scope": [
+      "Read repository content needed for the objective",
+      "Create reversible changes inside the authorized workspace"
+    ],
+    "approval_required": [
+      "Destructive or hard-to-recover changes",
+      "External publication, deployment, or communication",
+      "Access outside the authorized workspace or privilege boundary"
+    ]
+  },
+  "learning": {
+    "failure_response": "Contain the effect, understand the cause, restore confidence, and record the smallest durable improvement",
+    "review_trigger": "Review after a meaningful failure, scope change, or scheduled baseline curation"
+  },
+  "local_overlays": []
 }

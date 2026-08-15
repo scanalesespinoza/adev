@@ -13,7 +13,7 @@ Goal: establish the minimum A-Dev operating skeleton before prompting for meanin
 - Copy or adapt `BASELINE_template.json` into the target repo's canonical baseline format.
 - Create `ROADMAP.md` or equivalent.
 - Create a decision log seeded with project constraints and known red lines.
-- Define one small change that can close inside 1-2 hours.
+- Define one small change with a short feedback path and a clear rollback boundary.
 - State the validation path before implementation begins.
 
 ## Red lines
