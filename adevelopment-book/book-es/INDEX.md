@@ -52,7 +52,7 @@ El principio 50/50 representa atención continua, no una división matemática d
 
 ## Parte III — Gobernar la autonomía
 
-### 8. Autonomía, seguridad y responsabilidad
+### [8. Autonomía, seguridad y responsabilidad](08-autonomia-seguridad-y-responsabilidad.md)
 
 La autonomía es libertad dentro de límites previamente diseñados. Examina autoridad, mínimo privilegio, acciones destructivas, datos sensibles, intención potencialmente maliciosa, escalamiento humano y recuperación.
 
