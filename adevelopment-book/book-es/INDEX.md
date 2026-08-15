@@ -58,7 +58,7 @@ La autonomía es libertad dentro de límites previamente diseñados. Examina aut
 
 **Resultado:** el lector puede definir qué puede hacer un agente, cuándo debe detenerse y quién responde por las consecuencias.
 
-### 9. Equipos y agentes
+### [9. Equipos y agentes](09-equipos-y-agentes.md)
 
 La baseline convierte expectativas privadas en un contrato de colaboración. Issues, ramas breves, coordinación de archivos, revisión cruzada e integración frecuente permiten que varias personas y agentes trabajen sin depender de prompts privados.
 
