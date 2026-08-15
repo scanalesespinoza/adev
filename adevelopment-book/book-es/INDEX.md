@@ -6,7 +6,7 @@ ADEV enseña a dirigir el desarrollo con agentes de inteligencia artificial de m
 
 ## Parte I — La responsabilidad cambia de forma
 
-### 1. Manifiesto ADEV
+### [1. Manifiesto ADEV](01-manifiesto-adev.md)
 
 La inteligencia artificial es una herramienta de una nueva escala, no una entidad a la cual transferir responsabilidad. Presenta el origen de ADEV, su posición frente al entusiasmo y el temor, y el compromiso de transformar capacidad técnica en beneficio humano.
 
