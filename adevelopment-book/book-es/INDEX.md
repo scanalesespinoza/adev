@@ -44,7 +44,7 @@ Los prompts extensos son una fase inicial. Las instrucciones recurrentes deben c
 
 **Resultado:** el lector puede reducir repetición sin ocultar el contexto que gobierna al agente.
 
-### 7. Crear, verificar y demostrar
+### [7. Crear, verificar y demostrar](07-crear-verificar-y-demostrar.md)
 
 El principio 50/50 representa atención continua, no una división matemática del tiempo. Inner loop y outer loop se reflejan entre sí, y una entrega solo se cierra cuando el comportamiento prometido se comprueba en el entorno relevante.
 
