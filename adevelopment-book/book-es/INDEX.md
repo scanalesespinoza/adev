@@ -12,7 +12,7 @@ La inteligencia artificial es una herramienta de una nueva escala, no una entida
 
 **Resultado:** el lector abandona tanto la idealización como el rechazo automático y acepta su responsabilidad sobre el uso y los efectos de los agentes.
 
-### 2. El software como hábitat
+### [2. El software como hábitat](02-el-software-como-habitat.md)
 
 El software es un espacio que otras personas habitan. Producto y arquitectura comienzan por comprender a esas personas, sus acciones y la experiencia que necesitan.
 
