@@ -66,7 +66,7 @@ La baseline convierte expectativas privadas en un contrato de colaboración. Iss
 
 ## Parte IV — Aprender desde la ejecución
 
-### 10. EventFlow: el laboratorio
+### [10. EventFlow: el laboratorio](10-eventflow-el-laboratorio.md)
 
 EventFlow muestra el origen experimental de la práctica durante 2025. El caso separa métricas observadas de estimaciones económicas y documenta tanto la capacidad alcanzada como los límites de la comparación.
 
