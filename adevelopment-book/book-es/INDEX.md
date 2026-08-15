@@ -72,7 +72,7 @@ EventFlow muestra el origen experimental de la práctica durante 2025. El caso s
 
 **Resultado:** el lector entiende qué puede demostrar un experimento individual y qué conclusiones no permite extrapolar.
 
-### 11. Homedir: el campo de prueba
+### [11. Homedir: el campo de prueba](11-homedir-el-campo-de-prueba.md)
 
 Homedir muestra cómo los incidentes se convierten en reglas, pruebas, automatización y assets reutilizables. Incluye deriva multilenguaje, ramas demasiado largas, release gates, recuperación y evidencia operacional.
 
