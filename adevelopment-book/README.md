@@ -1,11 +1,19 @@
-# A-Dev Book and Collateral
+# ADEV Book and Collateral
 
-> This directory contains the current build sources for the explanatory book. Start at [`book/README.md`](../book/README.md) for its canonical repository entry point, or [`framework/README.md`](../framework/README.md) for the normative A-Dev practice.
+> This directory contains the manuscript sources and reusable collateral for the ADEV book. The canonical first-edition development track is the Spanish manuscript in [`book-es/`](book-es/README.md). The existing English manuscript in [`book/`](book/INDEX.md) is retained as a historical source for selective reuse, not as the translation source of record. The normative, English-language practice remains in [`framework/`](../framework/README.md).
 
-This directory contains the core A-Dev book and the collateral used to extend it across talks, posts, and documentation.
+## First edition in Spanish
 
-## Book
-The book source of truth lives in `book/`.
+The editorial source of truth for the first edition lives in `book-es/`.
+
+- Working title: *ADEV: La práctica de AI Agentic Development*.
+- Language: Spanish, using clear professional Latin American usage.
+- Editorial direction: [`publishing-kit/17-spanish-first-edition-editorial-charter.md`](../publishing-kit/17-spanish-first-edition-editorial-charter.md).
+- Build order: [`book-es/Book.txt`](book-es/Book.txt).
+
+## Historical English manuscript
+
+The prior English manuscript remains in `book/` while its useful material is evaluated chapter by chapter. It must not be expanded independently during the Spanish first-edition consolidation.
 
 Key files:
 - `Book.txt`: ordered manuscript manifest used by Leanpub-style tooling and the GitHub PDF workflow.
@@ -33,10 +41,12 @@ Main reading flow:
 18. `appendices/D-further-reading.md`
 
 ## PDF build rule
-The GitHub PDF build now reads the ordered chapter list from `book/Book.txt`. If the manuscript order changes, update `Book.txt` first so the workflow and the manuscript stay aligned.
+
+The current PDF workflow still reads `book/Book.txt`. Migration of the build to `book-es/Book.txt` is intentionally deferred until the Spanish manuscript contains publishable chapter prose. This prevents an editorial scaffold from replacing the existing downloadable artifact.
 
 ## Reusable collateral
 `collateral/` holds ready-to-use materials for one-pagers, talk outlines, speaker notes, video series, and LinkedIn posts.
 
 ## Editorial summary
-Augmented Development is how one person, with real experience and clear rules, can orchestrate an AI team to deliver professional software with short cycles, evidence, and quality.
+
+ADEV is a vendor-neutral practice for directing agent-assisted software delivery with human responsibility, explicit context, bounded autonomy, continuous verification, and evidence.
