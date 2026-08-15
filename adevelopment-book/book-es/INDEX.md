@@ -26,7 +26,7 @@ El agente ejecuta y propone; el arquitecto conserva intención, contexto, juicio
 
 ## Parte II — El sistema operativo de la práctica
 
-### 4. La baseline viva
+### [4. La baseline viva](04-la-baseline-viva.md)
 
 `ADEV.md` funciona como índice de principios y entrada a las fuentes de producto, arquitectura, calidad, seguridad y operación. Los fallos mejoran el sistema de trabajo sin convertir la baseline en una enciclopedia.
 
