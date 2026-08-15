@@ -32,7 +32,7 @@ El agente ejecuta y propone; el arquitecto conserva intención, contexto, juicio
 
 **Resultado:** el lector puede crear y mantener una baseline pequeña, jerarquizada y aplicable.
 
-### 5. Iteraciones atómicas
+### [5. Iteraciones atómicas](05-iteraciones-atomicas.md)
 
 Las tareas pequeñas reducen la superficie de incertidumbre, hacen visible el impacto y vuelven barato equivocarse. La atomicidad depende del contexto bajo control, no de una cantidad universal de líneas u horas.
 
