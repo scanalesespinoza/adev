@@ -38,7 +38,7 @@ Las tareas pequeñas reducen la superficie de incertidumbre, hacen visible el im
 
 **Resultado:** el lector puede dividir una necesidad en cambios breves, reversibles y verificables.
 
-### 6. Del prompt al contexto durable
+### [6. Del prompt al contexto durable](06-del-prompt-al-contexto.md)
 
 Los prompts extensos son una fase inicial. Las instrucciones recurrentes deben convertirse en contratos versionados, templates, skills, políticas y automatizaciones; el prompt queda reservado para la intención específica.
 
