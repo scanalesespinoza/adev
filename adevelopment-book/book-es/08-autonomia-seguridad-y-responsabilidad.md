@@ -26,7 +26,7 @@ La autonomía útil es libertad dentro de límites previamente diseñados:
 
 Dentro de esos límites, el agente puede explorar, proponer, editar, probar y corregir. Cuando el efecto supera el contrato, debe detenerse.
 
-El límite no es una falta de confianza emocional. Es diseño operacional. Los principios de *zero trust* de NIST recuerdan que la ubicación o propiedad de un recurso no concede confianza implícita: autenticación y autorización deben comprobarse para el acceso correspondiente. Aplicado al trabajo con agentes, estar ejecutándose en nuestra computadora o dentro de nuestro repositorio no justifica acceso ilimitado.
+El límite no es una falta de confianza emocional. Es diseño operativo. Los principios de *zero trust* de NIST recuerdan que la ubicación o propiedad de un recurso no concede confianza implícita: autenticación y autorización deben comprobarse para el acceso correspondiente. Aplicado al trabajo con agentes, estar ejecutándose en nuestra computadora o dentro de nuestro repositorio no justifica acceso ilimitado.
 
 ## El laboratorio no es la baseline profesional
 
@@ -71,7 +71,7 @@ Los controles técnicos tradicionales comprueban propiedades importantes: compil
 
 Un issue podría pedir una función que extraiga información, debilite deliberadamente un control o facilite un abuso. Un agente competente puede implementarlo con excelente calidad si el sistema trata toda instrucción como legítima por defecto. También puede recibir instrucciones manipuladas mediante contenido externo, dependencias comprometidas o inyección de prompts.
 
-Por eso ADEV propone desarrollar una capa de discernimiento operacional. No es una “conciencia” artificial capaz de resolver el bien y el mal, ni una garantía de que el sistema comprenderá toda intención. Es un conjunto de preguntas y controles que aumenta la probabilidad de detectar una solicitud incompatible con el propósito del producto:
+Por eso ADEV propone desarrollar una capa de discernimiento operativo. No es una “conciencia” artificial capaz de resolver el bien y el mal, ni una garantía de que el sistema comprenderá toda intención. Es un conjunto de preguntas y controles que aumenta la probabilidad de detectar una solicitud incompatible con el propósito del producto:
 
 - ¿Quién solicita el cambio y tiene autoridad para hacerlo?
 - ¿Qué necesidad legítima y comportamiento de producto lo justifican?
@@ -79,7 +79,7 @@ Por eso ADEV propone desarrollar una capa de discernimiento operacional. No es u
 - ¿Amplía privilegios, superficie de ataque o capacidad destructiva?
 - ¿Puede explicarse y revisarse su efecto antes de ejecutarlo?
 - ¿Existe una alternativa de menor riesgo?
-- ¿Debe participar una persona con responsabilidad de producto, seguridad o legal?
+- ¿Debe participar una persona con responsabilidad de producto, seguridad o asuntos jurídicos?
 
 Cuando la intención o la autoridad no pueden establecerse, la conducta segura es detener la acción afectada y escalar. El agente no debe inventar una justificación para continuar.
 
