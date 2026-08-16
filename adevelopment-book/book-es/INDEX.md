@@ -1,5 +1,10 @@
 # ADEV: La práctica de AI Agentic Development
 
+## Preliminares
+
+- **[Portada y declaración editorial](00-portada.md):** identidad de la edición, atribución y asistencia con inteligencia artificial.
+- **[Antes de comenzar](00-preliminares.md):** promesa honesta, audiencia, alcance, recorrido y contrato de lectura.
+
 ## Promesa al lector
 
 ADEV enseña a dirigir el desarrollo con agentes de inteligencia artificial de manera responsable, predecible y verificable. Su propósito es convertir la velocidad probabilística de los agentes en entregas profesionales mediante intención humana, arquitectura, reglas durables y evidencia.
