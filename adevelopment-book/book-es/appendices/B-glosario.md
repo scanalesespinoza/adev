@@ -52,7 +52,7 @@ Libertad del agente para decidir y ejecutar pasos dentro de límites diseñados.
 
 ### Baseline
 
-Conjunto versionado de principios, fuentes y guardrails que gobierna cómo se trabaja en un repositorio. La palabra inglesa se conserva porque representa más que una “línea base” métrica: es memoria operacional y contrato compartido.
+Conjunto versionado de principios, fuentes y guardrails que gobierna cómo se trabaja en un repositorio. La palabra inglesa se conserva porque representa más que una “línea base” métrica: es memoria operativa y contrato compartido.
 
 ### Baseline viva
 
@@ -92,7 +92,7 @@ Escenario alternativo utilizado para comparar qué habría ocurrido sin una inte
 
 ### Decisión estructural
 
-Elección que condiciona varias partes del producto o resulta costosa de revertir: límites de componentes, modelo de datos, identidad, interfaces o estrategia operacional. Requiere autoridad y revisión mayores que una decisión local reversible.
+Elección que condiciona varias partes del producto o resulta costosa de revertir: límites de componentes, modelo de datos, identidad, interfaces o estrategia operativa. Requiere autoridad y revisión mayores que una decisión local reversible.
 
 ### Definición de cierre (*definition of done*)
 
@@ -118,7 +118,7 @@ Acción que modifica un sistema fuera del workspace o afecta a terceros: publica
 
 ### Entorno relevante
 
-Lugar donde debe comprobarse una afirmación: local, integración, sandbox, audiencia controlada o producción. Se selecciona según el riesgo y la etapa; no siempre significa producción pública.
+Lugar en el que debe comprobarse una afirmación: local, integración, sandbox, audiencia controlada o producción. Se selecciona según el riesgo y la etapa; no siempre significa producción pública.
 
 ### Escalamiento
 
@@ -188,6 +188,10 @@ Paso de implementación y validación lo bastante pequeño para producir retroal
 
 Ciclo independiente que comienza cuando el cambio abandona la sesión local. Incluye CI, revisiones, políticas, integración y controles de entorno. Refleja o amplía los contratos importantes del inner loop.
 
+### Owner
+
+Persona o rol responsable de mantener una decisión, política, evidencia o iteración dentro de un alcance. En ADEV, el término indica responsabilidad operativa y no necesariamente propiedad jurídica.
+
 ### Overlay
 
 Especialización local de la doctrina para un repositorio, equipo, herramienta o entorno. Puede definir stack, comandos, gates y ownership, pero no debe debilitar silenciosamente una regla superior.
@@ -222,7 +226,7 @@ Retorno a un estado anterior confiable después de un cambio. No es sinónimo de
 
 ### Runbook
 
-Guía operacional para responder a una condición conocida, como incidente, recuperación o promoción. Define señales, acciones, roles, evidencia y escalamiento.
+Guía operativa para responder a una condición conocida, como incidente, recuperación o promoción. Define señales, acciones, roles, evidencia y escalamiento.
 
 ## S
 
@@ -250,7 +254,7 @@ Capacidad de reconstruir por qué se hizo un cambio, bajo qué autoridad, con qu
 
 ### Trunk-based development
 
-Modelo donde el trabajo converge frecuentemente sobre una rama principal mediante ramas de corta vida u otros mecanismos equivalentes. Ha sido útil en los casos fundadores de ADEV, pero no es una topología universal.
+Modelo en el que el trabajo converge frecuentemente sobre una rama principal mediante ramas de corta vida u otros mecanismos equivalentes. Ha sido útil en los casos fundadores de ADEV, pero no es una topología universal.
 
 ## V
 

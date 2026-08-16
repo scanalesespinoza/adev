@@ -10,7 +10,7 @@ No son dos productos separados. Forman un sistema con responsabilidades distinta
 - el **framework** conserva doctrina y contratos portables;
 - el **starter kit** ofrece piezas adaptables para comenzar;
 - la **evidencia** muestra de dónde provienen las afirmaciones;
-- los **overlays del proyecto** registran la realidad particular donde se ejecuta el trabajo.
+- los **overlays del proyecto** registran la realidad particular en la que se ejecuta el trabajo.
 
 Este apéndice es un mapa, no una copia de esos archivos. En caso de diferencia, utiliza siempre la fuente enlazada y su versión vigente.
 
@@ -76,7 +76,7 @@ La evidencia específica de Homedir o EventFlow puede enseñar un patrón. No ob
 
 ### Hardness
 
-[`framework/hardness/`](../../../framework/hardness/) gobierna la parte agent-facing de ADEV. Su pregunta principal es: ¿puede una persona anticipar y auditar qué hará el agente, bajo qué autoridad y con qué evidencia?
+[`framework/hardness/`](../../../framework/hardness/) gobierna la parte de ADEV orientada a los agentes. Su pregunta principal es: ¿puede una persona anticipar y auditar qué hará el agente, bajo qué autoridad y con qué evidencia?
 
 El recorrido recomendado es:
 
@@ -135,7 +135,7 @@ No crees carpetas vacías para aparentar madurez. Si el repositorio ya contiene 
 `ADEV.md` dentro de este repositorio es el canon upstream. Un proyecto que adopta ADEV necesita una copia, referencia o adaptación local que explique dos cosas:
 
 1. qué principios upstream aplica;
-2. qué restricciones particulares agrega el proyecto.
+2. qué restricciones particulares añade el proyecto.
 
 El overlay puede incluir:
 
@@ -158,7 +158,7 @@ Una skill no es simplemente un prompt almacenado. Es un contrato de capacidad.
 Antes de utilizar o crear una, comprueba:
 
 - propósito y condiciones de activación;
-- casos donde no debe activarse;
+- casos en los que no debe activarse;
 - entradas y salidas;
 - archivos, herramientas y entornos permitidos;
 - efectos locales o externos;
@@ -170,7 +170,7 @@ Antes de utilizar o crear una, comprueba:
 
 Una skill no puede ampliar la autoridad entregada por la persona ni debilitar una política superior. Si puede realizar una operación pero el objetivo no la autoriza, debe abstenerse.
 
-El repositorio incluye una [skill de inspección read-only](../../../framework/hardness/skills/adev-read-only-inspection/SKILL.md) como referencia inicial. Es un ejemplo revisable, no prueba de que todo runtime se comportará igual ni un contrato suficiente para efectos de escritura o publicación.
+El repositorio incluye una [skill de inspección de solo lectura](../../../framework/hardness/skills/adev-read-only-inspection/SKILL.md) como referencia inicial. Es un ejemplo revisable, no prueba de que todo runtime se comportará igual ni un contrato suficiente para efectos de escritura o publicación.
 
 ## Políticas y validación estructural
 
@@ -181,7 +181,7 @@ La validación estructural responde: “¿el registro tiene la forma esperada?�
 - si la política es correcta;
 - si el runtime la hará cumplir;
 - si el agente se comportará como esperamos;
-- si la evidencia operacional existe.
+- si la evidencia operativa existe.
 
 Los fixtures y scripts locales permiten detectar contratos incompletos. Las evaluaciones conductuales y la observación real deben aportar las capas restantes.
 
@@ -198,9 +198,9 @@ Una evidencia útil registra:
 - validación ejecutada;
 - incertidumbre y fallo;
 - entrega o contención;
-- aprendizaje reusable.
+- aprendizaje reutilizable.
 
-No debe conservar secretos, credenciales, información personal, datos de clientes ni outputs crudos sensibles. Generaliza personas, organizaciones y entornos cuando el detalle no sea necesario para reproducir el patrón.
+No debe conservar secretos, credenciales, información personal, datos de clientes ni salidas sin procesar que contengan información sensible. Generaliza personas, organizaciones y entornos cuando el detalle no sea necesario para reproducir el patrón.
 
 Un enlace a un repositorio mutable necesita commit, tag o fecha cuando sostiene una afirmación importante.
 
@@ -237,4 +237,4 @@ Si acabas de terminar el libro:
 7. Cierra la primera entrega con [`FIRST_RELEASE.md`](../../../starter-kit/FIRST_RELEASE.md).
 8. Registra el aprendizaje en el estante correcto.
 
-No intentes instalar todos los assets el primer día. Utiliza la pieza mínima que reduzca una incertidumbre real y agrega estructura cuando la ejecución demuestre su necesidad.
+No intentes instalar todos los assets el primer día. Utiliza la pieza mínima que reduzca una incertidumbre real y añade estructura cuando la ejecución demuestre su necesidad.

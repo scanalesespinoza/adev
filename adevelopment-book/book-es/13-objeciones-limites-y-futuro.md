@@ -67,7 +67,7 @@ ADEV utiliza la baseline como memoria y entrada al sistema de control, no como b
 - contención y recuperación;
 - revisión de reglas y permisos.
 
-La dureza —*hardness*— de un agente no significa determinismo perfecto. Significa que expectativas, autoridad, capacidades, efectos y evidencia son suficientemente explícitos para poder anticipar y auditar su conducta con mayor confianza.
+La dureza —*hardness*— de un agente no significa determinismo perfecto. Significa que expectativas, autoridad, capacidades, efectos y evidencia son suficientemente explícitos para anticipar y auditar su conducta con mayor confianza.
 
 Cuando una consecuencia sería inaceptable, la respuesta no consiste en escribir un prompt más solemne. Debemos reducir autonomía, introducir barreras técnicas o no utilizar el agente para esa acción.
 

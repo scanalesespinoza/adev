@@ -2,7 +2,7 @@
 
 ## Por qué este apéndice existe
 
-ADEV se construyó desde experiencia real, pero experiencia no es sinónimo de prueba universal. Un repositorio puede mostrar commits sin demostrar productividad. Un pipeline verde puede demostrar checks sin probar valor para el usuario. Un relato honesto puede enseñar una lección sin permitir reproducir su cronología.
+ADEV se construyó desde la experiencia real, pero la experiencia no es sinónimo de prueba universal. Un repositorio puede mostrar commits sin demostrar productividad. Un pipeline verde puede demostrar checks sin probar valor para el usuario. Un relato honesto puede enseñar una lección sin permitir reproducir su cronología.
 
 Este apéndice explica cómo la primera edición clasifica sus afirmaciones, selecciona fuentes y limita conclusiones. El objetivo no es otorgar apariencia científica a todo el libro. Es permitir que el lector distinga con claridad:
 
@@ -21,13 +21,13 @@ La edición utiliza seis clases principales:
 | Clase | Significado | Forma editorial |
 | --- | --- | --- |
 | **Observada** | Existe un artefacto o estado inspeccionado directamente. | “El repositorio muestra…”, acompañado de fuente y frontera. |
-| **Reproducida** | Se ejecutó un método explícito y se obtuvo el resultado informado. | Incluye comandos, inputs, commit o fecha y resultado. |
+| **Reproducida** | Se ejecutó un método explícito y se obtuvo el resultado informado. | Incluye comandos, entradas, commit o fecha y resultado. |
 | **Reportada** | Una fuente afirma el dato, pero esta edición no completó su reproducción. | “El whitepaper reporta…”, sin elevarlo a resultado independiente. |
 | **Relato del autor** | Proviene de memoria o experiencia profesional narrada en entrevistas. | Se atribuye al autor y se declara la falta de artefacto cuando importa. |
 | **Inferida o estimada** | Se deriva de datos más supuestos, modelos o interpretación. | Expone supuestos, límites y evita lenguaje causal. |
 | **Propuesta** | Describe una práctica, control o futuro que todavía no fue observado suficientemente. | Se presenta como hipótesis, recomendación o agenda abierta. |
 
-Una misma historia puede contener varias clases. En EventFlow, el número de commits hasta una frontera es reproducido; las líneas informadas permanecen reportadas; el ahorro y el retorno eran estimaciones. En Homedir, el release gate tiene un artefacto público; varios incidentes permanecen como relatos atribuidos hasta enlazar sus runs y commits exactos.
+Una misma historia puede contener varias clases. En EventFlow, el número de commits hasta una frontera es reproducido; las líneas informadas permanecen reportadas; el ahorro y el retorno eran estimaciones. En Homedir, el release gate tiene un artefacto público; varios incidentes permanecen como relatos atribuidos hasta enlazar sus ejecuciones y commits exactos.
 
 ## La unidad mínima de evidencia
 
@@ -66,7 +66,7 @@ Una combinación fuerte puede incluir:
 - comprobación del comportamiento;
 - observación posterior.
 
-Cada pieza responde algo distinto. El diff demuestra modificación; la prueba, una propiedad; el despliegue, promoción; el recorrido final, disponibilidad del comportamiento.
+Cada pieza responde a una pregunta distinta. El diff demuestra una modificación; la prueba, una propiedad; el despliegue, una promoción; el recorrido final, la disponibilidad del comportamiento.
 
 ### Para métricas de repositorio
 
@@ -109,7 +109,7 @@ Muestran volumen textual agregado o eliminado bajo reglas de conteo. No distingu
 
 ### Tiempo entre eventos
 
-Timestamps de commits, issues y PR permiten medir intervalos de calendario. No demuestran dedicación humana continua. Para esfuerzo se necesita registro de trabajo o un método equivalente.
+Las marcas de tiempo de commits, issues y PR permiten medir intervalos de calendario. No demuestran dedicación humana continua. Para medir esfuerzo se necesita un registro de trabajo o un método equivalente.
 
 ### Checks verdes
 
@@ -217,7 +217,7 @@ Los registros de evidencia no deben incluir:
 - datos personales innecesarios;
 - información confidencial de clientes o empleadores;
 - URLs, hosts o infraestructura privada;
-- prompts y outputs crudos con contenido sensible;
+- prompts y salidas sin procesar con contenido sensible;
 - detalles que permitan reconstruir un acceso peligroso.
 
 Utiliza roles, rangos y descriptores neutrales. Conserva el mínimo necesario para sostener el patrón. Si una credencial aparece en historial, debe rotarse; documentar el incidente no la vuelve segura.
