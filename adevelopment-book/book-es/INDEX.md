@@ -92,7 +92,7 @@ Aborda pérdida de habilidades, dependencia, seguridad, sistemas críticos, reto
 
 **Resultado:** el lector puede decidir responsablemente cuándo adoptar ADEV, cuándo hacerlo gradualmente y cuándo no hacerlo todavía.
 
-### 14. Cierre: comienza con un repositorio
+### [14. Cierre: comienza con un repositorio](14-cierre.md)
 
 El llamado final es concreto: elegir un repositorio real, incorporar una baseline mínima y entregar un cambio pequeño recorriendo el ciclo completo hasta su verificación.
 
