@@ -1,8 +1,8 @@
 # 12. Adoptar ADEV
 
-## No todas las organizaciones parten desde el mismo piso
+## No todas las organizaciones parten desde el mismo punto
 
-Preguntar por el mínimo viable de ADEV parece sencillo, pero no existe una respuesta idéntica para todos. Un equipo con arquitectura documentada, pruebas rápidas y un pipeline confiable necesita algo diferente de un repositorio donde las decisiones viven en conversaciones y cada entrega depende de una persona.
+Preguntar por el mínimo viable de ADEV parece sencillo, pero no existe una respuesta idéntica para todos. Un equipo con arquitectura documentada, pruebas rápidas y un pipeline confiable necesita algo diferente de un repositorio en el que las decisiones viven en conversaciones y cada entrega depende de una persona.
 
 La adopción comienza con un diagnóstico, no con copiar archivos.
 
@@ -24,15 +24,15 @@ Un equipo inmaduro puede obtener un beneficio temprano porque ADEV introduce est
 
 Adoptar ADEV exige tiempo para aprender, fallar, registrar reglas, mejorar checks y formar criterio. Durante los primeros ciclos, el equipo puede avanzar más lento que con su método conocido.
 
-Si el objetivo es terminar una iniciativa breve, de baja complejidad y con una fecha cercana, cambiar simultáneamente herramientas y práctica puede agregar un riesgo innecesario. En ese escenario podría ser más sensato utilizar el proceso existente y experimentar con ADEV en un alcance aislado.
+Si el objetivo es terminar una iniciativa breve, de baja complejidad y con una fecha cercana, cambiar simultáneamente herramientas y práctica puede añadir un riesgo innecesario. En ese escenario podría ser más sensato utilizar el proceso existente y experimentar con ADEV en un alcance aislado.
 
 La adopción tiene más sentido cuando existe una intención sostenida:
 
 - desarrollar regularmente con agentes;
 - mejorar consistencia entre personas;
 - reducir retrabajo evitable;
-- acelerar aprendizaje operacional;
-- aumentar capacidad de entrega a mediano plazo;
+- acelerar el aprendizaje operativo;
+- aumentar la capacidad de entrega a mediano plazo;
 - conservar independencia respecto de una herramienta específica.
 
 No podemos prometer un porcentaje universal de reducción de errores ni una fecha exacta de retorno. La inversión depende de la madurez inicial, el riesgo del producto, la experiencia del equipo y la calidad de la evidencia. La decisión correcta consiste en definir qué problema de trabajo se intenta mejorar y cómo se observará el cambio.
@@ -46,7 +46,7 @@ Selecciona un repositorio donde:
 - exista una necesidad real, pero con impacto acotado;
 - el equipo pueda ejecutar pruebas y revisar cambios;
 - no se requieran secretos o accesos productivos para comenzar;
-- haya una persona responsable de producto y una de la entrega;
+- haya una persona responsable del producto y otra de la entrega;
 - sea posible desplegar o demostrar un comportamiento;
 - un error pueda revertirse sin consecuencias graves.
 
@@ -153,11 +153,11 @@ Antes de implementar, pide al agente que evalúe si el issue cabe en una iteraci
 
 Durante la ejecución, observa archivos creados, eliminados y modificados; interfaces afectadas; nuevas dependencias; decisiones estructurales y resultados de las validaciones. No necesitas leer pasivamente cada token generado, pero sí contrastar los efectos con los planos.
 
-El pull request debe explicar qué cambió, por qué importa, qué quedó fuera, qué evidencia existe y cómo recuperar. La iteración termina cuando el comportamiento se comprueba en el entorno relevante, no cuando el agente deja de editar.
+El pull request debe explicar qué cambió, por qué importa, qué quedó fuera, qué evidencia existe y cómo se recuperará el estado anterior. La iteración termina cuando el comportamiento se comprueba en el entorno relevante, no cuando el agente deja de editar.
 
 ## La primera semana: aprender más que expandir
 
-La meta de la primera semana no es maximizar features. Es cerrar al menos un ciclo y mejorar la baseline con lo aprendido.
+La meta de la primera semana no es maximizar funcionalidades. Es cerrar al menos un ciclo y mejorar la baseline con lo aprendido.
 
 Al finalizar, el equipo debería poder mostrar:
 
@@ -183,7 +183,7 @@ El resultado de la semana es un sistema de trabajo ligeramente mejor, no solo m�
 
 ## La primera entrega
 
-La primera entrega conecta el piloto con la realidad operacional.
+La primera entrega conecta el piloto con la realidad operativa.
 
 Antes de promoverla, confirma:
 
@@ -207,7 +207,7 @@ Las métricas iniciales deberían describir flujo y calidad, no vender una trans
 Puedes observar:
 
 - tiempo desde issue hasta comportamiento verificado;
-- edad y tamaño comprensible de los PR;
+- edad, tamaño y comprensibilidad de los PR;
 - fallos encontrados localmente, en CI y después del despliegue;
 - retrabajo causado por contexto ausente;
 - tiempo de revisión y recuperación;
@@ -230,7 +230,7 @@ Conviene revisar la baseline de forma ligera cada semana y hacer una curaduría 
 - mover detalle especializado fuera del índice;
 - retirar reglas que perdieron alcance;
 - comprobar que cada obligación tiene evidencia;
-- revisar costo, ruido y consumo de contexto;
+- revisar el costo, el ruido y el consumo de contexto;
 - relacionar fallos recientes con controles existentes.
 
 La cadencia es una recomendación adaptable. Un equipo con pocos cambios puede revisar menos; un periodo de alta transformación puede necesitar más frecuencia.
@@ -256,7 +256,7 @@ Al terminar, responde:
 
 - ¿La baseline cambió una decisión real?
 - ¿El agente supo dónde encontrar contexto?
-- ¿La evidencia demostró la promesa del issue?
+- ¿La evidencia respaldó el cumplimiento de la promesa del issue?
 - ¿El equipo podría repetir el ciclo sin reconstruir la conversación?
 - ¿Qué capacidad falta antes de aumentar autonomía o paralelismo?
 

@@ -8,7 +8,7 @@ Desde allí construimos una práctica.
 
 Tratamos el software como un hábitat porque alguien tendrá que vivir con nuestras decisiones. Separamos al arquitecto del agente, no para convertirlos en adversarios, sino para conservar la intención humana mientras delegamos ejecución. Transformamos prompts repetidos en contexto durable. Hicimos pequeñas las iteraciones para volver manejable la incertidumbre. Unimos creación y verificación. Diseñamos autonomía dentro de límites. Llevamos la práctica desde una persona hasta un equipo y desde el código hasta producción.
 
-También miramos los fallos. EventFlow mostró capacidad, pero no probó causalidad económica. Homedir aportó incidentes, pero no convirtió un proyecto en verdad universal. Las objeciones nos obligaron a reconocer pérdida de habilidades, dependencia, concentración y situaciones donde no deberíamos delegar todavía.
+También miramos los fallos. EventFlow mostró capacidad, pero no probó causalidad económica. Homedir aportó incidentes, pero no convirtió un proyecto en verdad universal. Las objeciones nos obligaron a reconocer pérdida de habilidades, dependencia, concentración y situaciones en las que no deberíamos delegar todavía.
 
 Todo eso importa. Pero comprender ADEV no equivale a practicarlo.
 
@@ -22,7 +22,7 @@ No necesitamos esperar ese futuro.
 
 ADEV es deliberadamente portable. Puedes comenzar con la herramienta que ya tienes, siempre que permita trabajar dentro de un alcance que comprendas y revisar sus efectos. La práctica vive principalmente en el repositorio: producto, arquitectura, baseline, issues, decisiones, pruebas y evidencia.
 
-Esa ubicación también protege libertad. Si cambias de modelo, interfaz o proveedor, el conocimiento que gobierna el producto no debería desaparecer con la sesión. Habrá adaptaciones, pero la intención permanece bajo control del equipo.
+Esa ubicación también protege la libertad. Si cambias de modelo, interfaz o proveedor, el conocimiento que gobierna el producto no debería desaparecer con la sesión. Habrá adaptaciones, pero la intención permanece bajo control del equipo.
 
 No necesitas comenzar con múltiples agentes, una plataforma de orquestación ni una baseline extensa. Necesitas un problema real y un ciclo suficientemente pequeño para aprender.
 
@@ -111,7 +111,7 @@ El sistema aprende cuando la siguiente iteración actúa de otra manera.
 
 ## Después del primer cambio
 
-No aumentes inmediatamente tamaño, autonomía y paralelismo al mismo tiempo.
+No aumentes inmediatamente el tamaño, la autonomía y el paralelismo al mismo tiempo.
 
 Elige una dimensión:
 
@@ -119,7 +119,7 @@ Elige una dimensión:
 - un control de calidad más profundo;
 - un segundo agente revisor;
 - una entrega progresiva;
-- una nueva persona utilizando la misma baseline.
+- una nueva persona que utilice la misma baseline.
 
 Observa qué capacidad nueva exige y qué fricción introduce. La madurez no consiste en automatizarlo todo. Consiste en expandir el sistema sin perder comprensión, responsabilidad ni capacidad de recuperación.
 
