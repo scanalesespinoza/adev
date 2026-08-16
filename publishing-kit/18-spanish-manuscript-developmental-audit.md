@@ -106,7 +106,7 @@ This audit does not certify factual perfection, security, market fit, legal suff
 | Block | Files | Status |
 | --- | --- | --- |
 | Preliminary matter and Part I | `00-preliminares.md`, Chapters 1–3 | Complete; grammar and clarity pass without doctrine changes |
-| Part II | Chapters 4–7 | Pending |
+| Part II | Chapters 4–7 | Complete; grammar and clarity pass without doctrine changes |
 | Part III | Chapters 8–9 | Pending |
 | Part IV | Chapters 10–11 | Pending |
 | Part V | Chapters 12–14 | Pending |

@@ -2,7 +2,7 @@
 
 ## Cuando la documentación comienza a cambiar el resultado
 
-Un documento se vuelve operacional cuando sus defectos producen consecuencias y sus mejoras modifican el comportamiento futuro.
+Un documento se vuelve operativo cuando sus defectos producen consecuencias y sus mejoras modifican el comportamiento futuro.
 
 Eso ocurrió con `ADEV.md`. Al principio era una colección de recomendaciones para orientar el trabajo con agentes. Después de varias semanas, empezó a aparecer una señal distinta: había menos interrupciones por problemas repetidos y más tiempo disponible para avanzar. Cuando reaparecía un error que supuestamente estaba cubierto, la pregunta ya no era solamente qué falló en el código. También había que preguntar qué principio era ambiguo, qué contexto faltaba o por qué el control no había logrado aplicarlo.
 
@@ -106,7 +106,7 @@ Una instrucción puede favorecer autonomía, mientras otra exige aprobación par
 La baseline debe explicar qué ocurre cuando dos principios interactúan:
 
 1. Las restricciones legales, de seguridad y de protección de datos no se omiten por velocidad.
-2. La autoridad explícita limita la autonomía operacional.
+2. La autoridad explícita limita la autonomía operativa.
 3. El contrato de producto define la intención; la arquitectura limita cómo realizarla.
 4. Las reglas específicas de un dominio pueden especializar una regla general sin contradecir sus garantías.
 5. Una excepción debe quedar documentada con alcance, responsable y condición de salida.
@@ -183,7 +183,7 @@ La percepción de las personas es una fuente valiosa, pero no la única. La base
 
 Estas señales deben interpretarse con cuidado. Muchos commits no demuestran productividad. Muchos comandos no demuestran éxito. Una línea eliminada no prueba retrabajo. Para convertir actividad en aprendizaje hay que relacionarla con resultados observables.
 
-Los datos también deben agregarse y sanitizarse. La doctrina no necesita historiales crudos, secretos, rutas personales ni conversaciones privadas. Necesita patrones transferibles respaldados por evidencia suficiente.
+Los datos también deben agruparse y sanitizarse. La doctrina no necesita historiales crudos, secretos, rutas personales ni conversaciones privadas. Necesita patrones transferibles respaldados por evidencia suficiente.
 
 ## Práctica: audita una regla
 
@@ -197,7 +197,7 @@ Elige una regla importante de tu repositorio y responde:
 6. ¿Podría una prueba, template o check hacerla más fuerte?
 7. ¿Qué condición permitiría modificarla o retirarla?
 
-Si no puedes responder por qué existe una regla ni cómo observar su efecto, probablemente tienes una preferencia, no una baseline operacional.
+Si no puedes responder por qué existe una regla ni cómo observar su efecto, probablemente tienes una preferencia, no una baseline operativa.
 
 ## Resultado del capítulo
 
