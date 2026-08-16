@@ -33,7 +33,7 @@ Al mismo tiempo aparecen nuevas competencias:
 
 La transformación no es una suma automática. Una persona puede dejar de practicar codificación profunda sin adquirir criterio arquitectónico. Utilizar agentes no garantiza crecimiento profesional.
 
-ADEV propone un intercambio consciente. El equipo debe decidir qué competencias conserva mediante práctica directa porque son necesarias para revisar, diagnosticar o actuar bajo emergencia; cuáles puede delegar; y cuáles nuevas necesita desarrollar.
+ADEV propone un intercambio consciente. El equipo debe decidir qué competencias conserva mediante práctica directa porque son necesarias para revisar, diagnosticar o actuar bajo emergencia; cuáles puede delegar; y qué competencias nuevas necesita desarrollar.
 
 Una señal de peligro aparece cuando nadie puede explicar el sistema sin preguntarle al mismo agente que lo construyó. La abstracción es útil mientras exista capacidad humana para validar sus contratos, investigar fallos y recuperar el servicio.
 
@@ -43,7 +43,7 @@ Los agentes automatizan tareas que antes consumían trabajo humano. Sería irres
 
 ADEV no puede resolver por sí solo las consecuencias laborales de la automatización. Tampoco debería justificar reemplazos mediante comparaciones débiles como “una persona equivale a un departamento”. EventFlow mostró actividad intensa de un conductor experimentado; no demostró que equipos completos sean innecesarios.
 
-El software profesional contiene más que implementación: comprensión de personas, negociación de restricciones, arquitectura, seguridad, operación, investigación, cuidado de datos, respuesta a incidentes y responsabilidad institucional. Los agentes pueden participar en muchas de estas tareas, pero su participación no elimina la necesidad de autoridad, diversidad de perspectiva y rendición de cuentas.
+El software profesional contiene más que implementación: comprensión de personas, negociación de restricciones, arquitectura, seguridad, operación, investigación, cuidado de datos, respuesta a incidentes y responsabilidad institucional. Los agentes pueden participar en muchas de estas tareas, pero su participación no elimina la necesidad de autoridad, diversidad de perspectivas y rendición de cuentas.
 
 La decisión organizacional importante no es cuántas personas puede retirar después de comprar una herramienta. Es qué nueva capacidad puede crear, cómo redistribuye el trabajo y qué mecanismos protegen calidad, aprendizaje y dignidad profesional.
 
@@ -87,9 +87,9 @@ ADEV no ofrece una autorización general para introducir agentes en esos sistema
 - competencia de quienes aprueban;
 - respuesta y recuperación disponibles.
 
-En un contexto crítico, una adopción gradual puede comenzar con lectura, análisis, documentación, generación de pruebas o propuestas sin capacidad de modificar el sistema. La autonomía aumenta solo cuando evidencia y gobierno justifican el siguiente efecto.
+En un contexto crítico, una adopción gradual puede comenzar con lectura, análisis, documentación, generación de pruebas o propuestas sin capacidad de modificar el sistema. La autonomía aumenta solo cuando la evidencia y el gobierno justifican el siguiente efecto.
 
-Puede haber situaciones donde el límite correcto siga siendo no delegar: decisiones clínicas, autorizaciones irreversibles, cambios productivos sin recuperación suficiente o acciones cuyo cumplimiento no puede auditarse. ADEV ayuda a expresar ese límite; no obliga a cruzarlo.
+Puede haber situaciones en las que el límite correcto siga siendo no delegar: decisiones clínicas, autorizaciones irreversibles, cambios en producción sin recuperación suficiente o acciones cuyo cumplimiento no puede auditarse. ADEV ayuda a expresar ese límite; no obliga a cruzarlo.
 
 ## Objeción 5: «No han demostrado productividad ni retorno»
 
@@ -99,7 +99,7 @@ EventFlow y Homedir demuestran actividad, artefactos y patrones de aprendizaje. 
 
 Una evaluación responsable debería registrar:
 
-- tiempo humano real, no inferido desde timestamps;
+- tiempo humano real, no inferido a partir de marcas de tiempo;
 - costo de modelos, herramientas, revisión e infraestructura;
 - alcance y calidad comparables;
 - defectos, incidentes y mantenimiento posterior;
@@ -178,7 +178,7 @@ La visión del autor es una tecnología que reduzca fricción innecesaria: trám
 
 Es una aspiración, no una predicción. La misma capacidad puede automatizar exclusión, vigilancia, manipulación o decisiones opacas.
 
-El futuro deseable no es aquel donde las personas desaparecen del trabajo, sino aquel donde dedican menos energía a repetición sin propósito y más a comprender, crear, cuidar y decidir. Los agentes deberían ampliar la capacidad humana sin disolver su responsabilidad.
+El futuro deseable no es aquel en el que las personas desaparecen del trabajo, sino aquel en el que dedican menos energía a repetición sin propósito y más a comprender, crear, cuidar y decidir. Los agentes deberían ampliar la capacidad humana sin diluir la responsabilidad de las personas.
 
 ADEV contribuye de una manera acotada: propone que el software asistido por agentes conserve intención humana, límites explícitos, evidencia y aprendizaje abierto. No basta para garantizar un buen futuro, pero ayuda a que las decisiones técnicas sean visibles y discutibles.
 
@@ -220,4 +220,4 @@ Al terminar este capítulo, el lector puede evaluar ADEV sin idealización; reco
 - [`framework/evidence/README.md`](../../framework/evidence/README.md) define la cadena de prueba preferida.
 - [`framework/hardness/00-definition-and-scope.md`](../../framework/hardness/00-definition-and-scope.md) aclara qué puede y qué no puede prometer un agente endurecido.
 - [`framework/hardness/07-compatibility-layer.md`](../../framework/hardness/07-compatibility-layer.md) separa doctrina portable de adaptadores específicos.
-- [`docs/adoption-maturity-model.md`](../../docs/adoption-maturity-model.md) permite aumentar capacidad de manera gradual.
+- [`docs/adoption-maturity-model.md`](../../docs/adoption-maturity-model.md) permite aumentar la capacidad de manera gradual.
