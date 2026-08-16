@@ -41,7 +41,7 @@ La consecuencia durable sí es visible en la doctrina:
 - un punto de restauración reconocible;
 - descarte temprano cuando desaparece la confianza.
 
-La rama breve no evita el error. Hace que equivocarse sea moral y operacionalmente más barato. Un equipo puede abandonar una hora de trabajo sin convertirlo en una derrota personal. Esa seguridad protege también la disposición a experimentar.
+La rama breve no evita el error. Hace que equivocarse sea emocional y operativamente más barato. Un equipo puede abandonar una hora de trabajo sin convertirlo en una derrota personal. Esa seguridad protege también la disposición a experimentar.
 
 ## Caso 2: el idioma reveló una falla del sistema
 
@@ -86,7 +86,7 @@ Un pipeline verde prueba únicamente las propiedades que ejecutó. La comprobaci
 
 Cuando aparecieron señales de lentitud y errores en contenido comunitario, era tentador explicar el problema como una regresión amplia y proponer un rediseño. La medición posterior redujo el foco: respuestas `429`, límites compartidos por origen y patrones de solicitud explicaban mejor una parte relevante del comportamiento observado.
 
-La lección no consiste en convertir rate limiting en la causa universal de problemas de rendimiento. Consiste en resistir una arquitectura dramática cuando la evidencia todavía no permite localizar el problema.
+La lección no consiste en convertir el *rate limiting* en la causa universal de los problemas de rendimiento. Consiste en resistir una arquitectura dramática cuando la evidencia todavía no permite localizar el problema.
 
 El guardrail extraído fue:
 
@@ -138,7 +138,7 @@ La coherencia es esencial. Si el inner loop exige compilar, CI debe comprobar el
 
 ## Frecuencia de entrega: una señal, no una promesa
 
-El autor estima que, después de cerca de un año de maduración, cambios sencillos pueden recorrer issue, implementación, PR y entrega en minutos, y cambios medianos en alrededor de media a una hora. También relata varias entregas productivas durante un día activo.
+El autor estima que, después de cerca de un año de maduración, los cambios sencillos pueden recorrer issue, implementación, PR y entrega en minutos, y los cambios medianos, entre media hora y una hora. También relata varias entregas productivas durante un día activo.
 
 Estas cifras expresan la experiencia actual, pero todavía no cuentan con una muestra pública que relacione issues, timestamps, checks, despliegues y verificación final. No se presentan como benchmark ni promesa para el lector.
 
@@ -154,7 +154,7 @@ La extracción correcta separa tres niveles:
 
 1. **Hecho del proyecto:** ocurrió un fallo de locale entre local y CI.
 2. **Patrón transferible:** diferencias implícitas de entorno producen resultados inconsistentes.
-3. **Asset adaptable:** define defaults, homogeneiza el entorno relevante y refleja el contrato en inner y outer loop.
+3. **Asset adaptable:** define valores predeterminados, homogeneiza el entorno relevante y refleja el contrato en inner y outer loop.
 
 Esta separación protege a ADEV de convertirse en documentación de Homedir. El proyecto aporta presión y evidencia; el framework conserva solo aquello que puede ayudar en otros contextos con sus límites visibles.
 
@@ -168,15 +168,15 @@ Selecciona un fallo real de tu repositorio y registra:
 - evidencia que permitió comprenderlo;
 - control que lo habría detectado antes;
 - alcance mínimo de la nueva regla;
-- asset donde debe vivir;
+- asset en el que debe vivir;
 - prueba de que el guardrail funciona;
 - fecha o condición para revisarlo.
 
-Después ejecuta una iteración pequeña que incorpore el aprendizaje. No cierres el ejercicio al editar documentación: demuestra que la próxima ejecución encuentra, evita o contiene el problema de una manera observable.
+Después ejecuta una iteración pequeña que incorpore el aprendizaje. No cierres el ejercicio al editar documentación: demuestra que el proceso detecta, evita o contiene el problema de una manera observable en la siguiente ejecución.
 
 ## Resultado del capítulo
 
-Al terminar este capítulo, el lector puede usar Homedir como campo de prueba sin confundirlo con doctrina; reconstruir una cadena incidente–decisión–guardrail–asset; clasificar aprendizajes entre principios, pruebas, checks y runbooks; interpretar métricas operacionales con cautela; y convertir un fallo real en una mejora verificable del sistema de entrega.
+Al terminar este capítulo, el lector puede usar Homedir como campo de prueba sin confundirlo con doctrina; reconstruir una cadena incidente–decisión–guardrail–asset; clasificar aprendizajes entre principios, pruebas, checks y runbooks; interpretar métricas operativas con cautela; y convertir un fallo real en una mejora verificable del sistema de entrega.
 
 ## Puente a la práctica
 

@@ -28,11 +28,11 @@ La primera lección metodológica aparece aquí: **un repositorio demuestra arte
 
 ## La restricción como acto de arquitectura
 
-Al comenzar, el agente podía recomendar soluciones técnicamente aceptadas: una base de datos conocida, middleware de mercado o componentes habituales en aplicaciones empresariales. El problema era que una recomendación general no necesariamente respondía al contexto económico y operacional de EventFlow.
+Al comenzar, el agente podía recomendar soluciones técnicamente aceptadas: una base de datos conocida, middleware de mercado o componentes habituales en aplicaciones empresariales. El problema era que una recomendación general no necesariamente respondía al contexto económico y operativo de EventFlow.
 
 El criterio humano cambió la pregunta. No se trataba de escoger la herramienta con mayor reconocimiento, sino de resolver persistencia, comunicación y experiencia con la menor complejidad adecuada para el producto.
 
-El diseño favoreció una interfaz renderizada en servidor, componentes simples y una aproximación frugal a persistencia y mensajería. Algunas decisiones evolucionaron después, como muestra la documentación arquitectónica del repositorio. Eso no contradice el criterio inicial: una restricción es válida dentro de su momento, evidencia y necesidades; debe revisarse cuando cambian.
+El diseño favoreció una interfaz renderizada en servidor, componentes simples y una aproximación frugal a persistencia y mensajería. Algunas decisiones evolucionaron después, como muestra la documentación arquitectónica del repositorio. Eso no contradice el criterio inicial: una restricción es válida según el momento, la evidencia y las necesidades; debe revisarse cuando estos cambian.
 
 El valor del arquitecto no estuvo en escribir cada línea. Estuvo en impedir que una solución genérica definiera el producto por accidente.
 
