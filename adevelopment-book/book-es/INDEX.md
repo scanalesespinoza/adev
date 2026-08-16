@@ -80,7 +80,7 @@ Homedir muestra cómo los incidentes se convierten en reglas, pruebas, automatiz
 
 ## Parte V — Adoptar y extender ADEV
 
-### 12. Adoptar ADEV
+### [12. Adoptar ADEV](12-adoptar-adev.md)
 
 La adopción comienza evaluando la madurez existente. Propone un recorrido de día cero, primera semana y primera entrega que conecta el libro con el starter kit.
 
