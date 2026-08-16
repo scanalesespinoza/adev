@@ -6,7 +6,7 @@ The manuscript is written in Spanish to preserve the author's native voice, Lati
 
 ## Status
 
-Editorial consolidation is in progress. [`INDEX.md`](INDEX.md) defines the approved narrative architecture. Chapter files will be introduced through chapter-scoped iterations only after their evidence and asset dependencies are ready.
+Developmental drafting is complete. [`INDEX.md`](INDEX.md) defines the implemented narrative architecture, and every target in [`Book.txt`](Book.txt) exists. The manuscript is now entering copyediting and publication-system validation; this status does not mean that a release PDF or EPUB is ready.
 
 ## Editorial rules
 
@@ -21,11 +21,12 @@ Editorial consolidation is in progress. [`INDEX.md`](INDEX.md) defines the appro
 
 ## Build order
 
-[`Book.txt`](Book.txt) is the planned Leanpub-style manifest. It lists the approved chapter sequence even when chapter prose has not yet been created. The production PDF workflow must not switch to this manifest until all required files exist and pass editorial validation.
+[`Book.txt`](Book.txt) is the Spanish first-edition manifest. All listed sources exist. The production workflow still targets the historical English manuscript and must migrate to this manifest in a dedicated, reversible iteration with generated-artifact validation.
 
 ## Working documents
 
 - [Narrative index](INDEX.md)
 - [Editorial charter](../../publishing-kit/17-spanish-first-edition-editorial-charter.md)
+- [Developmental audit](../../publishing-kit/18-spanish-manuscript-developmental-audit.md)
 - [Evidence index](../../docs/evidence-index.md)
 - [Technical starter kit](../../starter-kit/README.md)
