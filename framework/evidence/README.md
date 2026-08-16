@@ -6,6 +6,7 @@ Start with:
 
 - [`docs/evidence-index.md`](../../docs/evidence-index.md)
 - [`docs/case-studies/README.md`](../../docs/case-studies/README.md)
+- [`adevelopment-book/book-es/appendices/C-evidencia-y-metodo.md`](../../adevelopment-book/book-es/appendices/C-evidencia-y-metodo.md) for the Spanish first-edition claim taxonomy and editorial method
 - [`publishing-kit/12-proof-signals.md`](../../publishing-kit/12-proof-signals.md)
 
 The preferred proof chain is:

@@ -100,4 +100,4 @@ El llamado final es concreto: elegir un repositorio real, incorporar una baselin
 
 - **[A. Assets técnicos](appendices/A-assets-tecnicos.md):** mapa del framework, starter kit, skills, templates y checklists.
 - **[B. Glosario](appendices/B-glosario.md):** términos canónicos de la práctica.
-- **C. Evidencia y método:** tipos de afirmación, límites de evidencia, fuentes y método de reproducción.
+- **[C. Evidencia y método](appendices/C-evidencia-y-metodo.md):** tipos de afirmación, límites de evidencia, fuentes y método de reproducción.
