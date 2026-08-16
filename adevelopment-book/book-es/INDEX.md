@@ -99,5 +99,5 @@ El llamado final es concreto: elegir un repositorio real, incorporar una baselin
 ## Apéndices
 
 - **[A. Assets técnicos](appendices/A-assets-tecnicos.md):** mapa del framework, starter kit, skills, templates y checklists.
-- **B. Glosario:** términos canónicos de la práctica.
+- **[B. Glosario](appendices/B-glosario.md):** términos canónicos de la práctica.
 - **C. Evidencia y método:** tipos de afirmación, límites de evidencia, fuentes y método de reproducción.
