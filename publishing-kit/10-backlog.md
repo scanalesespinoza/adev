@@ -1,53 +1,54 @@
 # Editorial Readiness Backlog
 
-Baseline: [repository and manuscript inventory](00-inventory.md), observed 2026-08-01. This backlog distinguishes verified completed work from active editorial gaps.
+Baseline: [Spanish manuscript developmental audit](18-spanish-manuscript-developmental-audit.md), observed at `main` commit `533bd1b` on 2026-08-16.
 
 ## Completed or retired
 
-- **Author bio:** completed in book front matter; future changes are editorial refinement, not missing content.
-- **Case-study creation:** completed beyond the original target; eight case-study files are present. Evidence quality and book integration remain separate work.
-- **Initial comparable-title matrix:** completed. Metadata completeness remains active.
-- **UI consistency and decision-history guidance:** completed in existing framework and starter assets.
-- **Starter-kit entry path:** completed through the repository map and starter-kit README.
-- **Permissions log initialization:** completed; ongoing maintenance remains required when third-party material is added.
-- **Spanish root README requirement:** retired. Canonical public content is English unless a bilingual mirror is explicitly approved.
-- **Unsourced adoption targets:** retired as readiness evidence. Targets may exist in a future measurement plan, but must not be reported as observed results.
+- The Spanish first edition is the canonical editorial source.
+- Portada, preliminary matter, 14 numbered chapters, and three appendices exist.
+- Every numbered chapter states an explicit reader outcome.
+- EventFlow and Homedir claims are separated by evidence class and linked to dedicated evidence records.
+- The historical English manuscript remains source material and is not a competing first-edition canon.
+- AI-assisted editing and human accountability are disclosed.
+- Unsupported productivity, ROI, team-equivalence, and zero-risk promises are excluded.
 
-## P0 — next atomic editorial cycles
+## P0 — release-candidate gates
 
-### 1. Resolve canonical manuscript ambiguity
+### 1. Whole-manuscript copyedit
 
-- **Scope:** document whether `manuscript/` is archival, then identify substantive divergence from `adevelopment-book/book/`.
-- **Acceptance:** one canonical-source statement is visible from both surfaces; a reproducible comparison lists divergent files; no manuscript prose is silently discarded.
+- **Scope:** grammar, cadence, punctuation, controlled terminology, repeated rhetoric, and attribution boundaries.
+- **Acceptance:** all manifest files are reviewed; meaning-changing edits are traceable; glossary and manuscript agree; no claim changes evidence class silently.
 
-### 2. Complete comparable-title evidence
+### 2. Spanish publication build
 
-- **Scope:** verify publication year, publisher, identifier or authoritative link, audience, and differentiation for existing entries; add only relevant verified AI-era titles.
-- **Acceptance:** every retained title has sourced publication metadata; duplicates are removed; unsupported market claims are absent.
+- **Scope:** migrate the PDF workflow from the historical English manifest to `book-es/Book.txt` and establish any required resource paths.
+- **Acceptance:** the complete manifest builds reproducibly; the historical source remains preserved; workflow triggers cover Spanish sources; rollback is documented.
 
-### 3. Define chapter outcomes
+### 3. Generated-artifact visual QA
 
-- **Scope:** add a concise reader outcome to every manifest chapter introduction.
-- **Acceptance:** each numbered chapter in `Book.txt` has one testable outcome statement; tone and terminology match ADEV; appendices remain out of scope.
+- **Scope:** inspect the candidate PDF page by page and validate headings, tables, lists, code, links, accented characters, page breaks, and blank pages.
+- **Acceptance:** findings are corrected or explicitly accepted; artifact identity maps to the reviewed commit; no source-only validation is presented as visual proof.
 
-### 4. Audit evidence links
+### 4. Rights and release metadata
 
-- **Scope:** map material book and publishing claims to current evidence or label them as proposals.
-- **Acceptance:** each Homedir-derived claim has a direct link to the relevant artifact in the canonical [Homedir repository](https://github.com/scanalesespinoza/homedir); other claims have a named source or an explicit “proposal/not yet observed” label.
+- **Scope:** evaluate actual external material, attribution, trademarks, distribution terms, edition metadata, and artifact naming.
+- **Acceptance:** the permissions log matches the candidate; unresolved items block release; no ISBN, publisher, date, or endorsement is invented.
 
-## P1 — after P0
+## P1 — professional strengthening
 
-- **Chapter depth and transitions:** expand thin sections and add intentional cross-references without changing the framework doctrine. Acceptance: each edit states its reader outcome and passes book link/build checks.
-- **Measurement plan:** define adoption/readership signals without inventing results. Acceptance: each signal names a source, collection method, owner, cadence, and observation date field.
-- **Document checks:** add narrow Markdown/link validation appropriate to publishing changes. Acceptance: the documented local command and CI result agree on a known-good branch.
-- **Release inventory ritual:** refresh this snapshot when a release is prepared. Acceptance: commit, tag, manifest count, word count, and generated-artifact page count (when available) are recorded from the same release candidate.
+- Refresh comparable-title metadata using authoritative publication sources.
+- Perform and date an external-link audit.
+- Obtain independent editorial and technical review.
+- Add only diagrams that improve comprehension and render reliably.
+- Define release notes and a correction channel for post-publication learning.
 
-## P2 — optional and evidence-dependent
+## P2 — evidence-dependent evolution
 
-- Decide whether an explicitly maintained bilingual mirror is worth its translation and drift cost.
-- Add diagrams only where they improve comprehension and remain maintainable in the publishing toolchain.
-- Add testimonials, quotes, or adoption observations only with permission and traceable provenance.
+- Reproduce unresolved Homedir incident narratives at immutable artifacts.
+- Collect adoption and outcome observations under a declared method.
+- Add a reusable product-knowledge contract if practice demonstrates the need.
+- Adapt a future English edition from the completed Spanish canon.
 
-## Out of scope for this backlog refresh
+## Working rule
 
-This cycle does not revise book prose, Hardness doctrine, starter-kit assets, case-study content, or evidence records. Their links appear only to establish the current inventory.
+Each item should remain an atomic stage or a sequence of chapter-scoped stages. A release candidate is not a release: build success, visual QA, rights review, and final approval must refer to the same commit and generated artifact.

@@ -1,40 +1,31 @@
 # Manuscript Improvement Plan
 
-## Issues found
-- **Depth**: Chapters are brief (~3.3k words total); need more examples and explanations.  
-- **Comp titles**: Missing list and differentiation.  
-- **Author bio**: Absent in manuscript; credibility relies on implied experience.  
-- **Audience clarity**: Broad description; no segmentation or pains.  
-- **Case studies**: Only one worked example (OAuth + health checks) referenced; more needed.  
-- **Spanish edition**: Not present; only one-page pitch bilingual.  
-- **TOC/Navigation**: Long docs lack internal TOC.  
-- **Marketing/platform**: No concrete metrics or plan in-book.  
-- **UI/consistency guardrails**: Pain point discussed in chats, not in manuscript.  
-- **Decision history**: Rollback story exists verbally, not captured in book.
+The Spanish first-edition manuscript has completed developmental drafting. The historical gaps previously listed here—missing Spanish prose, thin chapters, absent author context, missing outcomes, and an incomplete case-study arc—have been resolved or reframed through the canonical Spanish manuscript.
 
-## Suggested rewrites/additions (short)
-- Add 1–2 paragraphs per chapter elaborating the “why” and a concrete story (use rollback week, UI consistency struggle).  
-- Insert author bio block (Architect/Consultant, cross-functional roles, HomeDir proof).  
-- Add a “Consistency Guardrail (UI)” subsection in Baseline or Appendices.  
-- Add a “Decision History” subsection (failures → baseline updates) in Atomic Iterations or Digital Thread.  
-- Comp titles page with real books and how A-Dev differs.  
-- Add Spanish one-page summary and consider Spanish README mirror.  
-- Expand case studies: Quest Board, rollback, Live Alpha launch with flags.
+Current evidence and priorities are maintained in:
 
-## Style/consistency rules
-- Tone: clear, practical, low-fluff; first person when sharing experience; keep “Plan A,” “Baseline,” and “Simple Machines.”
-- Use consistent terms: A-Dev, practitioner role, quality cycle (50/50), Living Baseline, Simple Machines, Plan A, and steady-state language.
-- Keep AI disclosure note on title page/front matter.  
-- Use mermaid diagrams sparingly to illustrate flows.
+- the [Spanish manuscript developmental audit](18-spanish-manuscript-developmental-audit.md);
+- the [publisher readiness rubric](01-readiness-rubric.md);
+- the [Spanish first-edition editorial charter](17-spanish-first-edition-editorial-charter.md);
+- the [editorial readiness backlog](10-backlog.md).
 
-## Minimum viable publishable checklist (next release)
-- 2–3 expanded case studies in `docs/case-studies/`.  
-- Author bio added to Front Matter or Manifesto.  
-- Comp titles filled with real references.  
-- Add UI Consistency guardrail section + Decision History example.  
-- Spanish one-page pitch already done; add Spanish README snippet/section.  
-- Internal TOC for long docs (README, QUALITY).  
-- Starter kit download links (templates) highlighted.  
-- Permissions log initialized with any third-party items.  
-- Marketing plan with concrete channels and TODO metrics.  
-- Release PDF v0.3.x including above changes.
+## Active improvement sequence
+
+1. Copyedit the manuscript as a complete reading experience without changing doctrine silently.
+2. Resolve any copyedit finding through a chapter-scoped change when it affects meaning or evidence.
+3. Migrate the PDF build to the Spanish manifest and perform visual QA.
+4. Close rights, external-link, and release-metadata checks against the generated candidate.
+5. Invite independent review and classify resulting corrections, disagreements, and research gaps.
+
+## Style controls
+
+- Preserve clear, professional Latin American Spanish.
+- Use `ADEV` for the practice and `ADEV.md` for the repository entry point.
+- Keep first-person voice for attributed experience; use general statements only when evidence or explicit doctrine supports them.
+- Preserve the distinction among observed fact, author account, interpretation, proposal, and open gap.
+- Prefer concrete actions and evidence over promotional claims.
+- Use diagrams only when they clarify relationships that prose cannot express as efficiently.
+
+## Completion condition
+
+The improvement cycle is complete only when the manifest builds, the generated artifact passes visual inspection, the permissions review reflects its actual contents, and no unresolved copyedit finding changes the reader promise or evidence boundary.
