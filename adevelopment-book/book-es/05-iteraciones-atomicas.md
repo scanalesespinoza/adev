@@ -100,11 +100,11 @@ La atomicidad es una variable de control. Se ajusta según la evidencia de estab
 
 ADEV combina una rama principal confiable con ramas de trabajo breves. Cada rama nace para resolver un cambio atómico y se integra mediante un pull request.
 
-El punto donde la rama se separa de `main` funciona como referencia de restauración. Si la implementación se enreda, podemos comparar toda su superficie con un estado conocido. Si corregirla resulta menos claro que reconstruirla, podemos descartarla y comenzar otra vez sin arrastrar trabajo dudoso.
+El punto en el que la rama se separa de `main` funciona como referencia de restauración. Si la implementación se enreda, podemos comparar toda su superficie con un estado conocido. Si corregirla resulta menos claro que reconstruirla, podemos descartarla y comenzar otra vez sin arrastrar trabajo dudoso.
 
 La rama no reemplaza backups, pruebas ni rollback productivo. Su función es contener el riesgo del cambio antes de integrarlo.
 
-Una rama breve también reduce divergencia. Cuanto más vive, más probable es que `main` avance, otros cambios toquen las mismas áreas y las decisiones iniciales pierdan actualidad.
+Una rama breve también reduce divergencia. Cuanto más tiempo permanece abierta, más probable es que `main` avance, otros cambios toquen las mismas áreas y las decisiones iniciales pierdan actualidad.
 
 Por eso un PR no debería convertirse en un espacio indefinido donde se acumulan funcionalidades. Su propósito es llevar una intención desde un estado confiable hasta otro estado confiable.
 
@@ -112,7 +112,7 @@ Por eso un PR no debería convertirse en un espacio indefinido donde se acumulan
 
 Antes de adoptar este nivel de atomicidad, una rama acumuló varias funcionalidades durante varios días. Tres parecían funcionar. Las dos siguientes exigieron refactorizaciones crecientes y comenzaron a afectar otro servicio y comportamientos que ya estaban estables.
 
-El problema no era solamente técnico. El trabajo acumulado hacía emocionalmente difícil abandonar la rama. Cada nueva corrección intentaba proteger la inversión anterior, aunque la confianza en el conjunto siguiera disminuyendo.
+El problema no era solamente técnico. El trabajo acumulado hacía emocionalmente difícil abandonar la rama. Cada nueva corrección intentaba proteger la inversión anterior, aunque la confianza en el conjunto seguía disminuyendo.
 
 Finalmente fue necesario descartar todo y reiniciar desde un estado confiable. Incluso las funcionalidades aparentemente correctas estaban demasiado entrelazadas con el resto para integrarlas con seguridad.
 
@@ -162,7 +162,7 @@ Elige un issue que todavía no haya comenzado y realiza este ejercicio:
 5. Escribe una evidencia de cierre para cada acción.
 6. Divide el issue hasta que cada parte tenga una intención principal y pueda revertirse sin perder las otras.
 
-Entrega la primera parte antes de comenzar la siguiente. Después compara el tamaño previsto con el trabajo y diagnóstico reales. Esa evidencia permitirá ajustar tu unidad atómica futura.
+Entrega la primera parte antes de comenzar la siguiente. Después compara el tamaño previsto con el trabajo y el diagnóstico reales. Esa evidencia permitirá ajustar tu unidad atómica futura.
 
 ## Resultado del capítulo
 

@@ -6,7 +6,7 @@ Al comenzar a trabajar con agentes, parece razonable concentrar toda expectativa
 
 Ese enfoque puede funcionar en una primera interacción. No escala como práctica.
 
-Escribir nuevamente un prompt extenso para cada cambio consume tiempo, facilita omisiones y produce variaciones entre personas. Una regla aparece en una solicitud y desaparece en la siguiente. Dos integrantes describen el mismo proceso de maneras diferentes. El comportamiento del agente termina dependiendo de la memoria y dedicación de quien redactó la instrucción del día.
+Escribir nuevamente un prompt extenso para cada cambio consume tiempo, facilita omisiones y produce variaciones entre personas. Una regla aparece en una solicitud y desaparece en la siguiente. Dos integrantes describen el mismo proceso de maneras diferentes. El comportamiento del agente termina dependiendo de la memoria y del cuidado de quien redactó la instrucción del día.
 
 ADEV busca que el prompt se vuelva más pequeño a medida que el sistema de trabajo madura.
 

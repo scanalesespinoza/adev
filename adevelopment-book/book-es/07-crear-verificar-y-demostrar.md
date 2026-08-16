@@ -36,7 +36,7 @@ Los agentes aceleran la producción de hipótesis y alternativas. No eliminan la
 
 ## Verificar en la escala del cambio
 
-Una función con una lógica completa ya ofrece algo que comprobar. También lo hace un componente, un servicio o un flujo de usuario. Si actualizamos varios niveles sin validar ninguno, dejamos que la incertidumbre se acumule.
+Una función con lógica completa ya ofrece algo que comprobar. También lo hace un componente, un servicio o un flujo de usuario. Si actualizamos varios niveles sin validar ninguno, dejamos que la incertidumbre se acumule.
 
 La verificación debe acompañar la granularidad:
 
@@ -99,7 +99,7 @@ Cada check debería responder:
 
 - ¿Qué riesgo cubre?
 - ¿Qué comportamiento o propiedad demuestra?
-- ¿Qué tipo de fallo ha detectado?
+- ¿Qué tipo de fallo puede detectar?
 - ¿Es confiable o produce falsos positivos?
 - ¿Cuánto tarda y dónde pertenece?
 - ¿Duplica otro control?
@@ -143,7 +143,7 @@ Cada elemento responde una pregunta:
 - El despliegue demuestra que el artefacto llegó al entorno.
 - La verificación confirma que la promesa puede cumplirse allí.
 
-Si la cadena termina en el commit, tenemos evidencia de implementación. Si termina en CI, tenemos evidencia de integración. La entrega necesita llegar hasta el consumidor y entorno relevantes.
+Si la cadena termina en el commit, tenemos evidencia de implementación. Si termina en CI, tenemos evidencia de integración. La entrega necesita llegar hasta el consumidor y el entorno relevantes.
 
 ## Producción no es un detalle administrativo
 
@@ -160,7 +160,7 @@ Por eso el cierre final necesita:
 
 No todo cambio se valida en producción pública. El entorno relevante depende del riesgo y la etapa: puede ser un entorno aislado, una audiencia controlada o producción detrás de límites explícitos. Lo importante es no confundir éxito del pipeline con éxito del producto.
 
-La entrega termina cuando la persona o sistema consumidor puede ejecutar el comportamiento prometido bajo condiciones reales suficientes para su riesgo.
+La entrega termina cuando la persona o el sistema consumidor puede ejecutar el comportamiento prometido con un grado de realismo proporcional al riesgo.
 
 ## Cuando una validación falla
 
@@ -176,7 +176,7 @@ La respuesta correcta es comprender:
 
 Después corregimos la causa, repetimos la evidencia y evaluamos si el aprendizaje debe fortalecer la baseline.
 
-No buscamos pipelines siempre verdes porque evitan descubrir problemas. Buscamos controles que se vuelvan verdes cuando existe una razón verificable para confiar.
+No buscamos que los pipelines permanezcan verdes a costa de evitar el descubrimiento de problemas. Buscamos controles que se vuelvan verdes cuando existe una razón verificable para confiar.
 
 ## Práctica: construye una matriz de evidencia
 
@@ -188,7 +188,7 @@ Para tu próxima iteración, crea tres columnas:
 
 Relaciona cada fila con un criterio de aceptación o riesgo. Elimina controles que no puedan explicar su propósito e identifica criterios que todavía no tienen evidencia.
 
-Al cerrar el cambio, registra qué capa encontró cada problema. Si el outer loop detectó algo barato de comprobar localmente, mejora el inner loop. Si producción encontró algo que los anteriores podían simular razonablemente, agrega o fortalece el control correspondiente.
+Al cerrar el cambio, registra qué capa encontró cada problema. Si el outer loop detectó algo barato de comprobar localmente, mejora el inner loop. Si el entorno productivo encontró algo que los anteriores podían simular razonablemente, agrega o fortalece el control correspondiente.
 
 ## Resultado del capítulo
 
@@ -198,4 +198,4 @@ Al terminar este capítulo, el lector puede aplicar 50/50 como atención continu
 
 - [`starter-kit/QUALITY_CYCLE_checklist.md`](../../starter-kit/QUALITY_CYCLE_checklist.md) organiza la verificación amplia de una iteración.
 - [`starter-kit/FIRST_RELEASE.md`](../../starter-kit/FIRST_RELEASE.md) extiende la evidencia hasta la primera entrega.
-- [`docs/case-studies/ci-cd-recovery.md`](../../docs/case-studies/ci-cd-recovery.md) distingue integración, entrega y despliegue mediante un caso operacional.
+- [`docs/case-studies/ci-cd-recovery.md`](../../docs/case-studies/ci-cd-recovery.md) distingue integración, entrega y despliegue mediante un caso operativo.
