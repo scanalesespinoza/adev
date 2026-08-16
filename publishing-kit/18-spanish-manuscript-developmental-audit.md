@@ -101,6 +101,19 @@ The current PDF and documentation-site workflows still consume the historical En
 
 This audit does not certify factual perfection, security, market fit, legal sufficiency, or production readiness. It establishes a narrower conclusion: the Spanish manuscript has enough complete, connected prose to leave developmental drafting and enter copyediting and production validation.
 
+## Copyedit progress
+
+| Block | Files | Status |
+| --- | --- | --- |
+| Preliminary matter and Part I | `00-preliminares.md`, Chapters 1–3 | Complete; grammar and clarity pass without doctrine changes |
+| Part II | Chapters 4–7 | Pending |
+| Part III | Chapters 8–9 | Pending |
+| Part IV | Chapters 10–11 | Pending |
+| Part V | Chapters 12–14 | Pending |
+| Appendices | A–C | Pending |
+
+“Complete” records an editorial pass, not an assertion that no future correction can be found. Later whole-book review must still evaluate rhythm and terminology across block boundaries.
+
 ## Reproduction commands
 
 Run from the repository root in PowerShell:

@@ -18,7 +18,7 @@ La inteligencia artificial suele presentarse como algo separado de la historia h
 
 La historia de nuestra especie también es la historia de las herramientas con las que ampliamos nuestras capacidades. Algunas extendieron nuestra fuerza. Otras extendieron nuestros sentidos, nuestra memoria, nuestra movilidad o nuestra posibilidad de comunicarnos. Cada una cambió lo que podíamos hacer y, con ello, cambió nuestra manera de vivir y organizarnos.
 
-Los agentes de inteligencia artificial pertenecen a esa historia, aunque su escala sea extraordinaria. Pueden interpretar lenguaje, relacionar grandes cantidades de información y ejecutar cadenas de acciones con una autonomía operacional que antes no asociábamos con una herramienta cotidiana. Esa capacidad puede inaugurar una nueva etapa del trabajo intelectual y técnico.
+Los agentes de inteligencia artificial pertenecen a esa historia, aunque su escala sea extraordinaria. Pueden interpretar lenguaje, relacionar grandes cantidades de información y ejecutar cadenas de acciones con una autonomía operativa que antes no asociábamos con una herramienta cotidiana. Esa capacidad puede inaugurar una nueva etapa del trabajo intelectual y técnico.
 
 Pero llamarla herramienta no pretende disminuir su importancia. Pretende ubicar correctamente la responsabilidad.
 
@@ -34,7 +34,7 @@ Entonces aparece una contradicción. Confiamos en el agente como si fuera un pro
 
 ADEV rechaza ambas posturas.
 
-El agente no es un oráculo al cual creerle ni una excusa a la cual transferirle las consecuencias. Es una capacidad de ejecución que debe operar dentro de un sistema de intención, contexto, autoridad y verificación diseñado por personas.
+El agente no es un oráculo al que debamos creer ni una excusa a la cual transferir las consecuencias. Es una capacidad de ejecución que debe operar dentro de un sistema de intención, contexto, autoridad y verificación diseñado por personas.
 
 Esto no significa que toda responsabilidad pertenezca siempre a un único individuo. En una organización puede estar distribuida entre quien define el producto, quien diseña la arquitectura, quien autoriza el acceso, quien aprueba el cambio y quien opera el servicio. Lo importante es que esa responsabilidad permanezca explícitamente en el sistema humano. Nunca termina en la frase: “lo hizo la IA”.
 
@@ -130,7 +130,7 @@ Ese futuro también necesita contrapesos. Mayor capacidad sin límites puede amp
 
 Este libro es una invitación a practicar, no solamente a estar de acuerdo.
 
-Cuando lo termines, el primer paso no será adoptar una plataforma completa ni escribir un prompt extraordinario. Será elegir un repositorio real, incorporar una baseline mínima y entregar un cambio pequeño recorriendo el ciclo completo hasta comprobar su comportamiento.
+Cuando lo termines, el primer paso no será adoptar una plataforma completa ni escribir un prompt extraordinario. Será elegir un repositorio real, incorporar una baseline mínima y entregar un cambio pequeño que recorra el ciclo completo hasta comprobar su comportamiento.
 
 La herramienta aporta capacidad. Tú aportas intención, criterio y responsabilidad.
 

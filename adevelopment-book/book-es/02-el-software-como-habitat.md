@@ -8,7 +8,7 @@ Una arquitectura existe para crear un lugar que alguien pueda habitar.
 
 En un edificio, la estructura sostiene actividades humanas: descansar, trabajar, encontrarse, cuidar, aprender. En un producto digital ocurre algo semejante. Las personas entran para consultar información, completar un trámite, coordinarse con otras, tomar una decisión o resolver una necesidad. Durante ese tiempo viven dentro de las posibilidades y limitaciones que diseñamos.
 
-Pensar el software como hábitat cambia el punto de partida. Ya no preguntamos primero qué tecnología queremos utilizar. Preguntamos quién llegará, qué intenta conseguir, qué necesita comprender y qué debería sentir mientras lo hace.
+Pensar el software como hábitat cambia el punto de partida. Ya no preguntamos primero qué tecnología queremos utilizar. Preguntamos quién llegará, qué intenta conseguir, qué necesita comprender y qué experiencia debería encontrar mientras lo hace.
 
 La respuesta nunca es puramente estética. Una interfaz clara, una autorización correcta, un tiempo de respuesta aceptable y una recuperación comprensible forman parte de la misma experiencia. Para quien utiliza el sistema, producto, arquitectura, calidad y seguridad no son departamentos separados. Son propiedades del lugar que le entregamos.
 
@@ -88,7 +88,7 @@ Los agentes pueden ayudar a dividir el trabajo. Pueden detectar que un issue con
 
 Los requisitos llamados no funcionales suelen aparecer después de definir las capacidades: rendimiento, disponibilidad, privacidad, accesibilidad, recuperación y seguridad. La expresión puede sugerir que son secundarios. Para el usuario, no lo son.
 
-Una consulta que entrega la respuesta correcta después de un tiempo inútil no cumple realmente su propósito. Un formulario que funciona pero expone información privada no es una buena solución. Un proceso que falla sin explicar cómo continuar convierte una excepción técnica en frustración humana.
+Una consulta que entrega la respuesta correcta cuando ya dejó de ser útil no cumple realmente su propósito. Un formulario que funciona pero expone información privada no es una buena solución. Un proceso que falla sin explicar cómo continuar convierte una excepción técnica en frustración humana.
 
 Estas propiedades nacen junto con la necesidad:
 
@@ -114,7 +114,7 @@ Este principio es especialmente importante al trabajar con agentes. Un modelo pu
 
 Volvamos a la casa. El contrato de producto explica qué tipo de lugar estamos construyendo. ¿Es una vivienda, un restaurante, una escuela? ¿Cuántos espacios necesita y qué actividades deben ocurrir en ellos?
 
-La arquitectura explica cómo puede sostenerse ese lugar. Identifica paredes estructurales, conexiones, límites y zonas donde existe libertad para adaptar.
+La arquitectura explica cómo puede sostenerse ese lugar. Identifica paredes estructurales, conexiones, límites y zonas donde existe libertad para hacer ajustes.
 
 La calidad explica las propiedades que cada espacio debe conservar. Una pared junto a un baño enfrenta condiciones distintas a una división decorativa.
 
@@ -132,7 +132,7 @@ Si el issue prometía una estructura visual, debemos poder recorrerla y comproba
 
 La realidad puede mostrar que la especificación era incompleta o que el resultado necesita otra iteración. Eso no invalida el método. ADEV no espera perfección en un intento. Utiliza cambios pequeños para aprender sin esconder el fallo dentro de una entrega demasiado grande.
 
-La inteligencia artificial no elimina la prueba y el error. Reduce el costo de recorrerla cuando el trabajo está bien delimitado y la verificación acompaña cada paso.
+La inteligencia artificial no elimina la prueba y el error. Reduce el costo de recorrer ese ciclo cuando el trabajo está bien delimitado y la verificación acompaña cada paso.
 
 ## Práctica: escribe el primer contrato
 

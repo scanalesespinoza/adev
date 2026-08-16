@@ -90,7 +90,7 @@ Una decisión tecnológica necesita relacionarse con requisitos y restricciones 
 
 ## Cuándo el agente debe detenerse
 
-Un agente maduro no es aquel que nunca pregunta. Es aquel que reconoce cuándo continuar sería inventar autoridad o contexto.
+Un sistema de trabajo maduro no es aquel en el que el agente nunca pregunta. Es aquel en el que el agente reconoce cuándo continuar supondría inventar autoridad o contexto.
 
 Debe detenerse o escalar cuando:
 
@@ -119,9 +119,9 @@ El arquitecto debe poder explicar:
 - Por qué la solución corresponde al producto.
 - Qué riesgos introdujo.
 - Qué validaciones se ejecutaron.
-- Cómo se recuperaría el sistema si el resultado falla.
+- Cómo se recuperaría el sistema si el resultado fallara.
 
-El diff de un pull request ofrece una vista de impacto: archivos creados, eliminados y modificados; dependencias; migraciones; configuración y distribución del cambio. Las pruebas y checks agregan evidencia ejecutable. Una revisión independiente puede encontrar supuestos que autor e implementador compartieron.
+El diff de un pull request ofrece una vista de impacto: archivos creados, eliminados y modificados; dependencias; migraciones; configuración y distribución del cambio. Las pruebas y checks aportan evidencia ejecutable. Una revisión independiente puede encontrar supuestos compartidos por quien definió el cambio y quien lo implementó.
 
 Ninguna de esas capas es suficiente por separado. Un diff pequeño puede contener una vulnerabilidad crítica. Una suite verde puede verificar una especificación equivocada. Dos agentes pueden compartir el mismo punto ciego. La confianza profesional nace de combinar intención, revisión, controles y comportamiento observable.
 
