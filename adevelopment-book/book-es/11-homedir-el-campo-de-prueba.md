@@ -140,7 +140,7 @@ La coherencia es esencial. Si el inner loop exige compilar, CI debe comprobar el
 
 El autor estima que, después de cerca de un año de maduración, los cambios sencillos pueden recorrer issue, implementación, PR y entrega en minutos, y los cambios medianos, entre media hora y una hora. También relata varias entregas productivas durante un día activo.
 
-Estas cifras expresan la experiencia actual, pero todavía no cuentan con una muestra pública que relacione issues, timestamps, checks, despliegues y verificación final. No se presentan como benchmark ni promesa para el lector.
+Estas cifras expresan la experiencia actual, pero todavía no cuentan con una muestra pública que relacione issues, marcas de tiempo, checks, despliegues y verificación final. No se presentan como referencia comparativa ni promesa para el lector.
 
 Lo que sí puede aprenderse es el mecanismo que intentan describir: contexto durable, iteraciones pequeñas, pipeline conocido, revisión en capas y recuperación barata reducen fricción acumulada. Para convertir esa percepción en evidencia cuantitativa será necesario muestrear entregas completas y definir qué significa sencillo, mediano y exitoso.
 

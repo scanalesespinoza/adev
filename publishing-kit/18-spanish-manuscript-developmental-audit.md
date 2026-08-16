@@ -110,7 +110,7 @@ This audit does not certify factual perfection, security, market fit, legal suff
 | Part III | Chapters 8–9 | Complete; grammar and clarity pass without doctrine changes |
 | Part IV | Chapters 10–11 | Complete; grammar and clarity pass without changing evidence classes |
 | Part V | Chapters 12–14 | Complete; grammar and clarity pass without strengthening adoption claims |
-| Appendices | A–C | Pending |
+| Appendices | A–C | Complete; terminology, grammar, evidence language, and technical links reviewed |
 
 “Complete” records an editorial pass, not an assertion that no future correction can be found. Later whole-book review must still evaluate rhythm and terminology across block boundaries.
 

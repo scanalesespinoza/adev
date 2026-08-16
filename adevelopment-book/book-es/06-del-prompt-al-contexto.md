@@ -119,7 +119,7 @@ ADEV mantiene el conocimiento operativo cerca del repositorio porque allí puede
 
 ## Una skill no es un prompt guardado
 
-Guardar un prompt repetido es un primer paso, pero una práctica reusable necesita más estructura.
+Guardar un prompt repetido es un primer paso, pero una práctica reutilizable necesita más estructura.
 
 Una skill puede definir:
 
