@@ -86,7 +86,7 @@ La adopción comienza evaluando la madurez existente. Propone un recorrido de d�
 
 **Resultado:** el lector puede incorporar una baseline mínima a un repositorio y completar un primer cambio verificable.
 
-### 13. Objeciones, límites y futuro
+### [13. Objeciones, límites y futuro](13-objeciones-limites-y-futuro.md)
 
 Aborda pérdida de habilidades, dependencia, seguridad, sistemas críticos, retorno no demostrado, concentración tecnológica y el futuro de una práctica neutral y abierta.
 
