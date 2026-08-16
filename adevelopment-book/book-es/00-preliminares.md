@@ -4,9 +4,9 @@
 
 Este libro parte de una convicción sencilla: la inteligencia artificial es una herramienta, y la responsabilidad por lo que hacemos con ella continúa siendo humana. Un agente puede explorar, proponer, escribir código, ejecutar pruebas y recorrer una parte considerable del ciclo de entrega. No comprende, sin embargo, la necesidad humana de la misma manera que quien diseña el producto; tampoco hereda por sí solo la responsabilidad por sus efectos.
 
-ADEV nace en esa distancia entre capacidad y responsabilidad. Su nombre significa **AI Agentic Development** y designa una práctica para dirigir el desarrollo de software con agentes mediante intención explícita, contexto durable, cambios pequeños y evidencia. No pretende personificar la herramienta ni presentar la autonomía como sustituto del criterio. Busca crear las condiciones para delegar ejecución sin abandonar gobierno.
+ADEV nace en esa distancia entre capacidad y responsabilidad. Su nombre significa **AI Agentic Development** y designa una práctica para dirigir el desarrollo de software con agentes mediante intención explícita, contexto durable, cambios pequeños y evidencia. No pretende personificar la herramienta ni presentar la autonomía como sustituto del criterio. Busca crear las condiciones para delegar ejecución sin abandonar el gobierno.
 
-La perspectiva que encontrarás aquí proviene de una trayectoria profesional de aproximadamente quince años de entrega en proyectos reales. Comenzó en desarrollo de aplicaciones y se extendió hacia middleware, sistemas operativos, datos, redes e infraestructura; después incorporó calidad, seguridad, operaciones, gestión de arquitectura y arquitectura empresarial. Esa amplitud no se presenta como prueba universal de que ADEV funciona en todo contexto. Explica desde dónde observa el autor y por qué la práctica conecta producto, software, operación y aprendizaje en lugar de reducir el problema a la generación de código.
+La perspectiva que encontrarás aquí proviene de una trayectoria profesional de aproximadamente quince años dedicada a entregar proyectos reales. Comenzó en el desarrollo de aplicaciones y se extendió hacia middleware, sistemas operativos, datos, redes e infraestructura; después incorporó calidad, seguridad, operaciones, gestión de arquitectura y arquitectura empresarial. Esa amplitud no se presenta como prueba universal de que ADEV funciona en todo contexto. Explica desde dónde observa el autor y por qué la práctica conecta producto, software, operación y aprendizaje en lugar de reducir el problema a la generación de código.
 
 ## La promesa honesta
 
@@ -33,7 +33,7 @@ ADEV es una forma de organizar el comportamiento del sistema de entrega. Coloca 
 
 No es una colección de prompts perfectos. Un prompt extenso puede ayudar al principio, pero no escala como memoria organizacional. Tampoco es una autorización para aceptar código que nadie puede explicar ni validar. La delegación de complejidad reduce el trabajo manual que debe observarse línea por línea, pero aumenta la importancia de los planos, los límites, las pruebas y la evidencia observable.
 
-Finalmente, ADEV no promete que el agente acertará en una sola interacción. La realidad cambia, las especificaciones contienen supuestos y toda implementación puede fallar. El beneficio práctico está en probar antes, aprender con pérdidas pequeñas y volver durable lo aprendido.
+Finalmente, ADEV no promete que el agente acertará en una sola interacción. La realidad cambia, las especificaciones contienen supuestos y toda implementación puede fallar. El beneficio práctico está en probar antes, aprender con pérdidas pequeñas y hacer durable lo aprendido.
 
 ## Cómo recorrer el libro
 
@@ -67,4 +67,4 @@ El proceso no transfiere autoría ni responsabilidad a la herramienta. El autor 
 
 No se espera que aceptes ADEV por fe. Se espera que lo pruebes en una escala donde equivocarte sea barato. Elige un repositorio que puedas controlar, instala una baseline pequeña, define una necesidad observable y acompaña un cambio hasta comprobar su efecto. Luego revisa qué aprendiste y mejora el sistema antes de pedirle más autonomía.
 
-Esa secuencia resume el contrato de este libro: el autor ofrece una práctica abierta a contraste y mejora; el lector la juzga por su capacidad de producir trabajo comprensible, seguro y verificable. La primera edición no cierra ADEV. Establece un punto desde el cual practicarla con responsabilidad.
+Esa secuencia resume el contrato de este libro: el autor ofrece una práctica abierta al contraste y la mejora; el lector la juzga por su capacidad de producir trabajo comprensible, seguro y verificable. La primera edición no cierra ADEV. Establece un punto desde el cual practicarla con responsabilidad.
