@@ -31,7 +31,7 @@ El contrato común no pretende que todos piensen igual. Permite que las diferenc
 
 ## El issue es una reserva de intención
 
-En trabajo paralelo, un issue no es solo una lista de tareas. Reserva una porción de la intención del producto y la entrega a una persona o agente bajo un alcance reconocible.
+En el trabajo paralelo, un issue no es solo una lista de tareas. Reserva una porción de la intención del producto y la entrega a una persona o agente bajo un alcance reconocible.
 
 Antes de comenzar debería poder responder:
 
@@ -57,7 +57,7 @@ No es una ley universal. La topología del equipo, las obligaciones regulatorias
 
 Las ramas breves reducen divergencia. Si una iteración dura minutos u horas, es más sencillo comprender su diff, actualizarla respecto al estado compartido y descartarla cuando pierde confiabilidad. Una rama que acumula varias funcionalidades durante días crea más combinaciones, conflictos y decisiones difíciles de separar.
 
-El PR se convierte en la frontera donde la interpretación privada vuelve al sistema común. Allí se relacionan necesidad, cambios, decisiones, pruebas, riesgos y conversación de revisión.
+El PR se convierte en la frontera en la que la interpretación privada vuelve al sistema común. Allí se relacionan necesidad, cambios, decisiones, pruebas, riesgos y conversación de revisión.
 
 ## Coordinar antes de colisionar
 
@@ -85,11 +85,11 @@ Dentro de una iteración pueden existir roles distintos:
 1. **Conductor:** mantiene la relación con el issue, decide el alcance y responde por el cierre.
 2. **Implementador:** modifica el sistema y produce evidencia del inner loop.
 3. **Revisor:** contrasta el diff con intención, baseline y riesgos.
-4. **Validador operacional:** comprueba integración, despliegue y comportamiento relevante.
+4. **Validador operativo:** comprueba integración, despliegue y comportamiento relevante.
 
 Estos roles pueden ser ejercidos por personas, agentes o automatizaciones según el riesgo. Lo que no debería desaparecer es la responsabilidad humana por las decisiones y efectos.
 
-Utilizar sesiones separadas para implementar y revisar puede ampliar la cobertura. Sin embargo, dos agentes no son automáticamente independientes: pueden compartir modelo, contexto, entrenamiento o supuestos. La revisión cruzada es una capa adicional, no sustituto de pruebas ejecutables, controles externos ni juicio responsable.
+Utilizar sesiones separadas para implementar y revisar puede ampliar la cobertura. Sin embargo, dos agentes no son automáticamente independientes: pueden compartir modelo, contexto, entrenamiento o supuestos. La revisión cruzada es una capa adicional, no un sustituto de pruebas ejecutables, controles externos ni juicio responsable.
 
 ## El handoff es parte del trabajo
 
@@ -129,7 +129,7 @@ La rama principal debe representar el estado compartido confiable. Si integrar r
 
 Abrir diez agentes no garantiza entregar diez veces más. Cada flujo adicional consume atención para definir, revisar, integrar y recuperar. El cuello de botella puede moverse desde la implementación hacia la decisión o la validación.
 
-Una organización madura controla trabajo en curso según su capacidad real de cierre. Observa, entre otras señales:
+Una organización madura controla el trabajo en curso según su capacidad real de cierre. Observa, entre otras señales:
 
 - tiempo desde issue hasta comportamiento verificado;
 - PR abiertos y edad de las ramas;
@@ -138,7 +138,7 @@ Una organización madura controla trabajo en curso según su capacidad real de c
 - tiempo de revisión y recuperación;
 - proporción de trabajo iniciado que llega a entrega.
 
-Estas métricas no deben convertirse en cuotas universales ni en evaluación simplista de personas. Sirven para localizar fricción. Si los agentes producen cambios más rápido de lo que el equipo puede comprenderlos, el sistema no ganó capacidad: acumuló inventario técnico.
+Estas métricas no deben convertirse en cuotas universales ni en evaluación simplista de personas. Sirven para localizar fricción. Si los agentes producen cambios más rápido de lo que el equipo puede comprenderlos, el sistema no aumentó su capacidad: acumuló inventario técnico.
 
 El objetivo es aumentar flujo confiable, no actividad visible.
 
@@ -156,7 +156,7 @@ Un onboarding ADEV puede comenzar con un cambio real y pequeño:
 6. revisar el diff y la evidencia;
 7. integrar mediante PR;
 8. comprobar el comportamiento en el entorno relevante;
-9. registrar cualquier aprendizaje reusable.
+9. registrar cualquier aprendizaje reutilizable.
 
 El resultado no es solo una funcionalidad. La nueva persona demuestra que puede usar el lenguaje operativo del equipo y cerrar un ciclo sin depender de instrucciones privadas.
 
@@ -179,7 +179,7 @@ La solución no es centralizar cada decisión ni eliminar el paralelismo. Es hac
 
 Selecciona dos cambios pequeños del mismo producto. Antes de iniciarlos, registra propietario, alcance, archivos previstos, dependencias y evidencia de cierre.
 
-Decide si son realmente independientes. Si comparten una interfaz, define primero el contrato o secuencia el trabajo. Asigna una rama a cada iteración y utiliza la misma baseline para ambos agentes.
+Decide si son realmente independientes. Si comparten una interfaz, define primero el contrato u ordena el trabajo. Asigna una rama a cada iteración y utiliza la misma baseline para ambos agentes.
 
 En cada punto de integración, compara:
 
