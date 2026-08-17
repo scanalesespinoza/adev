@@ -57,21 +57,17 @@ The 50/50 principle represents continuous attention, not a mathematical division
 
 ## Part III — Governing Autonomy
 
-### 8. Autonomy, Security, and Responsibility
+### [8. Autonomy, Security, and Responsibility](08-autonomy-security-and-responsibility.md)
 
 Autonomy is freedom within designed boundaries. This chapter examines authority, least privilege, destructive actions, sensitive data, potentially malicious intent, human escalation, and recovery.
 
 **Outcome:** the reader can define what an agent may do, when it must stop, and who remains responsible for the consequences.
 
-Target: `08-autonomy-security-and-responsibility.md`
-
-### 9. Teams and Agents
+### [9. Teams and Agents](09-teams-and-agents.md)
 
 The baseline turns private expectations into a collaboration contract. Issues, short-lived branches, file coordination, cross-review, and frequent integration allow multiple people and agents to work without depending on private prompts.
 
 **Outcome:** the reader can introduce agents into a team without confusing parallelism with coordination.
-
-Target: `09-teams-and-agents.md`
 
 ## Part IV — Learning from Execution
 
