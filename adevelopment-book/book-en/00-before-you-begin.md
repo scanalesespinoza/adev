@@ -25,7 +25,7 @@ This promise includes no universal figure for productivity, savings, or return o
 
 This edition is written for experienced developers, architects, technical leaders, product owners, maintainers, and platform teams that already build software or are preparing to introduce agents into that work. It can also help someone forming a team who needs different people and agents to work from coherent expectations.
 
-This is not an introduction to programming, model training, or data science. It is not the manual for a particular tool or vendor. The technical examples make the practice concrete, but the goal is for its principles to outlast changes in models, interfaces, and platforms.
+This is not an introduction to programming, model training, or data science. It is not the manual for a particular tool or vendor. The technical examples make the practice concrete, but its principles are intended to outlast changes in models, interfaces, and platforms.
 
 ## What ADEV Is—and Is Not
 
