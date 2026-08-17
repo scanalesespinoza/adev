@@ -8,6 +8,8 @@ The manuscript is written in Spanish to preserve the author's native voice, Lati
 
 Developmental drafting and first-edition copyediting are complete. [`INDEX.md`](INDEX.md) defines the implemented narrative architecture, every target in [`Book.txt`](Book.txt) exists, and the publication workflow generates validated PDF and EPUB candidates. Public release remains a separate manual decision governed by the publishing checklist.
 
+The approved identity of this edition is `v1.0.0`. [`version.txt`](version.txt) is the canonical numeric version source used by the manuscript and publication workflow; creating the public tag remains a separate manual release action.
+
 ## Editorial rules
 
 - Lead with human problems and observable outcomes; introduce technology only when it clarifies the practice.

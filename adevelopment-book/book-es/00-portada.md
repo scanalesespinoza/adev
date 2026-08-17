@@ -4,6 +4,8 @@
 
 Repositorio canónico y assets técnicos: <https://github.com/scanalesespinoza/adev>
 
+Primera edición en español · versión 1.0.0
+
 ---
 
 Copyright © Sergio Sebastián Canales Espinoza.

@@ -37,10 +37,23 @@ jobs:
         run: |
           test -f adevelopment-book/book-es/Book.txt
           test -f adevelopment-book/book-es/title.txt
+          test -f adevelopment-book/book-es/version.txt
+          BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
+          [[ "$BOOK_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
           while IFS= read -r entry; do
             [ -z "$entry" ] && continue
             test -f "adevelopment-book/book-es/${entry}.md"
           done < adevelopment-book/book-es/Book.txt
+
+      - name: Validate release identity
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        run: |
+          BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
+          EXPECTED_TAG="v${BOOK_VERSION}"
+          if [ "$GITHUB_REF_NAME" != "$EXPECTED_TAG" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match the canonical book version $EXPECTED_TAG."
+            exit 1
+          fi
 
       - name: Compose deterministic cover
         run: |
@@ -53,6 +66,7 @@ jobs:
         run: |
           mkdir -p adevelopment-book/dist
           BOOK_TITLE="$(cat adevelopment-book/book-es/title.txt)"
+          BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
           mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book-es/Book.txt)
           FILES=()
           for entry in "${ENTRIES[@]}"; do
@@ -73,11 +87,13 @@ jobs:
             --metadata title="$BOOK_TITLE" \
             --metadata author="Sergio Sebastián Canales Espinoza" \
             --metadata date="Primera edición en español" \
+            --metadata subject="Primera edición en español · versión ${BOOK_VERSION}" \
             --metadata lang="es-ES"
 
       - name: Build and validate EPUB
         run: |
           BOOK_TITLE="$(cat adevelopment-book/book-es/title.txt)"
+          BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
           mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book-es/Book.txt)
           FILES=()
           for entry in "${ENTRIES[@]}"; do
@@ -93,6 +109,7 @@ jobs:
             --toc-depth=1 \
             --metadata title="$BOOK_TITLE" \
             --metadata author="Sergio Sebastián Canales Espinoza" \
+            --metadata identifier="urn:adev:book-es:${BOOK_VERSION}" \
             --metadata lang="es-ES"
           epubcheck adevelopment-book/dist/adev-book.epub
 

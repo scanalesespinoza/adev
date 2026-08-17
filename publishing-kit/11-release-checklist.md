@@ -16,7 +16,7 @@
 - [x] Included material is recorded in `08-permissions-log.md`.
 - [x] Select a final text-free cover asset and record its generation provenance.
 - [ ] Confirm cover treatment against the requirements of any external distribution channel before submission.
-- [ ] Choose the first public version identifier.
+- [x] Use `v1.0.0` as the first public version identifier; `adevelopment-book/book-es/version.txt` is its canonical source.
 - [ ] Choose the publication date at the time the release is approved.
 - [ ] Add ISBN, publisher, price, and channel metadata only when a chosen distribution channel requires them; do not invent placeholders.
 
