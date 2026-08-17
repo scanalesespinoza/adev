@@ -11,29 +11,23 @@ ADEV teaches professionals to direct software development with AI agents respons
 
 ## Part I — Responsibility Changes Form
 
-### 1. The ADEV Manifesto
+### [1. The ADEV Manifesto](01-adev-manifesto.md)
 
 Artificial intelligence is a tool of a new scale, not an entity to which responsibility can be transferred. This chapter presents the origin of ADEV, its position between enthusiasm and fear, and its commitment to turning technical capability toward human benefit.
 
 **Outcome:** the reader moves beyond both idealization and automatic rejection and accepts responsibility for the use and effects of agents.
 
-Target: `01-adev-manifesto.md`
-
-### 2. Software as Habitat
+### [2. Software as Habitat](02-software-as-habitat.md)
 
 Software is a space inhabited by other people. Product and architecture begin by understanding those people, their actions, and the experience they need.
 
 **Outcome:** the reader can express a need as observable human behavior before choosing tools.
 
-Target: `02-software-as-habitat.md`
-
-### 3. The Architect and the Agent
+### [3. The Architect and the Agent](03-the-architect-and-the-agent.md)
 
 The agent executes and proposes; the architect retains intent, context, judgment, and responsibility. Blueprints distinguish structural decisions from local and reversible ones.
 
 **Outcome:** the reader can define what to delegate, what to supervise, and what never to hand over completely to an agent.
-
-Target: `03-the-architect-and-the-agent.md`
 
 ## Part II — The Operating System of the Practice
 
