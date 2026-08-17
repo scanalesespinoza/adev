@@ -217,7 +217,7 @@ After this chapter, the reader can evaluate ADEV without idealization; recognize
 ## Bridge to Practice
 
 - [`docs/research-agenda.md`](../../docs/research-agenda.md) turns open questions into an evidence backlog.
-- [`framework/evidence/README.md`](../../framework/evidence/README.md) defines the preferred proof chain.
+- [`framework/evidence/README.md`](../../framework/evidence/README.md) defines the preferred evidence chain.
 - [`framework/hardness/00-definition-and-scope.md`](../../framework/hardness/00-definition-and-scope.md) clarifies what a hardened agent can and cannot promise.
 - [`framework/hardness/07-compatibility-layer.md`](../../framework/hardness/07-compatibility-layer.md) separates portable doctrine from tool-specific adapters.
 - [`docs/adoption-maturity-model.md`](../../docs/adoption-maturity-model.md) supports gradual increases in capability.

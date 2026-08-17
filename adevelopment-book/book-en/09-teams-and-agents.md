@@ -83,7 +83,7 @@ An agent is not a new team by itself. It operates within the responsibility of t
 An iteration may contain distinct roles:
 
 1. **Driver:** maintains the connection to the issue, decides scope, and answers for closure.
-2. **Implementer:** modifies the system and produces inner-loop evidence.
+2. **Implementer:** modifies the system and produces inner loop evidence.
 3. **Reviewer:** compares the diff with intent, baseline, and risks.
 4. **Operational validator:** verifies integration, deployment, and relevant behavior.
 

@@ -172,7 +172,7 @@ Behavior a person or consuming system can perform or perceive. It connects a pro
 
 ### Outer Loop
 
-The independent cycle beginning when a change leaves the local session. It includes CI, reviews, policies, integration, and environment controls, mirroring or extending important inner-loop contracts.
+The independent cycle beginning when a change leaves the local session. It includes CI, reviews, policies, integration, and environment controls, mirroring or extending important inner loop contracts.
 
 ### Overlay
 

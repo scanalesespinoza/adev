@@ -88,7 +88,7 @@ Classification prevents every error from becoming another paragraph in `ADEV.md`
 | Cross-cutting working principle | `ADEV.md` or applicable doctrine |
 | Contextual check that remains manual | Checklist |
 | Technology- or environment-specific detail | Specialized knowledge close to the domain |
-| Risk that can be checked repeatedly | Automated outer-loop check |
+| Risk that can be checked repeatedly | Automated outer loop check |
 | Transferable conflict, decision, and result | Case study or indexed evidence |
 
 A useful rule is:

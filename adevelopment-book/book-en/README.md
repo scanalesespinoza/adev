@@ -8,7 +8,7 @@ The source is `adevelopment-book/book-es/` as published under tag `v2.0.0` at co
 
 ## Status
 
-The full English manuscript and its three appendices have been assembled. The adaptation is now awaiting developmental review, copyediting, production audits, PDF and EPUB generation, and author approval. Files in this directory must not be presented as a released English edition until that completion gate is satisfied.
+The full English manuscript and its three appendices have been assembled and have passed developmental review. The adaptation is now awaiting copyediting, production audits, PDF and EPUB generation, and author approval. Files in this directory must not be presented as a released English edition until that completion gate is satisfied.
 
 ## Working rules
 
