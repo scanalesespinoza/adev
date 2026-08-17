@@ -32,6 +32,6 @@ Constraints: artwork only; no words, letters, numbers, glyphs, logos, UI panels,
 ## Publication handling
 
 - Preserve this file as the untypeset master.
-- Add typography through the publication build, not by regenerating text inside the image.
+- Add typography through [`build-cover.py`](../../build-cover.py), not by regenerating text inside the image.
 - Record any crop, color correction, or replacement as a new versioned asset.
 - Recheck the applicable distribution channel's current requirements before commercial submission.

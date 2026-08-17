@@ -31,7 +31,7 @@ jobs:
       - name: Install publishing toolchain
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc epubcheck texlive-xetex texlive-fonts-recommended texlive-latex-recommended texlive-lang-spanish lmodern
+          sudo apt-get install -y pandoc epubcheck python3-pil fonts-dejavu-core texlive-xetex texlive-fonts-recommended texlive-latex-recommended texlive-lang-spanish lmodern
 
       - name: Validate manuscript manifest
         run: |
@@ -41,6 +41,13 @@ jobs:
             [ -z "$entry" ] && continue
             test -f "adevelopment-book/book-es/${entry}.md"
           done < adevelopment-book/book-es/Book.txt
+
+      - name: Compose deterministic cover
+        run: |
+          mkdir -p adevelopment-book/dist
+          python3 adevelopment-book/build-cover.py \
+            --input adevelopment-book/book-es/resources/cover-art.png \
+            --output adevelopment-book/dist/adev-cover.png
 
       - name: Build consolidated PDF
         run: |
@@ -56,6 +63,7 @@ jobs:
             -o adevelopment-book/dist/adev-book.pdf \
             --from markdown-yaml_metadata_block \
             --pdf-engine=xelatex \
+            --include-in-header=adevelopment-book/pdf-cover.tex \
             -V geometry=margin=1in \
             -V classoption=onecolumn,titlepage \
             -V fontsize=11pt \
@@ -80,6 +88,7 @@ jobs:
             -o adevelopment-book/dist/adev-book.epub \
             --from markdown-yaml_metadata_block \
             --lua-filter=adevelopment-book/epub-external-links.lua \
+            --epub-cover-image=adevelopment-book/dist/adev-cover.png \
             --table-of-contents \
             --toc-depth=1 \
             --metadata title="$BOOK_TITLE" \
