@@ -3,6 +3,8 @@
 ## Target persona
 - **Practitioners, maintainers, and team leads:** people who want production-grade output with minimal coordination tax; value frugality, portability, and fast proof.
 
+The controlled and public launch copy for the consolidated Spanish edition is maintained in [`19-spanish-launch-kit.md`](19-spanish-launch-kit.md). That package supersedes generic launch wording for `v2.0.0` and defines how early-reader feedback should be collected without turning unverified reactions into proof.
+
 ## Channels & actions (TODO metrics)
 1. Talks/workshops for OSS and startup communities (e.g., OpenSource Santiago).  
 2. Guest on podcasts/streams about AI+Dev discipline; share A-Dev proof (HomeDir).  
