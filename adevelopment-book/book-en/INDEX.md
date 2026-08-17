@@ -43,21 +43,17 @@ Small tasks reduce the surface of uncertainty, make impact visible, and make mis
 
 **Outcome:** the reader can divide a need into short, reversible, and verifiable changes.
 
-### 6. From Prompt to Durable Context
+### [6. From Prompt to Durable Context](06-from-prompt-to-durable-context.md)
 
 Long prompts are an early phase. Recurring instructions should become versioned contracts, templates, skills, policies, and automation; the prompt remains focused on the specific intent.
 
 **Outcome:** the reader can reduce repetition without hiding the context that governs the agent.
 
-Target: `06-from-prompt-to-durable-context.md`
-
-### 7. Create, Verify, and Demonstrate
+### [7. Create, Verify, and Demonstrate](07-create-verify-and-demonstrate.md)
 
 The 50/50 principle represents continuous attention, not a mathematical division of time. The inner and outer loops mirror one another, and delivery closes only when the promised behavior is verified in the relevant environment.
 
 **Outcome:** the reader can build a need → change → test → integration → deployment → verification evidence chain.
-
-Target: `07-create-verify-and-demonstrate.md`
 
 ## Part III — Governing Autonomy
 
