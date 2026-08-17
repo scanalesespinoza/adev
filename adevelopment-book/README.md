@@ -16,7 +16,7 @@ The editorial source of truth for the first edition lives in `book-es/`.
 The prior English manuscript remains in `book/` while its useful material is evaluated chapter by chapter. It must not be expanded independently during the Spanish first-edition consolidation.
 
 Key files:
-- `Book.txt`: ordered manuscript manifest used by Leanpub-style tooling and the GitHub PDF workflow.
+- `Book.txt`: ordered historical manuscript manifest retained for reference.
 - `title.txt`: canonical book title.
 - `resources/`: manuscript-local assets.
 
@@ -42,7 +42,9 @@ Main reading flow:
 
 ## PDF build rule
 
-The current PDF workflow still reads `book/Book.txt`. Migration of the build to `book-es/Book.txt` is intentionally deferred until the Spanish manuscript contains publishable chapter prose. This prevents an editorial scaffold from replacing the existing downloadable artifact.
+The GitHub PDF workflow reads `book-es/Book.txt` and publishes the Spanish first edition under the stable artifact name `adev-book.pdf`. The historical English manuscript remains available as source material, but it is not a release input.
+
+A successful build proves that the manifest can be rendered. Release readiness additionally requires page-by-page visual inspection of the generated artifact and completion of the publishing rights checklist.
 
 ## Reusable collateral
 `collateral/` holds ready-to-use materials for one-pagers, talk outlines, speaker notes, video series, and LinkedIn posts.

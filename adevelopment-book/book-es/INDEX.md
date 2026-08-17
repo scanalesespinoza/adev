@@ -2,7 +2,7 @@
 
 ## Preliminares
 
-- **[Portada y declaración editorial](00-portada.md):** identidad de la edición, atribución y asistencia con inteligencia artificial.
+- **[Sobre esta edición](00-portada.md):** atribución, derechos, repositorio canónico y declaración de asistencia con inteligencia artificial.
 - **[Antes de comenzar](00-preliminares.md):** promesa honesta, audiencia, alcance, recorrido y contrato de lectura.
 
 ## Promesa al lector
