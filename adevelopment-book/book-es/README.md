@@ -6,7 +6,7 @@ The manuscript is written in Spanish to preserve the author's native voice, Lati
 
 ## Status
 
-Developmental drafting is complete. [`INDEX.md`](INDEX.md) defines the implemented narrative architecture, and every target in [`Book.txt`](Book.txt) exists. The manuscript is now entering copyediting and publication-system validation; this status does not mean that a release PDF or EPUB is ready.
+Developmental drafting and first-edition copyediting are complete. [`INDEX.md`](INDEX.md) defines the implemented narrative architecture, every target in [`Book.txt`](Book.txt) exists, and the publication workflow generates validated PDF and EPUB candidates. Public release remains a separate manual decision governed by the publishing checklist.
 
 ## Editorial rules
 
@@ -21,7 +21,7 @@ Developmental drafting is complete. [`INDEX.md`](INDEX.md) defines the implement
 
 ## Build order
 
-[`Book.txt`](Book.txt) is the Spanish first-edition manifest. All listed sources exist. The production workflow still targets the historical English manuscript and must migrate to this manifest in a dedicated, reversible iteration with generated-artifact validation.
+[`Book.txt`](Book.txt) is the Spanish first-edition manifest. The production workflow uses this same order for PDF and EPUB so both formats remain projections of one editorial canon.
 
 ## Working documents
 
