@@ -81,7 +81,7 @@ jobs:
             --from markdown-yaml_metadata_block \
             --lua-filter=adevelopment-book/epub-external-links.lua \
             --table-of-contents \
-            --toc-depth=2 \
+            --toc-depth=1 \
             --metadata title="$BOOK_TITLE" \
             --metadata author="Sergio Sebastián Canales Espinoza" \
             --metadata lang="es-ES"
