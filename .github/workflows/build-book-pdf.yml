@@ -79,11 +79,11 @@ jobs:
             --resource-path=adevelopment-book/book-es:adevelopment-book/book-es/resources \
             -o adevelopment-book/dist/adev-book.epub \
             --from markdown-yaml_metadata_block \
+            --lua-filter=adevelopment-book/epub-external-links.lua \
             --table-of-contents \
             --toc-depth=2 \
             --metadata title="$BOOK_TITLE" \
             --metadata author="Sergio Sebastián Canales Espinoza" \
-            --metadata date="Primera edición en español" \
             --metadata lang="es-ES"
           epubcheck adevelopment-book/dist/adev-book.epub
 

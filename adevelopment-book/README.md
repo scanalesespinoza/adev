@@ -44,6 +44,8 @@ Main reading flow:
 
 The GitHub publication workflow reads `book-es/Book.txt` once and generates the Spanish first edition as `adev-book.pdf` and `adev-book.epub`. The historical English manuscript remains available as source material, but it is not a release input.
 
+Repository-relative references remain convenient in the Markdown source. During EPUB generation, [`epub-external-links.lua`](epub-external-links.lua) converts references outside the manuscript package into canonical GitHub links so eBook readers do not receive broken local paths.
+
 A successful build proves that the manifest can be rendered and that the EPUB passes structural validation. Release readiness additionally requires page-by-page visual inspection of the PDF, reader-level inspection of the EPUB, and completion of the publishing rights checklist.
 
 ## Reusable collateral
