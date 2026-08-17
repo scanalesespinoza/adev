@@ -17,21 +17,21 @@
 - [x] Select a final text-free cover asset and record its generation provenance.
 - [ ] Confirm cover treatment against the requirements of any external distribution channel before submission.
 - [x] Use `v2.0.0` for the consolidated Spanish edition; `adevelopment-book/book-es/version.txt` is its canonical source. Preserve the historical `v1.0.0` release rather than rewriting it.
-- [ ] Choose the publication date at the time the release is approved.
+- [x] Record the GitHub publication date as August 16, 2026, in the author's local editorial context.
 - [ ] Add ISBN, publisher, price, and channel metadata only when a chosen distribution channel requires them; do not invent placeholders.
 
 ## Release operation
 
-- [ ] Freeze a candidate commit and confirm no manuscript or asset change occurred after rights review.
-- [ ] Run the publication workflow on that exact commit and require both format jobs to pass.
-- [ ] Download and compare the final PDF and EPUB artifact digests with the candidate record.
-- [ ] Recheck title page, navigation, opening chapter, closing chapter, and appendices in the final artifacts.
-- [ ] Create the approved version tag manually.
-- [ ] Confirm the GitHub release contains both `adev-book.pdf` and `adev-book.epub`.
-- [ ] Record the tag, commit, workflow run, artifact digests, publication date, and remaining limitations in the release notes.
+- [x] Freeze release commit `061425611c19a55faea90bdcd94bf99e5beb4894` and confirm the manuscript and assets on that commit.
+- [x] Run publication workflow `31988080665` on the exact `v2.0.0` tag and require the format job to pass.
+- [x] Download and verify the final PDF and EPUB artifact digests recorded in the release notes.
+- [x] Recheck the complete 106-page PDF visually and validate the EPUB package after publication.
+- [x] Create the approved annotated tag `v2.0.0` manually.
+- [x] Confirm the GitHub release contains both `adev-book.pdf` and `adev-book.epub`.
+- [x] Record the tag, commit, workflow run, artifact digests, publication date, and remaining limitations in the release notes.
 
 ## Distribution follow-up
 
 - [ ] Apply channel-specific metadata and disclosure requirements before submitting to an external store or publisher.
-- [ ] Update outward-facing links only after the release assets are publicly reachable.
+- [x] Use the public `v2.0.0` release as the canonical outward-facing link for the Spanish edition.
 - [ ] Preserve a rollback path: remove or supersede an incorrect release without rewriting repository history.
