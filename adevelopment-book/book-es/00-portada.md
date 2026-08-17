@@ -1,14 +1,8 @@
-# ADEV
+# Sobre esta edición
 
-## La práctica de AI Agentic Development
+**ADEV: La práctica de AI Agentic Development** presenta un sistema de responsabilidad humana, contexto explícito y evidencia para desarrollar software con agentes.
 
-**Responsabilidad humana, contexto explícito y evidencia para desarrollar software con agentes**
-
-Sergio Sebastián Canales Espinoza
-
-Primera edición en español
-
-Repositorio de referencia: <https://github.com/scanalesespinoza/adev>
+Repositorio canónico y assets técnicos: <https://github.com/scanalesespinoza/adev>
 
 ---
 

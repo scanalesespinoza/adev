@@ -45,7 +45,6 @@ jobs:
       - name: Build consolidated PDF
         run: |
           mkdir -p adevelopment-book/dist
-          BOOK_VERSION="${GITHUB_REF_NAME:-dev}"
           BOOK_TITLE="$(cat adevelopment-book/book-es/title.txt)"
           mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book-es/Book.txt)
           FILES=()
@@ -58,14 +57,14 @@ jobs:
             --from markdown-yaml_metadata_block \
             --pdf-engine=xelatex \
             -V geometry=margin=1in \
-            -V classoption=onecolumn \
+            -V classoption=onecolumn,titlepage \
             -V fontsize=11pt \
             -V linestretch=1.1 \
             --table-of-contents \
             --toc-depth=2 \
             --metadata title="$BOOK_TITLE" \
             --metadata author="Sergio Sebastián Canales Espinoza" \
-            --metadata date="Versión ${BOOK_VERSION}" \
+            --metadata date="Primera edición en español" \
             --metadata lang="es-ES"
 
       - name: Upload PDF artifact (all builds)
