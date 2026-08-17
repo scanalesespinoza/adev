@@ -14,7 +14,8 @@
 
 - [x] Repository-level rights review is recorded in `07-ai-disclosure-and-rights.md`.
 - [x] Included material is recorded in `08-permissions-log.md`.
-- [ ] Select and clear a final cover asset before embedding it.
+- [x] Select a final text-free cover asset and record its generation provenance.
+- [ ] Confirm cover treatment against the requirements of any external distribution channel before submission.
 - [ ] Choose the first public version identifier.
 - [ ] Choose the publication date at the time the release is approved.
 - [ ] Add ISBN, publisher, price, and channel metadata only when a chosen distribution channel requires them; do not invent placeholders.
