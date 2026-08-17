@@ -4,7 +4,7 @@
 
 Repositorio canónico y assets técnicos: <https://github.com/scanalesespinoza/adev>
 
-Primera edición en español · versión 1.0.0
+Primera edición en español · versión 2.0.0
 
 ---
 
