@@ -103,6 +103,6 @@ The final call is concrete: choose a real repository, introduce a minimum baseli
 
 ## Appendices
 
-- **A. Technical Assets:** map of the framework, starter kit, skills, templates, and checklists. Target: `appendices/A-technical-assets.md`.
-- **B. Glossary:** canonical terminology for the practice. Target: `appendices/B-glossary.md`.
-- **C. Evidence and Method:** claim types, evidence limits, sources, and reproduction method. Target: `appendices/C-evidence-and-method.md`.
+- **[A. Technical Assets](appendices/A-technical-assets.md):** map of the framework, starter kit, skills, templates, and checklists.
+- **[B. Glossary](appendices/B-glossary.md):** canonical terminology for the practice.
+- **[C. Evidence and Method](appendices/C-evidence-and-method.md):** claim types, evidence limits, sources, and reproduction method.
