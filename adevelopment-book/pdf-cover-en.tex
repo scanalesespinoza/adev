@@ -1,0 +1,14 @@
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{xcolor}
+
+\definecolor{adevcover}{HTML}{071B30}
+
+\renewcommand{\maketitle}{%
+  \thispagestyle{empty}%
+  \AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{\color{adevcover}\rule{\paperwidth}{\paperheight}}%
+    \AtPageCenter{\makebox(0,0){\includegraphics[height=\paperheight]{adevelopment-book/dist/adev-cover-en.png}}}%
+  }%
+  \null\clearpage%
+}
