@@ -86,7 +86,7 @@ Hardness is an emerging foundation, not a certification or guarantee of determin
 | Complete the first week | [`starter-kit/FIRST_WEEK.md`](../../../starter-kit/FIRST_WEEK.md) | First closed cycle and improved baseline |
 | Prepare the first delivery | [`starter-kit/FIRST_RELEASE.md`](../../../starter-kit/FIRST_RELEASE.md) | Traceability, verification, and recovery |
 | Assess maturity | [`docs/adoption-maturity-model.md`](../../../docs/adoption-maturity-model.md) | Next missing capability, not certification |
-| Support a claim | [`docs/evidence-index.md`](../../../docs/evidence-index.md) | Link among principle, proof, and asset |
+| Support a claim | [`docs/evidence-index.md`](../../../docs/evidence-index.md) | Link among principle, evidence, and asset |
 | Record an unresolved question | [`docs/research-agenda.md`](../../../docs/research-agenda.md) | Hypothesis, required evidence, and provisional guardrail |
 
 ## Minimum Structure of an ADEV Repository

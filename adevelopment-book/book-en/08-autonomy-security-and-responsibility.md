@@ -61,7 +61,7 @@ We can classify actions by their effects:
 
 Classification follows the greatest plausible effect. Drafting a message locally may be reversible; sending it changes the external world. Creating a migration does not grant authority to execute it in production. Having a credential available is not the same as having approval to use it.
 
-OWASP uses the term *excessive agency* for the risk that emerges when an application combines excessive functionality, permissions, or autonomy. Its guidance is direct: give the agent only the tools and operations it needs, grant each integration the least sufficient privilege, and introduce human approval for high-impact actions.
+OWASP uses the term *excessive agency* for the risk that emerges when an application combines excessive functionality, permissions, or autonomy. Its guidance is direct: give the agent only the tools and operations it needs, grant each integration the least privilege necessary, and introduce human approval for high-impact actions.
 
 ADEV adds a practical question: **What evidence would later demonstrate that the agent acted within its authority?** Without that evidence, the permission cannot be governed.
 

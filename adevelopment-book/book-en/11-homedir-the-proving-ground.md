@@ -78,7 +78,7 @@ Recovery follows the same pattern as code:
 6. Verify the surface used by a person.
 7. Turn the cause into documentation, a check, or a guardrail.
 
-Homedir's public release gates distinguish pull-request validation, controls on the main branch, and production promotion. That artifact supports a central idea: integration, delivery, and deployment are related controls, but they are not equivalent.
+Homedir's public release gates distinguish pull request validation, controls on the main branch, and production promotion. That artifact supports a central idea: integration, delivery, and deployment are related controls, but they are not equivalent.
 
 A green pipeline proves only the properties it executed. Final verification still requires observing the promised behavior in the relevant environment.
 

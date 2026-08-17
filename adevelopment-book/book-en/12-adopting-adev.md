@@ -112,7 +112,7 @@ Create or identify:
 - a roadmap or prioritized list;
 - a decision record;
 - a place for issues and iterations;
-- the branch and pull-request flow;
+- the branch and pull request flow;
 - the definition of closure for the first delivery.
 
 Day zero ends when the repository can answer which rule governs the work, which problem comes next, who is accountable, how it will be validated, and where the evidence will remain.

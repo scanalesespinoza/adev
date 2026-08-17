@@ -121,7 +121,7 @@ The architect must be able to explain:
 - Which validations ran.
 - How the system would recover if the result failed.
 
-A pull-request diff provides a view of impact: files created, deleted, and modified; dependencies; migrations; configuration; and the distribution of the change. Tests and checks provide executable evidence. An independent review can uncover assumptions shared by the person defining the change and the agent implementing it.
+A pull request diff provides a view of impact: files created, deleted, and modified; dependencies; migrations; configuration; and the distribution of the change. Tests and checks provide executable evidence. An independent review can uncover assumptions shared by the person defining the change and the agent implementing it.
 
 None of these layers is sufficient alone. A small diff can contain a critical vulnerability. A green suite can verify the wrong specification. Two agents can share the same blind spot. Professional confidence comes from combining intent, review, controls, and observable behavior.
 
