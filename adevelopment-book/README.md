@@ -40,9 +40,22 @@ Main reading flow:
 17. `appendices/C-checklists.md`
 18. `appendices/D-further-reading.md`
 
+## English adaptation of v2.0.0
+
+The complete English adaptation lives in [`book-en/`](book-en/README.md).
+
+- Working title: *ADEV: The Practice of AI Agentic Development*.
+- Language: international professional English with US spelling.
+- Source canon: the Spanish `v2.0.0` manuscript.
+- Build order: [`book-en/Book.txt`](book-en/Book.txt).
+- Proposed release tag: `v2.0.0-en`.
+- Stable artifacts: `adev-book-en.pdf` and `adev-book-en.epub`.
+
+The English build has its own workflow, metadata, cover treatment, artifact names, and release identity. It does not replace or mutate the Spanish publication path.
+
 ## Publication build rule
 
-The GitHub publication workflow reads `book-es/Book.txt` once and generates the Spanish first edition as `adev-book.pdf` and `adev-book.epub`. The historical English manuscript remains available as source material, but it is not a release input.
+The Spanish publication workflow reads `book-es/Book.txt` once and generates `adev-book.pdf` and `adev-book.epub`. The English publication workflow independently reads `book-en/Book.txt` and generates `adev-book-en.pdf` and `adev-book-en.epub`. The historical English manuscript remains available as source material, but it is not a release input.
 
 The text-free cover master is composed with deterministic typography by [`build-cover.py`](build-cover.py). The resulting cover is embedded as the PDF title page and the EPUB cover image; title text is never delegated to image generation.
 

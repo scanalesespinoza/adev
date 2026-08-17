@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compose deterministic typography over the Spanish first-edition cover art."""
+"""Compose deterministic edition typography over the ADEV cover art."""
 
 from __future__ import annotations
 
@@ -36,6 +36,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--edition", choices=("es", "en"), default="es")
     args = parser.parse_args()
 
     image = Image.open(args.input).convert("RGB")
@@ -59,20 +60,33 @@ def main() -> None:
     cyan = "#9FC6D7"
     amber = "#F2B45F"
 
+    edition_text = {
+        "es": {
+            "eyebrow": "LA PRÁCTICA DE",
+            "subtitle_1": "Responsabilidad humana, contexto explícito y evidencia",
+            "subtitle_2": "para desarrollar software con agentes",
+        },
+        "en": {
+            "eyebrow": "THE PRACTICE OF",
+            "subtitle_1": "Human responsibility, explicit context, and evidence",
+            "subtitle_2": "for developing software with agents",
+        },
+    }[args.edition]
+
     draw.text((left, 70), "ADEV", font=font(bold, 112), fill=off_white)
-    draw.text((left + 4, 194), "LA PRÁCTICA DE", font=font(bold, 27), fill=cyan)
+    draw.text((left + 4, 194), edition_text["eyebrow"], font=font(bold, 27), fill=cyan)
     draw.text((left, 232), "AI AGENTIC", font=font(bold, 55), fill=off_white)
     draw.text((left, 292), "DEVELOPMENT", font=font(bold, 55), fill=off_white)
     draw.line((left, 370, 342, 370), fill=amber, width=4)
     draw.text(
         (left, 389),
-        "Responsabilidad humana, contexto explícito y evidencia",
+        edition_text["subtitle_1"],
         font=font(regular, 23),
         fill=off_white,
     )
     draw.text(
         (left, 423),
-        "para desarrollar software con agentes",
+        edition_text["subtitle_2"],
         font=font(regular, 23),
         fill=off_white,
     )

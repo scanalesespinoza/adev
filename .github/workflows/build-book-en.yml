@@ -1,0 +1,139 @@
+name: Build ADEV English Book
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*-en"
+    paths:
+      - "adevelopment-book/book-en/**"
+      - ".github/workflows/build-book-en.yml"
+      - "adevelopment-book/build-cover.py"
+      - "adevelopment-book/pdf-cover-en.tex"
+      - "adevelopment-book/epub-external-links.lua"
+      - "adevelopment-book/README.md"
+  pull_request:
+    paths:
+      - "adevelopment-book/book-en/**"
+      - ".github/workflows/build-book-en.yml"
+      - "adevelopment-book/build-cover.py"
+      - "adevelopment-book/pdf-cover-en.tex"
+      - "adevelopment-book/epub-external-links.lua"
+      - "adevelopment-book/README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-book-en:
+    timeout-minutes: 25
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install publishing toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc epubcheck python3-pil fonts-dejavu-core texlive-xetex texlive-fonts-recommended texlive-latex-recommended lmodern
+
+      - name: Validate manuscript manifest
+        run: |
+          test -f adevelopment-book/book-en/Book.txt
+          test -f adevelopment-book/book-en/title.txt
+          test -f adevelopment-book/book-en/version.txt
+          BOOK_VERSION="$(cat adevelopment-book/book-en/version.txt)"
+          [[ "$BOOK_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          while IFS= read -r entry; do
+            [ -z "$entry" ] && continue
+            test -f "adevelopment-book/book-en/${entry}.md"
+          done < adevelopment-book/book-en/Book.txt
+
+      - name: Validate release identity
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        run: |
+          BOOK_VERSION="$(cat adevelopment-book/book-en/version.txt)"
+          EXPECTED_TAG="v${BOOK_VERSION}-en"
+          if [ "$GITHUB_REF_NAME" != "$EXPECTED_TAG" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match the canonical English book version $EXPECTED_TAG."
+            exit 1
+          fi
+
+      - name: Compose deterministic English cover
+        run: |
+          mkdir -p adevelopment-book/dist
+          python3 adevelopment-book/build-cover.py \
+            --edition en \
+            --input adevelopment-book/book-es/resources/cover-art.png \
+            --output adevelopment-book/dist/adev-cover-en.png
+
+      - name: Build consolidated English PDF
+        run: |
+          BOOK_TITLE="$(cat adevelopment-book/book-en/title.txt)"
+          BOOK_VERSION="$(cat adevelopment-book/book-en/version.txt)"
+          mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book-en/Book.txt)
+          FILES=()
+          for entry in "${ENTRIES[@]}"; do FILES+=("adevelopment-book/book-en/${entry}.md"); done
+          pandoc "${FILES[@]}" \
+            --resource-path=adevelopment-book/book-en:adevelopment-book/book-es/resources \
+            -o adevelopment-book/dist/adev-book-en.pdf \
+            --from markdown-yaml_metadata_block \
+            --pdf-engine=xelatex \
+            --include-in-header=adevelopment-book/pdf-cover-en.tex \
+            -V geometry=margin=1in \
+            -V classoption=onecolumn,titlepage \
+            -V fontsize=11pt \
+            -V linestretch=1.1 \
+            --table-of-contents \
+            --toc-depth=2 \
+            --metadata title="$BOOK_TITLE" \
+            --metadata author="Sergio Sebastián Canales Espinoza" \
+            --metadata date="First English edition" \
+            --metadata subject="First English edition · version ${BOOK_VERSION}" \
+            --metadata lang="en-US"
+
+      - name: Build and validate English EPUB
+        run: |
+          BOOK_TITLE="$(cat adevelopment-book/book-en/title.txt)"
+          BOOK_VERSION="$(cat adevelopment-book/book-en/version.txt)"
+          mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book-en/Book.txt)
+          FILES=()
+          for entry in "${ENTRIES[@]}"; do FILES+=("adevelopment-book/book-en/${entry}.md"); done
+          pandoc "${FILES[@]}" \
+            --resource-path=adevelopment-book/book-en:adevelopment-book/book-es/resources \
+            -o adevelopment-book/dist/adev-book-en.epub \
+            --from markdown-yaml_metadata_block \
+            --lua-filter=adevelopment-book/epub-external-links.lua \
+            --epub-cover-image=adevelopment-book/dist/adev-cover-en.png \
+            --table-of-contents \
+            --toc-depth=1 \
+            --metadata title="$BOOK_TITLE" \
+            --metadata author="Sergio Sebastián Canales Espinoza" \
+            --metadata identifier="urn:adev:book-en:${BOOK_VERSION}" \
+            --metadata lang="en-US"
+          epubcheck adevelopment-book/dist/adev-book-en.epub
+
+      - name: Upload English PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: adev-book-en-pdf
+          path: adevelopment-book/dist/adev-book-en.pdf
+
+      - name: Upload English EPUB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: adev-book-en-epub
+          path: adevelopment-book/dist/adev-book-en.epub
+
+      - name: Publish English book formats to GitHub Release
+        if: ${{ startsWith(github.ref, 'refs/tags/') }}
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            adevelopment-book/dist/adev-book-en.pdf
+            adevelopment-book/dist/adev-book-en.epub
+          body: "First English edition of ADEV in PDF and EPUB for ${{ github.ref_name }}."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
