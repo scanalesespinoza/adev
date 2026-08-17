@@ -31,21 +31,17 @@ The agent executes and proposes; the architect retains intent, context, judgment
 
 ## Part II — The Operating System of the Practice
 
-### 4. The Living Baseline
+### [4. The Living Baseline](04-the-living-baseline.md)
 
 `ADEV.md` serves as an index of principles and an entry point to product, architecture, quality, security, and operations knowledge. Failures improve the system of work without turning the baseline into an encyclopedia.
 
 **Outcome:** the reader can create and maintain a small, ordered, and applicable baseline.
 
-Target: `04-the-living-baseline.md`
-
-### 5. Atomic Iterations
+### [5. Atomic Iterations](05-atomic-iterations.md)
 
 Small tasks reduce the surface of uncertainty, make impact visible, and make mistakes inexpensive. Atomicity depends on the context under control, not on a universal number of lines or hours.
 
 **Outcome:** the reader can divide a need into short, reversible, and verifiable changes.
-
-Target: `05-atomic-iterations.md`
 
 ### 6. From Prompt to Durable Context
 
