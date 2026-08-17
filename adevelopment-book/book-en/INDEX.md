@@ -71,21 +71,17 @@ The baseline turns private expectations into a collaboration contract. Issues, s
 
 ## Part IV — Learning from Execution
 
-### 10. EventFlow: The Laboratory
+### [10. EventFlow: The Laboratory](10-eventflow-the-laboratory.md)
 
 EventFlow shows the experimental origin of the practice during 2025. The case separates observed metrics from economic estimates and documents both the capability achieved and the limits of comparison.
 
 **Outcome:** the reader understands what an individual experiment can demonstrate and which conclusions cannot be extrapolated from it.
 
-Target: `10-eventflow-the-laboratory.md`
-
-### 11. Homedir: The Proving Ground
+### [11. Homedir: The Proving Ground](11-homedir-the-proving-ground.md)
 
 Homedir shows how incidents become rules, tests, automation, and reusable assets. The cases include multilingual drift, branches that lived too long, release gates, recovery, and operational evidence.
 
 **Outcome:** the reader can turn real execution into doctrine without confusing one project with a universal truth.
-
-Target: `11-homedir-the-proving-ground.md`
 
 ## Part V — Adopting and Extending ADEV
 
