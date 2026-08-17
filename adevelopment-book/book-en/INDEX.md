@@ -85,27 +85,21 @@ Homedir shows how incidents become rules, tests, automation, and reusable assets
 
 ## Part V — Adopting and Extending ADEV
 
-### 12. Adopting ADEV
+### [12. Adopting ADEV](12-adopting-adev.md)
 
 Adoption begins by assessing existing maturity. This chapter proposes a day-zero, first-week, and first-delivery path that connects the book to the starter kit.
 
 **Outcome:** the reader can introduce a minimum baseline into a repository and complete a first verifiable change.
 
-Target: `12-adopting-adev.md`
-
-### 13. Objections, Limits, and the Future
+### [13. Objections, Limits, and the Future](13-objections-limits-and-the-future.md)
 
 This chapter addresses skill loss, dependency, security, critical systems, unproven returns, technological concentration, and the future of a neutral and open practice.
 
 **Outcome:** the reader can decide responsibly when to adopt ADEV, when to proceed gradually, and when not to use it yet.
 
-Target: `13-objections-limits-and-the-future.md`
-
-### 14. Closing: Start with a Repository
+### [14. Closing: Start with a Repository](14-closing-start-with-a-repository.md)
 
 The final call is concrete: choose a real repository, introduce a minimum baseline, and deliver one small change through the complete cycle until verification.
-
-Target: `14-closing-start-with-a-repository.md`
 
 ## Appendices
 
