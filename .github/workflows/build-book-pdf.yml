@@ -1,4 +1,4 @@
-name: Build ADEV Spanish Book PDF
+name: Build ADEV Spanish Book
 
 on:
   push:
@@ -21,17 +21,17 @@ permissions:
   contents: write
 
 jobs:
-  build-pdf:
+  build-book:
     timeout-minutes: 25
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install pandoc and LaTeX
+      - name: Install publishing toolchain
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-latex-recommended texlive-lang-spanish lmodern
+          sudo apt-get install -y pandoc epubcheck texlive-xetex texlive-fonts-recommended texlive-latex-recommended texlive-lang-spanish lmodern
 
       - name: Validate manuscript manifest
         run: |
@@ -67,17 +67,45 @@ jobs:
             --metadata date="Primera edición en español" \
             --metadata lang="es-ES"
 
+      - name: Build and validate EPUB
+        run: |
+          BOOK_TITLE="$(cat adevelopment-book/book-es/title.txt)"
+          mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book-es/Book.txt)
+          FILES=()
+          for entry in "${ENTRIES[@]}"; do
+            FILES+=("adevelopment-book/book-es/${entry}.md")
+          done
+          pandoc "${FILES[@]}" \
+            --resource-path=adevelopment-book/book-es:adevelopment-book/book-es/resources \
+            -o adevelopment-book/dist/adev-book.epub \
+            --from markdown-yaml_metadata_block \
+            --lua-filter=adevelopment-book/epub-external-links.lua \
+            --table-of-contents \
+            --toc-depth=1 \
+            --metadata title="$BOOK_TITLE" \
+            --metadata author="Sergio Sebastián Canales Espinoza" \
+            --metadata lang="es-ES"
+          epubcheck adevelopment-book/dist/adev-book.epub
+
       - name: Upload PDF artifact (all builds)
         uses: actions/upload-artifact@v4
         with:
           name: adev-book-pdf
           path: adevelopment-book/dist/adev-book.pdf
 
-      - name: Publish PDF to GitHub Release (tag builds)
+      - name: Upload EPUB artifact (all builds)
+        uses: actions/upload-artifact@v4
+        with:
+          name: adev-book-epub
+          path: adevelopment-book/dist/adev-book.epub
+
+      - name: Publish book formats to GitHub Release (tag builds)
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: softprops/action-gh-release@v1
         with:
-          files: adevelopment-book/dist/adev-book.pdf
-          body: "Primera edición en español de ADEV para la versión ${{ github.ref_name }}."
+          files: |
+            adevelopment-book/dist/adev-book.pdf
+            adevelopment-book/dist/adev-book.epub
+          body: "Primera edición en español de ADEV en PDF y EPUB para la versión ${{ github.ref_name }}."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

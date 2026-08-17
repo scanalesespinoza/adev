@@ -40,11 +40,13 @@ Main reading flow:
 17. `appendices/C-checklists.md`
 18. `appendices/D-further-reading.md`
 
-## PDF build rule
+## Publication build rule
 
-The GitHub PDF workflow reads `book-es/Book.txt` and publishes the Spanish first edition under the stable artifact name `adev-book.pdf`. The historical English manuscript remains available as source material, but it is not a release input.
+The GitHub publication workflow reads `book-es/Book.txt` once and generates the Spanish first edition as `adev-book.pdf` and `adev-book.epub`. The historical English manuscript remains available as source material, but it is not a release input.
 
-A successful build proves that the manifest can be rendered. Release readiness additionally requires page-by-page visual inspection of the generated artifact and completion of the publishing rights checklist.
+Repository-relative references remain convenient in the Markdown source. During EPUB generation, [`epub-external-links.lua`](epub-external-links.lua) converts references outside the manuscript package into canonical GitHub links so eBook readers do not receive broken local paths.
+
+A successful build proves that the manifest can be rendered and that the EPUB passes structural validation. Release readiness additionally requires page-by-page visual inspection of the PDF, reader-level inspection of the EPUB, and completion of the publishing rights checklist.
 
 ## Reusable collateral
 `collateral/` holds ready-to-use materials for one-pagers, talk outlines, speaker notes, video series, and LinkedIn posts.
