@@ -88,7 +88,7 @@ Initial architecture is a set of revisable decisions, not a complete prophecy of
 Define:
 
 - the behavior that will close the first iteration;
-- available inner- and outer-loop checks;
+- available inner and outer loop checks;
 - test expectations for the change;
 - the user's manual or automated path;
 - evidence required to accept the result.
@@ -147,7 +147,7 @@ The issue should contain:
 - context the agent must consult;
 - relevant constraints;
 - acceptance criteria;
-- inner-loop, outer-loop, and target-environment evidence.
+- inner loop, outer loop, and target environment evidence.
 
 Before implementation, ask the agent to assess whether the issue fits one atomic iteration. If it finds independent behaviors, it should propose a split and wait for the next change to be selected.
 
