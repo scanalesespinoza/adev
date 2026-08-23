@@ -20,4 +20,5 @@ The practitioner governs the system using three tools:
 This documentation serves as the book and manual for A-Dev.
 
 [Read the Manifesto](book/01-adev-manifesto.md){ .md-button .md-button--primary }
-[Download PDF](https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf){ .md-button }
+[Download PDF (English)](https://github.com/scanalesespinoza/adev/releases/download/v2.0.0-en/adev-book-en.pdf){ .md-button }
+[Download PDF (Spanish)](https://github.com/scanalesespinoza/adev/releases/download/v2.0.0/adev-book.pdf){ .md-button }
