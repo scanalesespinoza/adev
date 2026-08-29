@@ -65,6 +65,7 @@ Canonical committed content is English. Project-specific material such as Homedi
 
 ## Public artifacts
 
-- [Latest book PDF](https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf)
+- [Latest book PDF (English)](https://github.com/scanalesespinoza/adev/releases/download/v2.0.0-en/adev-book-en.pdf)
+- [Latest book PDF (Spanish)](https://github.com/scanalesespinoza/adev/releases/download/v2.0.0/adev-book.pdf)
 - [Documentation site](https://scanalesespinoza.github.io/adev/)
 - [Apache 2.0 license](LICENSE)
