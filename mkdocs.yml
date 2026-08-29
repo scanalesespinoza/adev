@@ -60,10 +60,22 @@ nav:
   - Playbook: book/07-weekend-marathon-playbook.md
   - Vision: book/08-homedir-vision.md
   - Case Studies:
+    - Overview: case-studies/README.md
     - EvenFlow Origins: case-studies/evenflow.md
     - Quest Board: case-studies/quest-board.md
     - Live Alpha: case-studies/live-alpha-flags.md
     - The Rollback story: case-studies/rollback.md
+    - CI/CD Recovery: case-studies/ci-cd-recovery.md
+    - Disaster Recovery: case-studies/disaster-recovery.md
+    - Multilingual Drift: case-studies/multilingual-drift.md
+    - Performance Evidence: case-studies/performance-evidence.md
+  - Evidence:
+    - Evidence Index: evidence-index.md
+    - EventFlow Metrics Reproduction: evidence/eventflow-metrics-reproduction.md
+    - Homedir Claim Boundaries: evidence/homedir-claim-boundaries.md
+  - Research:
+    - Research Agenda: research-agenda.md
+    - Adoption Maturity Model: adoption-maturity-model.md
   - Extras:
     - FAQ: book/09-faq-objections.md
     - Closing: book/10-closing.md
