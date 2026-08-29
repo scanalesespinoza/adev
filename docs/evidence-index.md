@@ -15,6 +15,7 @@ Primary raw source stream: local Codex CLI work on Homedir from late 2025 throug
 | Optimize only with evidence | Performance work improved once rate limiting and request origin patterns were measured instead of guessed. | `docs/case-studies/performance-evidence.md` |
 | Backup is not done until restore works | Backup and DR only became trustworthy after restore compatibility and retention rules were validated. | `docs/case-studies/disaster-recovery.md` |
 | Homedir is proof, not doctrine | The framework gains power when product history is converted into reusable rules and teaching assets. | `publishing-kit/11-homedir-derived-maturity-map.md` |
+| Operational repetition requires outcome evidence | Aggregated command histories expose navigation, continuity, preflight, authority, and retry friction, but frequency without reliable outcomes cannot establish success. | [`Operational workflow telemetry`](evidence/operational-workflow-telemetry.md) and [`starter-kit/OPERATING_RITUALS.md`](../starter-kit/OPERATING_RITUALS.md) |
 
 ## What still needs canonization
 - Admin/public UX divergence as its own case study.

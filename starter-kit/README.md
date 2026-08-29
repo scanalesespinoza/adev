@@ -8,7 +8,7 @@ This is the implementation kit for the [A-Dev practice](../framework/README.md).
 - `DAY_0.md`: establish the minimum operating skeleton.
 - `FIRST_WEEK.md`: run the first evidence-backed iteration cycle.
 - `FIRST_RELEASE.md`: close the first release with traceability and verification.
-- `OPERATING_RITUALS.md`: compact rituals derived from Homedir execution history.
+- `OPERATING_RITUALS.md`: compact rituals derived from operational evidence, including vendor-neutral workspace discovery, preflight, continuity, scoped authority, execution evidence, bounded retry, and workflow promotion.
 - `examples/minimal-adev-loop/`: a minimal, repo-agnostic sample to model the workflow.
 
 ## Existing assets
@@ -18,3 +18,5 @@ This is the implementation kit for the [A-Dev practice](../framework/README.md).
 
 ## Use rule
 Do not treat these files as theory-only templates. Copy, adapt, and keep them aligned with the actual repository you are operating.
+
+When operational telemetry is available, aggregate and sanitize it locally before review. Promote only transferable patterns with observable outcomes; never copy raw command histories into durable doctrine.
