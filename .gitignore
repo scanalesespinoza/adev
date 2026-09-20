@@ -1,2 +1,10 @@
 # Local utilities for Leanpub API (ignored)
 /leanpub-utils/
+
+# MkDocs build output
+/site/
+
+# Python
+__pycache__/
+*.pyc
+
