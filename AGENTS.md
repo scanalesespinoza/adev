@@ -18,6 +18,7 @@ This repo is the canonical home of A-Dev: the framework, the manuscript, the sta
 - Keep canonical public content in English unless a bilingual mirror is explicitly required.
 - Do not turn undocumented assumptions into doctrine.
 - If a lesson comes from Homedir, extract the transferable rule and record it in a reusable asset.
+- Stack-specific operational values (probe paths, resource limits, platform commands) may appear only as labeled project overlays or case-study evidence — never as unmarked universal requirements in canonical docs.
 
 ## Expected Deliverables
 When you add or revise framework material, prefer assets such as:

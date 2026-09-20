@@ -3,6 +3,7 @@
 ## Context
 - A-Dev favors “Live Alpha” over heavy staging to avoid drift and hidden debt.
 - Need to ship new behaviors fast without risking the primary user path.
+- Scope note: concrete probe/resource values below come from HomeDir's Quarkus-on-Kubernetes stack; they illustrate the pattern, they are not universal requirements.
 
 ## Decision
 - Gate every new capability behind a feature flag and keep defaults OFF until walkthrough + tests pass.
