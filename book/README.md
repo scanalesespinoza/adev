@@ -18,6 +18,7 @@ A later, dedicated consolidation phase should compare unique content, merge anyt
 
 - Guided tour: [`adevelopment-book/README.md`](../adevelopment-book/README.md)
 - Chapter index: [`adevelopment-book/book/INDEX.md`](../adevelopment-book/book/INDEX.md)
-- Latest PDF: [GitHub release artifact](https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf)
+- Latest PDF (English): [GitHub release artifact](https://github.com/scanalesespinoza/adev/releases/download/v2.0.0-en/adev-book-en.pdf)
+- Latest PDF (Spanish): [GitHub release artifact](https://github.com/scanalesespinoza/adev/releases/download/v2.0.0/adev-book.pdf)
 
 Book chapters may explain doctrine and cite evidence, but they should link to the canonical practice rather than becoming a second normative source.

@@ -21,4 +21,5 @@ Appendices:
 - [Checklists](appendices/C-checklists.md) - pre-merge guardrails.
 - [Further Reading](appendices/D-further-reading.md) - context for readers who want adjacent references.
 
-Downloadable PDF (latest): https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf
+Downloadable PDF (English, v2.0.0-en): https://github.com/scanalesespinoza/adev/releases/download/v2.0.0-en/adev-book-en.pdf
+Downloadable PDF (Spanish, v2.0.0): https://github.com/scanalesespinoza/adev/releases/download/v2.0.0/adev-book.pdf
