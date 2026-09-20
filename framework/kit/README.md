@@ -1,5 +1,7 @@
 # Kit
 
+> **Status:** routing index only — no content lives in this directory yet; the links below point to the canonical assets. Whether these shelves get populated or collapsed is a pending consolidation decision (tracked in #112).
+
 The A-Dev kit turns the practice into copyable repository assets.
 
 Use [`starter-kit/README.md`](../../starter-kit/README.md) for the current adoption path, including day 0, first week, first release, operating rituals, templates, and the minimal example.

@@ -1,5 +1,7 @@
 # Practices
 
+> **Status:** routing index only — no content lives in this directory yet; the links below point to the canonical assets. Whether these shelves get populated or collapsed is a pending consolidation decision (tracked in #112).
+
 Practices are repeatable patterns that help teams apply doctrine in context. They are guidance unless a project policy explicitly promotes them to a requirement.
 
 Current practice assets:

@@ -1,5 +1,7 @@
 # Evidence
 
+> **Status:** routing index only — no content lives in this directory yet; the links below point to the canonical assets. Whether these shelves get populated or collapsed is a pending consolidation decision (tracked in #112).
+
 Evidence supports framework claims without turning project-specific implementation choices into universal doctrine.
 
 Start with:

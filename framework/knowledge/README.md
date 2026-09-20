@@ -1,5 +1,7 @@
 # Knowledge
 
+> **Status:** routing index only — no content lives in this directory yet; the links below point to the canonical assets. Whether these shelves get populated or collapsed is a pending consolidation decision (tracked in #112).
+
 Knowledge explains why the practice works and records transferable lessons that are not themselves mandatory policy.
 
 Current sources:
