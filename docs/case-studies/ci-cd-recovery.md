@@ -24,3 +24,8 @@ Typical failure signals included:
 
 ## Reusable lesson
 A-Dev is not only about producing code faster. It is about preserving a trustworthy path from change to running system. If CI/CD is brittle, the framework has not finished the iteration.
+
+## Evidence status
+- Type: distilled operational narrative from HomeDir (author-attributed); not a linked incident report.
+- Related artifacts: [`.agent/workflows/full_release_cycle.md`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/.agent/workflows/full_release_cycle.md), [`.agent/workflows/production_verification.md`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/.agent/workflows/production_verification.md), [`.github/workflows/pr-check.yml`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/.github/workflows/pr-check.yml), [`RELEASE_GATES.md`](https://github.com/scanalesespinoza/homedir/blob/a2baac07fc60f025ebcb9aab7c5f794928cbd831/config/docs/governance/RELEASE_GATES.md).
+- Gap: the specific failing runs and fixing commits are not linked; treat the narrative as attributed history until artifact-level links are added.

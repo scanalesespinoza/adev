@@ -23,3 +23,8 @@
 - Live Alpha with flags is faster and safer than a staging fork.
 - Reusing Simple Machines keeps UI/auth changes lean and testable.
 - Every new flow updates the baseline so the team cannot repeat the same failure.
+
+## Evidence status
+- Type: distilled operational narrative from HomeDir (author-attributed).
+- Related artifacts: the surface described exists as [`QuestBoardResource.java`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/quarkus-app/src/main/java/com/scanales/eventflow/private_/QuestBoardResource.java) with [quest templates](https://github.com/scanalesespinoza/homedir/tree/1853d66110629541e8f7b7b8f1dfae05c3fece07/quarkus-app/src/main/resources/templates/QuestBoardResource); OAuth secrets are provisioned via [`deployment/google-oauth-secret.yaml`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/deployment/google-oauth-secret.yaml).
+- Gap: the flag configuration and enabling commit are not linked; treat timing claims as attributed history.

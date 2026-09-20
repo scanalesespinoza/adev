@@ -25,3 +25,8 @@
 - Governing the gap beats knowing every API: validation (50/50) + flags keep velocity safe.
 - Frugal constraints (no bloat, SSR) reduce coordination tax and make handoff easier.
 - Experiments feed the Pathfinder: successful patterns from EvenFlow became HomeDir standards.
+
+## Evidence status
+- Type: historical narrative of the EvenFlow experiment (author-attributed); EvenFlow itself is not a public artifact in this repository's source chain.
+- Related artifacts: descendant guardrails survive in HomeDir's [`docs/en/03-guardrails.md`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/docs/en/03-guardrails.md) and [`.agent/workflows`](https://github.com/scanalesespinoza/homedir/tree/1853d66110629541e8f7b7b8f1dfae05c3fece07/.agent/workflows).
+- Gap: no commit range, release, or repo link for the original experiment; treat outcomes as attributed history.

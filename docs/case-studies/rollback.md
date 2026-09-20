@@ -22,3 +22,8 @@
 - Short loops (1–2h) turn rollbacks into quick, documented recoveries.
 - Baseline-first thinking prevents the same regression from resurfacing.
 - Feature flags are the safety net when prompts misbehave. 
+
+## Evidence status
+- Type: distilled operational narrative from HomeDir (author-attributed).
+- Related artifacts: the codified "stop and fix" flow survives as [`.agent/workflows/production_fix_cycle.md`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/.agent/workflows/production_fix_cycle.md).
+- Gap: the specific regression, flag, and fixing commit are not linked; the same-hour window claim is narrative.

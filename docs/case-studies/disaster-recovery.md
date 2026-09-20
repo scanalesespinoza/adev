@@ -22,3 +22,8 @@ Operational pain surfaced as:
 
 ## Reusable lesson
 A-Dev should never count a backup mechanism as complete until service reconstruction is demonstrated with data, procedure, and recovery confidence.
+
+## Evidence status
+- Type: distilled operational narrative from HomeDir (author-attributed).
+- Related artifacts: [`AdminBackupResource.java`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/quarkus-app/src/main/java/com/scanales/eventflow/private_/AdminBackupResource.java) and its [admin backup templates](https://github.com/scanalesespinoza/homedir/tree/1853d66110629541e8f7b7b8f1dfae05c3fece07/quarkus-app/src/main/resources/templates/AdminBackupResource) show the backup surface the narrative refers to.
+- Gap: no failed-restore run, procedure doc, or smoke-test result is linked; restore viability claims remain narrative until such artifacts are referenced.
