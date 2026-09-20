@@ -1,0 +1,34 @@
+name: Validate Hardness Assets
+
+on:
+  pull_request:
+    paths:
+      - 'framework/hardness/**'
+      - '.github/workflows/validate-hardness.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'framework/hardness/**'
+      - '.github/workflows/validate-hardness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Validate policy schema fixtures
+        run: pwsh -NoProfile -File framework/hardness/scripts/validate-policy-fixtures.ps1
+
+      - name: Validate compatibility surface
+        run: pwsh -NoProfile -File framework/hardness/scripts/validate-compatibility-surface.ps1

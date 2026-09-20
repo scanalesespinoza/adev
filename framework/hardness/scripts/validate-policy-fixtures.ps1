@@ -8,9 +8,9 @@ param(
 $ErrorActionPreference = 'Stop'
 $scriptDirectory = Split-Path -Parent $MyInvocation.MyCommand.Path
 
-if ([string]::IsNullOrWhiteSpace($SchemaPath)) { $SchemaPath = Join-Path $scriptDirectory '..\policy-schema.json' }
-if ([string]::IsNullOrWhiteSpace($ValidFixturePath)) { $ValidFixturePath = Join-Path $scriptDirectory '..\fixtures\valid-policy.json' }
-if ([string]::IsNullOrWhiteSpace($InvalidFixturePath)) { $InvalidFixturePath = Join-Path $scriptDirectory '..\fixtures\invalid-policy-missing-owner.json' }
+if ([string]::IsNullOrWhiteSpace($SchemaPath)) { $SchemaPath = Join-Path $scriptDirectory '../policy-schema.json' }
+if ([string]::IsNullOrWhiteSpace($ValidFixturePath)) { $ValidFixturePath = Join-Path $scriptDirectory '../fixtures/valid-policy.json' }
+if ([string]::IsNullOrWhiteSpace($InvalidFixturePath)) { $InvalidFixturePath = Join-Path $scriptDirectory '../fixtures/invalid-policy-missing-owner.json' }
 
 function Get-JsonObject {
     param([string]$Path)
