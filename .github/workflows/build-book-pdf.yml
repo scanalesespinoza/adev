@@ -9,11 +9,17 @@ on:
     paths:
       - "adevelopment-book/book-es/**"
       - ".github/workflows/build-book-pdf.yml"
+      - "adevelopment-book/build-cover.py"
+      - "adevelopment-book/pdf-cover.tex"
+      - "adevelopment-book/epub-external-links.lua"
       - "adevelopment-book/README.md"
   pull_request:
     paths:
       - "adevelopment-book/book-es/**"
       - ".github/workflows/build-book-pdf.yml"
+      - "adevelopment-book/build-cover.py"
+      - "adevelopment-book/pdf-cover.tex"
+      - "adevelopment-book/epub-external-links.lua"
       - "adevelopment-book/README.md"
   workflow_dispatch:
 

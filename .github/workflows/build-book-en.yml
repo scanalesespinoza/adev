@@ -8,6 +8,7 @@ on:
       - "v*-en"
     paths:
       - "adevelopment-book/book-en/**"
+      - "adevelopment-book/book-es/resources/**"
       - ".github/workflows/build-book-en.yml"
       - "adevelopment-book/build-cover.py"
       - "adevelopment-book/pdf-cover-en.tex"
@@ -16,6 +17,7 @@ on:
   pull_request:
     paths:
       - "adevelopment-book/book-en/**"
+      - "adevelopment-book/book-es/resources/**"
       - ".github/workflows/build-book-en.yml"
       - "adevelopment-book/build-cover.py"
       - "adevelopment-book/pdf-cover-en.tex"
