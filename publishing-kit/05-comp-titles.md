@@ -11,4 +11,4 @@
 | Shape Up — Basecamp | Product cycles; small teams | 1–2h atomic loops with AI; flags and baselines keep scope tight and reversible |
 | Prompt engineering handbooks (various) | How to write prompts | A-Dev = prompt + baseline + evidence; focuses on systems to validate prompts, not just wording |
 
-TODO: Add publication years/ISBNs and 1–2 more AI-era titles once available.
+Pending editorial follow-up (tracked in #109): add publication years/ISBNs and 1–2 more AI-era titles once available.

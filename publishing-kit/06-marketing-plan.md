@@ -5,7 +5,7 @@
 
 The controlled and public launch copy for the consolidated Spanish edition is maintained in [`19-spanish-launch-kit.md`](19-spanish-launch-kit.md). That package supersedes generic launch wording for `v2.0.0` and defines how early-reader feedback should be collected without turning unverified reactions into proof.
 
-## Channels & actions (TODO metrics)
+## Channels & actions (metrics pending — tracked in #109)
 1. Talks/workshops for OSS and startup communities (e.g., OpenSource Santiago).  
 2. Guest on podcasts/streams about AI+Dev discipline; share A-Dev proof (HomeDir).  
 3. Newsletter/LinkedIn series: weekly A-Dev tips + case studies.  
@@ -23,7 +23,7 @@ The controlled and public launch copy for the consolidated Spanish edition is ma
 15. Translate the one-page pitch and key README sections to Spanish (LATAM reach).
 16. Surface case studies as evidence badges or links on README.
 
-## TODO metrics
+## Pending metrics (tracked in #109)
 - Audience size per channel (newsletter subs, Discord members, LinkedIn followers).
 - Conversion targets: **500 starter-kit downloads in month 1**; **20% of readers spin up a baseline within 7 days**.
 - Talk/podcast slots booked per quarter.

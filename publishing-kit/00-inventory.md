@@ -6,6 +6,8 @@ Repository counts below describe ADEV itself. They are not operational proof of 
 
 ## Snapshot basis
 
+> **Dated record — not current state.** This inventory describes the repository as observed on the date below. It predates the `v2.0.0`/`v2.0.0-en` releases and later additions (e.g. `book-en/`, community health files, `submissions/`). Regenerate before citing.
+
 - Observed on: 2026-08-01
 - Baseline: `main` at `3ca6da3`
 - Latest repository tag: `v1.0.5` (`c0ce645`, 2026-06-09)

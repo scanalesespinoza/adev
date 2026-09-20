@@ -42,7 +42,7 @@ Augmented Development (A-Dev) is the manual for the practitioner-orchestrator: s
 - Case studies (HomeDir OAuth, health checks, EvenFlow → HomeDir).
 - Newsletter/podcast guesting; LinkedIn/DevRel content.
 - OSS proof: release PDFs, CI badges, templates, starter kit.
-- TODO: add audience metrics and channel estimates (e.g., starter kit download goal post-launch).
+- Pending editorial follow-up (tracked in #109): add audience metrics and channel estimates (e.g., starter kit download goal post-launch).
 
 ## Sample Chapters
 - Use current chapters: 01 A-Dev Manifesto, 03 Atomic Iterations, 04 Baseline, 05 Digital Thread, 06 Quality Density, 07 Weekend Marathon.

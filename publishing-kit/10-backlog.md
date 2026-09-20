@@ -14,6 +14,8 @@ Baseline: [Spanish manuscript developmental audit](18-spanish-manuscript-develop
 
 ## P0 — release-candidate gates
 
+> **Status record:** the four gates below were all completed for `v2.0.0` and `v2.0.0-en` (released 2026-08-17). They remain here as the record of what the release required, not as open work.
+
 ### 1. Whole-manuscript copyedit
 
 - **Scope:** grammar, cadence, punctuation, controlled terminology, repeated rhetoric, and attribution boundaries.
