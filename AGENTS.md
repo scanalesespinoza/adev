@@ -17,6 +17,7 @@ This repo is the canonical home of A-Dev: the framework, the manuscript, the sta
 - Default mode is one atomic PR per stage.
 - Keep canonical public content in English unless a bilingual mirror is explicitly required.
 - Do not turn undocumented assumptions into doctrine.
+- Keep canonical docs vendor-neutral: stack-specific values (endpoints, resource limits, tuned flags) belong in case studies or evidence, labeled as project-specific.
 - If a lesson comes from Homedir, extract the transferable rule and record it in a reusable asset.
 
 ## Expected Deliverables
