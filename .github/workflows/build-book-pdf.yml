@@ -91,6 +91,8 @@ jobs:
             --metadata lang="es-ES"
 
       - name: Build and validate EPUB
+        env:
+          ADEV_REPO_REF: ${{ github.sha }}
         run: |
           BOOK_TITLE="$(cat adevelopment-book/book-es/title.txt)"
           BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
