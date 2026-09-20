@@ -1,4 +1,7 @@
 # One-Page Pitch (English)
+
+> Historical note (pre-v2.0.0): this document predates the naming consolidation. The canonical expansion is "AI Agentic Development"; "Augmented Development" is retired except in dated citations.
+
 **Title:** Augmented Development (A-Dev)  
 **Hook (10s):** A-Dev is a vendor-neutral framework for AI-assisted delivery. It helps practitioners ship systems they may not fully understand, but can fully validate, by reducing coordination tax with baselines, flags, and a disciplined quality cycle.
 **Promise:** A repeatable system to ship production features in short loops with evidence (plan -> prompt -> implementation/tests -> commit), avoiding avoidable debt and tool lock-in.

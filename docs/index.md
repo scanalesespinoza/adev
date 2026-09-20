@@ -1,4 +1,4 @@
-# A-Dev: Augmented Development Framework
+# A-Dev: AI Agentic Development Framework
 
 > **A vendor-neutral framework for AI-assisted delivery.**
 
@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/github/license/scanalesespinoza/adev?style=for-the-badge)](LICENSE)
 
 ## What is A-Dev?
-**A-Dev (Augmented Development)** is a discipline-first framework for practitioners, maintainers, and teams to orchestrate interchangeable AI assistants. It reduces coordination tax with living baselines, short quality cycles, and strict evidence trails.
+**A-Dev (AI Agentic Development)** is a discipline-first framework for practitioners, maintainers, and teams to orchestrate interchangeable AI assistants. It reduces coordination tax with living baselines, short quality cycles, and strict evidence trails.
 
 Instead of treating AI as a junior coder that creates technical debt, A-Dev treats AI as a force multiplier that must be governed by a living baseline of non-negotiable rules.
 

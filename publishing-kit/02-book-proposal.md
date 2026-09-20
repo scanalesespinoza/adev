@@ -1,5 +1,7 @@
 # Book Proposal (A-Dev)
 
+> Historical note (pre-v2.0.0): this document predates the naming consolidation. The canonical expansion is "AI Agentic Development"; "Augmented Development" is retired except in dated citations.
+
 ## Overview
 Augmented Development (A-Dev) is the manual for the practitioner-orchestrator: ship systems you may not fully understand, but can fully validate, by reducing coordination tax with baselines, flags, and a disciplined create/verify loop. It is implementation-led and frugal: keep the stack simple, keep the workflow explicit, and keep the evidence visible.
 

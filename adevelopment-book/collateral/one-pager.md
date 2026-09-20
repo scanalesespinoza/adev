@@ -2,7 +2,7 @@
 
 ## What A-Dev is
 
-Augmented Development: a discipline for orchestrating AI with human experience and clear rules.
+AI Agentic Development (ADEV): a discipline for orchestrating AI with human experience and clear rules.
 
 ## Why now
 
