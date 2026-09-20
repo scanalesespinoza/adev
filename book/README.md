@@ -4,7 +4,7 @@ This directory is the canonical entry point for the book that explains the A-Dev
 
 ## Current book sources
 
-- [`adevelopment-book/book/`](../adevelopment-book/book/) contains the current chapter and appendix sources used by the PDF and documentation workflows.
+- [`adevelopment-book/book-es/`](../adevelopment-book/book-es/) and [`adevelopment-book/book-en/`](../adevelopment-book/book-en/) contain the released editions that feed the PDF and EPUB workflows (`v2.0.0` and `v2.0.0-en`). [`adevelopment-book/book/`](../adevelopment-book/book/) is a legacy tree currently consumed only by the docs-site deploy, pending consolidation.
 - [`adevelopment-book/collateral/`](../adevelopment-book/collateral/) contains talk, post, one-pager, and video material derived from the book.
 - [`publishing-kit/`](../publishing-kit/) contains proposal, readiness, rights, market, and expansion planning.
 

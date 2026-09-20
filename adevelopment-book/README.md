@@ -1,10 +1,10 @@
 # ADEV Book and Collateral
 
-> This directory contains the manuscript sources and reusable collateral for the ADEV book. The canonical first-edition development track is the Spanish manuscript in [`book-es/`](book-es/README.md). The existing English manuscript in [`book/`](book/INDEX.md) is retained as a historical source for selective reuse, not as the translation source of record. The normative, English-language practice remains in [`framework/`](../framework/README.md).
+> This directory contains the manuscript sources and reusable collateral for the ADEV book. The released editions are the Spanish manuscript in [`book-es/`](book-es/README.md) (`v2.0.0`, released 2026-08-17) and its English adaptation in [`book-en/`](book-en/README.md) (`v2.0.0-en`, released 2026-08-17). The earlier English manuscript in [`book/`](book/INDEX.md) is a legacy snapshot retained for selective reuse — it is not a release input and is pending consolidation. The normative, English-language practice remains in [`framework/`](../framework/README.md).
 
 ## First edition in Spanish
 
-The editorial source of truth for the first edition lives in `book-es/`.
+The editorial source of truth for the first edition lives in `book-es/`. It was published as release `v2.0.0` on 2026-08-17 with `adev-book.pdf` and `adev-book.epub`.
 
 - Working title: *ADEV: La práctica de AI Agentic Development*.
 - Language: Spanish, using clear professional Latin American usage.
@@ -13,7 +13,7 @@ The editorial source of truth for the first edition lives in `book-es/`.
 
 ## Historical English manuscript
 
-The prior English manuscript remains in `book/` while its useful material is evaluated chapter by chapter. It must not be expanded independently during the Spanish first-edition consolidation.
+The prior English manuscript remains in `book/` as a legacy snapshot; the Spanish first-edition consolidation it was waiting on is complete. It must not be expanded independently — the released editions live in `book-es/` and `book-en/`. The docs site still consumes this tree until that pipeline is repointed (tracked separately).
 
 Key files:
 - `Book.txt`: ordered historical manuscript manifest retained for reference.
@@ -48,7 +48,7 @@ The complete English adaptation lives in [`book-en/`](book-en/README.md).
 - Language: international professional English with US spelling.
 - Source canon: the Spanish `v2.0.0` manuscript.
 - Build order: [`book-en/Book.txt`](book-en/Book.txt).
-- Proposed release tag: `v2.0.0-en`.
+- Release tag: `v2.0.0-en` (published 2026-08-17).
 - Stable artifacts: `adev-book-en.pdf` and `adev-book-en.epub`.
 
 The English build has its own workflow, metadata, cover treatment, artifact names, and release identity. It does not replace or mutate the Spanish publication path.

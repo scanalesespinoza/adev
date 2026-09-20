@@ -8,7 +8,7 @@ The source is `adevelopment-book/book-es/` as published under tag `v2.0.0` at co
 
 ## Status
 
-The full English manuscript and its three appendices have passed developmental review, copyediting, production build, PDF visual QA, EPUB structural QA, link review, and rights review. The edition is awaiting explicit author approval of the `v2.0.0-en` tag and GitHub release. Files in this directory must not be presented as a released English edition until that final authorization is given and the release workflow succeeds.
+The full English manuscript and its three appendices have passed developmental review, copyediting, production build, PDF visual QA, EPUB structural QA, link review, and rights review. The edition is published: release `v2.0.0-en` was tagged on 2026-08-17 with `adev-book-en.pdf` and `adev-book-en.epub` attached to the GitHub release.
 
 ## Working rules
 

@@ -6,9 +6,9 @@ The manuscript is written in Spanish to preserve the author's native voice, Lati
 
 ## Status
 
-Developmental drafting and first-edition copyediting are complete. [`INDEX.md`](INDEX.md) defines the implemented narrative architecture, every target in [`Book.txt`](Book.txt) exists, and the publication workflow generates validated PDF and EPUB candidates. Public release remains a separate manual decision governed by the publishing checklist.
+Developmental drafting and first-edition copyediting are complete. [`INDEX.md`](INDEX.md) defines the implemented narrative architecture, every target in [`Book.txt`](Book.txt) exists, and the publication workflow generates validated PDF and EPUB candidates.
 
-The approved identity of this edition is `v2.0.0`. [`version.txt`](version.txt) is the canonical numeric version source used by the manuscript and publication workflow; creating the public tag remains a separate manual release action. The historical `v1.0.0` release predates this consolidated edition and remains preserved rather than being rewritten.
+This edition is published: release `v2.0.0` was tagged on 2026-08-17 with `adev-book.pdf` and `adev-book.epub` attached to the GitHub release. The approved identity of this edition is `v2.0.0`. [`version.txt`](version.txt) is the canonical numeric version source used by the manuscript and publication workflow; future releases remain separate manual actions. The historical `v1.0.0` release predates this consolidated edition and remains preserved rather than being rewritten.
 
 ## Editorial rules
 
