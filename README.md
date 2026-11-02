@@ -11,6 +11,8 @@ They support each other, but they are not the same artifact. The practice is nor
 
 ## Start here
 
+Agent entry point: [`SKILL.md`](SKILL.md) applies the maintained doctrine and routes to the canonical assets. Install this repository as the `adev` skill; automatic invocation is enabled in [`agents/openai.yaml`](agents/openai.yaml).
+
 | If you want to... | Go to |
 | --- | --- |
 | Understand or apply the A-Dev practice | [`framework/README.md`](framework/README.md) |
