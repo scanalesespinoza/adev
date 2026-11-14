@@ -3,7 +3,7 @@ knowledge:
   trusted_sources: [reviewed-repository-instructions, versioned-policy-bundle, reviewed-runtime-contract]
   freshness: reviewed
 policy:
-  authority_order: [applicable-law-and-platform-controls, explicit-human-authorization, repository-policy, reviewed-runtime-profile, task-input]
+  authority_order: [applicable-law-and-platform-controls, explicit-human-authorization, repository-policy, reviewed-runtime-profile]
   fail_closed: true
 success:
   acceptance_criteria: [explicit-scope-and-observable-criteria, required-deterministic-validation, traceable-release-decision, no-unresolved-critical-finding]

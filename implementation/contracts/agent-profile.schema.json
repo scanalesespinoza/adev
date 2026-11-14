@@ -6,9 +6,9 @@
   "additionalProperties": false,
   "properties": {
     "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
-    "knowledge": {"type": "object", "required": ["trusted_sources", "freshness"], "properties": {"trusted_sources": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "freshness": {"enum": ["pinned", "reviewed", "event-driven"]}}},
-    "policy": {"type": "object", "required": ["authority_order", "fail_closed"], "properties": {"authority_order": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "fail_closed": {"const": true}}},
-    "success": {"type": "object", "required": ["acceptance_criteria", "required_evidence"], "properties": {"acceptance_criteria": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "required_evidence": {"type": "array", "minItems": 1, "items": {"type": "string"}}}},
-    "components": {"type": "object", "required": ["deterministic", "generative"], "properties": {"deterministic": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "generative": {"type": "array", "minItems": 1, "items": {"type": "string"}}}}
+    "knowledge": {"type": "object", "additionalProperties": false, "required": ["trusted_sources", "freshness"], "properties": {"trusted_sources": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "freshness": {"enum": ["pinned", "reviewed", "event-driven"]}}},
+    "policy": {"type": "object", "additionalProperties": false, "required": ["authority_order", "fail_closed"], "properties": {"authority_order": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "fail_closed": {"const": true}}},
+    "success": {"type": "object", "additionalProperties": false, "required": ["acceptance_criteria", "required_evidence"], "properties": {"acceptance_criteria": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "required_evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}}},
+    "components": {"type": "object", "additionalProperties": false, "required": ["deterministic", "generative"], "properties": {"deterministic": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "generative": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}}}
   }
 }
