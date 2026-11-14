@@ -1,17 +1,17 @@
 # A-Dev Practice
 
-This directory is the canonical map of the A-Dev practice. It separates normative framework material from the explanatory [A-Dev book](../book/README.md).
+This directory is the canonical home of the A-Dev practice. It separates normative framework material from the explanatory [A-Dev book](book/README.md) and from the executable operating model in [`../implementation/`](../implementation/README.md).
 
 ## Content model
 
 | Area | Purpose | Current canonical assets |
 | --- | --- | --- |
-| [Doctrine](doctrine/README.md) | Stable governing principles and non-negotiables | [`ADEV.md`](../ADEV.md) |
-| [Knowledge](knowledge/README.md) | Transferable explanations and accumulated lessons | [`docs/`](../docs/) |
-| [Practices](practices/README.md) | Repeatable delivery patterns and rituals | [`QUALITY.md`](../QUALITY.md), [`starter-kit/OPERATING_RITUALS.md`](../starter-kit/OPERATING_RITUALS.md) |
+| [Doctrine](doctrine/README.md) | Stable governing principles and non-negotiables | [`ADEV.md`](ADEV.md) |
+| [Knowledge](knowledge/README.md) | Transferable explanations and accumulated lessons | [`docs/`](docs/) |
+| [Practices](practices/README.md) | Repeatable delivery patterns and rituals | [`QUALITY.md`](QUALITY.md), [`starter-kit/OPERATING_RITUALS.md`](starter-kit/OPERATING_RITUALS.md) |
 | [Definitions](definitions/README.md) | Shared vocabulary and conceptual boundaries | Book glossary and Hardness definitions |
-| [Kit](kit/README.md) | Copyable adoption templates and examples | [`starter-kit/`](../starter-kit/) |
-| [Evidence](evidence/README.md) | Proof chains supporting framework claims | [`docs/evidence-index.md`](../docs/evidence-index.md) |
+| [Kit](kit/README.md) | Copyable adoption templates and examples | [`starter-kit/`](starter-kit/) |
+| [Evidence](evidence/README.md) | Proof chains supporting framework claims | [`docs/evidence-index.md`](docs/evidence-index.md) |
 | [Hardness](hardness/README.md) | Governance for predictable and policy-conformant agents | Definition, policy model, and skill contract |
 | [Concept traceability](concept-traceability-matrix.md) | Canonical cross-surface map for core A-Dev concepts | Doctrine, guidance, kit, evidence, book, and maturity gaps |
 

@@ -1,0 +1,19 @@
+name: Validate implementation contracts
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install jsonschema==4.23.0 PyYAML==6.0.2
+      - run: python implementation/evaluations/check_repository_layout.py
+      - run: python -B implementation/evaluations/test_profile.py

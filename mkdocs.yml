@@ -6,6 +6,7 @@ site_author: Sergio Sebastián Canales Espinoza
 repo_name: scanalesespinoza/adev
 repo_url: https://github.com/scanalesespinoza/adev
 edit_uri: ""
+docs_dir: framework/docs
 
 theme:
   name: material

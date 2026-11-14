@@ -5,11 +5,16 @@ on:
     branches:
       - main
     paths:
-      - 'adevelopment-book/book/**'
-      - 'docs/**'
+      - 'framework/adevelopment-book/book/**'
+      - 'framework/docs/**'
       - 'mkdocs.yml'
       - '.github/workflows/deploy-site.yml'
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'framework/**'
+      - 'mkdocs.yml'
+      - '.github/workflows/deploy-site.yml'
 
 permissions:
   contents: write
@@ -35,14 +40,18 @@ jobs:
 
       - name: Stage Book Content
         run: |
-          mkdir -p docs/book
-          mkdir -p docs/book/appendices
+          mkdir -p framework/docs/book
+          mkdir -p framework/docs/book/appendices
           # Copy book chapters to docs structure for build
-          cp adevelopment-book/book/*.md docs/book/ || true
-          cp adevelopment-book/book/appendices/*.md docs/book/appendices/ || true
+          cp framework/adevelopment-book/book/*.md framework/docs/book/
+          cp framework/adevelopment-book/book/appendices/*.md framework/docs/book/appendices/
           
           # Fix relative image links if any (optional, purely precautionary)
-          # sed -i 's|\.\./images|../../images|g' docs/book/*.md || true
+          # sed -i 's|\.\./images|../../images|g' framework/docs/book/*.md
+
+      - name: Build documentation
+        run: mkdocs build
 
       - name: Deploy to GitHub Pages
+        if: github.event_name != 'pull_request'
         run: mkdocs gh-deploy --force
