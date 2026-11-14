@@ -10,11 +10,19 @@ on:
       - "framework/adevelopment-book/book-es/**"
       - ".github/workflows/build-book-pdf.yml"
       - "framework/adevelopment-book/README.md"
+      - "framework/adevelopment-book/pdf-cover.tex"
+      - "framework/adevelopment-book/build-cover.py"
+      - "framework/adevelopment-book/epub-external-links.lua"
+      - "implementation/evaluations/check_repository_layout.py"
   pull_request:
     paths:
       - "framework/adevelopment-book/book-es/**"
       - ".github/workflows/build-book-pdf.yml"
       - "framework/adevelopment-book/README.md"
+      - "framework/adevelopment-book/pdf-cover.tex"
+      - "framework/adevelopment-book/build-cover.py"
+      - "framework/adevelopment-book/epub-external-links.lua"
+      - "implementation/evaluations/check_repository_layout.py"
   workflow_dispatch:
 
 permissions:
@@ -27,6 +35,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Validate repository layout
+        run: python3 implementation/evaluations/check_repository_layout.py
 
       - name: Install publishing toolchain
         run: |

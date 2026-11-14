@@ -34,6 +34,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Validate repository layout
+        run: python3 implementation/evaluations/check_repository_layout.py
+
       - name: Install publishing toolchain
         run: |
           sudo apt-get update

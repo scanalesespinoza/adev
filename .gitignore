@@ -1,2 +1,5 @@
 # Local utilities for Leanpub API (ignored)
 /leanpub-utils/
+/framework/adevelopment-book/dist/
+/framework/docs/book/
+/site/

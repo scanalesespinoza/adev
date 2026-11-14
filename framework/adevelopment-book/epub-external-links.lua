@@ -15,7 +15,7 @@ function Link(link)
 
   local view = target:match("/$") and "tree" or "blob"
   link.target = "https://github.com/scanalesespinoza/adev/"
-    .. view .. "/main/" .. target
+    .. view .. "/main/framework/" .. target
 
   return link
 end
