@@ -1,19 +1,16 @@
 # Repository Guidelines
 
-Read `ADEV.md` first. It is the persistent operating context for this repository and overrides generic writing-repo assumptions.
+Read [`framework/ADEV.md`](framework/ADEV.md) first. It is the persistent operating context for this repository and overrides generic writing-repo assumptions. For agent-native delivery assets, also read [`implementation/AGENTS.md`](implementation/AGENTS.md).
 
 ## Purpose
-This repo is the canonical home of A-Dev: the framework, the manuscript, the starter kit, and the proof assets extracted from real model- and agent-assisted delivery work. Treat it as a doctrine-and-evidence system, not as a loose notes repository.
+This repo is the canonical home of A-Dev: the framework, its implementation model, the manuscript, the adoption kit, and proof assets extracted from real model- and agent-assisted delivery work. Treat it as a doctrine-and-evidence system, not as a loose notes repository.
 
 ## Structure
-- `adevelopment-book/`: core manuscript source.
-- `docs/`: docs-site pages, evidence indexes, and case studies.
-- `starter-kit/`: reusable templates and operating assets.
-- `publishing-kit/`: proposal, readiness, backlog, and maturity planning.
-- `blog/`: outward-facing articles derived from the framework.
+- `framework/`: canonical doctrine, evidence, practice, adoption, and book sources.
+- `implementation/`: agent-consumable operating model, profiles, contracts, playbooks, and integration guidance.
 
 ## Working Rules
-- Follow `ADEV.md` for stage-based delivery.
+- Follow `framework/ADEV.md` for stage-based delivery.
 - Default mode is one atomic PR per stage.
 - Keep canonical public content in English unless a bilingual mirror is explicitly required.
 - Do not turn undocumented assumptions into doctrine.

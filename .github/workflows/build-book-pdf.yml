@@ -7,14 +7,14 @@ on:
     tags:
       - "v*"
     paths:
-      - "adevelopment-book/book-es/**"
+      - "framework/adevelopment-book/book-es/**"
       - ".github/workflows/build-book-pdf.yml"
-      - "adevelopment-book/README.md"
+      - "framework/adevelopment-book/README.md"
   pull_request:
     paths:
-      - "adevelopment-book/book-es/**"
+      - "framework/adevelopment-book/book-es/**"
       - ".github/workflows/build-book-pdf.yml"
-      - "adevelopment-book/README.md"
+      - "framework/adevelopment-book/README.md"
   workflow_dispatch:
 
 permissions:
@@ -35,20 +35,20 @@ jobs:
 
       - name: Validate manuscript manifest
         run: |
-          test -f adevelopment-book/book-es/Book.txt
-          test -f adevelopment-book/book-es/title.txt
-          test -f adevelopment-book/book-es/version.txt
-          BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
+          test -f framework/adevelopment-book/book-es/Book.txt
+          test -f framework/adevelopment-book/book-es/title.txt
+          test -f framework/adevelopment-book/book-es/version.txt
+          BOOK_VERSION="$(cat framework/adevelopment-book/book-es/version.txt)"
           [[ "$BOOK_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
           while IFS= read -r entry; do
             [ -z "$entry" ] && continue
-            test -f "adevelopment-book/book-es/${entry}.md"
-          done < adevelopment-book/book-es/Book.txt
+            test -f "framework/adevelopment-book/book-es/${entry}.md"
+          done < framework/adevelopment-book/book-es/Book.txt
 
       - name: Validate release identity
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         run: |
-          BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
+          BOOK_VERSION="$(cat framework/adevelopment-book/book-es/version.txt)"
           EXPECTED_TAG="v${BOOK_VERSION}"
           if [ "$GITHUB_REF_NAME" != "$EXPECTED_TAG" ]; then
             echo "Tag $GITHUB_REF_NAME does not match the canonical book version $EXPECTED_TAG."
@@ -57,27 +57,27 @@ jobs:
 
       - name: Compose deterministic cover
         run: |
-          mkdir -p adevelopment-book/dist
-          python3 adevelopment-book/build-cover.py \
-            --input adevelopment-book/book-es/resources/cover-art.png \
-            --output adevelopment-book/dist/adev-cover.png
+          mkdir -p framework/adevelopment-book/dist
+          python3 framework/adevelopment-book/build-cover.py \
+            --input framework/adevelopment-book/book-es/resources/cover-art.png \
+            --output framework/adevelopment-book/dist/adev-cover.png
 
       - name: Build consolidated PDF
         run: |
-          mkdir -p adevelopment-book/dist
-          BOOK_TITLE="$(cat adevelopment-book/book-es/title.txt)"
-          BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
-          mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book-es/Book.txt)
+          mkdir -p framework/adevelopment-book/dist
+          BOOK_TITLE="$(cat framework/adevelopment-book/book-es/title.txt)"
+          BOOK_VERSION="$(cat framework/adevelopment-book/book-es/version.txt)"
+          mapfile -t ENTRIES < <(grep -v '^\s*$' framework/adevelopment-book/book-es/Book.txt)
           FILES=()
           for entry in "${ENTRIES[@]}"; do
-            FILES+=("adevelopment-book/book-es/${entry}.md")
+            FILES+=("framework/adevelopment-book/book-es/${entry}.md")
           done
           pandoc "${FILES[@]}" \
-            --resource-path=adevelopment-book/book-es:adevelopment-book/book-es/resources \
-            -o adevelopment-book/dist/adev-book.pdf \
+            --resource-path=framework/adevelopment-book/book-es:framework/adevelopment-book/book-es/resources \
+            -o framework/adevelopment-book/dist/adev-book.pdf \
             --from markdown-yaml_metadata_block \
             --pdf-engine=xelatex \
-            --include-in-header=adevelopment-book/pdf-cover.tex \
+            --include-in-header=framework/adevelopment-book/pdf-cover.tex \
             -V geometry=margin=1in \
             -V classoption=onecolumn,titlepage \
             -V fontsize=11pt \
@@ -92,46 +92,46 @@ jobs:
 
       - name: Build and validate EPUB
         run: |
-          BOOK_TITLE="$(cat adevelopment-book/book-es/title.txt)"
-          BOOK_VERSION="$(cat adevelopment-book/book-es/version.txt)"
-          mapfile -t ENTRIES < <(grep -v '^\s*$' adevelopment-book/book-es/Book.txt)
+          BOOK_TITLE="$(cat framework/adevelopment-book/book-es/title.txt)"
+          BOOK_VERSION="$(cat framework/adevelopment-book/book-es/version.txt)"
+          mapfile -t ENTRIES < <(grep -v '^\s*$' framework/adevelopment-book/book-es/Book.txt)
           FILES=()
           for entry in "${ENTRIES[@]}"; do
-            FILES+=("adevelopment-book/book-es/${entry}.md")
+            FILES+=("framework/adevelopment-book/book-es/${entry}.md")
           done
           pandoc "${FILES[@]}" \
-            --resource-path=adevelopment-book/book-es:adevelopment-book/book-es/resources \
-            -o adevelopment-book/dist/adev-book.epub \
+            --resource-path=framework/adevelopment-book/book-es:framework/adevelopment-book/book-es/resources \
+            -o framework/adevelopment-book/dist/adev-book.epub \
             --from markdown-yaml_metadata_block \
-            --lua-filter=adevelopment-book/epub-external-links.lua \
-            --epub-cover-image=adevelopment-book/dist/adev-cover.png \
+            --lua-filter=framework/adevelopment-book/epub-external-links.lua \
+            --epub-cover-image=framework/adevelopment-book/dist/adev-cover.png \
             --table-of-contents \
             --toc-depth=1 \
             --metadata title="$BOOK_TITLE" \
             --metadata author="Sergio Sebastián Canales Espinoza" \
             --metadata identifier="urn:adev:book-es:${BOOK_VERSION}" \
             --metadata lang="es-ES"
-          epubcheck adevelopment-book/dist/adev-book.epub
+          epubcheck framework/adevelopment-book/dist/adev-book.epub
 
       - name: Upload PDF artifact (all builds)
         uses: actions/upload-artifact@v4
         with:
           name: adev-book-pdf
-          path: adevelopment-book/dist/adev-book.pdf
+          path: framework/adevelopment-book/dist/adev-book.pdf
 
       - name: Upload EPUB artifact (all builds)
         uses: actions/upload-artifact@v4
         with:
           name: adev-book-epub
-          path: adevelopment-book/dist/adev-book.epub
+          path: framework/adevelopment-book/dist/adev-book.epub
 
       - name: Publish book formats to GitHub Release (tag builds)
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            adevelopment-book/dist/adev-book.pdf
-            adevelopment-book/dist/adev-book.epub
+            framework/adevelopment-book/dist/adev-book.pdf
+            framework/adevelopment-book/dist/adev-book.epub
           body: "Primera edición en español de ADEV en PDF y EPUB para la versión ${{ github.ref_name }}."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

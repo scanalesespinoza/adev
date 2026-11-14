@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'adevelopment-book/book/**'
+      - 'framework/adevelopment-book/book/**'
       - 'docs/**'
       - 'mkdocs.yml'
       - '.github/workflows/deploy-site.yml'
@@ -38,8 +38,8 @@ jobs:
           mkdir -p docs/book
           mkdir -p docs/book/appendices
           # Copy book chapters to docs structure for build
-          cp adevelopment-book/book/*.md docs/book/ || true
-          cp adevelopment-book/book/appendices/*.md docs/book/appendices/ || true
+          cp framework/adevelopment-book/book/*.md docs/book/ || true
+          cp framework/adevelopment-book/book/appendices/*.md docs/book/appendices/ || true
           
           # Fix relative image links if any (optional, purely precautionary)
           # sed -i 's|\.\./images|../../images|g' docs/book/*.md || true

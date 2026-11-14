@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A-Dev agent-native delivery profile",
+  "type": "object",
+  "required": ["version", "knowledge", "policy", "success", "components"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "knowledge": {"type": "object", "required": ["trusted_sources", "freshness"], "properties": {"trusted_sources": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "freshness": {"enum": ["pinned", "reviewed", "event-driven"]}}},
+    "policy": {"type": "object", "required": ["authority_order", "fail_closed"], "properties": {"authority_order": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "fail_closed": {"const": true}}},
+    "success": {"type": "object", "required": ["acceptance_criteria", "required_evidence"], "properties": {"acceptance_criteria": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "required_evidence": {"type": "array", "minItems": 1, "items": {"type": "string"}}}},
+    "components": {"type": "object", "required": ["deterministic", "generative"], "properties": {"deterministic": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "generative": {"type": "array", "minItems": 1, "items": {"type": "string"}}}}
+  }
+}
