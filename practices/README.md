@@ -4,6 +4,7 @@ Practices are repeatable patterns that help teams apply the [core doctrine](../A
 
 | Practice | Use it for |
 | --- | --- |
+| [Engineering baseline](engineering-baseline.md) | The professional standard every change meets without being asked |
 | [Delivery defaults](delivery-defaults.md) | Pull requests, branch hygiene, incremental rollout, versioning, and product focus |
 | [Multi-agent collaboration](multi-agent-collaboration.md) | Several people or agents working on one repository |
 | [Data protection](data-protection.md) | Sanitizing everything that becomes durable |

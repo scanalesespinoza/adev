@@ -94,12 +94,21 @@ $adevRoot = Get-NormalizedPath (Split-Path -Parent $PSScriptRoot)
 $adevSkill = Join-Path $adevRoot "SKILL.md"
 $profileFile = Join-Path $adevRoot "profiles\$AdevProfile.md"
 Register-Skill -Source $adevRoot -Name (Get-SkillName $adevRoot)
+foreach ($bundled in Get-ChildItem -LiteralPath (Join-Path $adevRoot "skills") -Directory -ErrorAction SilentlyContinue) {
+    if (Test-Path -LiteralPath (Join-Path $bundled.FullName "SKILL.md")) {
+        Register-Skill -Source $bundled.FullName -Name (Get-SkillName $bundled.FullName)
+    }
+}
+$engineeringBaseline = Join-Path $adevRoot "practices\engineering-baseline.md"
+$learningSkill = Join-Path $adevRoot "skills\adev-learn\SKILL.md"
+$firstOverlayName = $null
 
 $lines = @(
     $startMarker,
     "# A-Dev",
     "",
     "- For software-delivery work, read and apply $adevSkill within the authorized scope.",
+    "- Apply the engineering baseline ($engineeringBaseline) to every change: deliver the requested outcome at professional standard, beyond what was asked and within scope.",
     "- A-Dev profile: $AdevProfile ($profileFile). A more specific declaration in the task or repository takes precedence."
 )
 
@@ -110,9 +119,16 @@ foreach ($path in $Overlay) {
     }
     $name = Get-SkillName $overlayRoot
     Register-Skill -Source $overlayRoot -Name $name
+    if (-not $firstOverlayName) { $firstOverlayName = $name }
     $lines += "- Overlay ${name}: at the beginning of every session, read $(Join-Path $overlayRoot 'SKILL.md') and follow its startup procedure."
 }
 
+if ($firstOverlayName) {
+    $lines += "- Learning loop: before closing a meaningful task, and after any failure or correction, apply $learningSkill and record evidence in overlay $firstOverlayName."
+}
+else {
+    $lines += "- Learning loop: before closing a meaningful task, and after any failure or correction, apply $learningSkill."
+}
 $lines += "- Loading this guidance does not authorize remote writes, deployment, or destructive operations."
 $lines += $endMarker
 $section = $lines -join "`n"

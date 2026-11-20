@@ -63,8 +63,10 @@ nav:
     - Standard: profiles/standard.md
     - Autonomous: profiles/autonomous.md
   - Install: install/README.md
+  - Learning loop: skills/adev-learn/SKILL.md
   - Practices:
     - Overview: practices/README.md
+    - Engineering baseline: practices/engineering-baseline.md
     - Delivery defaults: practices/delivery-defaults.md
     - Quality cycle: practices/quality-cycle.md
     - Multi-agent collaboration: practices/multi-agent-collaboration.md
