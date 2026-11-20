@@ -57,6 +57,12 @@ exclude_docs: |
 nav:
   - Home: README.md
   - Core doctrine: ADEV.md
+  - Profiles:
+    - Overview: profiles/README.md
+    - Guided: profiles/guided.md
+    - Standard: profiles/standard.md
+    - Autonomous: profiles/autonomous.md
+  - Install: install/README.md
   - Practices:
     - Overview: practices/README.md
     - Delivery defaults: practices/delivery-defaults.md
@@ -85,7 +91,9 @@ nav:
     - Overview: implementation/README.md
     - Agent instructions: implementation/AGENTS.md
     - Operating model: implementation/architecture/agent-native-ai-sdlc.md
-  - Starter kit: starter-kit/README.md
+  - Starter kit:
+    - Overview: starter-kit/README.md
+    - Personal overlay: starter-kit/personal-overlay/README.md
   - Knowledge:
     - Overview: docs/index.md
     - Adoption maturity: docs/adoption-maturity-model.md

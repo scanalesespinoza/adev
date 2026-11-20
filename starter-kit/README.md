@@ -10,6 +10,7 @@ This is the implementation kit for the [A-Dev practice](../README.md). For agent
 - `FIRST_RELEASE.md`: close the first release with traceability and verification.
 - `OPERATING_RITUALS.md`: compact rituals derived from Homedir execution history.
 - `examples/minimal-adev-loop/`: a minimal, repo-agnostic sample to model the workflow.
+- [`personal-overlay/`](personal-overlay/README.md): a private layer for one person's working model, evidence, and candidate patterns.
 
 ## Existing assets
 - `BASELINE_template.json`: machine-readable baseline seed.
