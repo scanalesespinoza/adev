@@ -32,7 +32,7 @@ Do not trigger for edits, commits, branches, pull requests, merges, messages, de
 
 1. Preserve local and remote state.
 2. Keep findings separate from inference, proposals, and gaps.
-3. Treat [`ADEV.md`](../../../../ADEV.md) as doctrine and use the narrower canonical shelf when it exists.
+3. Treat [`ADEV.md`](../../../ADEV.md) as doctrine and use the narrower canonical shelf when it exists.
 4. Do not treat a fixture, example, book passage, or repository-root link as proof of an operational result.
 5. For any Homedir-derived operational claim, require a direct artifact link under the canonical [Homedir repository](https://github.com/scanalesespinoza/homedir), or label the claim unverified.
 

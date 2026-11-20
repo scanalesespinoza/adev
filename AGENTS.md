@@ -1,16 +1,20 @@
 # Repository Guidelines
 
-Read [`framework/ADEV.md`](framework/ADEV.md) first. It is the persistent operating context for this repository and overrides generic writing-repo assumptions. For agent-native delivery assets, also read [`implementation/AGENTS.md`](implementation/AGENTS.md).
+Read [`ADEV.md`](ADEV.md) first. It is the persistent operating context for this repository and overrides generic writing-repo assumptions. For agent-native delivery assets, also read [`implementation/AGENTS.md`](implementation/AGENTS.md).
 
 ## Purpose
 This repo is the canonical home of A-Dev: the framework, its implementation model, the adoption kit, and proof assets extracted from real model- and agent-assisted delivery work. Treat it as a doctrine-and-evidence system, not as a loose notes repository.
 
 ## Structure
-- `framework/`: canonical doctrine, evidence, practice, and adoption sources. The book lives in [adev-book](https://github.com/scanalesespinoza/adev-book).
-- `implementation/`: agent-consumable operating model, profiles, contracts, playbooks, and integration guidance.
+- `ADEV.md`: the core doctrine. Keep it small.
+- `hardness/`, `overlays/`, `practices/`: agent governance, scoped requirements, and guidance.
+- `implementation/`: agent-consumable operating model, profiles, contracts, playbooks, and evaluations.
+- `starter-kit/`: copyable adoption assets.
+- `docs/`: knowledge, evidence, case studies, and reference maps. The site is built from all tracked Markdown.
+- The book lives in [adev-book](https://github.com/scanalesespinoza/adev-book).
 
 ## Working Rules
-- Follow `framework/ADEV.md` and the [delivery defaults](framework/practices/delivery-defaults.md).
+- Follow `ADEV.md` and the [delivery defaults](practices/delivery-defaults.md).
 - Default mode is one atomic PR per stage.
 - English is the only language for committed content in this repository unless a bilingual mirror is explicitly required. This is a rule for the A-Dev canon, not for adopting repositories.
 - Do not turn undocumented assumptions into doctrine.

@@ -8,7 +8,7 @@ Practices are repeatable patterns that help teams apply the [core doctrine](../A
 | [Multi-agent collaboration](multi-agent-collaboration.md) | Several people or agents working on one repository |
 | [Data protection](data-protection.md) | Sanitizing everything that becomes durable |
 | [Operational lessons](operational-lessons.md) | Transferable lessons from the proving ground |
-| [`QUALITY.md`](../QUALITY.md) | The 50/50 build and verification cycle |
+| [`QUALITY.md`](quality-cycle.md) | The 50/50 build and verification cycle |
 | [`starter-kit/OPERATING_RITUALS.md`](../starter-kit/OPERATING_RITUALS.md) | Pre-iteration, recovery, multilingual, performance, and disaster-recovery rituals |
 | [`starter-kit/FIRST_WEEK.md`](../starter-kit/FIRST_WEEK.md) | The first evidence-backed delivery loop |
 
