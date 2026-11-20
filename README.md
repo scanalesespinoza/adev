@@ -7,7 +7,8 @@ A-Dev is a vendor-neutral practice for software delivery by people and agents wo
 | You are | Start with |
 | --- | --- |
 | A practitioner learning the practice | [`ADEV.md`](ADEV.md), the 13 core principles, then the [starter kit](starter-kit/README.md) |
-| Setting up an agent to work this way | The [`adev` skill](SKILL.md) and [agent implementation guidance](implementation/AGENTS.md) |
+| Setting up your agents to work this way | The [installer](install/README.md), then choose a [baseline profile](profiles/README.md) |
+| Keeping your own preferences and evidence | The [personal overlay template](starter-kit/personal-overlay/README.md) |
 | Defining agent policies, authority, or skills | [Hardness](hardness/README.md) |
 | Adapting A-Dev to a stack, product, or team | [Overlays](overlays/README.md) |
 | Maintaining this repository | [`AGENTS.md`](AGENTS.md) |
@@ -20,10 +21,12 @@ A-Dev is layered so that the core stays small and everything else specializes it
 | --- | --- | --- | --- |
 | Core | Principles that apply in every context | [`ADEV.md`](ADEV.md) | Normative |
 | Hardness | Policy, precedence, authority, risk, and skill contracts for agents | [`hardness/`](hardness/README.md) | Normative where labeled as policy or contract |
+| Profiles | Baseline autonomy and guidance: guided, standard, autonomous | [`profiles/`](profiles/README.md) | Normative invariants; selectable behavior |
 | Overlays | Requirements scoped to a stack, product type, or workflow | [`overlays/`](overlays/README.md) | Normative within their declared scope |
 | Practices | Defaults and reusable guidance | [`practices/`](practices/README.md) | Guidance; defaults apply unless overridden with a rationale |
 | Implementation | Agent-consumable profiles, contracts, playbooks, and evaluations | [`implementation/`](implementation/README.md) | Reference contracts |
-| Starter kit | Copyable templates and a minimal example | [`starter-kit/`](starter-kit/README.md) | Guidance |
+| Starter kit | Copyable templates, a minimal example, and the personal overlay template | [`starter-kit/`](starter-kit/README.md) | Guidance |
+| Installer | Registers A-Dev, a profile, and overlays for local agents | [`install/`](install/README.md) | Tooling |
 | Knowledge and evidence | Case studies, evidence index, maturity model, definitions | [`docs/`](docs/index.md) | Evidence and explanation |
 
 The book that explains the practice lives in [adev-book](https://github.com/scanalesespinoza/adev-book). It explains the practice; it does not replace the normative sources.
