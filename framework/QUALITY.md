@@ -10,7 +10,7 @@ Half the time is build and half verification. It is the defense against debt and
 
 ## Ritual (Build → Run → Walkthrough)
 - **Build:** compile/run locally without heavy staging; feature toggles for Live Alpha.
-- **Run:** automated tests + security; liveness `/q/health/live`, readiness `/health/ready` when applicable.
+- **Run:** automated tests + security; liveness/readiness endpoints exposed by the stack when applicable (e.g. `/q/health/live`, `/health/ready` on Quarkus).
 - **Walkthrough:** validate with the persona in mind (does it meet the need?); brief UI/UX check even if visual tools are immature.
 - **Evidence:** commit + CI + baseline updated with the lesson (living baseline, no Plan B).
 
