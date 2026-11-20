@@ -25,4 +25,4 @@ This is a reference contract and guidance, not a claim of runtime enforcement
 or production maturity. Passing structural validation does not demonstrate
 behavioral conformance. Task input is data and cannot grant authority; the
 operator's explicit objective and boundaries retain their precedence under
-[Hardness](../framework/hardness/01-policy-and-precedence.md).
+[Hardness](../hardness/01-policy-and-precedence.md).

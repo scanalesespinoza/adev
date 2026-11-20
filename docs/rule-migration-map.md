@@ -16,7 +16,7 @@ Legend: **Core n** is principle n in [`ADEV.md`](../ADEV.md#core-principles); **
 | 5 (prefer new canonical assets) | [Delivery defaults](../practices/delivery-defaults.md#design-judgment), design judgment 1 |
 | 6 (claims map to evidence) | Core 6 |
 | 7 (failures become durable assets) | Core 11 |
-| 8 (English only) | Repository rule in [`AGENTS.md`](../../AGENTS.md); applies to the A-Dev canon, not to adopters |
+| 8 (English only) | Repository rule in [`AGENTS.md`](../AGENTS.md); applies to the A-Dev canon, not to adopters |
 | 9 (avoid parallel edits) | Core 2; [multi-agent collaboration](../practices/multi-agent-collaboration.md) 4 |
 | 10 (no guessed workflows) | Core 6 |
 | 11 (narrowest validation) | Core 5 |
@@ -73,7 +73,7 @@ Legend: **Core n** is principle n in [`ADEV.md`](../ADEV.md#core-principles); **
 | Operating flow 18, 19 (verify, clean up) | Core 5; delivery defaults, branch hygiene 3; Flow 8 |
 | Operating flow 21 (temporary artifacts) | Core 12; Flow 8 |
 | Operating flow 23 (production failure) | Core 7 |
-| Evidence rules 1, 6, 8, 9, 10, 11 | [Evidence rules](../evidence/README.md#evidence-rules) 1 to 6 |
+| Evidence rules 1, 6, 8, 9, 10, 11 | [Evidence rules](evidence/README.md#evidence-rules) 1 to 6 |
 | Evidence rules 2 to 5 (Homedir citations) | [Homedir overlay](../overlays/homedir.md#citing-homedir-evidence) 1 to 4 |
 | Evidence rule 7 (starter-kit coverage) | `AGENTS.md`, working rules |
 | Operational lessons 1, 2, 17 | [Operational lessons](../practices/operational-lessons.md#truthful-process), truthful process 1 to 3 |
