@@ -9,7 +9,7 @@ description: Apply A-Dev operating doctrine to agent-assisted software delivery,
 
 Read [ADEV.md](ADEV.md) before acting on a delivery task. It is the maintained core doctrine; this skill is its operational entry point, not a replacement or a frozen copy. Resolve relative references from this skill's repository directory, including when installed through a filesystem link.
 
-Read [README.md](README.md) for the layer map. Apply the [baseline profile](profiles/README.md) declared for the task, repository, overlay, or installation, in that order of precedence; use `standard` when none is declared. Profile invariants hold in every profile: destructive actions are never autonomous and approvals do not transfer. Apply the [overlays](overlays/README.md) whose scope matches the task, and the [delivery defaults](practices/delivery-defaults.md) unless the repository overrides them. Read the [quality cycle](practices/quality-cycle.md) when implementing or validating a change. Consult [Hardness](hardness/README.md) when defining agent policies, authority, or capability contracts, and [implementation/README.md](implementation/README.md) for agent-native adoption. The book explains the practice; it does not replace the normative sources.
+Read [README.md](README.md) for the layer map. Apply the [baseline profile](profiles/README.md) declared for the task, repository, overlay, or installation, in that order of precedence; use `standard` when none is declared. Profile invariants hold in every profile: destructive actions are never autonomous and approvals do not transfer. Apply the [overlays](overlays/README.md) whose scope matches the task, and the [delivery defaults](practices/delivery-defaults.md) unless the repository overrides them. Apply the [engineering baseline](practices/engineering-baseline.md) to every change: deliver the requested outcome at professional standard, beyond what was asked and within scope. Read the [quality cycle](practices/quality-cycle.md) when implementing or validating a change. Consult [Hardness](hardness/README.md) when defining agent policies, authority, or capability contracts, and [implementation/README.md](implementation/README.md) for agent-native adoption. The book explains the practice; it does not replace the normative sources.
 
 Apply this guidance within the user's actual objective, applicable repository instructions, and runtime permissions. Loading a default skill does not authorize publication, deployment, destructive Git operations, or unrelated changes. Read-only questions remain read-only.
 
@@ -30,6 +30,10 @@ Apply this guidance within the user's actual objective, applicable repository in
 - Link factual claims to the specific inspected source artifact and record its revision or observation date. Do not infer operational success from a fixture or a narrative.
 - Sanitize durable records: exclude credentials, sensitive raw logs, private environments, personal data, and organization-specific details that are not intentionally public and necessary.
 - If authority, a required source, or validation is missing, report the precise gap and continue independent authorized work. Do not silently claim completion.
+
+## Learning loop
+
+Before closing a meaningful task, and after any failure or correction, run the [learning loop](skills/adev-learn/SKILL.md): record sanitized evidence in the user's personal overlay, update candidate patterns, and propose mature ones to A-Dev within the authorized scope.
 
 ## Completion
 

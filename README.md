@@ -13,6 +13,15 @@ A-Dev is a vendor-neutral practice for software delivery by people and agents wo
 | Adapting A-Dev to a stack, product, or team | [Overlays](overlays/README.md) |
 | Maintaining this repository | [`AGENTS.md`](AGENTS.md) |
 
+## How A-Dev evolves
+
+```text
+your daily work ──> evidence in your private overlay ──> candidate patterns ──> A-Dev layers
+   (agent runs the learning loop)        (adev capture)          (patterns/)     (overlay, practice, default, core)
+```
+
+Every task an agent closes with A-Dev connected can feed this loop. The [learning loop skill](skills/adev-learn/SKILL.md) records what happened, the [pattern lifecycle](patterns/README.md) decides what becomes shared practice, and the [engineering baseline](practices/engineering-baseline.md) is the standard every change is held to.
+
 ## How it is organized
 
 A-Dev is layered so that the core stays small and everything else specializes it without weakening it. Conflicts are resolved with the [Hardness precedence model](hardness/01-policy-and-precedence.md#precedence).
@@ -24,10 +33,11 @@ A-Dev is layered so that the core stays small and everything else specializes it
 | Profiles | Baseline autonomy and guidance: guided, standard, autonomous | [`profiles/`](profiles/README.md) | Normative invariants; selectable behavior |
 | Overlays | Requirements scoped to a stack, product type, or workflow | [`overlays/`](overlays/README.md) | Normative within their declared scope |
 | Patterns | Candidate lessons on their way into a layer | [`patterns/`](patterns/README.md) | Candidate; not normative |
-| Practices | Defaults and reusable guidance | [`practices/`](practices/README.md) | Guidance; defaults apply unless overridden with a rationale |
+| Practices | Defaults, the [engineering baseline](practices/engineering-baseline.md), and reusable guidance | [`practices/`](practices/README.md) | Guidance; defaults and the engineering baseline apply unless overridden with a rationale |
+| Learning loop | Turns daily work into evidence, candidate patterns, and proposals to A-Dev | [`skills/adev-learn/`](skills/adev-learn/SKILL.md) | Skill |
 | Implementation | Agent-consumable profiles, contracts, playbooks, and evaluations | [`implementation/`](implementation/README.md) | Reference contracts |
 | Starter kit | Copyable templates, a minimal example, and the personal overlay template | [`starter-kit/`](starter-kit/README.md) | Guidance |
-| Installer | Registers A-Dev, a profile, and overlays for local agents | [`install/`](install/README.md) | Tooling |
+| Installer and CLI | `adev install`, `update`, `doctor`, `capture`, `uninstall` | [`install/`](install/README.md), [`bin/adev`](bin/adev) | Tooling |
 | Knowledge and evidence | Case studies, evidence index, maturity model, definitions | [`docs/`](docs/index.md) | Evidence and explanation |
 
 The book that explains the practice lives in [adev-book](https://github.com/scanalesespinoza/adev-book). It explains the practice; it does not replace the normative sources.
