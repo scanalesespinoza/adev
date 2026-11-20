@@ -1,11 +1,11 @@
 # Evidence
 
-Evidence supports framework claims without turning project-specific implementation choices into universal doctrine. It applies the core principle [evidence over assertion](../ADEV.md#core-principles).
+Evidence supports framework claims without turning project-specific implementation choices into universal doctrine. It applies the core principle [evidence over assertion](../../ADEV.md#core-principles).
 
 Start with:
 
-- [`docs/evidence-index.md`](../docs/evidence-index.md)
-- [`docs/case-studies/README.md`](../docs/case-studies/README.md)
+- [`docs/evidence-index.md`](../evidence-index.md)
+- [`docs/case-studies/README.md`](../case-studies/README.md)
 - [`adevelopment-book/book-es/appendices/C-evidencia-y-metodo.md`](https://github.com/scanalesespinoza/adev-book/blob/main/adevelopment-book/book-es/appendices/C-evidencia-y-metodo.md) for the Spanish first-edition claim taxonomy and editorial method
 - [`publishing-kit/12-proof-signals.md`](https://github.com/scanalesespinoza/adev-book/blob/main/publishing-kit/12-proof-signals.md)
 
@@ -17,6 +17,6 @@ Start with:
 4. Multi-agent collaboration evidence captures branch state, local uncommitted files, upstream divergence, integration decisions, and validation after synchronization.
 5. Keep related lessons together under stable names and link them to supporting evidence, so that future contributors and agents can search by topic before adding content.
 6. Before adding evidence or doctrine, search for related entries and consolidate. Create a new file only when the content is genuinely distinct.
-7. When citing the Homedir proving ground, follow the [Homedir overlay](../overlays/homedir.md#citing-homedir-evidence).
+7. When citing the Homedir proving ground, follow the [Homedir overlay](../../overlays/homedir.md#citing-homedir-evidence).
 
 Hardness still needs evidence focused on agent behavior: instruction conflicts, permission boundaries, safe refusal, escalation, and behavioral regression.

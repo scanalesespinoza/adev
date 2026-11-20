@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths:
-      - 'framework/docs/**'
+      - '**.md'
       - 'mkdocs.yml'
       - '.github/workflows/deploy-site.yml'
   workflow_dispatch:
   pull_request:
     paths:
-      - 'framework/**'
+      - '**.md'
       - 'mkdocs.yml'
       - '.github/workflows/deploy-site.yml'
 
@@ -36,6 +36,12 @@ jobs:
 
       - name: Install MkDocs and Material
         run: pip install mkdocs-material
+
+      - name: Stage site sources
+        run: |
+          rm -rf site-src
+          mkdir site-src
+          git ls-files -z | xargs -0 cp --parents -t site-src
 
       - name: Build documentation
         run: mkdocs build --strict
