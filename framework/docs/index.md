@@ -17,7 +17,7 @@ The practitioner governs the system using three tools:
 3. **Traceability**: Every feature links to a plan, a prompt, and evidence.
 
 ## Next steps
-This documentation serves as the book and manual for A-Dev.
+This site is the manual for A-Dev. The book that explains the practice is maintained in [adev-book](https://github.com/scanalesespinoza/adev-book).
 
-[Read the Manifesto](book/01-adev-manifesto.md){ .md-button .md-button--primary }
-[Download PDF](https://github.com/scanalesespinoza/adev/releases/latest/download/adev-book.pdf){ .md-button }
+[Adoption maturity model](adoption-maturity-model.md){ .md-button .md-button--primary }
+[Read the book](https://github.com/scanalesespinoza/adev-book){ .md-button }

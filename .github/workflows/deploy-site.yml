@@ -5,7 +5,6 @@ on:
     branches:
       - main
     paths:
-      - 'framework/adevelopment-book/book/**'
       - 'framework/docs/**'
       - 'mkdocs.yml'
       - '.github/workflows/deploy-site.yml'
@@ -38,19 +37,8 @@ jobs:
       - name: Install MkDocs and Material
         run: pip install mkdocs-material
 
-      - name: Stage Book Content
-        run: |
-          mkdir -p framework/docs/book
-          mkdir -p framework/docs/book/appendices
-          # Copy book chapters to docs structure for build
-          cp framework/adevelopment-book/book/*.md framework/docs/book/
-          cp framework/adevelopment-book/book/appendices/*.md framework/docs/book/appendices/
-          
-          # Fix relative image links if any (optional, purely precautionary)
-          # sed -i 's|\.\./images|../../images|g' framework/docs/book/*.md
-
       - name: Build documentation
-        run: mkdocs build
+        run: mkdocs build --strict
 
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
