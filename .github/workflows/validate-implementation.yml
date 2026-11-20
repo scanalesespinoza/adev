@@ -17,5 +17,6 @@ jobs:
       - run: pip install jsonschema==4.23.0 PyYAML==6.0.2
       - run: python implementation/evaluations/check_repository_layout.py
       - run: python -B implementation/evaluations/test_profile.py
-      - run: bash -n install/install.sh install/bootstrap.sh
+      - run: bash -n bin/adev install/install.sh install/bootstrap.sh
       - run: install/test_install.sh
+      - run: install/test_adev.sh
