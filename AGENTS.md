@@ -3,10 +3,10 @@
 Read [`framework/ADEV.md`](framework/ADEV.md) first. It is the persistent operating context for this repository and overrides generic writing-repo assumptions. For agent-native delivery assets, also read [`implementation/AGENTS.md`](implementation/AGENTS.md).
 
 ## Purpose
-This repo is the canonical home of A-Dev: the framework, its implementation model, the manuscript, the adoption kit, and proof assets extracted from real model- and agent-assisted delivery work. Treat it as a doctrine-and-evidence system, not as a loose notes repository.
+This repo is the canonical home of A-Dev: the framework, its implementation model, the adoption kit, and proof assets extracted from real model- and agent-assisted delivery work. Treat it as a doctrine-and-evidence system, not as a loose notes repository.
 
 ## Structure
-- `framework/`: canonical doctrine, evidence, practice, adoption, and book sources.
+- `framework/`: canonical doctrine, evidence, practice, and adoption sources. The book lives in [adev-book](https://github.com/scanalesespinoza/adev-book).
 - `implementation/`: agent-consumable operating model, profiles, contracts, playbooks, and integration guidance.
 
 ## Working Rules
@@ -21,7 +21,6 @@ When you add or revise framework material, prefer assets such as:
 - evidence indexes,
 - failure-derived case studies,
 - starter-kit rituals and checklists,
-- manuscript expansions with explicit outcome statements.
 
 ## Validation
 Use the narrowest meaningful validation for the changed surface. For docs-focused PRs, that typically means link/structure review and consistency checks rather than broad code validation.
