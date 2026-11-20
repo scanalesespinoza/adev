@@ -1,7 +1,7 @@
 # Doctrine
 
-Doctrine states the durable principles and non-negotiable constraints of A-Dev.
+Doctrine states the durable principles of A-Dev.
 
-The current canonical operating doctrine is [`ADEV.md`](../ADEV.md). This index exists to distinguish that normative source from explanatory book chapters and project-specific evidence.
+The canonical core doctrine is [`ADEV.md`](../ADEV.md): thirteen principles that apply in every delivery context. Context-dependent requirements live in [defaults and practices](../practices/README.md) and [overlays](../overlays/README.md), so that the core stays small enough to adopt and review.
 
-Future consolidation should keep the core doctrine small and move workflow-specific requirements into named profiles or overlays.
+[`rule-migration-map.md`](rule-migration-map.md) maps each rule of the former single-file doctrine to its current location.
