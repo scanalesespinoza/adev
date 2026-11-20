@@ -58,4 +58,4 @@ Detailed defaults, such as incremental rollout, branch hygiene, auto-merge, vers
 
 ## Changing the core
 
-Add or change a core principle only when it applies across tools, industries, and delivery contexts and is supported by evidence. Prefer a default, practice, or overlay when the lesson depends on a context. Follow the change discipline in [Hardness policy and precedence](hardness/01-policy-and-precedence.md#change-discipline).
+Add or change a core principle only when it applies across tools, industries, and delivery contexts and is supported by evidence. Prefer a default, practice, or overlay when the lesson depends on a context. Follow the change discipline in [Hardness policy and precedence](hardness/01-policy-and-precedence.md#change-discipline). New lessons enter as [candidate patterns](patterns/README.md) before they are adopted into a layer.
