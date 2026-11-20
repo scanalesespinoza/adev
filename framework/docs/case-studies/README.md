@@ -11,7 +11,8 @@ Use these case studies as proof points and patterns for new prompts.
 - [Backup Is Not Done Until Restore Works](disaster-recovery.md) - DR became trustworthy only after restore viability and retention behavior were treated as required evidence.
 - [EvenFlow to HomeDir](evenflow.md) - 6-week event platform experiment (auth, speakers, schedule, notifications) that seeded the HomeDir standards.
 
-## Quick reference
+## Quick reference (Homedir implementation detail)
+These are observed settings from the proving-ground deployment — evidence, not universal defaults. Adapt values to the target stack.
 - **Health checks:** `/q/health/live`, `/health/ready`, probes every 10s, failureThreshold 3.
 - **Security:** runAsNonRoot, drop ALL caps, filesystem read-only.
 - **Resources:** small requests (50m CPU/52Mi RAM) with burst (4 CPU/1Gi) to support rampage -> steady state.

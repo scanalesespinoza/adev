@@ -6,9 +6,10 @@ This directory is the canonical home of the A-Dev practice. It separates normati
 
 | Area | Purpose | Current canonical assets |
 | --- | --- | --- |
-| [Doctrine](doctrine/README.md) | Stable governing principles and non-negotiables | [`ADEV.md`](ADEV.md) |
+| [Doctrine](doctrine/README.md) | The small core of principles that apply everywhere | [`ADEV.md`](ADEV.md) |
+| [Overlays](overlays/README.md) | Requirements scoped to a stack, product type, or workflow | Handoff, web product, marketing, platform, Homedir |
 | [Knowledge](knowledge/README.md) | Transferable explanations and accumulated lessons | [`docs/`](docs/) |
-| [Practices](practices/README.md) | Repeatable delivery patterns and rituals | [`QUALITY.md`](QUALITY.md), [`starter-kit/OPERATING_RITUALS.md`](starter-kit/OPERATING_RITUALS.md) |
+| [Practices](practices/README.md) | Defaults, repeatable delivery patterns, and rituals | [Delivery defaults](practices/delivery-defaults.md), [`QUALITY.md`](QUALITY.md), [`starter-kit/OPERATING_RITUALS.md`](starter-kit/OPERATING_RITUALS.md) |
 | [Definitions](definitions/README.md) | Shared vocabulary and conceptual boundaries | Book glossary and Hardness definitions |
 | [Kit](kit/README.md) | Copyable adoption templates and examples | [`starter-kit/`](starter-kit/) |
 | [Evidence](evidence/README.md) | Proof chains supporting framework claims | [`docs/evidence-index.md`](docs/evidence-index.md) |
@@ -17,7 +18,7 @@ This directory is the canonical home of the A-Dev practice. It separates normati
 
 ## Normative status
 
-- **Normative:** `ADEV.md` and documents explicitly labeled as policy or contract.
+- **Normative:** `ADEV.md`, overlays within their declared scope, and documents explicitly labeled as policy or contract.
 - **Guidance:** practices, maturity models, checklists, and adoption paths.
 - **Evidence:** case studies and proof indexes. Evidence may be project-specific; doctrine must remain transferable.
 - **Explanatory:** the book, collateral, blog, and publishing material, maintained in [adev-book](https://github.com/scanalesespinoza/adev-book).

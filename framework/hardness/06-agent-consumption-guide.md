@@ -4,7 +4,7 @@ Use this guide when an agent needs to apply A-Dev as a working framework rather 
 
 ## Consume the canon
 
-1. Read [`ADEV.md`](../ADEV.md) for doctrine and non-negotiable constraints.
+1. Read [`ADEV.md`](../ADEV.md) for the core principles, then the applicable [overlays](../overlays/README.md).
 2. Read the [Hardness overview](README.md), then the [human expectations contract](03-human-expectations-contract.md) to turn the user request into intent, constraints, authority, acceptance criteria, uncertainty, and stop conditions.
 3. Resolve applicable rules with the [policy and precedence model](01-policy-and-precedence.md) and classify the intended effect with the [action risk and authority model](04-action-risk-authority-model.md).
 4. Use the [policy schema and fixtures](05-policy-schema-and-fixtures.md) only to validate the structure of a policy record; it does not authorize action.
