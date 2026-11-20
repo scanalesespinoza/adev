@@ -87,6 +87,9 @@ nav:
     - Policy schema and fixtures: hardness/05-policy-schema-and-fixtures.md
     - Agent consumption: hardness/06-agent-consumption-guide.md
     - Compatibility layer: hardness/07-compatibility-layer.md
+  - Patterns:
+    - Overview: patterns/README.md
+    - Agentic delivery runtimes: patterns/agentic-delivery-runtime.md
   - Implementation:
     - Overview: implementation/README.md
     - Agent instructions: implementation/AGENTS.md

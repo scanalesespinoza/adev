@@ -10,6 +10,7 @@ This repo is the canonical home of A-Dev: the framework, its implementation mode
 - `hardness/`, `overlays/`, `practices/`: agent governance, scoped requirements, and guidance.
 - `implementation/`: agent-consumable operating model, profiles, contracts, playbooks, and evaluations.
 - `profiles/`: baseline autonomy and guidance profiles.
+- `patterns/`: candidate patterns and the promotion process into a layer.
 - `install/`: the installer for local agents, with its test.
 - `starter-kit/`: copyable adoption assets, including the personal overlay template.
 - `docs/`: knowledge, evidence, case studies, and reference maps. The site is built from all tracked Markdown.
