@@ -1,41 +1,67 @@
 # A-Dev
 
-A-Dev is a vendor-neutral practice for software delivery by people and agents working together. It gives agents and the professionals who direct them a baseline of good behavior: explicit intent, bounded autonomy, verified outcomes, and evidence that survives the session. It is designed to be adopted gradually and extended over time.
+A-Dev makes the AI coding agents you already use, such as Claude Code or Codex, work the way a careful senior engineer would. They clarify the goal before changing anything, ask before risky actions, test and verify their work, and learn from mistakes. It is open, works with several agents, and you can adopt it step by step, whether you are a student or a professional team.
+
+> **¿Hablas español?** A-Dev se instala con un solo comando (abajo). Si eres estudiante o estás empezando con agentes, usa `--profile guided`: el agente te explica cada paso y te pide confirmación antes de cambiar archivos. El libro *ADEV: La práctica de AI Agentic Development* está en español en [adev-book](https://github.com/scanalesespinoza/adev-book/tree/main/adevelopment-book/book-es). La documentación del repositorio está en inglés.
 
 ## Quick start
 
-One command connects A-Dev to the coding agents on your machine (Claude Code, Codex, and agents that read `~/.agents/skills`). Requirements: Linux or macOS with `bash`, `git`, and `curl`.
+Requirements: Linux or macOS with `bash`, `git`, and `curl`. Run it from a folder for tools, not from inside one of your projects:
 
 ```bash
+mkdir -p ~/workspace && cd ~/workspace
 curl -fsSL https://raw.githubusercontent.com/scanalesespinoza/adev/main/install/bootstrap.sh | bash
 ```
 
-That clones A-Dev into the current directory, installs it with the `standard` profile, and adds the `adev` command to `~/.local/bin` (open a new shell, or add that directory to your `PATH`, if the command is not found). Start a new agent session and it works under A-Dev. Options go after `bash -s --`:
+**New to coding agents, or a student?** Use the guided profile, so the agent explains its steps and asks before changing files:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/scanalesespinoza/adev/main/install/bootstrap.sh | bash -s -- \
-  --workspace "$HOME/workspace" \
-  --profile guided \
-  --overlay-repo https://github.com/<you>/<your-private-overlay>.git
+curl -fsSL https://raw.githubusercontent.com/scanalesespinoza/adev/main/install/bootstrap.sh | bash -s -- --profile guided
 ```
+
+Then open a new terminal and start a new agent session. Options go after `bash -s --`:
 
 | Option | Use it to |
 | --- | --- |
-| `--workspace PATH` | Choose where the repositories are cloned (default: the current directory) |
-| `--profile guided\|standard\|autonomous` | Match the agent's autonomy to your experience; see [profiles](profiles/README.md) |
-| `--overlay-repo URL` | Connect your private [personal overlay](starter-kit/personal-overlay/README.md), where your preferences and evidence live |
+| `--profile guided\|standard\|autonomous` | Match the agent's autonomy to your experience (default: `standard`); see [profiles](profiles/README.md) |
+| `--workspace PATH` | Choose where A-Dev is cloned (default: the current directory) |
+| `--overlay-repo URL` | Connect your private [personal overlay](starter-kit/personal-overlay/README.md). Optional; you do not need one to start. |
 
-After installation, every agent session:
+Prefer to read the script first? Download it, inspect it, then run it: `curl -fsSLO https://raw.githubusercontent.com/scanalesespinoza/adev/main/install/bootstrap.sh && less bootstrap.sh && bash bootstrap.sh --profile guided`.
 
-1. follows the [core doctrine](ADEV.md) and delivers each task to the [engineering baseline](practices/engineering-baseline.md), beyond what was asked and within scope;
-2. behaves according to your [profile](profiles/README.md), so destructive and external actions always need your approval;
-3. runs the [learning loop](skills/adev-learn/SKILL.md), so lessons from your work become evidence and candidate patterns.
+### What the installer changes
 
-Then use `adev doctor` to check the installation, `adev update` to stay current, `adev capture session --title "..."` to record evidence, and `adev uninstall` to disconnect. Details and Windows instructions are in the [installation guide](install/README.md).
+- Clones A-Dev into `./adev` (or `--workspace`).
+- Adds a block of instructions between `<!-- adev:start -->` and `<!-- adev:end -->` to `~/.claude/CLAUDE.md` and `~/.codex/AGENTS.md`. It applies to **every** session of those agents. Your other content in those files is kept.
+- Links A-Dev's skills into `~/.claude/skills`, `~/.codex/skills`, and `~/.agents/skills`.
+- Adds the `adev` command to `~/.local/bin` and saves your choices in `~/.config/adev/config`.
+
+It never grants the agent permission to push, publish, deploy, merge, or delete. Those always need your explicit approval.
+
+**Undo:** `adev uninstall` removes the block, the skill links, the command, and the saved settings. It leaves the `adev/` folder and any line you added to your shell profile; delete those yourself if you want.
+
+### What changes in a session
+
+Asked to "help with assignment 2" in a course repository, with the guided profile, an agent working under A-Dev:
+
+1. restates what the assignment asks and how it will be graded;
+2. points out ambiguities before coding, for example whether a 3.95 average rounds up to a passing 4.0;
+3. asks about the course's AI policy and whether you want hints, a review of your code, or code with explanations ([academic overlay](overlays/academic.md));
+4. proposes a plan and waits for your answer before writing files;
+5. tests and verifies its work, says what it did not verify, and ends with a checklist of what you should check and an honest AI-use declaration if your course needs one;
+6. records what was learned in your personal overlay, if you have one ([learning loop](skills/adev-learn/SKILL.md)).
+
+It does not create branches, push, or open pull requests unless you ask.
+
+Day to day: `adev doctor` checks the installation, `adev update` keeps it current, and `adev capture session --title "..."` records evidence. Details and Windows instructions are in the [installation guide](install/README.md).
+
+### Words you will see
+
+**Profile:** how much the agent asks and explains. **Overlay:** extra rules for a context such as coursework or a web product. **Skill:** instructions an agent loads for a kind of task. **Personal overlay:** your private repository of preferences and evidence. **R0–R3:** risk levels of actions, from only reading (R0) to affecting things outside your machine (R3). All terms: [definitions](docs/definitions.md).
 
 ## Use A-Dev without installing
 
-For agents that cannot run the installer, such as cloud or web agents, or for a single task, paste this prompt at the start of the session. Replace the profile, and remove the overlay line if you do not have one.
+For agents that cannot run the installer, such as cloud or web agents, or for a single task, paste this prompt at the start of the session. Change the profile if you want, and remove the overlay line if you do not have one.
 
 ```text
 Work under A-Dev for this session. Source: https://github.com/scanalesespinoza/adev
@@ -46,7 +72,8 @@ Before doing anything else, read, in this order:
 2. ADEV.md: the 13 core principles. They apply to everything you do.
 3. profiles/standard.md: the profile for this session (guided | standard | autonomous).
 4. practices/engineering-baseline.md: the quality bar for every change.
-5. overlays/README.md: then read only the overlays whose scope matches this task.
+5. overlays/README.md: then read only the overlays whose scope matches this task
+   (for coursework, overlays/academic.md).
 
 Then, for every task:
 - Restate the outcome, acceptance criteria, scope, and what you are authorized to do.
@@ -69,13 +96,15 @@ Overlay: https://github.com/<you>/<your-private-overlay> (read its SKILL.md at t
 When A-Dev is installed, the managed guidance does all of this automatically. A one-line reminder is enough:
 
 ```text
-Apply A-Dev (adev skill) to this task with the guided profile, and run the learning loop when you finish.
+Apply A-Dev (adev skill) to this task with the standard profile, and run the learning loop when you finish.
 ```
 
 ## Start here
 
 | You are | Start with |
 | --- | --- |
+| A student or new to coding agents | The [quick start](#quick-start) with `--profile guided`, then the [academic overlay](overlays/academic.md) |
+| Working on a group or team project | The [small team quick setup](practices/multi-agent-collaboration.md#small-team-quick-setup) |
 | A practitioner learning the practice | [`ADEV.md`](ADEV.md), the 13 core principles, then the [starter kit](starter-kit/README.md) |
 | Setting up your agents to work this way | The [quick start](#quick-start), then choose a [baseline profile](profiles/README.md) |
 | Keeping your own preferences and evidence | The [personal overlay template](starter-kit/personal-overlay/README.md) |

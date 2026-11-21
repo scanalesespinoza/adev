@@ -2,6 +2,15 @@
 
 A profile sets how much an agent explains, asks, and does on its own. The same [core doctrine](../ADEV.md) applies under every profile; what changes is the autonomy granted within the [action risk classes](../hardness/04-action-risk-authority-model.md) and the amount of guidance given to the person.
 
+The action risk classes, in plain words:
+
+| Class | Meaning | Example |
+| --- | --- | --- |
+| R0 | Only reads | Reading a file, running `git status` |
+| R1 | Changes local files in a way that is easy to undo | Editing code, creating a branch |
+| R2 | Destroys or overwrites something that is hard to recover | Deleting files, `git reset --hard`, rewriting history |
+| R3 | Affects anything outside your machine | Pushing, opening a pull request, deploying, sending a message |
+
 | Profile | For | In one sentence |
 | --- | --- | --- |
 | [Guided](guided.md) | People new to agent-assisted delivery, or new to the domain or repository | The agent plans aloud, explains why, and confirms before changing anything that matters. |
@@ -15,6 +24,7 @@ A profile sets how much an agent explains, asks, and does on its own. The same [
 3. **Profiles never override higher authority.** The user's explicit instructions, repository policy, and platform controls take precedence ([precedence](../hardness/01-policy-and-precedence.md#precedence)). A profile can only make an agent more cautious than those layers allow, or use autonomy those layers already granted.
 4. **Stop conditions always apply.** Conflicting instructions, missing acceptance criteria, untrusted input, unsafe effects, and failed verification stop the work and are reported.
 5. **Evidence is not optional.** Every profile reports what was done, what was verified, and what remains unverified.
+6. **The learning loop runs in every profile.** A registered personal overlay authorizes the [learning loop](../skills/adev-learn/SKILL.md) to write and locally commit sanitized records there without asking. It never authorizes a push.
 
 ## Selecting a profile
 

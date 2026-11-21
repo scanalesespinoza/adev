@@ -17,3 +17,20 @@ Use this practice when several people or agents, local or remote, work on the sa
 13. **Lock critical operations.** Agree on a coordination protocol before releases, schema changes, migrations, and production promotions.
 
 Evidence should capture the branch state, local uncommitted files, upstream divergence, integration decisions, and validation after synchronization.
+
+## Small team quick setup
+
+For a course project or a small team that is new to this:
+
+1. Create one shared repository and add an `AGENTS.md` at its root that declares the team's choices, for example:
+
+   ```text
+   A-Dev profile: guided
+   A-Dev context: academic
+   Each task gets its own branch and pull request. Another member reviews before merging.
+   ```
+
+2. Each member either installs A-Dev (see the [quick start](../README.md#quick-start)) or pastes the [agent prompt](../README.md#use-a-dev-without-installing) at the start of each session, for example in a web chat.
+3. Work in short tasks: pull `main`, create a branch, make the change, run the tests, push the branch, and open a pull request. If pull requests are new to you, GitHub's [guide to pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) explains them.
+4. A teammate reviews and merges. Nobody pushes directly to `main`, and nobody rewrites a teammate's work without telling them.
+5. Declare AI use the way the course or team requires.

@@ -1,6 +1,6 @@
 # Evidence index
 
-One line per record, newest first. Agents read this file at startup and open a record only when a task needs it.
+One line per record, newest first. Agents read this file at startup and open a record only when a task needs it. In the Record column, write a Markdown link whose text is the title and whose target is the record path, such as `sessions/2026-01-31-short-title.md`, as `adev capture` does.
 
 | Date | Type | Record | One-line summary |
 | --- | --- | --- | --- |

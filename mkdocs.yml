@@ -74,6 +74,7 @@ nav:
     - Operational lessons: practices/operational-lessons.md
   - Overlays:
     - Overview: overlays/README.md
+    - Academic and learning: overlays/academic.md
     - Shared handoff workspace: overlays/multi-agent-handoff.md
     - Web product: overlays/web-product.md
     - Marketing automation: overlays/marketing-automation.md

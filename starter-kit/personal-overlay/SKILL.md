@@ -20,11 +20,12 @@ Historical records are dated observations. They do not prove the current state o
 
 ## Maintain evidence
 
-Loading this skill does not request a new record or authorize a remote write. When the owner asks to record verified work:
+Record evidence when the A-Dev [learning loop](https://github.com/scanalesespinoza/adev/blob/main/skills/adev-learn/SKILL.md) runs (at the close of a meaningful task, and after a failure or correction) or when the owner asks. Registering this overlay authorizes those local writes and local commits; it never authorizes a push or any other remote write.
 
 1. Search the index and related records first. Update the best existing record; create a dated record only for a distinct subject.
 2. Use the matching template in [`templates/`](templates/). Record what happened, what was tried, the result, the verification, and what remains. Never fabricate commands, outputs, timings, metrics, or resolutions.
 3. Attribute AI assistance: the tool, the exact model only when known, its contribution, the human role, and the corrections needed.
 4. Sanitize before saving: no secrets, sensitive raw output, personal identifiers, customer details, internal URLs, or private environment names.
 5. Add or update the record's line in [`evidence/INDEX.md`](evidence/INDEX.md).
-6. When a lesson looks transferable, add it to [`patterns/`](patterns/README.md) as a candidate with links to its evidence. Promotion to A-Dev happens through a pull request to A-Dev, within the owner's authorized scope.
+6. Commit the record locally in this repository (`evidence: <title>`), including only the files you wrote. Never push unless the owner asks.
+7. When a lesson looks transferable, add it to [`patterns/`](patterns/README.md) as a candidate with links to its evidence. Promotion to A-Dev happens through a pull request to A-Dev, within the owner's authorized scope.

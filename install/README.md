@@ -12,9 +12,11 @@ Installing A-Dev connects it to the coding agents on your machine (Claude Code, 
 Requirements: `bash`, `git`, and `curl`.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/scanalesespinoza/adev/main/install/bootstrap.sh \
-  | bash -s -- --workspace "$HOME/workspace" --profile standard
+mkdir -p ~/workspace && cd ~/workspace
+curl -fsSL https://raw.githubusercontent.com/scanalesespinoza/adev/main/install/bootstrap.sh | bash
 ```
+
+The bootstrap clones A-Dev into the current directory (or into `--workspace PATH`). Run it from a folder for tools, not from inside a project, so that A-Dev does not end up nested in your project's repository.
 
 With a personal overlay and a repository it references:
 
