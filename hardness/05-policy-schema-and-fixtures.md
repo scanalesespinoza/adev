@@ -14,10 +14,10 @@ The schema requires a stable ID, statement, level, fully declared scope, authori
 Run from the repository root with PowerShell:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File ./framework/hardness/scripts/validate-policy-fixtures.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File ./hardness/scripts/validate-policy-fixtures.ps1
 ```
 
-The script parses the local schema and fixtures with built-in PowerShell features, then verifies the schema's required policy fields and their supported structural constraints. No package installation is required. Fixtures are synthetic and are not operational evidence. When a future policy cites an operational source, it must follow the direct-artifact attribution rule in [`ADEV.md`](../evidence/README.md#evidence-rules).
+The script parses the local schema and fixtures with built-in PowerShell features, then verifies the schema's required policy fields and their supported structural constraints. No package installation is required. Fixtures are synthetic and are not operational evidence. When a future policy cites an operational source, it must follow the direct-artifact attribution rule in [`ADEV.md`](../docs/evidence/README.md#evidence-rules).
 
 ## Boundary
 

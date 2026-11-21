@@ -7,9 +7,9 @@ description: Apply A-Dev operating doctrine to agent-assisted software delivery,
 
 ## Canon and applicability
 
-Read [framework/ADEV.md](framework/ADEV.md) before acting on a delivery task. It is the maintained doctrine; this skill is its operational entry point, not a replacement or a frozen copy. Resolve relative references from this skill's repository directory, including when installed through a filesystem link.
+Read [ADEV.md](ADEV.md) before acting on a delivery task. It is the maintained core doctrine; this skill is its operational entry point, not a replacement or a frozen copy. Resolve relative references from this skill's repository directory, including when installed through a filesystem link.
 
-Read [README.md](README.md) for the repository map. For framework work, use [framework/README.md](framework/README.md); for agent-native adoption, use [implementation/README.md](implementation/README.md); for legacy adoption assets, use [framework/starter-kit/README.md](framework/starter-kit/README.md). Apply the [overlays](framework/overlays/README.md) whose scope matches the task, and the [delivery defaults](framework/practices/delivery-defaults.md) unless the repository overrides them. Read [framework/QUALITY.md](framework/QUALITY.md) when implementing or validating a change. Consult [Hardness](framework/hardness/README.md) when defining agent policies, authority, or capability contracts. The book explains the practice; it does not replace the normative sources.
+Read [README.md](README.md) for the layer map. Apply the [overlays](overlays/README.md) whose scope matches the task, and the [delivery defaults](practices/delivery-defaults.md) unless the repository overrides them. Read the [quality cycle](practices/quality-cycle.md) when implementing or validating a change. Consult [Hardness](hardness/README.md) when defining agent policies, authority, or capability contracts, and [implementation/README.md](implementation/README.md) for agent-native adoption. The book explains the practice; it does not replace the normative sources.
 
 Apply this guidance within the user's actual objective, applicable repository instructions, and runtime permissions. Loading a default skill does not authorize publication, deployment, destructive Git operations, or unrelated changes. Read-only questions remain read-only.
 

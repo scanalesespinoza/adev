@@ -1,12 +1,12 @@
 site_name: A-Dev Framework
 site_url: https://scanalesespinoza.github.io/adev/
-site_description: The A-Dev Framework (Augmented Development) is a discipline-first methodology for practitioners and teams to orchestrate AI-assisted delivery with living baselines, short quality cycles, and strict evidence trails.
+site_description: A-Dev is a vendor-neutral practice for software delivery by people and agents, with a small core doctrine, agent governance, scoped overlays, and evidence-backed defaults.
 site_author: Sergio Sebastián Canales Espinoza
 
 repo_name: scanalesespinoza/adev
 repo_url: https://github.com/scanalesespinoza/adev
 edit_uri: ""
-docs_dir: framework/docs
+docs_dir: site-src
 
 theme:
   name: material
@@ -49,21 +49,63 @@ markdown_extensions:
   - toc:
       permalink: true
 
+exclude_docs: |
+  /mkdocs.yml
+  /.github/
+  /framework/
+
 nav:
-  - Home: index.md
-  - Adoption maturity: adoption-maturity-model.md
-  - Evidence:
-    - Evidence index: evidence-index.md
-    - EventFlow metrics reproduction: evidence/eventflow-metrics-reproduction.md
-    - Homedir claim boundaries: evidence/homedir-claim-boundaries.md
-  - Case Studies:
-    - Overview: case-studies/README.md
-    - EvenFlow Origins: case-studies/evenflow.md
-    - Quest Board: case-studies/quest-board.md
-    - Live Alpha: case-studies/live-alpha-flags.md
-    - The Rollback story: case-studies/rollback.md
-    - CI/CD recovery: case-studies/ci-cd-recovery.md
-    - Disaster recovery: case-studies/disaster-recovery.md
-    - Multilingual drift: case-studies/multilingual-drift.md
-    - Performance evidence: case-studies/performance-evidence.md
-  - Research agenda: research-agenda.md
+  - Home: README.md
+  - Core doctrine: ADEV.md
+  - Practices:
+    - Overview: practices/README.md
+    - Delivery defaults: practices/delivery-defaults.md
+    - Quality cycle: practices/quality-cycle.md
+    - Multi-agent collaboration: practices/multi-agent-collaboration.md
+    - Data protection: practices/data-protection.md
+    - Operational lessons: practices/operational-lessons.md
+  - Overlays:
+    - Overview: overlays/README.md
+    - Shared handoff workspace: overlays/multi-agent-handoff.md
+    - Web product: overlays/web-product.md
+    - Marketing automation: overlays/marketing-automation.md
+    - Platform operations: overlays/platform-operations.md
+    - Homedir: overlays/homedir.md
+  - Hardness:
+    - Overview: hardness/README.md
+    - Definition and scope: hardness/00-definition-and-scope.md
+    - Policy and precedence: hardness/01-policy-and-precedence.md
+    - Skill contract: hardness/02-skill-contract-template.md
+    - Human expectations: hardness/03-human-expectations-contract.md
+    - Action risk and authority: hardness/04-action-risk-authority-model.md
+    - Policy schema and fixtures: hardness/05-policy-schema-and-fixtures.md
+    - Agent consumption: hardness/06-agent-consumption-guide.md
+    - Compatibility layer: hardness/07-compatibility-layer.md
+  - Implementation:
+    - Overview: implementation/README.md
+    - Agent instructions: implementation/AGENTS.md
+    - Operating model: implementation/architecture/agent-native-ai-sdlc.md
+  - Starter kit: starter-kit/README.md
+  - Knowledge:
+    - Overview: docs/index.md
+    - Adoption maturity: docs/adoption-maturity-model.md
+    - Definitions: docs/definitions.md
+    - Concept traceability: docs/concept-traceability-matrix.md
+    - Rule migration map: docs/rule-migration-map.md
+    - Evidence:
+      - Evidence rules: docs/evidence/README.md
+      - Evidence index: docs/evidence-index.md
+      - EventFlow metrics reproduction: docs/evidence/eventflow-metrics-reproduction.md
+      - Homedir claim boundaries: docs/evidence/homedir-claim-boundaries.md
+    - Case studies:
+      - Overview: docs/case-studies/README.md
+      - EvenFlow Origins: docs/case-studies/evenflow.md
+      - Quest Board: docs/case-studies/quest-board.md
+      - Live Alpha: docs/case-studies/live-alpha-flags.md
+      - The Rollback story: docs/case-studies/rollback.md
+      - CI/CD recovery: docs/case-studies/ci-cd-recovery.md
+      - Disaster recovery: docs/case-studies/disaster-recovery.md
+      - Multilingual drift: docs/case-studies/multilingual-drift.md
+      - Performance evidence: docs/case-studies/performance-evidence.md
+    - Research agenda: docs/research-agenda.md
+  - Book: https://github.com/scanalesespinoza/adev-book
