@@ -108,7 +108,7 @@ $lines = @(
     "# A-Dev",
     "",
     "- For software-delivery work, read and apply $adevSkill within the authorized scope.",
-    "- Apply the engineering baseline ($engineeringBaseline) to every change: deliver the requested outcome at professional standard, beyond what was asked and within scope.",
+    "- Apply the engineering baseline ($engineeringBaseline) to every change: deliver the requested outcome at professional standard, beyond what was asked and within scope, unless an applicable overlay narrows it (in coursework, the academic overlay: implement only what the assignment asks and offer extras as optional suggestions).",
     "- A-Dev profile: $AdevProfile ($profileFile). A more specific declaration in the task or repository takes precedence."
 )
 
@@ -124,10 +124,10 @@ foreach ($path in $Overlay) {
 }
 
 if ($firstOverlayName) {
-    $lines += "- Learning loop: before closing a meaningful task, and after any failure or correction, apply $learningSkill and record evidence in overlay $firstOverlayName."
+    $lines += "- Learning loop: before your final message in any turn where you changed files, fixed a mistake, or learned something non-obvious, even if you end with a question, apply $learningSkill and record evidence in overlay $firstOverlayName."
 }
 else {
-    $lines += "- Learning loop: before closing a meaningful task, and after any failure or correction, apply $learningSkill."
+    $lines += "- Learning loop: before your final message in any turn where you changed files, fixed a mistake, or learned something non-obvious, even if you end with a question, apply $learningSkill."
 }
 $lines += "- Loading this guidance does not authorize remote writes, deployment, or destructive operations."
 $lines += $endMarker

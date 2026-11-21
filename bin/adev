@@ -163,7 +163,7 @@ cmd_install() {
     {
         say "$start_marker" '# A-Dev' ''
         say "- For software-delivery work, read and apply $adev_root/SKILL.md within the authorized scope."
-        say "- Apply the engineering baseline ($adev_root/practices/engineering-baseline.md) to every change: deliver the requested outcome at professional standard, beyond what was asked and within scope."
+        say "- Apply the engineering baseline ($adev_root/practices/engineering-baseline.md) to every change: deliver the requested outcome at professional standard, beyond what was asked and within scope, unless an applicable overlay narrows it (in coursework, the academic overlay: implement only what the assignment asks and offer extras as optional suggestions)."
         say "- A-Dev profile: $profile ($adev_root/profiles/$profile.md). A more specific declaration in the task or repository takes precedence."
     } >"$section"
 
@@ -179,9 +179,9 @@ cmd_install() {
     done
 
     if [[ -n "$first_overlay_name" ]]; then
-        say "- Learning loop: before closing a meaningful task, and after any failure or correction, apply $adev_root/skills/adev-learn/SKILL.md and record evidence in overlay $first_overlay_name." >>"$section"
+        say "- Learning loop: before your final message in any turn where you changed files, fixed a mistake, or learned something non-obvious, even if you end with a question, apply $adev_root/skills/adev-learn/SKILL.md and record evidence in overlay $first_overlay_name." >>"$section"
     else
-        say "- Learning loop: before closing a meaningful task, and after any failure or correction, apply $adev_root/skills/adev-learn/SKILL.md." >>"$section"
+        say "- Learning loop: before your final message in any turn where you changed files, fixed a mistake, or learned something non-obvious, even if you end with a question, apply $adev_root/skills/adev-learn/SKILL.md." >>"$section"
     fi
     say '- Loading this guidance does not authorize remote writes, deployment, or destructive operations.' "$end_marker" >>"$section"
 
@@ -380,6 +380,7 @@ cmd_capture() {
     ' "$index" >"$index.tmp" && mv -- "$index.tmp" "$index"
     say "Created $overlay/evidence/$rel"
     say "Indexed in $index; replace the pending summary when the record is complete."
+    say "Commit it in the overlay when done: git -C \"$overlay\" add -A && git -C \"$overlay\" commit -m \"evidence: $title\""
 }
 
 # ---------- uninstall ----------

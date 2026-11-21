@@ -22,7 +22,7 @@ The core stays small so that it transfers across tools, teams, industries, and e
 
 When layers conflict, apply the precedence in [Hardness policy and precedence](hardness/01-policy-and-precedence.md): safety and platform constraints, then the user's explicit objective and boundaries, then organization or repository doctrine, then overlays, then the selected skill, then defaults. A lower layer may specialize a higher one; it may not silently weaken it.
 
-Downstream `ADEV.md` copies should stay synchronized with this file and declare any local overlay explicitly. Previous rule numbers are mapped in [`doctrine/rule-migration-map.md`](docs/rule-migration-map.md).
+Downstream `ADEV.md` copies should stay synchronized with this file and declare any local overlay explicitly. Previous rule numbers are mapped in [`docs/rule-migration-map.md`](docs/rule-migration-map.md).
 
 ## Core principles
 

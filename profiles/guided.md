@@ -25,6 +25,10 @@
 2. Validate each increment before starting the next, including the path a real user follows.
 3. When a mistake happens, explain what went wrong, how it was detected, and how to prevent it. This is the moment the profile is meant to teach.
 
+## Coursework
+
+When the work is coursework, apply the [academic overlay](../overlays/academic.md) as well: ask about the course's AI policy and the student's preferred mode (hints, review, or write and explain) before writing anything.
+
 ## Moving on
 
 When the person routinely anticipates the plan and the checks, the [standard profile](standard.md) is likely a better fit.

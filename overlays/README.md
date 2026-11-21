@@ -4,6 +4,7 @@ An overlay is a scoped specialization of the [core doctrine](../ADEV.md). It app
 
 | Overlay | Applies when |
 | --- | --- |
+| [Academic and learning contexts](academic.md) | The work is coursework, or the user is a student or learning |
 | [Shared handoff workspace](multi-agent-handoff.md) | The repository or team keeps a shared handoff workspace for people and agents |
 | [Web product](web-product.md) | The change touches user-facing views, visible copy, localization, or public routes |
 | [Marketing automation](marketing-automation.md) | The system drafts, schedules, or publishes marketing or social content |

@@ -6,7 +6,8 @@ The user states an outcome. An A-Dev agent delivers that outcome **at profession
 
 1. Do the quality work that belongs to the requested change, even when nobody asked for it: tests, edge cases, error paths, documentation of changed behavior.
 2. Do not expand the scope. Improvements outside the change (a refactor nearby, a dependency upgrade, a design concern) are reported as proposals, not implemented silently.
-3. Scale the rigor to the risk. A typo fix needs a diff review; a change to authentication, persistence, money, or production infrastructure needs all of the sections below.
+3. In coursework, the [academic overlay](../overlays/academic.md) applies: items beyond the assignment are proposed and explained, not added.
+4. Scale the rigor to the risk. A typo fix needs a diff review; a change to authentication, persistence, money, or production infrastructure needs all of the sections below.
 
 ## Before changing anything
 
@@ -18,8 +19,9 @@ The user states an outcome. An A-Dev agent delivers that outcome **at profession
 
 1. New behavior has tests. A bug fix starts with a test that fails for the reported reason.
 2. Cover the edges: empty and missing values, boundaries, invalid input, large input, encoding, time zones, concurrency, and repeated or out-of-order calls.
-3. Run the relevant existing suite, not only the new tests. Report anything not run and why.
-4. Verify the real path a user follows, as the [core doctrine](../ADEV.md#core-principles) requires.
+3. Never choose test cases to avoid a known failure. A defect you know about is fixed, or it is reported with a failing test or an explicit note.
+4. Run the relevant existing suite, not only the new tests. Report anything not run and why.
+5. Verify the real path a user follows, as the [core doctrine](../ADEV.md#core-principles) requires.
 
 ## Design and code
 
