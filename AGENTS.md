@@ -11,7 +11,8 @@ This repo is the canonical home of A-Dev: the framework, its implementation mode
 - `implementation/`: agent-consumable operating model, profiles, contracts, playbooks, and evaluations.
 - `profiles/`: baseline autonomy and guidance profiles.
 - `patterns/`: candidate patterns and the promotion process into a layer.
-- `install/`: the installer for local agents, with its test.
+- `bin/adev`: the CLI (install, update, doctor, capture, uninstall); `install/`: bootstrap, Windows installer, and tests.
+- `skills/`: skills bundled with A-Dev, such as the learning loop.
 - `starter-kit/`: copyable adoption assets, including the personal overlay template.
 - `docs/`: knowledge, evidence, case studies, and reference maps. The site is built from all tracked Markdown.
 - The book lives in [adev-book](https://github.com/scanalesespinoza/adev-book).

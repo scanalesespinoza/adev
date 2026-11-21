@@ -89,4 +89,4 @@ for url in ${extra_urls[@]+"${extra_urls[@]}"}; do
     sync_repository "$url" "$workspace_path/$(checkout_name "$url")" ""
 done
 
-exec "$workspace_path/adev/install/install.sh" "${install_args[@]}"
+exec "$workspace_path/adev/bin/adev" install "${install_args[@]}"
