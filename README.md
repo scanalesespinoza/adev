@@ -10,7 +10,7 @@ One command connects A-Dev to the coding agents on your machine (Claude Code, Co
 curl -fsSL https://raw.githubusercontent.com/scanalesespinoza/adev/main/install/bootstrap.sh | bash
 ```
 
-That clones A-Dev into the current directory, installs it with the `standard` profile, and adds the `adev` command to `~/.local/bin`. Start a new agent session and it works under A-Dev. Options go after `bash -s --`:
+That clones A-Dev into the current directory, installs it with the `standard` profile, and adds the `adev` command to `~/.local/bin` (open a new shell, or add that directory to your `PATH`, if the command is not found). Start a new agent session and it works under A-Dev. Options go after `bash -s --`:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/scanalesespinoza/adev/main/install/bootstrap.sh | bash -s -- \
