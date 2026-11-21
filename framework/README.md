@@ -1,6 +1,6 @@
 # A-Dev Practice
 
-This directory is the canonical home of the A-Dev practice. It separates normative framework material from the explanatory [A-Dev book](book/README.md) and from the executable operating model in [`../implementation/`](../implementation/README.md).
+This directory is the canonical home of the A-Dev practice. It separates normative framework material from the explanatory [A-Dev book](https://github.com/scanalesespinoza/adev-book), which has its own repository, and from the executable operating model in [`../implementation/`](../implementation/README.md).
 
 ## Content model
 
@@ -20,7 +20,7 @@ This directory is the canonical home of the A-Dev practice. It separates normati
 - **Normative:** `ADEV.md` and documents explicitly labeled as policy or contract.
 - **Guidance:** practices, maturity models, checklists, and adoption paths.
 - **Evidence:** case studies and proof indexes. Evidence may be project-specific; doctrine must remain transferable.
-- **Explanatory:** the book, collateral, blog, and publishing material.
+- **Explanatory:** the book, collateral, blog, and publishing material, maintained in [adev-book](https://github.com/scanalesespinoza/adev-book).
 
 When these surfaces conflict, normative material takes precedence. A project overlay may specialize the doctrine but must identify its scope and must not silently redefine the upstream framework.
 
