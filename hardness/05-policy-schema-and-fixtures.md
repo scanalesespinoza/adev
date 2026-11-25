@@ -11,13 +11,19 @@ The schema requires a stable ID, statement, level, fully declared scope, authori
 - [`fixtures/valid-policy.json`](fixtures/valid-policy.json) must satisfy the schema.
 - [`fixtures/invalid-policy-missing-owner.json`](fixtures/invalid-policy-missing-owner.json) must fail because `owner` is required.
 
-Run from the repository root with PowerShell:
+Run from the repository root with PowerShell 7 (`pwsh`, available on Linux, macOS, and Windows), as CI does:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File ./hardness/scripts/validate-policy-fixtures.ps1
+pwsh -NoProfile -File ./hardness/scripts/validate-policy-fixtures.ps1
 ```
 
-The script parses the local schema and fixtures with built-in PowerShell features, then verifies the schema's required policy fields and their supported structural constraints. No package installation is required. Fixtures are synthetic and are not operational evidence. When a future policy cites an operational source, it must follow the direct-artifact attribution rule in [`ADEV.md`](../docs/evidence/README.md#evidence-rules).
+With Windows PowerShell 5.1:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\hardness\scripts\validate-policy-fixtures.ps1
+```
+
+The script parses the local schema and fixtures with built-in PowerShell features, then verifies the schema's required policy fields and their supported structural constraints. No package installation is required. Fixtures are synthetic and are not operational evidence. When a future policy cites an operational source, it must follow the direct-artifact attribution rule in the [evidence rules](../docs/evidence/README.md#evidence-rules).
 
 ## Boundary
 
