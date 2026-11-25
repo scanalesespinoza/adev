@@ -93,6 +93,7 @@ nav:
   - Patterns:
     - Overview: patterns/README.md
     - Agentic delivery runtimes: patterns/agentic-delivery-runtime.md
+    - Operational workflow: patterns/operational-workflow.md
   - Implementation:
     - Overview: implementation/README.md
     - Agent instructions: implementation/AGENTS.md
@@ -111,6 +112,7 @@ nav:
       - Evidence index: docs/evidence-index.md
       - EventFlow metrics reproduction: docs/evidence/eventflow-metrics-reproduction.md
       - Homedir claim boundaries: docs/evidence/homedir-claim-boundaries.md
+      - Operational workflow telemetry: docs/evidence/operational-workflow-telemetry.md
     - Case studies:
       - Overview: docs/case-studies/README.md
       - EvenFlow Origins: docs/case-studies/evenflow.md

@@ -39,3 +39,4 @@ These are the [change discipline](../hardness/01-policy-and-precedence.md#change
 | Domain | Patterns | Evidence window |
 | --- | --- | --- |
 | [Agentic delivery runtimes](agentic-delivery-runtime.md) | 16 | 2026-11-19 to 2026-11-20 |
+| [Operational workflow](operational-workflow.md) | 8 (1 adopted) | Local telemetry, aggregated |
