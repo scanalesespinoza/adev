@@ -50,6 +50,10 @@ def check():
     assert "docs_dir: site-src" in (ROOT / "mkdocs.yml").read_text()
     workflow = (ROOT / ".github/workflows/deploy-site.yml").read_text()
     assert "mkdocs build --strict" in workflow, "broken site links must fail the build"
+    assert "pip install -r requirements-docs.txt" in workflow, "the site toolchain is pinned"
+    for name in ("deploy-site.yml", "validate-implementation.yml", "validate-hardness.yml"):
+        text = (ROOT / ".github/workflows" / name).read_text()
+        assert not re.search(r"uses: [^@\s]+@v\d", text), f"{name}: pin actions to a commit SHA"
     assert "git ls-files" in workflow, "the site is staged from tracked files"
     assert "|| true" not in workflow, "missing sources must fail the site build"
     check_links()
