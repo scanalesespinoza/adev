@@ -23,3 +23,8 @@ Observed signals included:
 
 ## Reusable lesson
 A-Dev is pro-optimization only when optimization is evidence-backed. The framework becomes stronger when it resists dramatic redesign until the measurements justify it.
+
+## Evidence status
+- Type: distilled operational narrative (author-attributed) plus a partial reproduction record.
+- Related artifacts: [`docs/evidence/eventflow-metrics-reproduction.md`](../evidence/eventflow-metrics-reproduction.md) in this repository preserves the measured-scenario approach.
+- Gap: raw scenario fixtures, timings, and the corrective change are not linked; the rate-limiting conclusion remains an attributed finding.

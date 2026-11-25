@@ -22,3 +22,8 @@ Visible symptoms included:
 
 ## Reusable lesson
 Localization drift is a verification failure, not a cosmetic issue. It weakens trust and signals that the delivery system is not yet coherent across its own surfaces.
+
+## Evidence status
+- Type: distilled operational narrative from HomeDir (author-attributed).
+- Related artifacts: HomeDir ships bilingual docs under [`docs/en/`](https://github.com/scanalesespinoza/homedir/tree/1853d66110629541e8f7b7b8f1dfae05c3fece07/docs/en) and [`docs/es/`](https://github.com/scanalesespinoza/homedir/tree/1853d66110629541e8f7b7b8f1dfae05c3fece07/docs/es); no message-bundle files exist in the tree at `1853d66`.
+- Gap: the specific mixed-language views and their fixing commits are not linked; treat as attributed narrative pending artifact-level evidence.

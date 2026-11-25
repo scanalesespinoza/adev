@@ -23,3 +23,8 @@
 - Feature flags are the cheapest insurance against AI-induced regressions.
 - Keeping probes and resources steady across flag states avoids “it works only in staging.”
 - Documenting flag behavior in the baseline prevents future prompt drift. 
+
+## Evidence status
+- Type: pattern description distilled from HomeDir operation (author-attributed).
+- Related artifacts: probe/resource guardrails are visible in [`deployment/deployment.yaml`](https://github.com/scanalesespinoza/homedir/blob/1853d66110629541e8f7b7b8f1dfae05c3fece07/deployment/deployment.yaml).
+- Gap: the flag-gating mechanism and specific flag-flip commits are not linked; the file documents the pattern, not a traced incident.

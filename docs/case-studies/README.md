@@ -2,6 +2,8 @@
 
 Use these case studies as proof points and patterns for new prompts.
 
+Each case study ends with an **Evidence status** block: it states whether the narrative is artifact-linked or author-attributed, links the strongest available Homedir artifacts (pinned to a commit), and names what is still unlinked. An unlinked gap means the claim is attributed history — not verified operational proof.
+
 - [Quest Board Login (Live Alpha)](quest-board.md) - Google OAuth behind a feature flag to let personas join quests without breaking GitHub login.
 - [Rollback Contained in the Same Hour](rollback.md) - How "stop the line" + flags prevented a long rollback.
 - [Live Alpha with Feature Flags](live-alpha-flags.md) - Why flags beat staging and how to guardrail them.
