@@ -12,6 +12,12 @@ if ([string]::IsNullOrWhiteSpace($SchemaPath)) { $SchemaPath = Join-Path $script
 if ([string]::IsNullOrWhiteSpace($ValidFixturePath)) { $ValidFixturePath = Join-Path $scriptDirectory '../fixtures/valid-policy.json' }
 if ([string]::IsNullOrWhiteSpace($InvalidFixturePath)) { $InvalidFixturePath = Join-Path $scriptDirectory '../fixtures/invalid-policy-missing-owner.json' }
 
+function Test-IsInteger {
+    # ConvertFrom-Json returns Int32 in Windows PowerShell 5.1 and Int64 in PowerShell 7.
+    param($Value)
+    return ($Value -is [int] -or $Value -is [long])
+}
+
 function Get-JsonObject {
     param([string]$Path)
 
@@ -76,8 +82,8 @@ function Test-PolicyRecord {
     Test-EnumValue $Policy.authority.level @($Schema.properties.authority.properties.level.enum) 'policy.authority.level' $errors
 
     Test-RequiredFields $Policy.precedence $Schema.properties.precedence.required 'policy.precedence' $errors
-    if ($Policy.precedence.authorityRank -isnot [int] -or $Policy.precedence.authorityRank -lt 1 -or $Policy.precedence.authorityRank -gt 6) { $errors.Add('policy.precedence.authorityRank must be an integer from 1 to 6.') }
-    if ($Policy.precedence.priority -isnot [int] -or $Policy.precedence.priority -lt 0) { $errors.Add('policy.precedence.priority must be a non-negative integer.') }
+    if (-not (Test-IsInteger $Policy.precedence.authorityRank) -or $Policy.precedence.authorityRank -lt 1 -or $Policy.precedence.authorityRank -gt 6) { $errors.Add('policy.precedence.authorityRank must be an integer from 1 to 6.') }
+    if (-not (Test-IsInteger $Policy.precedence.priority) -or $Policy.precedence.priority -lt 0) { $errors.Add('policy.precedence.priority must be a non-negative integer.') }
     Test-EnumValue $Policy.precedence.tieBreaker @($Schema.properties.precedence.properties.tieBreaker.enum) 'policy.precedence.tieBreaker' $errors
 
     if ($Policy.exceptions -isnot [System.Collections.IEnumerable]) { $errors.Add('policy.exceptions must be an array.') }
