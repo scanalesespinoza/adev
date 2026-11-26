@@ -11,7 +11,7 @@ REQUIRED = [
     "profiles/README.md", "profiles/guided.md", "profiles/standard.md", "profiles/autonomous.md",
     "install/install.sh", "install/bootstrap.sh", "install/Install-ADev.ps1",
     "starter-kit/personal-overlay/SKILL.md", "patterns/README.md", "docs/es/inicio-rapido.md", "bin/adev", "skills/adev-learn/SKILL.md",
-    "practices/engineering-baseline.md", "install/test_adev.sh",
+    "practices/engineering-baseline.md", "install/test_adev.sh", "install/test_install.ps1",
 ]
 
 

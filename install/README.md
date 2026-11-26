@@ -56,7 +56,7 @@ From a clone of this repository:
 .\install\Install-ADev.ps1 -AdevProfile standard -Overlay ..\my-overlay
 ```
 
-Skill locations are created as directory junctions. The Windows installer covers `install` only.
+Skill locations are created as directory junctions. The Windows installer covers `install` only. It is tested in CI on Windows with both PowerShell 7 and Windows PowerShell 5.1 (`install/test_install.ps1`).
 
 ## What it does not do
 
