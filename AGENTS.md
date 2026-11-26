@@ -20,7 +20,7 @@ This repo is the canonical home of A-Dev: the framework, its implementation mode
 ## Working Rules
 - Follow `ADEV.md` and the [delivery defaults](practices/delivery-defaults.md).
 - Default mode is one atomic PR per stage.
-- English is the only language for committed content in this repository unless a bilingual mirror is explicitly required. This is a rule for the A-Dev canon, not for adopting repositories.
+- English is the only language for committed content in this repository unless a bilingual mirror is explicitly required. This is a rule for the A-Dev canon, not for adopting repositories. The one required mirror is `docs/es/inicio-rapido.md`, the Spanish quick start: change it together with the README quick start (the layout check guards the shared commands).
 - Do not turn undocumented assumptions into doctrine.
 - Keep the core small: place a lesson in the narrowest layer that would have changed the outcome (core, default, practice, or overlay).
 - Keep canonical docs vendor-neutral: stack-specific values (endpoints, resource limits, tuned flags) belong in overlays, case studies, or evidence, labeled as project-specific.

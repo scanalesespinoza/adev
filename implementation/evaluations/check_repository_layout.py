@@ -10,7 +10,7 @@ REQUIRED = [
     "starter-kit/README.md", "docs/index.md", "docs/rule-migration-map.md",
     "profiles/README.md", "profiles/guided.md", "profiles/standard.md", "profiles/autonomous.md",
     "install/install.sh", "install/bootstrap.sh", "install/Install-ADev.ps1",
-    "starter-kit/personal-overlay/SKILL.md", "patterns/README.md", "bin/adev", "skills/adev-learn/SKILL.md",
+    "starter-kit/personal-overlay/SKILL.md", "patterns/README.md", "docs/es/inicio-rapido.md", "bin/adev", "skills/adev-learn/SKILL.md",
     "practices/engineering-baseline.md", "install/test_adev.sh",
 ]
 
@@ -56,6 +56,11 @@ def check():
         assert not re.search(r"uses: [^@\s]+@v\d", text), f"{name}: pin actions to a commit SHA"
     assert "git ls-files" in workflow, "the site is staged from tracked files"
     assert "|| true" not in workflow, "missing sources must fail the site build"
+    readme = (ROOT / "README.md").read_text()
+    spanish = (ROOT / "docs/es/inicio-rapido.md").read_text()
+    for shared in ("install/bootstrap.sh | bash -s -- --profile guided", "--overlay-repo", "--workspace",
+                   "adev uninstall", "adev doctor", "overlays/academic.md", "skills/adev-learn/SKILL.md"):
+        assert shared in readme and shared in spanish, f"Spanish quick start out of sync with README: {shared}"
     check_links()
     print("Repository layout, relative links and anchors, site build, and skill discovery: PASS")
 
