@@ -1,0 +1,430 @@
+#!/usr/bin/env bash
+# adev: connect A-Dev, a baseline profile, and personal overlays to local coding agents.
+set -euo pipefail
+
+self="$(readlink -f -- "${BASH_SOURCE[0]}")"
+adev_root="$(CDPATH= cd -- "$(dirname -- "$self")/.." && pwd -P)"
+user_home="${HOME:?HOME must be set}"
+claude_home="${CLAUDE_CONFIG_DIR:-$user_home/.claude}"
+codex_home="${CODEX_HOME:-$user_home/.codex}"
+agent_skills="${AGENT_SKILLS_PATH:-$user_home/.agents/skills}"
+config_file="${XDG_CONFIG_HOME:-$user_home/.config}/adev/config"
+bin_dir="${ADEV_BIN_DIR:-$user_home/.local/bin}"
+start_marker='<!-- adev:start -->'
+end_marker='<!-- adev:end -->'
+profiles=(guided standard autonomous)
+
+say() { printf '%s\n' "$@"; }
+warn() { printf 'Warning: %s\n' "$*" >&2; }
+die() { printf 'adev: %s\n' "$*" >&2; exit 1; }
+
+usage() {
+    cat <<'EOF'
+Usage: adev <command> [options]
+
+Commands:
+  install    Register A-Dev, a profile, and overlays for Claude Code, Codex, and ~/.agents
+             --profile guided|standard|autonomous   (default: standard)
+             --overlay PATH                         (repeatable)
+             --remove-section NAME                  remove <!-- NAME:start/end --> blocks
+             --no-bin                               do not link adev into ~/.local/bin
+  update     Fast-forward A-Dev and the overlays when safe, then reinstall with saved settings
+  doctor     Check the installation and report problems (non-zero exit on failure)
+  capture    Scaffold an evidence record in an overlay
+             <daily|incident|session> [--title TEXT] [--overlay NAME]
+  uninstall  Remove the managed guidance, skill links, command link, and settings
+             (repositories are never deleted)
+  version    Print the A-Dev revision
+
+Environment: CLAUDE_CONFIG_DIR, CODEX_HOME, AGENT_SKILLS_PATH, XDG_CONFIG_HOME, ADEV_BIN_DIR.
+EOF
+}
+
+# ---------- helpers ----------
+
+skill_name() {
+    local name
+    name="$(awk '/^---$/ { n++; next } n == 1 && /^name:/ { sub(/^name:[[:space:]]*/, ""); print; exit }' "$1/SKILL.md")"
+    [[ "$name" =~ ^[a-z0-9][a-z0-9-]*$ ]] || die "SKILL.md in $1 needs a frontmatter name of lowercase letters, digits, and hyphens"
+    printf '%s' "$name"
+}
+
+skill_dirs() { printf '%s\n' "$agent_skills" "$codex_home/skills" "$claude_home/skills"; }
+guidance_files() { printf '%s\n' "$claude_home/CLAUDE.md" "$codex_home/AGENTS.md"; }
+
+bundled_skills() {
+    local dir
+    for dir in "$adev_root"/skills/*/; do
+        [[ -f "$dir/SKILL.md" ]] && printf '%s\n' "${dir%/}"
+    done
+}
+
+link_skill() {
+    local source="$1" name="$2" base destination current
+    while IFS= read -r base; do
+        destination="$base/$name"
+        mkdir -p -- "$base"
+        if [[ -e "$destination" || -L "$destination" ]]; then
+            current="$(readlink -f -- "$destination" 2>/dev/null || true)"
+            if [[ "$current" == "$source" ]]; then
+                say "Skill already registered: $destination"
+            else
+                warn "kept existing skill location: $destination (points to ${current:-unknown})"
+            fi
+            continue
+        fi
+        ln -s -- "$source" "$destination"
+        say "Registered skill: $destination -> $source"
+    done < <(skill_dirs)
+}
+
+remove_section() {
+    local file="$1" start="$2" end="$3" output
+    [[ -f "$file" ]] && grep -Fxq "$start" "$file" || return 0
+    output="$(mktemp)"
+    awk -v start="$start" -v end="$end" '
+        $0 == start { skipping = 1; next }
+        skipping { if ($0 == end) { skipping = 0; drop_blank = 1 } ; next }
+        drop_blank && $0 == "" { drop_blank = 0; next }
+        { drop_blank = 0; print }
+    ' "$file" >"$output"
+    mv -- "$output" "$file"
+}
+
+write_section() {
+    local file="$1" section_file="$2" output
+    output="$(mktemp)"
+    mkdir -p -- "$(dirname -- "$file")"
+    if [[ -f "$file" ]] && grep -Fxq "$start_marker" "$file" && grep -Fxq "$end_marker" "$file"; then
+        awk -v guide="$section_file" -v start="$start_marker" -v end="$end_marker" '
+            $0 == start { while ((getline line < guide) > 0) print line; close(guide); skipping = 1; next }
+            skipping { if ($0 == end) skipping = 0; next }
+            { print }
+        ' "$file" >"$output"
+    else
+        if [[ -s "$file" ]]; then
+            awk '1' "$file" >"$output"
+            printf '\n' >>"$output"
+        fi
+        awk '1' "$section_file" >>"$output"
+    fi
+    mv -- "$output" "$file"
+    say "Updated managed agent guidance: $file"
+}
+
+saved_profile=""
+saved_overlays=()
+load_config() {
+    saved_profile=""
+    saved_overlays=()
+    [[ -f "$config_file" ]] || return 0
+    local key value
+    while IFS='=' read -r key value; do
+        case "$key" in
+            profile) saved_profile="$value" ;;
+            overlay) saved_overlays+=("$value") ;;
+        esac
+    done <"$config_file"
+}
+
+overlay_with_name() {
+    local wanted="$1" overlay
+    for overlay in ${saved_overlays[@]+"${saved_overlays[@]}"}; do
+        if [[ -z "$wanted" || "$(skill_name "$overlay")" == "$wanted" ]]; then
+            printf '%s' "$overlay"
+            return 0
+        fi
+    done
+    return 1
+}
+
+# ---------- install ----------
+
+cmd_install() {
+    local profile="standard" link_bin=1 overlays=() remove=() overlay root name section file first_overlay_name=""
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            --profile) profile="${2:?--profile requires a value}"; shift 2 ;;
+            --overlay) overlays+=("${2:?--overlay requires a path}"); shift 2 ;;
+            --remove-section) remove+=("${2:?--remove-section requires a name}"); shift 2 ;;
+            --no-bin) link_bin=0; shift ;;
+            *) die "unknown install option: $1" ;;
+        esac
+    done
+    [[ -f "$adev_root/profiles/$profile.md" ]] || die "unknown profile: $profile (expected ${profiles[*]})"
+    command -v git >/dev/null 2>&1 || warn "git was not found; update and doctor need it"
+
+    link_skill "$adev_root" "$(skill_name "$adev_root")"
+    while IFS= read -r root; do
+        [[ -n "$root" ]] && link_skill "$root" "$(skill_name "$root")"
+    done < <(bundled_skills)
+
+    section="$(mktemp)"
+    {
+        say "$start_marker" '# A-Dev' ''
+        say "- For software-delivery work, read and apply $adev_root/SKILL.md within the authorized scope."
+        say "- Apply the engineering baseline ($adev_root/practices/engineering-baseline.md) to every change: deliver the requested outcome at professional standard, beyond what was asked and within scope, unless an applicable overlay narrows it (in coursework, the academic overlay: implement only what the assignment asks and offer extras as optional suggestions)."
+        say "- A-Dev profile: $profile ($adev_root/profiles/$profile.md). A more specific declaration in the task or repository takes precedence."
+    } >"$section"
+
+    local resolved=()
+    for overlay in ${overlays[@]+"${overlays[@]}"}; do
+        root="$(readlink -f -- "$overlay" 2>/dev/null || true)"
+        [[ -n "$root" && -f "$root/SKILL.md" ]] || die "overlay has no SKILL.md: $overlay"
+        name="$(skill_name "$root")"
+        link_skill "$root" "$name"
+        resolved+=("$root")
+        [[ -n "$first_overlay_name" ]] || first_overlay_name="$name"
+        say "- Overlay $name: at the beginning of every session, read $root/SKILL.md and follow its startup procedure." >>"$section"
+    done
+
+    if [[ -n "$first_overlay_name" ]]; then
+        say "- Learning loop: before your final message in any turn where you changed files, fixed a mistake, or learned something non-obvious, even if you end with a question, apply $adev_root/skills/adev-learn/SKILL.md and record evidence in overlay $first_overlay_name." >>"$section"
+    else
+        say "- Learning loop: before your final message in any turn where you changed files, fixed a mistake, or learned something non-obvious, even if you end with a question, apply $adev_root/skills/adev-learn/SKILL.md." >>"$section"
+    fi
+    say '- Loading this guidance does not authorize remote writes, deployment, or destructive operations.' "$end_marker" >>"$section"
+
+    while IFS= read -r file; do
+        local legacy
+        for legacy in ${remove[@]+"${remove[@]}"}; do
+            remove_section "$file" "<!-- $legacy:start -->" "<!-- $legacy:end -->"
+        done
+        write_section "$file" "$section"
+        if grep -Eq -- '<!-- [a-z0-9-]+:start -->' "$file" && grep -E -- '<!-- [a-z0-9-]+:start -->' "$file" | grep -Fvxq "$start_marker"; then
+            warn "$file also contains a section managed by another installer; review it, or rerun with --remove-section <name>"
+        fi
+    done < <(guidance_files)
+
+    mkdir -p -- "$(dirname -- "$config_file")"
+    {
+        say "profile=$profile"
+        for root in ${resolved[@]+"${resolved[@]}"}; do say "overlay=$root"; done
+    } >"$config_file"
+
+    if [[ "$link_bin" == 1 ]]; then
+        mkdir -p -- "$bin_dir"
+        if [[ -L "$bin_dir/adev" || ! -e "$bin_dir/adev" ]]; then
+            ln -sfn -- "$adev_root/bin/adev" "$bin_dir/adev"
+            say "Linked command: $bin_dir/adev"
+        else
+            warn "kept existing file at $bin_dir/adev"
+        fi
+        case ":$PATH:" in *":$bin_dir:"*) ;; *) warn "$bin_dir is not on PATH; add it to use the adev command" ;; esac
+    fi
+    rm -f -- "$section"
+    say 'Restart Claude Code and Codex, or begin new sessions, to load the updated guidance.'
+}
+
+# ---------- update ----------
+
+fast_forward() {
+    local repo="$1" branch upstream
+    if ! git -C "$repo" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+        warn "not a Git checkout, skipped: $repo"; return 0
+    fi
+    if [[ -n "$(git -C "$repo" status --porcelain)" ]]; then
+        warn "local changes, skipped: $repo"; return 0
+    fi
+    branch="$(git -C "$repo" branch --show-current)"
+    upstream="$(git -C "$repo" rev-parse --abbrev-ref --symbolic-full-name '@{upstream}' 2>/dev/null || true)"
+    if [[ -z "$branch" || -z "$upstream" ]]; then
+        warn "no tracking branch, skipped: $repo"; return 0
+    fi
+    git -C "$repo" fetch --quiet --prune
+    if git -C "$repo" merge --ff-only --quiet "$upstream" 2>/dev/null; then
+        say "Up to date: $repo ($branch @ $(git -C "$repo" rev-parse --short HEAD))"
+    else
+        warn "cannot fast-forward $repo ($branch has diverged from $upstream); skipped"
+    fi
+}
+
+cmd_update() {
+    [[ $# -eq 0 ]] || die "update takes no options"
+    load_config
+    [[ -n "$saved_profile" ]] || die "no saved installation; run adev install first"
+    command -v git >/dev/null 2>&1 || die "git is required"
+    fast_forward "$adev_root"
+    local overlay args=(install --profile "$saved_profile")
+    for overlay in ${saved_overlays[@]+"${saved_overlays[@]}"}; do
+        fast_forward "$overlay"
+        args+=(--overlay "$overlay")
+    done
+    [[ -L "$bin_dir/adev" ]] || args+=(--no-bin)
+    exec "$adev_root/bin/adev" "${args[@]}"
+}
+
+# ---------- doctor ----------
+
+cmd_doctor() {
+    [[ $# -eq 0 ]] || die "doctor takes no options"
+    local failures=0 warnings=0 name base target file overlay root
+    ok() { say "  ok    $*"; }
+    bad() { say "  FAIL  $*"; failures=$((failures + 1)); }
+    note() { say "  warn  $*"; warnings=$((warnings + 1)); }
+
+    say "A-Dev at $adev_root ($(git -C "$adev_root" rev-parse --short HEAD 2>/dev/null || echo 'not a Git checkout'))"
+    command -v git >/dev/null 2>&1 && ok "git available" || bad "git not found"
+    load_config
+    if [[ -n "$saved_profile" ]]; then
+        [[ -f "$adev_root/profiles/$saved_profile.md" ]] && ok "profile: $saved_profile" || bad "saved profile is unknown: $saved_profile"
+    else
+        bad "no saved installation at $config_file (run adev install)"
+    fi
+
+    check_skill() {
+        local source="$1" skill="$2"
+        while IFS= read -r base; do
+            target="$(readlink -f -- "$base/$skill" 2>/dev/null || true)"
+            if [[ "$target" == "$source" ]]; then ok "skill $skill in $base"
+            elif [[ -e "$base/$skill" ]]; then note "skill $skill in $base points elsewhere: $target"
+            else bad "skill $skill missing in $base"; fi
+        done < <(skill_dirs)
+    }
+    check_skill "$adev_root" "$(skill_name "$adev_root")"
+    while IFS= read -r root; do [[ -n "$root" ]] && check_skill "$root" "$(skill_name "$root")"; done < <(bundled_skills)
+    for overlay in ${saved_overlays[@]+"${saved_overlays[@]}"}; do
+        if [[ -f "$overlay/SKILL.md" ]]; then
+            name="$(skill_name "$overlay")"
+            check_skill "$overlay" "$name"
+            [[ -f "$overlay/evidence/INDEX.md" ]] && ok "overlay $name has an evidence index" || note "overlay $name has no evidence/INDEX.md; adev capture will not work there"
+            if git -C "$overlay" rev-parse --is-inside-work-tree >/dev/null 2>&1 && [[ -n "$(git -C "$overlay" status --porcelain)" ]]; then
+                note "overlay $name has uncommitted changes"
+            fi
+        else
+            bad "overlay missing or without SKILL.md: $overlay"
+        fi
+    done
+
+    while IFS= read -r file; do
+        if [[ -f "$file" ]] && grep -Fxq "$start_marker" "$file"; then
+            [[ "$(grep -cFx "$start_marker" "$file")" == 1 ]] && ok "managed guidance in $file" || bad "duplicate managed sections in $file"
+            if [[ -n "$saved_profile" ]] && ! grep -Fq "A-Dev profile: $saved_profile " "$file"; then
+                bad "guidance in $file does not match the saved profile (run adev install or adev update)"
+            fi
+            if grep -E -- '<!-- [a-z0-9-]+:start -->' "$file" | grep -Fvxq "$start_marker"; then
+                note "$file also has another managed section: $(grep -oE -- '<!-- [a-z0-9-]+:start -->' "$file" | grep -Fvx "$start_marker" | sed -E 's/<!-- (.*):start -->/\1/' | tr '\n' ' ')(remove with adev install --remove-section <name>)"
+            fi
+        else
+            bad "no managed guidance in $file"
+        fi
+    done < <(guidance_files)
+
+    if [[ -L "$bin_dir/adev" ]]; then
+        case ":$PATH:" in *":$bin_dir:"*) ok "adev command on PATH" ;; *) note "$bin_dir is not on PATH" ;; esac
+    else
+        note "adev command not linked in $bin_dir"
+    fi
+    if git -C "$adev_root" rev-parse '@{upstream}' >/dev/null 2>&1; then
+        local behind
+        behind="$(git -C "$adev_root" rev-list --count 'HEAD..@{upstream}' 2>/dev/null || echo 0)"
+        [[ "$behind" == 0 ]] && ok "A-Dev is current with its last fetched upstream" || note "A-Dev is $behind commits behind its upstream (run adev update)"
+    fi
+
+    say "$failures failure(s), $warnings warning(s)"
+    [[ "$failures" == 0 ]]
+}
+
+# ---------- capture ----------
+
+cmd_capture() {
+    local type="${1:-}" title="" overlay_name="" overlay folder date slug file index rel
+    [[ -n "$type" ]] || die "capture needs a type: daily, incident, or session"
+    shift
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            --title) title="${2:?--title requires text}"; shift 2 ;;
+            --overlay) overlay_name="${2:?--overlay requires a name}"; shift 2 ;;
+            *) die "unknown capture option: $1" ;;
+        esac
+    done
+    case "$type" in
+        daily) folder=daily ;;
+        incident) folder=incidents ;;
+        session) folder=sessions ;;
+        *) die "unknown record type: $type (expected daily, incident, or session)" ;;
+    esac
+    load_config
+    overlay="$(overlay_with_name "$overlay_name" || true)"
+    [[ -n "$overlay" ]] || die "no registered overlay${overlay_name:+ named $overlay_name}; install one with adev install --overlay PATH"
+    [[ -f "$overlay/templates/$type.md" && -f "$overlay/evidence/INDEX.md" ]] || die "overlay $overlay needs templates/$type.md and evidence/INDEX.md"
+    [[ "$type" == daily || -n "$title" ]] || die "--title is required for $type records"
+
+    date="$(date +%F)"
+    if [[ "$type" == daily ]]; then
+        file="$date.md"; title="${title:-$date}"
+    else
+        slug="$(printf '%s' "$title" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g' | cut -c1-60)"
+        [[ -n "$slug" ]] || die "the title must contain letters or digits"
+        file="$date-$slug.md"
+    fi
+    mkdir -p -- "$overlay/evidence/$folder"
+    [[ ! -e "$overlay/evidence/$folder/$file" ]] || die "record already exists: $overlay/evidence/$folder/$file (update it instead)"
+
+    awk -v date="$date" -v title="$title" -v type="$type" '
+        BEGIN { gsub(/&/, "\\\\&", title) }
+        NR == 1 {
+            gsub(/YYYY-MM-DD/, date)
+            if (type != "daily") sub(/\[[^]]*\]/, title)
+            print; next
+        }
+        /^\*\*Date:\*\*/ { gsub(/YYYY-MM-DD/, date) }
+        { print }
+    ' "$overlay/templates/$type.md" >"$overlay/evidence/$folder/$file"
+
+    index="$overlay/evidence/INDEX.md"
+    rel="$folder/$file"
+    awk -v row="| $date | $type | [$title]($rel) | _Summary pending._ |" '
+        { print }
+        !done && /^\| *-+ *\|/ { print row; done = 1 }
+    ' "$index" >"$index.tmp" && mv -- "$index.tmp" "$index"
+    say "Created $overlay/evidence/$rel"
+    say "Indexed in $index; replace the pending summary when the record is complete."
+    say "Commit it in the overlay when done: git -C \"$overlay\" add -A && git -C \"$overlay\" commit -m \"evidence: $title\""
+}
+
+# ---------- uninstall ----------
+
+cmd_uninstall() {
+    [[ $# -eq 0 ]] || die "uninstall takes no options"
+    load_config
+    local owned=("$adev_root") root base entry target file
+    while IFS= read -r root; do [[ -n "$root" ]] && owned+=("$root"); done < <(bundled_skills)
+    for root in ${saved_overlays[@]+"${saved_overlays[@]}"}; do owned+=("$(readlink -f -- "$root" 2>/dev/null || printf '%s' "$root")"); done
+    while IFS= read -r base; do
+        [[ -d "$base" ]] || continue
+        for entry in "$base"/*; do
+            [[ -L "$entry" ]] || continue
+            target="$(readlink -f -- "$entry" 2>/dev/null || true)"
+            for root in "${owned[@]}"; do
+                if [[ "$target" == "$root" ]]; then rm -f -- "$entry"; say "Removed skill link: $entry"; break; fi
+            done
+        done
+    done < <(skill_dirs)
+    while IFS= read -r file; do
+        if [[ -f "$file" ]] && grep -Fxq "$start_marker" "$file"; then
+            remove_section "$file" "$start_marker" "$end_marker"
+            say "Removed managed guidance: $file"
+        fi
+    done < <(guidance_files)
+    if [[ -L "$bin_dir/adev" && "$(readlink -f -- "$bin_dir/adev")" == "$adev_root/bin/adev" ]]; then
+        rm -f -- "$bin_dir/adev"; say "Removed command link: $bin_dir/adev"
+    fi
+    rm -f -- "$config_file"
+    say "A-Dev was disconnected. Repositories were left in place."
+}
+
+# ---------- main ----------
+
+command="${1:-}"
+[[ $# -gt 0 ]] && shift
+case "$command" in
+    install) cmd_install "$@" ;;
+    update) cmd_update "$@" ;;
+    doctor) cmd_doctor "$@" ;;
+    capture) cmd_capture "$@" ;;
+    uninstall) cmd_uninstall "$@" ;;
+    version) say "A-Dev $(git -C "$adev_root" describe --tags --always 2>/dev/null || echo unknown) at $adev_root" ;;
+    help|-h|--help|"") usage ;;
+    *) usage >&2; exit 2 ;;
+esac
