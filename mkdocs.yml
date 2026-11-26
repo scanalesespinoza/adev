@@ -49,6 +49,15 @@ markdown_extensions:
   - toc:
       permalink: true
 
+extra:
+  alternate:
+    - name: English
+      link: /adev/
+      lang: en
+    - name: Español
+      link: /adev/docs/es/inicio-rapido/
+      lang: es
+
 exclude_docs: |
   /mkdocs.yml
   /.github/
@@ -56,6 +65,7 @@ exclude_docs: |
 
 nav:
   - Home: README.md
+  - Español: docs/es/inicio-rapido.md
   - Core doctrine: ADEV.md
   - Profiles:
     - Overview: profiles/README.md

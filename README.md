@@ -1,8 +1,10 @@
 # A-Dev
 
+[![Validate](https://github.com/scanalesespinoza/adev/actions/workflows/validate-implementation.yml/badge.svg)](https://github.com/scanalesespinoza/adev/actions/workflows/validate-implementation.yml) [![Site](https://github.com/scanalesespinoza/adev/actions/workflows/deploy-site.yml/badge.svg)](https://scanalesespinoza.github.io/adev/) [![Release](https://img.shields.io/github/v/release/scanalesespinoza/adev)](https://github.com/scanalesespinoza/adev/releases/latest) [![License](https://img.shields.io/github/license/scanalesespinoza/adev)](LICENSE)
+
 A-Dev makes the AI coding agents you already use, such as Claude Code or Codex, work the way a careful senior engineer would. They clarify the goal before changing anything, ask before risky actions, test and verify their work, and learn from mistakes. It is open, works with several agents, and you can adopt it step by step, whether you are a student or a professional team.
 
-> **¿Hablas español?** A-Dev se instala con un solo comando (abajo). Si eres estudiante o estás empezando con agentes, usa `--profile guided`: el agente te explica cada paso y te pide confirmación antes de cambiar archivos. El libro *ADEV: La práctica de AI Agentic Development* está en español en [adev-book](https://github.com/scanalesespinoza/adev-book/tree/main/adevelopment-book/book-es). La documentación del repositorio está en inglés.
+> **¿Hablas español?** Lee el [inicio rápido en español](docs/es/inicio-rapido.md). A-Dev se instala con un solo comando (abajo). Si eres estudiante o estás empezando con agentes, usa `--profile guided`: el agente te explica cada paso y te pide confirmación antes de cambiar archivos. El libro *ADEV: La práctica de AI Agentic Development* está en español en [adev-book](https://github.com/scanalesespinoza/adev-book/tree/main/adevelopment-book/book-es). La documentación del repositorio está en inglés.
 
 ## Quick start
 
