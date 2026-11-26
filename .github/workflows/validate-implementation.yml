@@ -23,3 +23,14 @@ jobs:
       - run: bash -n bin/adev install/install.sh install/bootstrap.sh
       - run: install/test_install.sh
       - run: install/test_adev.sh
+  windows-installer:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Test Install-ADev.ps1 (PowerShell 7)
+        shell: pwsh
+        run: ./install/test_install.ps1
+      - name: Test Install-ADev.ps1 (Windows PowerShell 5.1)
+        shell: powershell
+        run: ./install/test_install.ps1
